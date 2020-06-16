@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Title from "../../components/Title";
+import Title from "../Header/Title";
 import CartColumns from './CartColumns';
 import EmptyCart from "./EmptyCart";
 import {ProductConsumer} from "../../context";

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Product from '../components/Product'
-import Title from "../components/Title";
-import {storeProducts} from '../data';
-import {ProductConsumer} from "../context";
+import Product from './Product'
+import Title from "../Header/Title";
+import {storeProducts} from '../../data';
+import {ProductConsumer} from "../../context";
 
 class ProductList extends Component {
     state={

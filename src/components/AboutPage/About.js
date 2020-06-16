@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Title from "../components/Title";
-import img from "../aboutpicture.JPG"
+import Title from "../Header/Title";
+import img from "../../aboutpicture.JPG"
 
 class About extends Component {
     render() {

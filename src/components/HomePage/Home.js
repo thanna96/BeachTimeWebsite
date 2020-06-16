@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CarouselWrapper from "../components/CarouselWrapper";
+import CarouselWrapper from "../Styles/CarouselWrapper";
 
 class Home extends Component {
     render() {

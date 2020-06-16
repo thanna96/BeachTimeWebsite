@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import img from "../banner.JPG"
-import img2 from "../banner2.JPG"
-import img3 from "../banner3.JPG"
+import img from "../../banner.JPG"
+import img2 from "../../banner2.JPG"
+import img3 from "../../banner3.JPG"
 
 class CarouselWrapper extends Component {
     render() {

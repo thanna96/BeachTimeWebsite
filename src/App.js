@@ -1,18 +1,18 @@
 import React from 'react';
 import {Switch,Route} from "react-router-dom";
 import './App.css';
-import Navbar from './components/Navbar'
-import ProductList from './views/ProductList'
-import Details from './views/Details'
-import Cart from './views/Cart'
-import Default from './views/Default'
-import Home from './views/Home'
-import About from './views/About'
-import Login from './views/Login'
-import StorePolicy from './views/StorePolicy'
-import Contact from "./views/Contact";
-import Footer from "./components/Footer";
-import Modal from "./components/Modal";
+import Navbar from './components/Header/Navbar'
+import ProductList from './components/ProductsPage/ProductList'
+import Details from './components/ProductsPage/Details'
+import Cart from './components/Cart'
+import Default from './components/DefaultPage/Default'
+import Home from './components/HomePage/Home'
+import About from './components/AboutPage/About'
+import Login from './components/LoginPage/Login'
+import StorePolicy from './components/PolicyPage/StorePolicy'
+import Contact from "./components/ContactPage/Contact";
+import Footer from "./components/Footer/Footer";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   return (
