@@ -1,14 +1,33 @@
 import React, {Component} from 'react';
 import Title from "../../components/Title";
 import CartColumns from './CartColumns';
+import EmptyCart from "./EmptyCart";
+import {ProductConsumer} from "../../context";
+import CartList from "./CartList";
+import CartTotals from "./CartTotals";
 
 class Cart extends Component {
     render() {
         return (
-            <div>
-                <Title name="Your" title="cart"/>
-                <CartColumns/>
-            </div>
+            <section>
+                <ProductConsumer>
+                    {value =>{
+                        const {cart} = value;
+                        if(cart.length > 0){
+                            return(
+                                <React.Fragment>
+                                    <Title name="Your" title="cart"/>
+                                    <CartColumns/>
+                                    <CartList value={value}/>
+                                    <CartTotals value={value}/>
+                                </React.Fragment>
+                            )
+                        }else{
+                           return <EmptyCart/>;
+                        }
+                    }}
+                </ProductConsumer>
+            </section>
         );
     }
 }
