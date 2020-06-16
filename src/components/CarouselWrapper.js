@@ -4,11 +4,11 @@ import { Carousel } from 'react-responsive-carousel';
 import img from "../banner.JPG"
 import img2 from "../banner2.JPG"
 import img3 from "../banner3.JPG"
-import PropTypes from "prop-types";
 
 class CarouselWrapper extends Component {
     render() {
         return (
+            <div className="container-fluid  d-none d-lg-block">
             <Carousel infiniteLoop  autoPlay>
                 <div>
                     <img
@@ -32,6 +32,7 @@ class CarouselWrapper extends Component {
                     />
                 </div>
             </Carousel>
+            </div>
         );
     }
 }

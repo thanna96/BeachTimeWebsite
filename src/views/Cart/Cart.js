@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import Title from "../../components/Title";
+import CartColumns from './CartColumns';
 
 class Cart extends Component {
     render() {
         return (
             <div>
-                <h3>Cart</h3>
+                <Title name="Your" title="cart"/>
+                <CartColumns/>
             </div>
         );
     }
