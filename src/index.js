@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router} from "react-router-dom";
+import {ProductProvider} from "./context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ProductProvider>
+          <Router>
+              <App />
+          </Router>
+      </ProductProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
