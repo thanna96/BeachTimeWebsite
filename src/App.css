@@ -13,11 +13,12 @@ body{
 }
 
 .title h1{
-  font-size: calc(45px + 2vmin);
+  font-size: calc(55px + 2vmin);
   text-align: center;
 }
 
 .text-title {
+  font-family: 'Amatic SC', cursive;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
@@ -48,4 +49,10 @@ body{
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+}
+.sewtitle{
+  font-family: 'Amatic SC', cursive;
+}
+.navbar{
+  font-family: 'Amatic SC', cursive;
 }

@@ -69,6 +69,8 @@ const ProductWrapper = styled.div`
     .card-footer{
         background: transparent;
         border-top: transparent;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 1rem;
     }
     &:hover{
         .card{
