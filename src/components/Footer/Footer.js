@@ -10,14 +10,14 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col-md-12 text-center ">
                             <div className="mb-3 ">
-                                <a className="fb-ic">
-                                    <MDBIcon icon="facebook" size="2x" className="fab fa-lg white-text mr-md-5 mr-3 fa-2x" />
+                                <a href="https://thomashanna.me/" className="fb-ic">
+                                    <MDBIcon icon="facebook" size="2x" className="text-black-50 mr-md-5 mr-3" />
                                 </a>
-                                <a className="tw-ic">
-                                    <MDBIcon icon="twitter" size="2x" className="fab fa-lg white-text mr-md-5 mr-3 fa-2x" />
+                                <a href="https://thomashanna.me/" className="tw-ic">
+                                    <MDBIcon icon="twitter" size="2x" className="text-black-50 mr-md-5 mr-3" />
                                 </a>
-                                <a className="ins-ic">
-                                    <MDBIcon icon="instagram" size="2x" className="fab fa-lg white-text mr-md-0 mr-3 fa-2x" />                                </a>
+                                <a href="https://thomashanna.me/" className="ins-ic">
+                                    <MDBIcon icon="instagram" size="2x" className="text-black-50 mr-md-0 mr-3" />                                </a>
                             </div>
                         </div>
                     </div>
