@@ -40,9 +40,9 @@ class Details extends Component {
                                                 Select
                                             </button>
                                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
+                                                <a className="dropdown-item" href="https://thomashanna.me/">Action</a>
+                                                <a className="dropdown-item" href="https://thomashanna.me/">Another action</a>
+                                                <a className="dropdown-item" href="https://thomashanna.me/">Something else here</a>
                                             </div>
                                         </h4>
 
@@ -55,9 +55,9 @@ class Details extends Component {
                                                 Select
                                             </button>
                                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a className="dropdown-item" href="#">Action</a>
-                                                <a className="dropdown-item" href="#">Another action</a>
-                                                <a className="dropdown-item" href="#">Something else here</a>
+                                                <a className="dropdown-item" href="https://thomashanna.me/">Action</a>
+                                                <a className="dropdown-item" href="https://thomashanna.me/">Another action</a>
+                                                <a className="dropdown-item" href="https://thomashanna.me/">Something else here</a>
                                             </div>
                                         </h4>
 
