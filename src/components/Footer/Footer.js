@@ -10,13 +10,13 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col-md-12 text-center ">
                             <div className="mb-3 ">
-                                <a href="https://thomashanna.me/" className="fb-ic">
+                                <a href="https://www.facebook.com/gena.miele?__tn__=%2Cd*F*F-R&eid=ARAqBZJDAajsw3D9FrKgzblPIUFF24OSpRqlSa6d2tY2-RhQq0-JwVGQliNFu0PpMsm8CTubiR2P48XX&tn-str=*F" className="fb-ic">
                                     <MDBIcon icon="facebook" size="2x" className="text-black-50 mr-md-5 mr-3" />
                                 </a>
-                                <a href="https://thomashanna.me/" className="tw-ic">
+                                <a href="https://twitter.com/gena_miele" className="tw-ic">
                                     <MDBIcon icon="twitter" size="2x" className="text-black-50 mr-md-5 mr-3" />
                                 </a>
-                                <a href="https://thomashanna.me/" className="ins-ic">
+                                <a href="https://www.instagram.com/sewhoneyswim/?hl=en" className="ins-ic">
                                     <MDBIcon icon="instagram" size="2x" className="text-black-50 mr-md-0 mr-3" />                                </a>
                             </div>
                         </div>
