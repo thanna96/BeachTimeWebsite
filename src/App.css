@@ -59,7 +59,7 @@ body{
 
 
 .slide-container {
-  width: 70%;
+  width: 90%;
   margin: auto; }
 
 h3 {
@@ -70,7 +70,7 @@ h3 {
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 300px;
+  height: 400px;
 }
 
 .each-slide span {
