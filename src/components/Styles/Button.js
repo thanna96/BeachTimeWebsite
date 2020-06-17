@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ButtonContainer = styled.button`
     text-transform: capitalize;
     font-size: 1.4rem;
-    background: transparent;
+    background-color: #e7e7e7; color: black;
     border: 0.05rem transparent;
     color: var(--mainBlack);
     border-radius: 0.5rem;

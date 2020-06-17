@@ -16,6 +16,16 @@ class ProductList extends Component {
                     <div className="container">
                         <Title name="summer 2020" title="collection"/>
 
+                        <h5 className="text-title text-uppercase mt-3 mb-2 col-10 mx-auto col-md-6 my-3" >Sort By:</h5>
+                        <select id="mylist" onChange="myFunction()" className='form-control mt-3 mb-2 col-10 mx-auto col-md-6 my-3'>
+                            <option>Newest</option>
+                            <option>Price: (Low to High)</option>
+                            <option>Price: (High to Low)</option>
+                            <option>Name: A-Z</option>
+                            <option>Name: Z-A</option>
+                        </select>
+
+
                         <div className="row">
                             <ProductConsumer>
                                 {(value)=>{
