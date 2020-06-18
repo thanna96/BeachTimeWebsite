@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {ButtonContainer} from '../Styles/Button';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from "../../IMG_2639.jpg";
 
 class Navbar extends Component {
 
@@ -11,10 +12,6 @@ class Navbar extends Component {
         return (
             <div>
                 <TitleWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
-                    {/*<Link to='/'>*/}
-                    {/*    <img src={logo} alt="store"*/}
-                    {/*         className="navbar-brand"/>*/}
-                    {/*</Link>*/}
 
                     {/* Title for Mobile Devices */}
                     <ul className="nav-link-mobile navbar-nav align-items-center mx-auto">
@@ -39,7 +36,17 @@ class Navbar extends Component {
                         </li>
                     </ul>
 
-                    <div className="title sewtitle">
+                    <div className="nav-link-mobile row">
+                        <div className="col-10 mx-auto my-2 center">
+                            <Link to='/'>
+                                <img src={logo} alt="store"
+                                     className="img-fluid"
+                                />
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="nav-link title sewtitle ">
                         <h1 className="text-title">SEW HONEY SWIM</h1>
                     </div>
 
