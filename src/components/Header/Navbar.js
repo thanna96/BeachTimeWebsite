@@ -37,7 +37,7 @@ class Navbar extends Component {
                     </ul>
 
                     <div className="nav-link-mobile row">
-                        <div className="col-10 mx-auto my-2 center">
+                        <div className="mx-auto my-2">
                             <Link to='/'>
                                 <img src={logo} alt="store"
                                      className="img-fluid"
