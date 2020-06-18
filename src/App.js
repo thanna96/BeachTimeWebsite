@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch,Route} from "react-router-dom";
+import {Switch,Route,HashRouter} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Header/Navbar'
 import ProductList from './components/ProductsPage/ProductList'
@@ -16,9 +16,10 @@ import Modal from "./components/Modal/Modal";
 
 function App() {
   return (
-      <React.Fragment>
+      <HashRouter>
           <Navbar/>
           <Switch>
+
               <Route exact path="/" component={Home}/>
               <Route path="/ProductList" component={ProductList}/>
               <Route path="/About" component={About}/>
@@ -31,7 +32,7 @@ function App() {
           </Switch>
           <Modal/>
           <Footer/>
-      </React.Fragment>
+      </HashRouter>
   );
 }
 

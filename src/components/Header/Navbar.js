@@ -10,8 +10,8 @@ class Navbar extends Component {
 
     render() {
         return (
-            <div>
-                <TitleWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
+            <div >
+                <TitleWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 " >
 
                     {/* Title for Mobile Devices */}
                     <ul className="nav-link-mobile navbar-nav align-items-center mx-auto">
@@ -73,7 +73,6 @@ class Navbar extends Component {
                 </ul>
                 </TitleWrapper>
 
-                <hr/>
                 <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
 
                     {/* Navbar for Desktop */}

@@ -21,8 +21,7 @@ class Footer extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="text-center ">© 2020 Copyright:
-                        <a href="https://thomashanna.me/"> TomHanna.com</a>
+                    <div className="text-center ">© 2020 Sew Honey Swim
                     </div>
                 </div>
 
