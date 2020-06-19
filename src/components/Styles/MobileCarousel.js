@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import img from "../../banner.JPG"
-import img2 from "../../banner2.JPG"
-import img3 from "../../banner3.JPG"
+import Mimg from "../../mBanner1.JPG"
+import Mimg2 from "../../mBanner2.JPG"
+import Mimg3 from "../../mBanner3.JPG"
 import { Slide } from 'react-slideshow-image';
 
 const slideImages = [
-    img,
-    img2,
-    img3
+    Mimg,
+    Mimg2,
+    Mimg3
 ];
 const properties = {
     duration: 5000,
@@ -20,6 +20,7 @@ const properties = {
     onChange: (oldIndex, newIndex) => {
         console.log(`slide transition from ${oldIndex} to ${newIndex}`);
     }
+
 }
 
 class CarouselWrapper extends Component {

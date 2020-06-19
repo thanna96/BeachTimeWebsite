@@ -13,13 +13,14 @@ import StorePolicy from './components/PolicyPage/StorePolicy'
 import Contact from "./components/ContactPage/Contact";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
+// import TopBar from "./components/Header/TopBar";
 
 function App() {
   return (
       <HashRouter>
+          {/*<TopBar/>*/}
           <Navbar/>
           <Switch>
-
               <Route exact path="/" component={Home}/>
               <Route path="/ProductList" component={ProductList}/>
               <Route path="/About" component={About}/>

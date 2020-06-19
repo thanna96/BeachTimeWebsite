@@ -57,6 +57,13 @@ body{
   font-family: 'Amatic SC', cursive;
 }
 
+.carousel-mobile{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+  .carousel-mobile {display: block;}
+  .carousel-desktop {display: none;}
+}
 
 .slide-container {
   width: 90%;

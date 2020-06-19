@@ -4,13 +4,65 @@ import styled from 'styled-components';
 import {ButtonContainer} from '../Styles/Button';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../IMG_2639.jpg";
+import logo from "../../croppedLogo.jpg";
+import logo2 from "../../croppedLogo2.jpg";
 
 class Navbar extends Component {
 
     render() {
         return (
             <div >
+                <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
+                    {/* Navbar for Desktop */}
+                    <ul className="navbar-nav align-items-center  mx-auto">
+                        <li className="nav-item ">
+                            <Link to='/' className="nav-link">
+                                Home
+                            </Link>
+                        </li>
+                        <li className="nav-item ">
+                            <Link to='/ProductList' className="nav-link">
+                                Shop
+                            </Link>
+                        </li>
+                        <li className="nav-item " >
+                            <Link to='/About' className="nav-link">
+                                About Us
+                            </Link>
+                        </li>
+                        <li className="nav-item " >
+                            <Link to='/Contact' className="nav-link">
+                                Contact
+                            </Link>
+                        </li>
+                        <li className="nav-item ml-2">
+                            <Link to='/'>
+                                <img src={logo2} alt="store"
+                                     className="img-fluid nav-link"
+                                />
+                            </Link>
+                        </li>
+                            <li className="nav-item ml-2">
+                                <Link to='/StorePolicy' className="nav-link">
+                                    Policy
+                                </Link>
+                            </li>
+                            <li className="nav-item ml-2" >
+                                <Link to='/Login' className="nav-link">
+                                    Login
+                                </Link>
+                            </li>
+
+                            <Link to='/Cart' className="nav-link ml-auto">
+                                <ButtonContainer>
+                        <span className="mr-2">
+                            <FontAwesomeIcon icon={ faShoppingCart }/>
+                        </span> Cart
+                                </ButtonContainer>
+                            </Link>
+                    </ul>
+                </NavWrapper>
+
                 <TitleWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 " >
 
                     {/* Title for Mobile Devices */}
@@ -46,58 +98,65 @@ class Navbar extends Component {
                         </div>
                     </div>
 
-                    <div className="nav-link title sewtitle ">
-                        <h1 className="text-title">SEW HONEY SWIM</h1>
-                    </div>
+                    {/*<div className="nav-link title sewtitle ">*/}
+                    {/*    <div className="mx-auto my-2 container-fluid">*/}
+                    {/*        <Link to='/'>*/}
+                    {/*            <img src={logo2} alt="store"*/}
+                    {/*                 className="img-fluid"*/}
+                    {/*            />*/}
+                    {/*        </Link>*/}
+                    {/*    </div>*/}
+                    {/*    /!*<h1 className="text-title">SEW HONEY SWIM</h1>*!/*/}
+                    {/*</div>*/}
 
                     {/* Title for Desktop */}
-                    <ul className="navbar-nav align-items-center ml-auto">
-                        <li className="nav-item ml-2">
-                            <Link to='/StorePolicy' className="nav-link">
-                                Policy
-                            </Link>
-                        </li>
-                        <li className="nav-item ml-2" >
-                            <Link to='/Login' className="nav-link">
-                                Login
-                            </Link>
-                        </li>
+                {/*    <ul className="navbar-nav align-items-center ml-auto">*/}
+                {/*        <li className="nav-item ml-2">*/}
+                {/*            <Link to='/StorePolicy' className="nav-link">*/}
+                {/*                Policy*/}
+                {/*            </Link>*/}
+                {/*        </li>*/}
+                {/*        <li className="nav-item ml-2" >*/}
+                {/*            <Link to='/Login' className="nav-link">*/}
+                {/*                Login*/}
+                {/*            </Link>*/}
+                {/*        </li>*/}
 
-                    <Link to='/Cart' className="nav-link ml-auto">
-                        <ButtonContainer>
-                        <span className="mr-2">
-                            <FontAwesomeIcon icon={ faShoppingCart }/>
-                        </span> Cart
-                        </ButtonContainer>
-                    </Link>
-                </ul>
+                {/*    <Link to='/Cart' className="nav-link ml-auto">*/}
+                {/*        <ButtonContainer>*/}
+                {/*        <span className="mr-2">*/}
+                {/*            <FontAwesomeIcon icon={ faShoppingCart }/>*/}
+                {/*        </span> Cart*/}
+                {/*        </ButtonContainer>*/}
+                {/*    </Link>*/}
+                {/*</ul>*/}
                 </TitleWrapper>
 
                 <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
 
                     {/* Navbar for Desktop */}
-                    <ul className="navbar-nav align-items-center  mx-auto">
-                        <li className="nav-item ">
-                            <Link to='/' className="nav-link">
-                                Home
-                            </Link>
-                        </li>
-                        <li className="nav-item ">
-                            <Link to='/ProductList' className="nav-link">
-                                Shop
-                            </Link>
-                        </li>
-                        <li className="nav-item " >
-                            <Link to='/About' className="nav-link">
-                                About Us
-                            </Link>
-                        </li>
-                        <li className="nav-item " >
-                            <Link to='/Contact' className="nav-link">
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
+                    {/*<ul className="navbar-nav align-items-center  mx-auto">*/}
+                    {/*    <li className="nav-item ">*/}
+                    {/*        <Link to='/' className="nav-link">*/}
+                    {/*            Home*/}
+                    {/*        </Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li className="nav-item ">*/}
+                    {/*        <Link to='/ProductList' className="nav-link">*/}
+                    {/*            Shop*/}
+                    {/*        </Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li className="nav-item " >*/}
+                    {/*        <Link to='/About' className="nav-link">*/}
+                    {/*            About Us*/}
+                    {/*        </Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li className="nav-item " >*/}
+                    {/*        <Link to='/Contact' className="nav-link">*/}
+                    {/*            Contact*/}
+                    {/*        </Link>*/}
+                    {/*    </li>*/}
+                    {/*</ul>*/}
 
                     {/* Navbar for Mobile Devices */}
                     <div className="nav-link-mobile container-fluid ">
@@ -125,7 +184,7 @@ class Navbar extends Component {
                         </ul>
                     </div>
                 </NavWrapper>
-                <hr/>
+
             </div>
         );
     }
