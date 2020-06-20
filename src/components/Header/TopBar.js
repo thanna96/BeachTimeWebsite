@@ -4,7 +4,7 @@ import {MDBIcon} from "mdbreact";
 class TopBar extends Component {
     render() {
         return (
-                <div className="container-fluid d-none d-lg-block" style={{"background":"#e7e7e7"}}>
+                <div className="container-fluid d-none d-lg-block" style={{"background":"#e6be8a"}}>
                     <ul className="mx-auto" id="menu" style={{"text-align": "right"}}>
                         <li>
                             <a href="https://www.facebook.com/gena.miele?__tn__=%2Cd*F*F-R&eid=ARAqBZJDAajsw3D9FrKgzblPIUFF24OSpRqlSa6d2tY2-RhQq0-JwVGQliNFu0PpMsm8CTubiR2P48XX&tn-str=*F" className="fb-ic">

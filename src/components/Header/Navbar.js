@@ -14,50 +14,52 @@ class Navbar extends Component {
             <div >
                 <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
                     {/* Navbar for Desktop */}
-                    <ul className="navbar-nav align-items-center  mx-auto">
-                        <li className="nav-item ">
+                    <ul className="navbar-nav align-items-center mx-auto">
+                        <li className="nav-item mr-auto ml-auto">
                             <Link to='/' className="nav-link">
-                                Home
+                                <p className="text-muted">Home</p>
                             </Link>
                         </li>
-                        <li className="nav-item ">
+                        <li className="nav-item mr-auto ml-auto">
                             <Link to='/ProductList' className="nav-link">
-                                Shop
+                                <p className="text-muted">Shop</p>
                             </Link>
                         </li>
-                        <li className="nav-item " >
+                        <li className="nav-item mr-auto ml-auto" >
                             <Link to='/About' className="nav-link">
-                                About Us
+                                <p className="text-muted">About Us</p>
                             </Link>
                         </li>
-                        <li className="nav-item " >
+                        <li className="nav-item mr-auto ml-auto" >
                             <Link to='/Contact' className="nav-link">
-                                Contact
+                                <p className="text-muted">Contact</p>
                             </Link>
                         </li>
-                        <li className="nav-item ml-2">
+                        <li className="nav-item mr-auto ml-auto">
                             <Link to='/'>
                                 <img src={logo2} alt="store"
                                      className="img-fluid nav-link"
                                 />
                             </Link>
                         </li>
-                            <li className="nav-item ml-2">
+                            <li className="nav-item mr-auto ml-auto">
                                 <Link to='/StorePolicy' className="nav-link">
-                                    Policy
+                                    <p className="text-muted">Policy</p>
                                 </Link>
                             </li>
-                            <li className="nav-item ml-2" >
+                            <li className="nav-item mr-auto ml-auto" >
                                 <Link to='/Login' className="nav-link">
-                                    Login
+                                    <p className="text-muted">Login</p>
                                 </Link>
                             </li>
 
-                            <Link to='/Cart' className="nav-link ml-auto">
+                            <Link to='/Cart' className="nav-link mr-auto ml-auto">
                                 <ButtonContainer>
-                        <span className="mr-2">
+
+                        <span className="mr-2 text-muted">
                             <FontAwesomeIcon icon={ faShoppingCart }/>
-                        </span> Cart
+                        </span>
+                                    Cart
                                 </ButtonContainer>
                             </Link>
                     </ul>
@@ -184,7 +186,7 @@ class Navbar extends Component {
                         </ul>
                     </div>
                 </NavWrapper>
-
+                <hr style={{"background":"#FFFF00"}}/>
             </div>
         );
     }

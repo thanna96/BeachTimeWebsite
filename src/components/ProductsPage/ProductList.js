@@ -13,6 +13,7 @@ class ProductList extends Component {
     render() {
         return (
             <React.Fragment>
+
                 <div className="">
                     <div className="container">
                         <img src={img} alt="store"
@@ -21,17 +22,17 @@ class ProductList extends Component {
                         />
                         {/*<Title name="summer 2020" title="collection"/>*/}
 
-                        <h5 className="text-title text-uppercase mt-3 mb-2 col-10 ml-0 col-md-6 my-3" >Sort By:</h5>
-                        <select id="mylist" onChange="myFunction()" className='form-control mt-3 mb-2 col-9 ml-0 col-md-6 my-3'>
+                        <h4 className="text-title text-uppercase mt-3 mb-2 col-10 ml-0 col-md-6 my-3" >Sort By:
+                        <select id="mylist"  >
                             <option>Newest</option>
                             <option>Price: (Low to High)</option>
                             <option>Price: (High to Low)</option>
                             <option>Name: A-Z</option>
                             <option>Name: Z-A</option>
                         </select>
+                        </h4>
 
-
-                        <hr/>
+                        <hr style={{"background":"#FFFF00"}}/>
                         <div className="row">
                             <ProductConsumer>
                                 {(value)=>{
