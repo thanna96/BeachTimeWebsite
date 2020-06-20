@@ -17,22 +17,22 @@ class Navbar extends Component {
                     <ul className="navbar-nav align-items-center mx-auto">
                         <li className="nav-item mr-auto ml-auto">
                             <Link to='/' className="nav-link">
-                                <p className="text-muted">Home</p>
+                                Home
                             </Link>
                         </li>
                         <li className="nav-item mr-auto ml-auto">
                             <Link to='/ProductList' className="nav-link">
-                                <p className="text-muted">Shop</p>
+                                Shop
                             </Link>
                         </li>
                         <li className="nav-item mr-auto ml-auto" >
                             <Link to='/About' className="nav-link">
-                                <p className="text-muted">About Us</p>
+                                About Us
                             </Link>
                         </li>
                         <li className="nav-item mr-auto ml-auto" >
                             <Link to='/Contact' className="nav-link">
-                                <p className="text-muted">Contact</p>
+                                Contact
                             </Link>
                         </li>
                         <li className="nav-item mr-auto ml-auto">
@@ -44,15 +44,19 @@ class Navbar extends Component {
                         </li>
                             <li className="nav-item mr-auto ml-auto">
                                 <Link to='/StorePolicy' className="nav-link">
-                                    <p className="text-muted">Policy</p>
+                                    Policy
                                 </Link>
                             </li>
                             <li className="nav-item mr-auto ml-auto" >
                                 <Link to='/Login' className="nav-link">
-                                    <p className="text-muted">Login</p>
+                                    Login
                                 </Link>
                             </li>
-
+                        <li className="nav-item mr-auto ml-auto" >
+                            <Link to='/Contact' className="nav-link">
+                                Size Chart
+                            </Link>
+                        </li>
                             <Link to='/Cart' className="nav-link mr-auto ml-auto">
                                 <ButtonContainer>
 
@@ -82,7 +86,7 @@ class Navbar extends Component {
                         <li className="nav-item" >
                             <Link to='/Cart' className="nav-link-mobile ">
                                 <ButtonContainer>
-                                    <span className="mr-2">
+                                    <span className="mr-2 text-muted">
                                         <FontAwesomeIcon icon={ faShoppingCart }/>
                                     </span> Cart
                                 </ButtonContainer>
@@ -183,10 +187,15 @@ class Navbar extends Component {
                                     <span className="mr-2">Contact</span>
                                 </Link>
                             </li>
+                            <li className="nav-item " >
+                                <Link to='/Contact' className="nav-link-mobile">
+                                    <span className="mr-2">Sizing Chart</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </NavWrapper>
-                <hr style={{"background":"#FFFF00"}}/>
+                <hr style={{"background":"#e6be8a"}}/>
             </div>
         );
     }
@@ -195,13 +204,13 @@ class Navbar extends Component {
 const TitleWrapper = styled.nav`
     background:var(--mainWhite);
     .nav-link{
-        color:var(--mainBlack)!important;
+        color:#808080!important;
         font-size:1.6rem;
         text-transform:capitalize !important;
         display: block;
     }
     .nav-link-mobile{
-        color:var(--mainBlack)!important;
+        color:#808080!important;
         font-size:1.6rem;
         text-transform:capitalize !important;
         display: none;
@@ -221,12 +230,13 @@ const TitleWrapper = styled.nav`
 const NavWrapper = styled.nav`
     background:var(--mainWhite);
     .nav-link{
-        color:var(--mainBlack)!important;
+        color:#808080!important;
         font-size:1.9rem;
         text-transform:capitalize !important;
+        
     }
     .nav-link-mobile{
-        color:var(--mainBlack)!important;
+        color:#808080!important;
         font-size:1.6rem;
         text-transform:capitalize !important;
         display: none;

@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <footer className="page-footer font-small cyan darken-3">
-                <hr style={{"background":"#FFFF00"}}/>
+                <hr style={{"background":"#e6be8a"}}/>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center ">

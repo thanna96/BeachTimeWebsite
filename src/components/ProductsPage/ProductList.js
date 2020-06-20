@@ -30,9 +30,15 @@ class ProductList extends Component {
                             <option>Name: A-Z</option>
                             <option>Name: Z-A</option>
                         </select>
+                            &nbsp;Filter:
+                            <select id="mylist"  >
+                                <option>All</option>
+                                <option>Tops</option>
+                                <option>Bottoms</option>
+                                <option>One-Piece</option>
+                            </select>
                         </h4>
 
-                        <hr style={{"background":"#FFFF00"}}/>
                         <div className="row">
                             <ProductConsumer>
                                 {(value)=>{
