@@ -36,10 +36,12 @@ class Product extends Component {
                     </ProductConsumer>
 
                     {/* Card Footer */}
-                    <div className="card-footer d-flex justify-content-between">
+                    <div className="card-footer d-flex justify-content-center">
                         <p className="align-self-center mb-0">
                             {title}
                         </p>
+                    </div>
+                    <div className="card-footer d-flex justify-content-center">
                         <h5 className="font-italic mb-0">
                             <span className="mr-1">$</span>
                             {price}

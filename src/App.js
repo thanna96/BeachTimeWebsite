@@ -13,12 +13,12 @@ import StorePolicy from './components/PolicyPage/StorePolicy'
 import Contact from "./components/ContactPage/Contact";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
-// import TopBar from "./components/Header/TopBar";
+import TopBar from "./components/Header/TopBar";
 
 function App() {
   return (
       <HashRouter>
-          {/*<TopBar/>*/}
+          <TopBar/>
           <Navbar/>
           <Switch>
               <Route exact path="/" component={Home}/>

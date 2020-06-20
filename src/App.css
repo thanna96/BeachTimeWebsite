@@ -6,7 +6,9 @@
   --mainYellow:#ffa400;
   --mainBlack: #000000;
 }
-
+ul#menu li {
+  display:inline;
+}
 body{
   background: var(--mainWhite) !important;
   color:var(--mainDark) !important;
