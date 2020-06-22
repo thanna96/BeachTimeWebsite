@@ -1,0 +1,77 @@
+[
+  {
+    "productId": 1,
+    "title": "Carter One-Piece",
+    "info" : {
+      "img": "img/default.jpg",
+      "price": 70.00,
+      "sizes": {
+        "X-Small": 1,
+        "Small": 1,
+        "Medium": 1,
+        "Large": 1,
+        "X-Large": 1
+      },
+      "color": [
+        "Black",
+        "White",
+        "Yellow"
+      ],
+      "company": "SHS",
+      "description": "One-Piece",
+      "inCart": false,
+      "count": 0,
+      "total": 0
+    }
+},
+  {
+    "productId": 2,
+    "title": "Stella One-Piece",
+    "info" : {
+      "img": "img/default2.jpg",
+      "price": 70.00,
+      "sizes": {
+        "X-Small": 1,
+        "Small": 1,
+        "Medium": 1,
+        "Large": 1,
+        "X-Large": 1
+      },
+      "color": [
+        "Black",
+        "White",
+        "Yellow"
+      ],
+      "company": "SHS",
+      "description": "One-Piece",
+      "inCart": false,
+      "count": 0,
+      "total": 0
+    }
+  },
+  {
+    "productId": 3,
+    "title": "Bradley Bottom",
+    "info" : {
+      "img": "img/default3.jpg",
+      "price": 70.00,
+      "sizes": {
+        "X-Small": 1,
+        "Small": 1,
+        "Medium": 1,
+        "Large": 1,
+        "X-Large": 1
+      },
+      "color": [
+        "Black",
+        "White",
+        "Yellow"
+      ],
+      "company": "SHS",
+      "description": "Bottom",
+      "inCart": false,
+      "count": 0,
+      "total": 0
+    }
+  }
+]
