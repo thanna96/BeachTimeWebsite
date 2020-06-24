@@ -20,9 +20,9 @@ const params = {
         "productId": productId,
         "title": title
     },
-    UpdateExpression: "set info.price = info.price - :val",
+    UpdateExpression: "set info.img = :val",
     ExpressionAttributeValues: {
-        ":val": 1
+        ":val": "img/default3.jpg"
     },
     ReturnValues: "UPDATED_NEW"
 };

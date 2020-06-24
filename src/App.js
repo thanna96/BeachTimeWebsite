@@ -14,11 +14,13 @@ import Contact from "./components/ContactPage/Contact";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
 import TopBar from "./components/Header/TopBar";
+import TestDb from "./DBTests/TestDB";
 import SizingPage from "./components/SizingPage/SizingPage";
 
 function App() {
   return (
       <HashRouter>
+          <TestDb/>
           <TopBar/>
           <Navbar/>
           <Switch>

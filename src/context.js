@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
 import {detailProduct, storeProducts} from './data';
 
+const AWS = require("aws-sdk");
+
+AWS.config.update({
+    region: "us-west-2",
+    accessKeyId: "foo",
+    secretAccessKey: "bar",
+    endpoint: "http://localhost:8000"
+});
+const docClient = new AWS.DynamoDB.DocumentClient();
+
 
 const ProductContext = React.createContext();
 // Provider
@@ -25,14 +35,37 @@ class ProductProvider extends Component {
     }
 
     setProducts = ()=>{
-        let tempProducts = [];
-        storeProducts.forEach(item => {
-            const singleItem = {...item};
-            tempProducts = [...tempProducts, singleItem];
-        })
-        this.setState(()=>{
-            return{products:tempProducts}
-        })
+        const scanTable = async (tableName) => {
+            const params = {
+                TableName: "Products",
+                ProjectionExpression: "productId, title, info",
+            };
+
+            let scanResults = [];
+            let items;
+            do{
+                items =  await docClient.scan(params).promise();
+                items.Items.forEach((item) => scanResults.push(item));
+                params.ExclusiveStartKey  = items.LastEvaluatedKey;
+            }while(typeof items.LastEvaluatedKey != "undefined");
+
+            console.log("gfdgdffg",scanResults)
+
+            this.setState(()=>{
+                return{products:scanResults}
+            })
+        };
+        scanTable();
+
+
+        // let tempProducts = [];
+        // storeProducts.forEach(item => {
+        //     const singleItem = {...item};
+        //     tempProducts = [...tempProducts, singleItem];
+        // })
+        // this.setState(()=>{
+        //     return{products:tempProducts}
+        // })
     }
 
     getItem = id =>{

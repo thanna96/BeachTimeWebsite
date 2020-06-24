@@ -10,7 +10,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 
 console.log("Importing products into DynamoDB. Please wait.");
 
-const allMovies = JSON.parse(fs.readFileSync('src/ProductData.json', 'utf8'));
+const allMovies = JSON.parse(fs.readFileSync('src/DBTests/ProductData.json', 'utf8'));
 allMovies.forEach(function(product) {
     const params = {
         TableName: "Products",
