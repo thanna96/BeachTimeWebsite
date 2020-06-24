@@ -3,7 +3,11 @@ import React, {Component} from 'react';
 class Login extends Component {
     render() {
         return (
-            <form className="center">
+            <div>
+            <div className="row col-10 mx-auto col-md-6 ">
+                <h6 className="text-muted ">Home/</h6><h6>Login</h6>
+            </div>
+            <form className="center col-10 mx-auto col-md-6 ">
                 <label>
                     Email: <br/>
                     <input type="text" name="name" />
@@ -16,6 +20,7 @@ class Login extends Component {
                 <br/>
                 <input  type="submit" value="Submit" />
             </form>
+            </div>
         );
     }
 }

@@ -16,6 +16,13 @@ class Navbar extends Component {
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center mx-auto">
                         <li className="nav-item mr-auto ml-auto">
+                            <Link to='/'>
+                                <img src={logo2} alt="store"
+                                     className="img-fluid nav-link"
+                                />
+                            </Link>
+                        </li>
+                        <li className="nav-item mr-auto ml-auto">
                             <Link to='/' className="nav-link">
                                 Home
                             </Link>
@@ -35,13 +42,7 @@ class Navbar extends Component {
                                 Contact
                             </Link>
                         </li>
-                        <li className="nav-item mr-auto ml-auto">
-                            <Link to='/'>
-                                <img src={logo2} alt="store"
-                                     className="img-fluid nav-link"
-                                />
-                            </Link>
-                        </li>
+
                             <li className="nav-item mr-auto ml-auto">
                                 <Link to='/StorePolicy' className="nav-link">
                                     Policy
@@ -53,19 +54,17 @@ class Navbar extends Component {
                                 </Link>
                             </li>
                         <li className="nav-item mr-auto ml-auto" >
-                            <Link to='/Contact' className="nav-link">
-                                Size Chart
+                            <Link to='/SizingPage' className="nav-link">
+                                Sizing
                             </Link>
                         </li>
-                            <Link to='/Cart' className="nav-link mr-auto ml-auto">
-                                <ButtonContainer>
-
-                        <span className="mr-2 text-muted">
-                            <FontAwesomeIcon icon={ faShoppingCart }/>
-                        </span>
-                                    Cart
-                                </ButtonContainer>
-                            </Link>
+                        <Link to='/Cart' className="nav-link mr-auto ml-auto">
+                            <ButtonContainer>
+                                <span className="mr-2 text-muted">
+                                    <FontAwesomeIcon icon={ faShoppingCart }/>
+                                </span> Cart
+                            </ButtonContainer>
+                        </Link>
                     </ul>
                 </NavWrapper>
 
@@ -166,36 +165,37 @@ class Navbar extends Component {
 
                     {/* Navbar for Mobile Devices */}
                     <div className="nav-link-mobile container-fluid ">
-                        <ul className="nav-link-mobile navbar-nav mx-auto  ">
+                        <ul className="nav-link-mobile navbar-nav mx-auto align-items-center">
                             <li className="nav-item ">
                                 <Link to='/' className="nav-link-mobile">
-                                    <span className="mr-2">Home</span>
+                                    <span className="mr-3">Home</span>
                                 </Link>
                             </li>
                             <li className="nav-item ">
                               <Link to='/ProductList' className="nav-link-mobile">
-                                  <span className="mr-2">Shop</span>
+                                  <span className="mr-3">Shop</span>
                                 </Link>
                             </li>
                             <li className="nav-item " >
                                <Link to='/About' className="nav-link-mobile">
-                                    <span className="mr-2">About Us</span>
-                                </Link>
-                            </li>
-                            <li className="nav-item " >
-                                <Link to='/Contact' className="nav-link-mobile">
-                                    <span className="mr-2">Contact</span>
-                                </Link>
-                            </li>
-                            <li className="nav-item " >
-                                <Link to='/Contact' className="nav-link-mobile">
-                                    <span className="mr-2">Sizing Chart</span>
+                                    <span className="mr-3">About</span>
                                 </Link>
                             </li>
                         </ul>
+                        <ul className="nav-link-mobile navbar-nav mx-auto">
+                        <li className="nav-item " >
+                            <Link to='/Contact' className="nav-link-mobile">
+                                <span className="mr-3">Contact</span>
+                            </Link>
+                        </li>
+                        <li className="nav-item " >
+                            <Link to='/SizingPage' className="nav-link-mobile">
+                                <span className="mr-3">Sizing</span>
+                            </Link>
+                        </li>
+                        </ul>
                     </div>
                 </NavWrapper>
-                <hr style={{"background":"#e6be8a"}}/>
             </div>
         );
     }
@@ -231,7 +231,7 @@ const NavWrapper = styled.nav`
     background:var(--mainWhite);
     .nav-link{
         color:#808080!important;
-        font-size:1.9rem;
+        font-size:1.6rem;
         text-transform:capitalize !important;
         
     }

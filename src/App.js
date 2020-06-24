@@ -14,6 +14,7 @@ import Contact from "./components/ContactPage/Contact";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
 import TopBar from "./components/Header/TopBar";
+import SizingPage from "./components/SizingPage/SizingPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/About" component={About}/>
               <Route path="/Details" component={Details}/>
               <Route path="/Cart" component={Cart}/>
+              <Route path="/SizingPage" component={SizingPage}/>
               <Route path="/StorePolicy" component={StorePolicy}/>
               <Route path="/Login" component={Login}/>
               <Route path="/Contact" component={Contact}/>

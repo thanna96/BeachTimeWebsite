@@ -3,7 +3,11 @@ import React, {Component} from 'react';
 class Contact extends Component {
     render() {
         return (
-            <form className="center">
+            <div>
+                <div className="row col-10 mx-auto col-md-6 ">
+                    <h6 className="text-muted ">Home/</h6><h6>Contact</h6>
+                </div>
+            <form className="center col-10 mx-auto col-md-6 ">
                 <label>
                     Name: <br/>
                     <input type="text" name="name" />
@@ -21,6 +25,7 @@ class Contact extends Component {
                 <br/>
                 <input  type="submit" value="Submit" />
             </form>
+            </div>
         );
     }
 }

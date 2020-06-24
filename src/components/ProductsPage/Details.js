@@ -9,12 +9,12 @@ class Details extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
-                    const {id,company,img,price,title,inCart,info} = value.detailProduct;
+                    const {id,title,info} = value.detailProduct;
                     return (
                         <div className="container py-5">
                             {/* title */}
-                            <div className="row">
-                                <h6 className="text-muted">Home/Shop/</h6><h6>{title}</h6>
+                            <div className="row col-10 mx-auto col-md-6 my-3">
+                                <h6 className="text-muted ">Home/Shop/</h6><h6>{title}</h6>
                             </div>
                             {/* end title */}
 
@@ -25,21 +25,21 @@ class Details extends Component {
                                             <div>
                                                 <img
                                                     className="d-block "
-                                                    src={img}
+                                                    src={info.img}
                                                     alt="First slide"
                                                 />
                                             </div>
                                             <div>
                                                 <img
                                                     className="d-block"
-                                                    src={img}
+                                                    src={info.img}
                                                     alt="Third slide"
                                                 />
                                             </div>
                                             <div>
                                                 <img
                                                     className="d-block"
-                                                    src={img}
+                                                    src={info.img}
                                                     alt="Third slide"
                                                 />
                                             </div>
@@ -51,7 +51,7 @@ class Details extends Component {
                                         <h1>{title}</h1>
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             made by : <span className="text-uppercase">
-                                            {company}
+                                            {info.company}
                                         </span>
                                         </h4>
 
@@ -100,7 +100,7 @@ class Details extends Component {
 
                                         <h4>
                                             <strong>
-                                                price : <span>$</span>{price}
+                                                price : <span>$</span>{info.price}
                                             </strong>
                                         </h4>
 
@@ -108,7 +108,7 @@ class Details extends Component {
                                             Product info:
                                         </p>
                                         <p className="text-muted lead">
-                                            {info}
+                                            {info.description}
                                         </p>
                                         {/* buttons */}
                                         <div>
@@ -118,11 +118,11 @@ class Details extends Component {
                                                 </ButtonContainer>
                                             </Link>
                                             <ButtonContainer
-                                                disabled={inCart}
+                                                disabled={info.inCart}
                                                 onClick={()=>{
                                                     value.addToCart(id);
                                                     value.openModal(id);}}>
-                                                {inCart?'inCart':'Add to Cart'}
+                                                {info.inCart?'inCart':'Add to Cart'}
                                             </ButtonContainer>
                                         </div>
                                     </div>

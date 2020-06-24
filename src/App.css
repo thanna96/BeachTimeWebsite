@@ -20,7 +20,7 @@ body{
 }
 
 .text-title {
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
@@ -53,10 +53,10 @@ body{
   color: var(--mainYellow);
 }
 .sewtitle{
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
 }
 .navbar{
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
 }
 
 .carousel-mobile{

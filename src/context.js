@@ -51,8 +51,8 @@ class ProductProvider extends Component {
         const selectedProduct = tempCart.find(item => item.id === id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
-        product.count = product.count + 1;
-        product.total = product.price * product.count;
+        product.info.count = product.info.count + 1;
+        product.info.total = product.info.price * product.info.count;
 
         this.setState( () => {
             return {cart:[...tempCart]}
@@ -66,13 +66,13 @@ class ProductProvider extends Component {
         const selectedProduct = tempCart.find(item => item.id === id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
-        product.count = product.count - 1;
+        product.info.count = product.info.count - 1;
 
-        if(product.count === 0){
+        if(product.info.count === 0){
             this.removeItem(id);
         }
         else {
-            product.total = product.price * product.count;
+            product.info.total = product.info.price * product.info.count;
 
             this.setState(() => {
                 return {cart: [...tempCart]}
@@ -90,9 +90,9 @@ class ProductProvider extends Component {
 
         const index = tempProducts.indexOf(this.getItem(id));
         let removedProduct = tempProducts[index];
-        removedProduct.inCart = false;
-        removedProduct.count = 0;
-        removedProduct.total = 0;
+        removedProduct.info.inCart = false;
+        removedProduct.info.count = 0;
+        removedProduct.info.total = 0;
 
         this.setState(() =>{
             return {
@@ -115,7 +115,7 @@ class ProductProvider extends Component {
 
     addTotals = () =>{
         let subTotal = 0;
-        this.state.cart.map(item => (subTotal += item.total));
+        this.state.cart.map(item => (subTotal += item.info.total));
         const tempTax = subTotal * 0.06625;
         const tax = parseFloat(tempTax.toFixed(2));
         const total = subTotal + tax;
@@ -132,10 +132,10 @@ class ProductProvider extends Component {
         let tempProducts = [...this.state.products];
         const index = tempProducts.indexOf(this.getItem(id));
         const product = tempProducts[index];
-        product.inCart = true;
-        product.count = 1;
-        const price = product.price;
-        product.total = price;
+        product.info.inCart = true;
+        product.info.count = 1;
+        const price = product.info.price;
+        product.info.total = price;
         this.setState( () =>{
             return { products: tempProducts,cart:[...this.state.cart,product]};
         },()=>this.addTotals());

@@ -6,6 +6,9 @@ class About extends Component {
     render() {
         return (
             <div>
+                <div className="row col-10 mx-auto col-md-6 ">
+                    <h6 className="text-muted ">Home/</h6><h6>About</h6>
+                </div>
                 <Title name="About" title="Sew Honey"/>
                 <img className="mx-auto my-2 center " src={img} alt="aboutpic" />
                 <br/>

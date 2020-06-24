@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 class Product extends Component {
     render() {
-        const {id, title, img, price, inCart} = this.props.product;
+        const {id, title, info} = this.props.product;
         return (
             <ProductWrapper className="col-6 mx-auto col-md-6 col-lg-3 my-3">
                 <div className="card">
@@ -19,15 +19,15 @@ class Product extends Component {
                          onClick={()=>value.handleDetail(id)}>
 
                         <Link to="/details">
-                            <img src={img} alt="product" className="card-img-top"/>
+                            <img src={info.img} alt="product" className="card-img-top"/>
                         </Link>
 
-                        <button className="cart-btn" disabled={!!inCart}
+                        <button className="cart-btn" disabled={!!info.inCart}
                                 onClick={()=>{
                                     value.addToCart(id);
                                     value.openModal(id);
                         }}>
-                            {inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>
+                            {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>
                             ):(
                                 <div>Add to Cart <FontAwesomeIcon icon={ faShoppingCart }/></div>)}
                         </button>
@@ -44,7 +44,7 @@ class Product extends Component {
                     <div className="card-footer d-flex justify-content-center">
                         <h5 className="font-italic mb-0">
                             <span className="mr-1">$</span>
-                            {price}
+                            {info.price}
                         </h5>
                     </div>
                 </div>
