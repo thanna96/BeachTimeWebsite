@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 class Login extends Component {
     render() {
@@ -20,6 +21,9 @@ class Login extends Component {
                 <br/>
                 <input  type="submit" value="Submit" />
             </form>
+                <Link to='/AdminPage' className="nav-link-mobile">
+                    <span className="mr-3">Login</span>
+                </Link>
             </div>
         );
     }

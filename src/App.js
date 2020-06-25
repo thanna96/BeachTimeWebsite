@@ -16,6 +16,7 @@ import Modal from "./components/Modal/Modal";
 import TopBar from "./components/Header/TopBar";
 import TestDb from "./DBTests/TestDB";
 import SizingPage from "./components/SizingPage/SizingPage";
+import AdminPage from "./components/AdminPage/AdminPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/StorePolicy" component={StorePolicy}/>
               <Route path="/Login" component={Login}/>
               <Route path="/Contact" component={Contact}/>
+              <Route path="/AdminPage" component={AdminPage}/>
               <Route component={Default}/>
           </Switch>
           <Modal/>
