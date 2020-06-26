@@ -5,7 +5,7 @@ class TopBar extends Component {
     render() {
         return (
                 <div className="container-fluid d-none d-lg-block" style={{"background":"#eeeeee"}}>
-                    <ul className="mx-auto" id="menu" style={{"text-align": "right"}}>
+                    <ul className="mx-auto" id="menu" style={{"textAlign": "right"}}>
                         <li>
                             <a href="https://www.facebook.com/gena.miele?__tn__=%2Cd*F*F-R&eid=ARAqBZJDAajsw3D9FrKgzblPIUFF24OSpRqlSa6d2tY2-RhQq0-JwVGQliNFu0PpMsm8CTubiR2P48XX&tn-str=*F" className="fb-ic">
                                 <MDBIcon icon="facebook" size="1x" className="text-black-50 mr-md-5 mr-3 " />

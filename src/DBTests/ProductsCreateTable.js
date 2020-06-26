@@ -10,11 +10,11 @@ const dynamodb = new AWS.DynamoDB();
 const params = {
     TableName: "Products",
     KeySchema: [
-        {AttributeName: "productId", KeyType: "HASH"},  //Partition key
+        {AttributeName: "id", KeyType: "HASH"},  //Partition key
         {AttributeName: "title", KeyType: "RANGE"}  //Sort key
     ],
     AttributeDefinitions: [
-        {AttributeName: "productId", AttributeType: "N"},
+        {AttributeName: "id", AttributeType: "N"},
         {AttributeName: "title", AttributeType: "S"}
     ],
     ProvisionedThroughput: {

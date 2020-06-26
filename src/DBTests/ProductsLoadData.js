@@ -15,7 +15,7 @@ allMovies.forEach(function(product) {
     const params = {
         TableName: "Products",
         Item: {
-            "productId": product.productId,
+            "id": product.id,
             "title": product.title,
             "info": product.info
         }

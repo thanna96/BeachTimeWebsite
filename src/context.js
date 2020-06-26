@@ -35,10 +35,10 @@ class ProductProvider extends Component {
     }
 
     setProducts = ()=>{
-        const scanTable = async (tableName) => {
+        const scanTable = async () => {
             const params = {
                 TableName: "Products",
-                ProjectionExpression: "productId, title, info",
+                ProjectionExpression: "id, title, info",
             };
 
             let scanResults = [];

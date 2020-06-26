@@ -15,7 +15,7 @@ const title = "Brandi Bottom";
 const params = {
     TableName: table,
     Item: {
-        "productId": productId,
+        "id": productId,
         "title": title,
         "info": {
             "price": 0,
