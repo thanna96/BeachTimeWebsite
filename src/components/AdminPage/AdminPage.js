@@ -23,11 +23,14 @@ class AdminPage extends Component {
             title: '',
             price: null,
             img: '',
-            description: ''
+            description: '',
+            sizes: [],
+            colors: []
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.handleArrays = this.handleArrays.bind(this);
     }
 
     componentDidMount() {
@@ -56,7 +59,7 @@ class AdminPage extends Component {
         scanTable()
     }
 
-    addProduct = (id,title,price,imgName,description) =>{
+    addProduct = (id,title,price,imgName,description,colors,sizes) =>{
         const params = {
             TableName: "Products",
             Item: {
@@ -65,18 +68,8 @@ class AdminPage extends Component {
                 "info": {
                     "img": "img/"+imgName,
                     "price": price,
-                    "sizes": {
-                        "X-Small": 1,
-                        "Small": 1,
-                        "Medium": 1,
-                        "Large": 1,
-                        "X-Large": 1
-                    },
-                    "color": [
-                        "Black",
-                        "White",
-                        "Yellow"
-                    ],
+                    "sizes": sizes,
+                    "color": colors,
                     "company": "SHS",
                     "description": description,
                     "inCart": false,
@@ -110,19 +103,34 @@ class AdminPage extends Component {
         })
     }
 
+    handleArrays(Event) {
+        let nam = Event.target.name;
+        let val = Event.target.value;
+        if(nam === 'colors'){
+            this.state.colors.push(val)
+        }
+        if(nam === 'sizes'){
+            this.state.sizes.push(val)
+        }
+    }
+
     handleSubmit(Event) {
         console.log(
             "id",this.state.id,
             "title",this.state.title,
             "price",this.state.price,
             "img",this.state.img,
-            "desc",this.state.description);
+            "desc",this.state.description,
+            "colors",this.state.colors,
+            "sizes",this.state.sizes);
         this.addProduct(
             this.state.id,
             this.state.title,
-            this.state.price,
+            parseFloat(this.state.price),
             this.state.img,
-            this.state.description);
+            this.state.description,
+            this.state.colors,
+            this.state.sizes);
         Event.preventDefault();
     }
     render() {
@@ -149,9 +157,9 @@ class AdminPage extends Component {
                     <Form.Label>Product Description:</Form.Label>
                     <Form.Control name='description' type="text" as="textarea" rows="3" onChange={this.handleChange}/>
                     <br/>
-                    <Form.Group controlId="exampleForm.ControlSelect2">
+                    <Form.Group controlId="sizes">
                         <Form.Label>Select Sizes (ctrl+click)</Form.Label>
-                        <Form.Control as="select" multiple>
+                        <Form.Control name="sizes" onChange={this.handleArrays} as="select" multiple>
                             <option value="XS">XS</option>
                             <option value="S">S</option>
                             <option value="M">M</option>
@@ -160,14 +168,14 @@ class AdminPage extends Component {
                         </Form.Control>
                     </Form.Group>
                     <br/>
-                    <Form.Group controlId="exampleForm.ControlSelect2">
+                    <Form.Group controlId="colors">
                         <Form.Label>Select Colors (ctrl+click)</Form.Label>
-                        <Form.Control as="select" multiple>
-                            <option>White</option>
-                            <option>Red</option>
-                            <option>Black</option>
-                            <option>Yellow</option>
-                            <option>Blue</option>
+                        <Form.Control name="colors" onChange={this.handleArrays} as="select" multiple>
+                            <option value="White">White</option>
+                            <option value="Red">Red</option>
+                            <option value="Black">Black</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Blue">Blue</option>
                         </Form.Control>
                     </Form.Group>
                     <Button variant="primary" type="submit" >
