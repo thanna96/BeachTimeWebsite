@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
-import {detailProduct, storeProducts} from './data';
+import {detailProduct} from './data';
 
 const AWS = require("aws-sdk");
 
 AWS.config.update({
-    region: "us-west-2",
-    accessKeyId: "foo",
-    secretAccessKey: "bar",
-    endpoint: "http://localhost:8000"
+    region: "us-east-1",
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
 });
 const docClient = new AWS.DynamoDB.DocumentClient();
 
