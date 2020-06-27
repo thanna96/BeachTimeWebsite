@@ -49,9 +49,8 @@ class ProductProvider extends Component {
             }while(typeof items.LastEvaluatedKey != "undefined");
 
             console.log("gfdgdffg",scanResults)
-
             this.setState(()=>{
-                return{products:scanResults}
+                return{products:scanResults.sort((a,b)=> a.id > b.id ? 1 : -1)}
             })
         };
         scanTable();
