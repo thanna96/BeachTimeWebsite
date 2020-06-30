@@ -5,8 +5,46 @@ import {ProductConsumer} from "../../context";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
+import {Storage} from 'aws-amplify'
+
+const AWS = require("aws-sdk");
+
+AWS.config.update({
+    region: "us-east-1",
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+});
 
 class Product extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            image: ''
+        }
+    }
+
+    componentDidMount() {
+        Storage.get('default.jpg')
+            .then(data => {
+                this.setState({
+                    image: data
+                })
+            })
+            .catch(err =>{
+                console.log('error fetching image')
+            })
+        console.log(this.state.image)
+    }
+
+    // handleImage(image){
+    //     let params = {
+    //         Bucket: 'sew-honey-bucket',
+    //         Key: image
+    //     };
+    //
+    //     return URL.createObjectURL(s3.getSignedUrl('getObject', params))
+    // }
+
     render() {
         const {id, title, info} = this.props.product;
         return (
@@ -17,9 +55,8 @@ class Product extends Component {
 
                     <div className="img-container p-0"
                          onClick={()=>value.handleDetail(id)}>
-
                         <Link to="/details">
-                            <img src={info.img} alt="product" className="card-img-top"/>
+                            <img src={this.state.image} alt="product" className="card-img-top"/>
                         </Link>
 
                         <button className="cart-btn" disabled={!!info.inCart}

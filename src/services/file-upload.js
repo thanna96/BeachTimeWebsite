@@ -8,7 +8,7 @@ const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 // call S3 to retrieve upload file to specified bucket
 const uploadParams = {Bucket: 'sew-honey-bucket', Key: '', Body: ''};
-const file = "public/img/default.JPG";
+const file = "public/img/default2.JPG";
 
 // Configure the file stream and obtain the upload parameters
 const fs = require('fs');

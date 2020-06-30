@@ -9,6 +9,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {ProductProvider} from "./context";
 
 require('dotenv').config();
+
 ReactDOM.render(
   <React.StrictMode>
       <ProductProvider>

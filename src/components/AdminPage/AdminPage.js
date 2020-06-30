@@ -3,31 +3,37 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
+import {ProductsSize} from "../../context";
 
 const AWS = require("aws-sdk");
+const fs = require("fs");
 
 AWS.config.update({
     region: "us-east-1",
-    accessKeyId: "g",
-    secretAccessKey: "t"
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
 });
+
+const s3 = new AWS.S3();
+
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 class AdminPage extends Component {
     constructor(props){
         super(props);
         this.state = {
+            imgFiles: null,
             id: null,
             title: '',
             price: null,
-            img: '',
+            img: [],
             description: '',
             sizes: [],
             colors: []
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleFile = this.handleFile.bind(this);
+        this.handleFileChanged = this.handleFileChanged.bind(this);
         this.handleArrays = this.handleArrays.bind(this);
     }
 
@@ -64,7 +70,7 @@ class AdminPage extends Component {
                 "id": id,
                 "title": title,
                 "info": {
-                    "img": "img/"+imgName,
+                    "img": imgName,
                     "price": price,
                     "sizes": sizes,
                     "color": colors,
@@ -94,11 +100,31 @@ class AdminPage extends Component {
         })
     }
 
-    handleFile(Event){
+    handleFileChanged(Event){
+        console.log(Event.target.files)
         this.setState({
-            ...this.state,
-            img: Event.target.files[0].name
+            imgFiles: Event.target.files
+        });
+
+        Array.from(Event.target.files).forEach((file)=>{
+
+            const uploadParams = {
+                Bucket: 'sew-honey-bucket',
+                Key: file.name,
+                Body: ''
+            };
+            //uploadParams.Body = file;
+            //const path = require('path');
+            //uploadParams.Key = path.basename(file.name);
+            s3.upload(uploadParams, function(err, data) {
+                if (err) {
+                    console.log("Error", err);
+                } if (data) {
+                    console.log("Upload Success", data.Location);
+                }
+            });
         })
+
     }
 
     handleArrays(Event) {
@@ -113,11 +139,13 @@ class AdminPage extends Component {
     }
 
     handleSubmit(Event) {
+
+        const imageNames = this.state.imgFiles.forEach(image => imageNames.push(image.name))
         console.log(
             "id",this.state.id,
             "title",this.state.title,
             "price",this.state.price,
-            "img",this.state.img,
+            "img",imageNames,
             "desc",this.state.description,
             "colors",this.state.colors,
             "sizes",this.state.sizes);
@@ -141,7 +169,7 @@ class AdminPage extends Component {
             <div className="row col-10 mx-auto col-md-6 ">
                 <Form onSubmit={this.handleSubmit} >
                     <Form.Group>
-                        <Form.File multiple id="exampleFormControlFile1" label="Picture:" onChange={this.handleFile} />
+                        <Form.File multiple id="imgUpload" label="Picture:" onChange={this.handleFileChanged} />
                     </Form.Group>
                     <br/>
                     <Row>
