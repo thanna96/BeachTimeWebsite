@@ -38,7 +38,6 @@ class Product extends Component {
 
                         <button className="cart-btn" disabled={!!info.inCart}
                                 onClick={()=>{
-                                    //value.addToCart(id,title);
                                     value.openModal(id,title);
                         }}>
                             {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>

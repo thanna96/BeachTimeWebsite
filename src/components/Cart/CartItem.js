@@ -13,7 +13,8 @@ export default function CartItem({item,value}) {
             </div>
 
             <div className="col-10 mx-auto col-lg-2">
-                <span className="d-lg-none">product : </span>{title},{info.color[0]},{info.sizes[0]}
+                <span className="d-lg-none">product : </span>{title},{info.selColor},{info.selSize}
+            {/*    If the size and color are undefined go with array index 0    */}
             </div>
 
             <div className="col-10 mx-auto col-lg-2">

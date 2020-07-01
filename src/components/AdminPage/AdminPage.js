@@ -3,12 +3,13 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
+import {ProductsSize} from "../../context";
 
 const AWS = require("aws-sdk");
 AWS.config.update({
     region: "us-east-1",
-    accessKeyId: "",
-    secretAccessKey: ""
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
 });
 
 const s3 = new AWS.S3();
@@ -70,7 +71,9 @@ class AdminPage extends Component {
                     "price": price,
                     "sizes": sizes,
                     "color": colors,
-                    "company": "SHS",
+                    "selSize": '',
+                    "selColor": '',
+                    "style": "One-Piece",
                     "description": description,
                     "inCart": false,
                     "count": 0,

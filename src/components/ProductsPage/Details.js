@@ -5,6 +5,24 @@ import {ButtonContainer} from "../Styles/Button";
 import { Carousel } from 'react-responsive-carousel';
 
 class Details extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            selSiz: '',
+            selCol: ''
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(Event){
+        let nam = Event.target.name;
+        let val = Event.target.value;
+        this.setState({
+            ...this.state,
+            [nam]: val
+        })
+    }
+
     render() {
         return (
             <ProductConsumer>
@@ -46,9 +64,9 @@ class Details extends Component {
                                         {/* Size */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Size:
-                                            <select id="mylist"  >
+                                            <select name="selSiz" onChange={this.handleChange} >
                                                 {info.sizes.map(size => (
-                                                    <option key={size} >{size}</option>
+                                                    <option value={size} >{size}</option>
                                                 ))}
                                             </select>
                                         </h4>
@@ -56,25 +74,25 @@ class Details extends Component {
                                         {/* Color */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Color:
-                                            <select id="mylist"  >
+                                            <select name="selCol"  onChange={this.handleChange}>
                                                 {info.color.map(color => (
-                                                    <option key={color} >{color}</option>
+                                                    <option value={color} >{color}</option>
                                                 ))}
                                             </select>
                                         </h4>
 
-                                        {/* Quantity */}
-                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                            <form>
-                                                <div className="form-group ">
-                                                    <label htmlFor="exampleDropdownFormEmail1">Quantity:</label>
-                                                    <input type="number" className="form-control  btn-outline-dark"
-                                                           style={{width: "20%"}}
-                                                           id="quantity"
-                                                           placeholder="1"/>
-                                                </div>
-                                            </form>
-                                        </h4>
+                                        {/*/!* Quantity *!/*/}
+                                        {/*<h4 className="text-title text-uppercase text-muted mt-3 mb-2">*/}
+                                        {/*    <form>*/}
+                                        {/*        <div className="form-group ">*/}
+                                        {/*            <label htmlFor="exampleDropdownFormEmail1">Quantity:</label>*/}
+                                        {/*            <input type="number" className="form-control  btn-outline-dark"*/}
+                                        {/*                   style={{width: "20%"}}*/}
+                                        {/*                   id="quantity"*/}
+                                        {/*                   placeholder="1"/>*/}
+                                        {/*        </div>*/}
+                                        {/*    </form>*/}
+                                        {/*</h4>*/}
 
                                         <h4>
                                             <strong>
@@ -98,8 +116,10 @@ class Details extends Component {
                                             <ButtonContainer
                                                 disabled={info.inCart}
                                                 onClick={()=>{
+                                                    info.selSize = this.state.selSiz
+                                                    info.selColor = this.state.selCol
                                                     value.addToCart(id,title);
-                                                    value.openModal(id,title);}}>
+                                                    }}>
                                                 {info.inCart?'inCart':'Add to Cart'}
                                             </ButtonContainer>
                                         </div>
