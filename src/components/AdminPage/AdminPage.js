@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button'
 import {ProductsSize} from "../../context";
 
 const AWS = require("aws-sdk");
-const fs = require("fs");
 
 AWS.config.update({
     region: "us-east-1",
@@ -22,7 +21,7 @@ class AdminPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            imgFiles: null,
+            imgFiles: [],
             id: null,
             title: '',
             price: null,
@@ -101,21 +100,32 @@ class AdminPage extends Component {
     }
 
     handleFileChanged(Event){
-        console.log(Event.target.files)
-        this.setState({
-            imgFiles: Event.target.files
-        });
+        const fileNames = [];
+        for (let i = 0; i< Event.target.files.length; i++){
+            fileNames.push(Event.target.files[i].name)
+        }
+
+        console.log(fileNames)
+        // this.setState({
+        //     imgFiles: fileNames
+        // });
+        this.state.imgFiles = fileNames
+        console.log(this.state.imgFiles)
 
         Array.from(Event.target.files).forEach((file)=>{
 
             const uploadParams = {
                 Bucket: 'sew-honey-bucket',
-                Key: file.name,
+                Key: "img/"+file.name + ".jpeg",
                 Body: ''
             };
-            //uploadParams.Body = file;
+            //const fileStream = fs.createReadStream(file.path);
+           // fileStream.on('error', function(err) {
+           //     console.log('File Error', err);
+            //});
+            uploadParams.Body = file;
             //const path = require('path');
-            //uploadParams.Key = path.basename(file.name);
+            //uploadParams.Key = path.basename(file.path);
             s3.upload(uploadParams, function(err, data) {
                 if (err) {
                     console.log("Error", err);
@@ -140,12 +150,13 @@ class AdminPage extends Component {
 
     handleSubmit(Event) {
 
-        const imageNames = this.state.imgFiles.forEach(image => imageNames.push(image.name))
+        let imageNames = this.state.imgFiles;
+
         console.log(
             "id",this.state.id,
             "title",this.state.title,
             "price",this.state.price,
-            "img",imageNames,
+            "img",imageNames.map(image => image = image + ".jpeg"),
             "desc",this.state.description,
             "colors",this.state.colors,
             "sizes",this.state.sizes);
@@ -153,7 +164,7 @@ class AdminPage extends Component {
             this.state.id,
             this.state.title,
             parseFloat(this.state.price),
-            this.state.img,
+            imageNames.map(image => image = image + ".jpeg"),
             this.state.description,
             this.state.colors,
             this.state.sizes);

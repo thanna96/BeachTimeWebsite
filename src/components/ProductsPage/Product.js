@@ -5,9 +5,10 @@ import {ProductConsumer} from "../../context";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
-import {Storage} from 'aws-amplify'
+import Image from "react-bootstrap/Image";
 
 const AWS = require("aws-sdk");
+const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 AWS.config.update({
     region: "us-east-1",
@@ -23,32 +24,11 @@ class Product extends Component {
         }
     }
 
-    componentDidMount() {
-        Storage.get('default.jpg')
-            .then(data => {
-                this.setState({
-                    image: data
-                })
-            })
-            .catch(err =>{
-                console.log('error fetching image')
-            })
-        console.log(this.state.image)
-    }
-
-    // handleImage(image){
-    //     let params = {
-    //         Bucket: 'sew-honey-bucket',
-    //         Key: image
-    //     };
-    //
-    //     return URL.createObjectURL(s3.getSignedUrl('getObject', params))
-    // }
-
     render() {
         const {id, title, info} = this.props.product;
         return (
             <ProductWrapper className="col-6 mx-auto col-md-6 col-lg-3 my-3">
+
                 <div className="card">
                     <ProductConsumer>
                         {value=>(
@@ -56,7 +36,7 @@ class Product extends Component {
                     <div className="img-container p-0"
                          onClick={()=>value.handleDetail(id)}>
                         <Link to="/details">
-                            <img src={this.state.image} alt="product" className="card-img-top"/>
+                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} id="imgTest" alt="product" className="card-img-top"/>
                         </Link>
 
                         <button className="cart-btn" disabled={!!info.inCart}
