@@ -54,16 +54,6 @@ class ProductProvider extends Component {
             })
         };
         scanTable();
-
-
-        // let tempProducts = [];
-        // storeProducts.forEach(item => {
-        //     const singleItem = {...item};
-        //     tempProducts = [...tempProducts, singleItem];
-        // })
-        // this.setState(()=>{
-        //     return{products:tempProducts}
-        // })
     }
 
     getItem = id =>{

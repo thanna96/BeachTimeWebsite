@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import Image from "react-bootstrap/Image";
 
 const AWS = require("aws-sdk");
-const s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 AWS.config.update({
     region: "us-east-1",
@@ -28,11 +27,10 @@ class Product extends Component {
         const {id, title, info} = this.props.product;
         return (
             <ProductWrapper className="col-6 mx-auto col-md-6 col-lg-3 my-3">
-
                 <div className="card">
+
                     <ProductConsumer>
                         {value=>(
-
                     <div className="img-container p-0"
                          onClick={()=>value.handleDetail(id)}>
                         <Link to="/details">
@@ -49,7 +47,6 @@ class Product extends Component {
                                 <div>Add to Cart <FontAwesomeIcon icon={ faShoppingCart }/></div>)}
                         </button>
                     </div>)}
-
                     </ProductConsumer>
 
                     {/* Card Footer */}
@@ -64,6 +61,7 @@ class Product extends Component {
                             {info.price}
                         </h5>
                     </div>
+
                 </div>
             </ProductWrapper>
         );
@@ -76,8 +74,8 @@ Product.propTypes = {
         title:PropTypes.string,
         info: PropTypes.shape(
             {
-                img:PropTypes.string,
-                price:PropTypes.string,
+                img:PropTypes.array,
+                price:PropTypes.number,
                 inCart:PropTypes.bool
             }
         ),

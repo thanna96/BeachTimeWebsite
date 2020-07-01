@@ -22,29 +22,16 @@ class Details extends Component {
                                 <div className="row">
                                     <div className="col-10 mx-auto col-md-6 my-3">
                                         <Carousel>
-                                            <div>
-                                                <img
-                                                    className="d-block "
-                                                    src={info.img}
-                                                    alt="First slide"
-                                                />
-                                            </div>
-                                            <div>
-                                                <img
-                                                    className="d-block"
-                                                    src={info.img}
-                                                    alt="Third slide"
-                                                />
-                                            </div>
-                                            <div>
-                                                <img
-                                                    className="d-block"
-                                                    src={info.img}
-                                                    alt="Third slide"
-                                                />
-                                            </div>
+                                                {info.img.map(image => (
+                                                    <div>
+                                                    <img
+                                                        className="d-block "
+                                                        src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
+                                                        alt="slide photo"
+                                                    />
+                                                    </div>
+                                                ))}
                                         </Carousel>
-                                        {/*<img src={img} className="img-fluid" alt="product"/>*/}
                                     </div>
                                     {/* product text*/}
                                     <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
@@ -58,31 +45,25 @@ class Details extends Component {
                                         {/* Size */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Size:
-                                            <button className="btn btn-outline-dark dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                Select
-                                            </button>
-                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a className="dropdown-item" href="https://thomashanna.me/">Action</a>
-                                                <a className="dropdown-item" href="https://thomashanna.me/">Another action</a>
-                                                <a className="dropdown-item" href="https://thomashanna.me/">Something else here</a>
-                                            </div>
+                                            <select id="mylist"  >
+                                                <option>XS</option>
+                                                <option>S</option>
+                                                <option>M</option>
+                                                <option>L</option>
+                                                <option>XL</option>
+                                            </select>
                                         </h4>
 
                                         {/* Color */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Color:
-                                            <button className="btn btn-outline-dark dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                Select
-                                            </button>
-                                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a className="dropdown-item" href="https://thomashanna.me/">Action</a>
-                                                <a className="dropdown-item" href="https://thomashanna.me/">Another action</a>
-                                                <a className="dropdown-item" href="https://thomashanna.me/">Something else here</a>
-                                            </div>
+                                            <select id="mylist"  >
+                                                <option>Blue</option>
+                                                <option>Black</option>
+                                                <option>Green</option>
+                                                <option>Red</option>
+                                                <option>White</option>
+                                            </select>
                                         </h4>
 
                                         {/* Quantity */}

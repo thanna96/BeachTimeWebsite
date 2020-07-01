@@ -105,12 +105,7 @@ class AdminPage extends Component {
             fileNames.push(Event.target.files[i].name)
         }
 
-        console.log(fileNames)
-        // this.setState({
-        //     imgFiles: fileNames
-        // });
         this.state.imgFiles = fileNames
-        console.log(this.state.imgFiles)
 
         Array.from(Event.target.files).forEach((file)=>{
 
@@ -119,13 +114,7 @@ class AdminPage extends Component {
                 Key: "img/"+file.name + ".jpeg",
                 Body: ''
             };
-            //const fileStream = fs.createReadStream(file.path);
-           // fileStream.on('error', function(err) {
-           //     console.log('File Error', err);
-            //});
             uploadParams.Body = file;
-            //const path = require('path');
-            //uploadParams.Key = path.basename(file.path);
             s3.upload(uploadParams, function(err, data) {
                 if (err) {
                     console.log("Error", err);
@@ -168,8 +157,6 @@ class AdminPage extends Component {
             this.state.description,
             this.state.colors,
             this.state.sizes);
-
-
 
         Event.preventDefault();
     }

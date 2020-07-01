@@ -48,7 +48,7 @@ class ProductList extends Component {
                             <ProductConsumer>
                                 {(value)=>{
                                     return value.products.map( product =>{
-                                        return <Product key={product.productId} product={product}/>
+                                        return <Product key={product.title} product={product}/>
                                     })
                                 }}
                             </ProductConsumer>
