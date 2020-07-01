@@ -2,14 +2,12 @@ import React, {Component} from 'react';
 import {detailProduct} from './data';
 
 const AWS = require("aws-sdk");
-
 AWS.config.update({
     region: "us-east-1",
     accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
 });
 const docClient = new AWS.DynamoDB.DocumentClient();
-
 
 const ProductContext = React.createContext();
 // Provider
@@ -48,7 +46,7 @@ class ProductProvider extends Component {
                 params.ExclusiveStartKey  = items.LastEvaluatedKey;
             }while(typeof items.LastEvaluatedKey != "undefined");
 
-            console.log("gfdgdffg",scanResults)
+            console.log("Scan Results:",scanResults)
             this.setState(()=>{
                 return{products:scanResults.sort((a,b)=> a.id > b.id ? 1 : -1)}
             })
@@ -56,20 +54,20 @@ class ProductProvider extends Component {
         scanTable();
     }
 
-    getItem = id =>{
-        return this.state.products.find(item => item.id === id);
+    getItem = (id,title) =>{
+        return this.state.products.find(item => item.id === id && item.title === title);
     }
 
-    handleDetail = id =>{
-        const product = this.getItem(id);
+    handleDetail = (id,title) =>{
+        const product = this.getItem(id,title);
         this.setState(()=>{
             return {detailProduct:product};
         });
     }
 
-    increment = (id)=>{
+    increment = (id,title)=>{
         let tempCart = [...this.state.cart];
-        const selectedProduct = tempCart.find(item => item.id === id);
+        const selectedProduct = tempCart.find(item => item.id === id && item.title === title);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
         product.info.count = product.info.count + 1;
@@ -82,15 +80,15 @@ class ProductProvider extends Component {
         })
     };
 
-    decrement = (id)=>{
+    decrement = (id,title) =>{
         let tempCart = [...this.state.cart];
-        const selectedProduct = tempCart.find(item => item.id === id);
+        const selectedProduct = tempCart.find(item => item.id === id && item.title === title);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
         product.info.count = product.info.count - 1;
 
         if(product.info.count === 0){
-            this.removeItem(id);
+            this.removeItem(id,title);
         }
         else {
             product.info.total = product.info.price * product.info.count;
@@ -103,13 +101,13 @@ class ProductProvider extends Component {
         }
     };
 
-    removeItem = (id)=>{
+    removeItem = (id,title) =>{
         let tempProducts = [...this.state.products];
         let tempCart = [...this.state.cart];
 
-        tempCart = tempCart.filter(item => item.id !== id);
+        tempCart = tempCart.filter(item => item.id !== id && item.title !== title);
 
-        const index = tempProducts.indexOf(this.getItem(id));
+        const index = tempProducts.indexOf(this.getItem(id,title));
         let removedProduct = tempProducts[index];
         removedProduct.info.inCart = false;
         removedProduct.info.count = 0;
@@ -123,7 +121,7 @@ class ProductProvider extends Component {
         }, () =>this.addTotals())
     };
 
-    clearCart = (id)=>{
+    clearCart = () =>{
         this.setState(()=>{
             return {
                 cart:[]
@@ -149,21 +147,20 @@ class ProductProvider extends Component {
         })
     }
 
-    addToCart = (id) =>{
+    addToCart = (id,title) =>{
         let tempProducts = [...this.state.products];
-        const index = tempProducts.indexOf(this.getItem(id));
+        const index = tempProducts.indexOf(this.getItem(id,title));
         const product = tempProducts[index];
         product.info.inCart = true;
         product.info.count = 1;
-        const price = product.info.price;
-        product.info.total = price;
+        product.info.total = product.info.price;
         this.setState( () =>{
             return { products: tempProducts,cart:[...this.state.cart,product]};
         },()=>this.addTotals());
     };
 
-    openModal = id =>{
-        const product = this.getItem(id);
+    openModal = (id,title) =>{
+        const product = this.getItem(id,title);
         this.setState( () =>{
             return {modalProduct:product,modalOpen:true}
         })

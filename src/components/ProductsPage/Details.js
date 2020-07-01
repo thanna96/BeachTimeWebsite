@@ -25,9 +25,10 @@ class Details extends Component {
                                                 {info.img.map(image => (
                                                     <div>
                                                     <img
+                                                        key={image}
                                                         className="d-block "
                                                         src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
-                                                        alt="slide photo"
+                                                        alt=""
                                                     />
                                                     </div>
                                                 ))}
@@ -46,11 +47,9 @@ class Details extends Component {
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Size:
                                             <select id="mylist"  >
-                                                <option>XS</option>
-                                                <option>S</option>
-                                                <option>M</option>
-                                                <option>L</option>
-                                                <option>XL</option>
+                                                {info.sizes.map(size => (
+                                                    <option key={size} >{size}</option>
+                                                ))}
                                             </select>
                                         </h4>
 
@@ -58,11 +57,9 @@ class Details extends Component {
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Color:
                                             <select id="mylist"  >
-                                                <option>Blue</option>
-                                                <option>Black</option>
-                                                <option>Green</option>
-                                                <option>Red</option>
-                                                <option>White</option>
+                                                {info.color.map(color => (
+                                                    <option key={color} >{color}</option>
+                                                ))}
                                             </select>
                                         </h4>
 
@@ -101,8 +98,8 @@ class Details extends Component {
                                             <ButtonContainer
                                                 disabled={info.inCart}
                                                 onClick={()=>{
-                                                    value.addToCart(id);
-                                                    value.openModal(id);}}>
+                                                    value.addToCart(id,title);
+                                                    value.openModal(id,title);}}>
                                                 {info.inCart?'inCart':'Add to Cart'}
                                             </ButtonContainer>
                                         </div>

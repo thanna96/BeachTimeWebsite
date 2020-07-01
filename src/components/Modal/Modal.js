@@ -10,7 +10,7 @@ class Modal extends Component {
             <ProductConsumer>
                 {(value) =>{
                     const {modalOpen,closeModal} = value;
-                    const{ title, info} = value.modalProduct;
+                    const{ id, title, info} = value.modalProduct;
 
                     if(!modalOpen){
                         return null;
@@ -19,16 +19,37 @@ class Modal extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5">
-                                        <h5>item added to cart!</h5>
-                                        <img src={info.img} className="img-fluid" alt="product"/>
                                         <h5>{title}</h5>
+                                        <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} className="img-fluid" alt="product"/>
+                                        {/* Size */}
+                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                            Size:
+                                            <select id="mylist"  >
+                                                {info.sizes.map(size => (
+                                                    <option key={size} >{size}</option>
+                                                ))}
+                                            </select>
+                                        </h4>
+
+                                        {/* Color */}
+                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                            Color:
+                                            <select id="mylist"  >
+                                                {info.color.map(color => (
+                                                    <option key={color} >{color}</option>
+                                                ))}
+                                            </select>
+                                        </h4>
                                         <h5 className="text-muted">price : ${info.price}</h5>
                                         <ButtonContainer onClick={()=>closeModal()}>
                                             Close
                                         </ButtonContainer>
-                                        <Link to='/Cart'>
-                                            <ButtonContainer onClick={()=>closeModal()}>
-                                                View Cart
+                                        <Link to='/ProductList'>
+                                            <ButtonContainer onClick={()=>{
+                                                closeModal();
+                                                value.addToCart(id,title);
+                                            }}>
+                                                Add to Cart
                                             </ButtonContainer>
                                         </Link>
                                     </div>

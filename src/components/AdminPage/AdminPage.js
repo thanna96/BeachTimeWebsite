@@ -3,18 +3,15 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
-import {ProductsSize} from "../../context";
 
 const AWS = require("aws-sdk");
-
 AWS.config.update({
     region: "us-east-1",
-    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+    accessKeyId: "",
+    secretAccessKey: ""
 });
 
 const s3 = new AWS.S3();
-
 const docClient = new AWS.DynamoDB.DocumentClient();
 
 class AdminPage extends Component {
@@ -105,10 +102,9 @@ class AdminPage extends Component {
             fileNames.push(Event.target.files[i].name)
         }
 
+        // eslint-disable-next-line react/no-direct-mutation-state
         this.state.imgFiles = fileNames
-
         Array.from(Event.target.files).forEach((file)=>{
-
             const uploadParams = {
                 Bucket: 'sew-honey-bucket',
                 Key: "img/"+file.name + ".jpeg",
@@ -123,22 +119,25 @@ class AdminPage extends Component {
                 }
             });
         })
-
     }
 
     handleArrays(Event) {
         let nam = Event.target.name;
         let val = Event.target.value;
         if(nam === 'colors'){
-            this.state.colors.push(val)
+            if(this.state.colors.indexOf(val) < 0 ){
+                this.state.colors.push(val)
+            }
         }
         if(nam === 'sizes'){
-            this.state.sizes.push(val)
+            if(this.state.sizes.indexOf(val) < 0 ){
+                this.state.sizes.push(val)
+            }
         }
+        console.log(this.state.colors)
     }
 
     handleSubmit(Event) {
-
         let imageNames = this.state.imgFiles;
 
         console.log(
@@ -160,10 +159,9 @@ class AdminPage extends Component {
 
         Event.preventDefault();
     }
+
     render() {
-
         return (
-
             <div className="row col-10 mx-auto col-md-6 ">
                 <Form onSubmit={this.handleSubmit} >
                     <Form.Group>

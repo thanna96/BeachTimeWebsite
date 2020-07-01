@@ -5,7 +5,6 @@ import {ProductConsumer} from "../../context";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
-import Image from "react-bootstrap/Image";
 
 const AWS = require("aws-sdk");
 
@@ -32,15 +31,15 @@ class Product extends Component {
                     <ProductConsumer>
                         {value=>(
                     <div className="img-container p-0"
-                         onClick={()=>value.handleDetail(id)}>
+                         onClick={()=>value.handleDetail(id,title)}>
                         <Link to="/details">
                             <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} id="imgTest" alt="product" className="card-img-top"/>
                         </Link>
 
                         <button className="cart-btn" disabled={!!info.inCart}
                                 onClick={()=>{
-                                    value.addToCart(id);
-                                    value.openModal(id);
+                                    //value.addToCart(id,title);
+                                    value.openModal(id,title);
                         }}>
                             {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>
                             ):(
