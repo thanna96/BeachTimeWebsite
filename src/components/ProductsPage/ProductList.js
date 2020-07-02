@@ -6,11 +6,65 @@ import {ProductConsumer} from "../../context";
 import img from "../../2020.JPG";
 
 class ProductList extends Component {
-    state={
-        products:storeProducts
+    constructor(props) {
+        super(props);
+        this.sortList = this.sortList.bind(this);
+        this.state = {
+            products: storeProducts,
+            sortChoice: 'new'
+        }
     }
 
+    sortProducts = (data) =>{
+        switch ( this.state.sortChoice ){
+            default:
+                data = data.sort((a,b)=> a.id > b.id ? 1 : -1);
+                break;
+            case 'priceLH':
+                data = data.sort((a,b)=> a.info.price > b.info.price ? 1 : -1);
+                break;
+            case 'priceHL':
+                data = data.sort((a,b)=> a.info.price < b.info.price ? 1 : -1)
+                break;
+            case 'AZ':
+                data = data.sort((a,b)=> a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
+                break;
+            case 'ZA':
+                data = data.sort((a,b)=> a.title.toLowerCase() < b.title.toLowerCase() ? 1 : -1)
+                break;
+        }
+    }
+
+    sortList(Event){
+        let sortChoice = Event.target.value;
+        let data = this.state.sortChoice;
+
+        switch ( sortChoice ){
+            default:
+                data = 'new'
+                break;
+            case 'priceLH':
+                data = 'priceLH'
+                break;
+            case 'priceHL':
+                data = 'priceHL'
+                break;
+            case 'AZ':
+                data = 'AZ'
+                break;
+            case 'ZA':
+                data = 'ZA'
+                break;
+        }
+
+        this.setState({
+            sortChoice: data
+        })
+    }
+
+
     render() {
+
         return (
             <React.Fragment>
 
@@ -26,12 +80,12 @@ class ProductList extends Component {
                         {/*<Title name="summer 2020" title="collection"/>*/}
 
                         <h5 className="text-title text-uppercase mt-3 mb-2 text-muted" >Sort:
-                        <select id="mylist"  >
-                            <option>Newest</option>
-                            <option>Price: (Low to High)</option>
-                            <option>Price: (High to Low)</option>
-                            <option>Name: A-Z</option>
-                            <option>Name: Z-A</option>
+                        <select id="sortList" onChange={this.sortList}>
+                            <option value="new">Newest</option>
+                            <option value="priceLH">Price: (Low to High)</option>
+                            <option value="priceHL">Price: (High to Low)</option>
+                            <option value="AZ">Name: A-Z</option>
+                            <option value="ZA">Name: Z-A</option>
                         </select>
                         </h5>
                         <h5  className="text-title text-uppercase mt-3 text-muted">
@@ -47,6 +101,7 @@ class ProductList extends Component {
                         <div className="row">
                             <ProductConsumer>
                                 {(value)=>{
+                                    this.sortProducts(value.products)
                                     return value.products.map( product =>{
                                         return <Product key={product.title} product={product}/>
                                     })

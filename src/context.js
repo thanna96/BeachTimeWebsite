@@ -31,6 +31,7 @@ class ProductProvider extends Component {
         this.setProducts();
     }
 
+
     setProducts = ()=>{
         const scanTable = async () => {
             const params = {
@@ -183,7 +184,8 @@ class ProductProvider extends Component {
                 increment: this.increment,
                 decrement: this.decrement,
                 removeItem: this.removeItem,
-                clearCart: this.clearCart
+                clearCart: this.clearCart,
+                sortProducts: this.sortProducts
             }}>
                 {this.props.children}
             </ProductContext.Provider>
