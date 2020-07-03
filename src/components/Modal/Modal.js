@@ -5,6 +5,24 @@ import {ButtonContainer} from "../Styles/Button";
 import {Link} from "react-router-dom";
 
 class Modal extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            selSiz: 'xs',
+            selCol: 'White'
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(Event){
+        let nam = Event.target.name;
+        let val = Event.target.value;
+        this.setState({
+            ...this.state,
+            [nam]: val
+        })
+    }
+
     render() {
         return (
             <ProductConsumer>
@@ -24,7 +42,7 @@ class Modal extends Component {
                                         {/* Size */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Size:
-                                            <select id="mylist"  >
+                                            <select name="selSize" onChange={this.handleChange} >
                                                 {info.sizes.map(size => (
                                                     <option key={size} >{size}</option>
                                                 ))}
@@ -34,7 +52,7 @@ class Modal extends Component {
                                         {/* Color */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Color:
-                                            <select id="mylist"  >
+                                            <select name="selCol" onChange={this.handleChange} >
                                                 {info.color.map(color => (
                                                     <option key={color} >{color}</option>
                                                 ))}
@@ -46,6 +64,8 @@ class Modal extends Component {
                                         </ButtonContainer>
                                         <Link to='/ProductList'>
                                             <ButtonContainer onClick={()=>{
+                                                info.selSize = this.state.selSiz
+                                                info.selColor = this.state.selCol
                                                 closeModal();
                                                 value.addToCart(id,title);
                                             }}>
