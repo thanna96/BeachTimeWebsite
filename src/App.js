@@ -21,7 +21,7 @@ import AdminPage from "./components/AdminPage/AdminPage";
 
 function App() {
   return (
-      <HashRouter>
+      <React.Fragment>
           <TestDb/>
           <TopBar/>
           <Navbar/>
@@ -40,7 +40,7 @@ function App() {
           </Switch>
           <Modal/>
           <Footer/>
-      </HashRouter>
+      </React.Fragment>
   );
 }
 
