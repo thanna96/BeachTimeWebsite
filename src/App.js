@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch,Route,HashRouter} from "react-router-dom";
+import {Switch,Route} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Header/Navbar'
 import ProductList from './components/ProductsPage/ProductList'
