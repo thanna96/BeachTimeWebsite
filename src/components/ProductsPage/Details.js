@@ -8,8 +8,8 @@ class Details extends Component {
     constructor(props){
         super(props);
         this.state = {
-            selSiz: '',
-            selCol: ''
+            selSiz: 'xs',
+            selCol: 'White'
         }
         this.handleChange = this.handleChange.bind(this);
     }

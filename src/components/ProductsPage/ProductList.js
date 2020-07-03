@@ -11,6 +11,7 @@ class ProductList extends Component {
         this.sortList = this.sortList.bind(this);
         this.state = {
             products: storeProducts,
+            filterChoice: 'all',
             sortChoice: 'new'
         }
     }
@@ -62,6 +63,45 @@ class ProductList extends Component {
         })
     }
 
+    filterHandler(Event){
+        let filtChoice = Event.target.value;
+        let data = this.state.filterChoice;
+
+        switch ( filtChoice ){
+            default:
+                data = 'all'
+                break;
+            case 'tops':
+                data = 'tops'
+                break;
+            case 'bottoms':
+                data = 'bottoms'
+                break;
+            case 'onePiece':
+                data = 'onePiece'
+                break;
+        }
+
+        this.setState({
+            filterChoice: data
+        })
+    }
+
+    filterProducts = (data) =>{
+        switch ( this.state.filterChoice ){
+            default:
+                break;
+            case 'tops':
+                data.map(product => product.style === 'tops')
+                break;
+            case 'bottoms':
+                data.map(product => product.style === 'bottoms')
+                break;
+            case 'onePiece':
+                data.map(product => product.style === 'onePiece')
+                break;
+        }
+    }
 
     render() {
 
@@ -79,7 +119,8 @@ class ProductList extends Component {
                         />
                         {/*<Title name="summer 2020" title="collection"/>*/}
 
-                        <h5 className="text-title text-uppercase mt-3 mb-2 text-muted" >Sort:
+                        <h5 className="text-title text-uppercase mt-3 mb-2 text-muted" >
+                            Sort:
                         <select id="sortList" onChange={this.sortList}>
                             <option value="new">Newest</option>
                             <option value="priceLH">Price: (Low to High)</option>
@@ -90,17 +131,18 @@ class ProductList extends Component {
                         </h5>
                         <h5  className="text-title text-uppercase mt-3 text-muted">
                             Filter:
-                            <select id="mylist"  >
-                                <option>All</option>
-                                <option>Tops</option>
-                                <option>Bottoms</option>
-                                <option>One-Piece</option>
+                            <select id="mylist" onChange={this.filterHandler} >
+                                <option value="all">All</option>
+                                <option value="tops">Tops</option>
+                                <option value="bottoms">Bottoms</option>
+                                <option value="onePiece">One-Piece</option>
                             </select>
                         </h5>
 
                         <div className="row">
                             <ProductConsumer>
                                 {(value)=>{
+                                    this.filterProducts(value.products)
                                     this.sortProducts(value.products)
                                     return value.products.map( product =>{
                                         return <Product key={product.title} product={product}/>
