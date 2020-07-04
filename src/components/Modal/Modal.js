@@ -64,8 +64,10 @@ class Modal extends Component {
                                         </ButtonContainer>
                                         <Link to='/ProductList'>
                                             <ButtonContainer onClick={()=>{
-                                                info.selSize = this.state.selSiz
-                                                info.selColor = this.state.selCol
+                                                if( this.state.selSiz === null ) {info.selSize = info.sizes[0]}
+                                                else {info.selSize = this.state.selSiz}
+                                                if( this.state.selCol === null ) {info.selColor = info.color[0]}
+                                                else{info.selColor = this.state.selCol}
                                                 closeModal();
                                                 value.addToCart(id,title);
                                             }}>

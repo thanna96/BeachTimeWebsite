@@ -116,8 +116,10 @@ class Details extends Component {
                                             <ButtonContainer
                                                 disabled={info.inCart}
                                                 onClick={()=>{
-                                                    info.selSize = this.state.selSiz
-                                                    info.selColor = this.state.selCol
+                                                    if( this.state.selSiz === null ) {info.selSize = info.sizes[0]}
+                                                    else {info.selSize = this.state.selSiz}
+                                                    if( this.state.selCol === null ) {info.selColor = info.color[0]}
+                                                    else{info.selColor = this.state.selCol}
                                                     value.addToCart(id,title);
                                                     }}>
                                                 {info.inCart?'inCart':'Add to Cart'}
