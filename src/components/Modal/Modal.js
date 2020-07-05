@@ -8,8 +8,8 @@ class Modal extends Component {
     constructor(props){
         super(props);
         this.state = {
-            selSiz: 'xs',
-            selCol: 'White'
+            selSiz: '',
+            selCol: ''
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -29,6 +29,11 @@ class Modal extends Component {
                 {(value) =>{
                     const {modalOpen,closeModal} = value;
                     const{ id, title, info} = value.modalProduct;
+
+                    this.setState({
+                        selSize: info.sizes[0],
+                        selCol: info.color[0]
+                    });
 
                     if(!modalOpen){
                         return null;
@@ -64,10 +69,8 @@ class Modal extends Component {
                                         </ButtonContainer>
                                         <Link to='/ProductList'>
                                             <ButtonContainer onClick={()=>{
-                                                if( this.state.selSiz === null ) {info.selSize = info.sizes[0]}
-                                                else {info.selSize = this.state.selSiz}
-                                                if( this.state.selCol === null ) {info.selColor = info.color[0]}
-                                                else{info.selColor = this.state.selCol}
+                                                info.selSize = this.state.selSiz
+                                                info.selColor = this.state.selCol
                                                 closeModal();
                                                 value.addToCart(id,title);
                                             }}>
