@@ -207,25 +207,19 @@ export const storeProducts = [
 ];
 
 export const detailProduct = {
-  "id": 1,
-  "title": "Carter One-Piece",
+  "id": 0,
+  "title": "Unknown",
   "info" : {
-    "img": "img/default.jpg",
-    "price": 70.00,
-    "sizes": {
-      "X-Small": 1,
-      "Small": 1,
-      "Medium": 1,
-      "Large": 1,
-      "X-Large": 1
-    },
-    "color": [
-      "Black",
-      "White",
-      "Yellow"
+    "img": [""],
+    "price": 0.00,
+    "sizes": [
+      "-",
     ],
-    "company": "SHS",
-    "description": "One-Piece",
+    "color": [
+      "-"
+    ],
+    "company": ".",
+    "description": ".",
     "inCart": false,
     "count": 0,
     "total": 0

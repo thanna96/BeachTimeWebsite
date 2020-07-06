@@ -9,9 +9,17 @@ class Details extends Component {
         super(props);
         this.state = {
             selSiz: '',
-            selCol: ''
+            selCol: '',
+            productName: '',
+            id: 0
         }
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount() {
+        console.log("id",this.props.match.params.title,this.props.match.params.id)
+        this.setState({productName:this.props.match.params.title})
+        this.setState({id:parseInt(this.props.match.params.id)})
     }
 
     handleChange(Event){
@@ -27,15 +35,21 @@ class Details extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
+                    if ( value.getItem(this.state.id,this.state.productName )){
+                        value.detailProduct = value.getItem(this.state.id,this.state.productName);
+                    }
                     const {id,title,info} = value.detailProduct;
+                    //console.log("value",value.getItem(this.state.id,this.state.productName))
 
                     return (
-                        <div className="container py-5">
+                        <div>
                             {/* title */}
-                            <div className="row col-10 mx-auto col-md-6 my-3">
+                            <div className="row col-10 mx-auto col-md-6 ">
                                 <h6 className="text-muted ">Home/Shop/</h6><h6>{title}</h6>
                             </div>
                             {/* end title */}
+                        <div className="container ">
+
 
                             {/* product info */}
                                 <div className="row">
@@ -67,7 +81,7 @@ class Details extends Component {
                                             Size:
                                             <select name="selSiz" onChange={this.handleChange} >
                                                 {info.sizes.map(size => (
-                                                    <option value={size} >{size}</option>
+                                                    <option value={size} key={size}>{size}</option>
                                                 ))}
                                             </select>
                                         </h4>
@@ -77,7 +91,7 @@ class Details extends Component {
                                             Color:
                                             <select name="selCol"  onChange={this.handleChange}>
                                                 {info.color.map(color => (
-                                                    <option value={color} >{color}</option>
+                                                    <option value={color} key={color}>{color}</option>
                                                 ))}
                                             </select>
                                         </h4>
@@ -129,6 +143,7 @@ class Details extends Component {
                                     </div>
                                 </div>
                             {/* end product info */}
+                        </div>
                         </div>
                     )
                 }}

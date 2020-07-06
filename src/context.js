@@ -203,7 +203,7 @@ class ProductProvider extends Component {
                 decrement: this.decrement,
                 removeItem: this.removeItem,
                 clearCart: this.clearCart,
-                sortProducts: this.sortProducts
+                getItem: this.getItem
             }}>
                 {this.props.children}
             </ProductContext.Provider>
