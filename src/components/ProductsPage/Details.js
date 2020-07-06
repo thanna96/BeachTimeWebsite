@@ -28,10 +28,6 @@ class Details extends Component {
             <ProductConsumer>
                 {(value) => {
                     const {id,title,info} = value.detailProduct;
-                    // this.setState({
-                    //     selSiz: info.sizes[0],
-                    //     selCol: info.color[0]
-                    // });
 
                     return (
                         <div className="container py-5">
@@ -123,6 +119,8 @@ class Details extends Component {
                                                 onClick={()=>{
                                                     info.selSize = this.state.selSiz
                                                     info.selColor = this.state.selCol
+                                                    if (info.selSize === '') info.selSize = info.sizes[0];
+                                                    if (info.selColor === '') info.selColor = info.color[0];
                                                     value.addToCart(id,title);
                                                     }}>
                                                 {info.inCart?'inCart':'Add to Cart'}

@@ -38,7 +38,8 @@ class ProductProvider extends Component {
         if (localCart) {
             localCart.forEach(product => {
                 this.getItem(product.id,product.title).info.count = product.info.count
-
+                this.getItem(product.id,product.title).info.selColor = product.info.selColor
+                this.getItem(product.id,product.title).info.selSize = product.info.selSize
                 this.addToCart(product.id,product.title)
             })
         }

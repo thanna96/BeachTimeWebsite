@@ -30,11 +30,6 @@ class Modal extends Component {
                     const {modalOpen,closeModal} = value;
                     const{ id, title, info} = value.modalProduct;
 
-                    // this.setState({
-                    //     selSiz: info.sizes[0],
-                    //     selCol: info.color[0]
-                    // });
-
                     if(!modalOpen){
                         return null;
                     }else {
@@ -71,6 +66,8 @@ class Modal extends Component {
                                             <ButtonContainer onClick={()=>{
                                                 info.selSize = this.state.selSiz
                                                 info.selColor = this.state.selCol
+                                                if (info.selSize === '') info.selSize = info.sizes[0];
+                                                if (info.selColor === '') info.selColor = info.color[0];
                                                 closeModal();
                                                 value.addToCart(id,title);
                                             }}>
