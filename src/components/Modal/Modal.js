@@ -30,10 +30,10 @@ class Modal extends Component {
                     const {modalOpen,closeModal} = value;
                     const{ id, title, info} = value.modalProduct;
 
-                    this.setState({
-                        selSize: info.sizes[0],
-                        selCol: info.color[0]
-                    });
+                    // this.setState({
+                    //     selSiz: info.sizes[0],
+                    //     selCol: info.color[0]
+                    // });
 
                     if(!modalOpen){
                         return null;

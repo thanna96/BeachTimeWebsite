@@ -28,9 +28,21 @@ class ProductProvider extends Component {
     }
 
     componentDidMount() {
-        this.setProducts();
+        //localStorage.removeItem("cart")
+        this.setProducts()
     }
 
+    getCart = () =>{
+        let localCart = localStorage.getItem("cart");
+        localCart = JSON.parse(localCart)
+        if (localCart) {
+            localCart.forEach(product => {
+                this.getItem(product.id,product.title).info.count = product.info.count
+
+                this.addToCart(product.id,product.title)
+            })
+        }
+    }
 
     setProducts = ()=>{
         const scanTable = async () => {
@@ -51,6 +63,7 @@ class ProductProvider extends Component {
             this.setState(()=>{
                 return{products:scanResults.sort((a,b)=> a.id > b.id ? 1 : -1)}
             })
+            this.getCart()
         };
         scanTable();
     }
@@ -131,6 +144,7 @@ class ProductProvider extends Component {
             this.setProducts();
             this.addTotals();
         })
+        localStorage.removeItem("cart")
     };
 
     addTotals = () =>{
@@ -146,6 +160,9 @@ class ProductProvider extends Component {
                 cartTotal:total
             }
         })
+        let cartCopy = [...this.state.cart];
+        let stringCart = JSON.stringify(cartCopy);
+        localStorage.setItem("cart", stringCart);
     }
 
     addToCart = (id,title) =>{
@@ -153,8 +170,8 @@ class ProductProvider extends Component {
         const index = tempProducts.indexOf(this.getItem(id,title));
         const product = tempProducts[index];
         product.info.inCart = true;
-        product.info.count = 1;
-        product.info.total = product.info.price;
+        if (product.info.count === 0) product.info.count = 1;
+        product.info.total = product.info.price * product.info.count;
         this.setState( () =>{
             return { products: tempProducts,cart:[...this.state.cart,product]};
         },()=>this.addTotals());

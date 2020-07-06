@@ -8,8 +8,8 @@ class Details extends Component {
     constructor(props){
         super(props);
         this.state = {
-            selSiz: 'xs',
-            selCol: 'White'
+            selSiz: '',
+            selCol: ''
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -28,10 +28,10 @@ class Details extends Component {
             <ProductConsumer>
                 {(value) => {
                     const {id,title,info} = value.detailProduct;
-                    this.setState({
-                        selSize: info.sizes[0],
-                        selCol: info.color[0]
-                    });
+                    // this.setState({
+                    //     selSiz: info.sizes[0],
+                    //     selCol: info.color[0]
+                    // });
 
                     return (
                         <div className="container py-5">
