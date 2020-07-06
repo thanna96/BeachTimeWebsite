@@ -53,10 +53,10 @@ class ProductList extends Component {
                 data = 'all'
                 break;
             case 'tops':
-                data = 'tops'
+                data = 'Top'
                 break;
             case 'bottoms':
-                data = 'bottoms'
+                data = 'bottom'
                 break;
             case 'onePiece':
                 data = 'One-Piece'
@@ -92,11 +92,11 @@ class ProductList extends Component {
         switch ( this.state.filterChoice ){
             default:
                 break;
-            case 'tops':
-                data = data.filter(product => product.info.style === 'tops')
+            case 'Top':
+                data = data.filter(product => product.info.style === 'Top')
                 break;
-            case 'bottoms':
-                data = data.filter(product => product.info.style === 'bottoms')
+            case 'bottom':
+                data = data.filter(product => product.info.style === 'bottom')
                 break;
             case 'One-Piece':
                 data = data.filter(product => product.info.style === 'One-Piece')
