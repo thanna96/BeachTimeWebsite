@@ -46,7 +46,7 @@ class Details extends Component {
                                     <div className="col-10 mx-auto col-md-6 my-3">
                                         <Carousel>
                                                 {info.img.map(image => (
-                                                    <div>
+                                                    <div key=''>
                                                     <img
                                                         key={image}
                                                         className="d-block "

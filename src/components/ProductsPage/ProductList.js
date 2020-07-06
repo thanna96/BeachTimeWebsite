@@ -9,30 +9,11 @@ class ProductList extends Component {
     constructor(props) {
         super(props);
         this.sortList = this.sortList.bind(this);
+        this.filterHandler = this.filterHandler.bind(this)
         this.state = {
             products: storeProducts,
             filterChoice: 'all',
             sortChoice: 'new'
-        }
-    }
-
-    sortProducts = (data) =>{
-        switch ( this.state.sortChoice ){
-            default:
-                data = data.sort((a,b)=> a.id > b.id ? 1 : -1);
-                break;
-            case 'priceLH':
-                data = data.sort((a,b)=> a.info.price > b.info.price ? 1 : -1);
-                break;
-            case 'priceHL':
-                data = data.sort((a,b)=> a.info.price < b.info.price ? 1 : -1)
-                break;
-            case 'AZ':
-                data = data.sort((a,b)=> a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
-                break;
-            case 'ZA':
-                data = data.sort((a,b)=> a.title.toLowerCase() < b.title.toLowerCase() ? 1 : -1)
-                break;
         }
     }
 
@@ -78,7 +59,7 @@ class ProductList extends Component {
                 data = 'bottoms'
                 break;
             case 'onePiece':
-                data = 'onePiece'
+                data = 'One-Piece'
                 break;
         }
 
@@ -87,24 +68,44 @@ class ProductList extends Component {
         })
     }
 
+    sortProducts = (data) =>{
+        switch ( this.state.sortChoice ){
+            default:
+                data = data.sort((a,b)=> a.id > b.id ? 1 : -1);
+                break;
+            case 'priceLH':
+                data = data.sort((a,b)=> a.info.price > b.info.price ? 1 : -1);
+                break;
+            case 'priceHL':
+                data = data.sort((a,b)=> a.info.price < b.info.price ? 1 : -1)
+                break;
+            case 'AZ':
+                data = data.sort((a,b)=> a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
+                break;
+            case 'ZA':
+                data = data.sort((a,b)=> a.title.toLowerCase() < b.title.toLowerCase() ? 1 : -1)
+                break;
+        }
+    }
+
     filterProducts = (data) =>{
         switch ( this.state.filterChoice ){
             default:
                 break;
             case 'tops':
-                data.map(product => product.style === 'tops')
+                data = data.filter(product => product.info.style === 'tops')
                 break;
             case 'bottoms':
-                data.map(product => product.style === 'bottoms')
+                data = data.filter(product => product.info.style === 'bottoms')
                 break;
-            case 'onePiece':
-                data.map(product => product.style === 'onePiece')
+            case 'One-Piece':
+                data = data.filter(product => product.info.style === 'One-Piece')
                 break;
         }
+        return data
     }
 
     render() {
-
         return (
             <React.Fragment>
 
@@ -142,9 +143,10 @@ class ProductList extends Component {
                         <div className="row">
                             <ProductConsumer>
                                 {(value)=>{
-                                    this.filterProducts(value.products)
                                     this.sortProducts(value.products)
-                                    return value.products.map( product =>{
+                                    let products = value.products;
+                                    products = this.filterProducts(products)
+                                    return products.map( product =>{
                                         return <Product key={product.title} product={product}/>
                                     })
                                 }}
