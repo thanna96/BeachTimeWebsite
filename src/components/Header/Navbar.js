@@ -48,11 +48,11 @@ class Navbar extends Component {
                                     Policy
                                 </Link>
                             </li>
-                            <li className="nav-item mr-auto ml-auto" >
-                                <Link to='/Login' className="nav-link">
-                                    Login
-                                </Link>
-                            </li>
+                            {/*<li className="nav-item mr-auto ml-auto" >*/}
+                            {/*    <Link to='/Login' className="nav-link">*/}
+                            {/*        Login*/}
+                            {/*    </Link>*/}
+                            {/*</li>*/}
                         <li className="nav-item mr-auto ml-auto" >
                             <Link to='/SizingPage' className="nav-link">
                                 Sizing
@@ -77,11 +77,11 @@ class Navbar extends Component {
                                 <span className="mr-2">Policy</span>
                             </Link>
                         </li>
-                        <li className="nav-item" >
-                            <Link to='/Login' className="ml-2 nav-link-mobile">
-                                <span className="mr-2">Login</span>
-                            </Link>
-                        </li>
+                        {/*<li className="nav-item" >*/}
+                        {/*    <Link to='/Login' className="ml-2 nav-link-mobile">*/}
+                        {/*        <span className="mr-2">Login</span>*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
                         <li className="nav-item" >
                             <Link to='/Cart' className="nav-link-mobile ">
                                 <ButtonContainer>
