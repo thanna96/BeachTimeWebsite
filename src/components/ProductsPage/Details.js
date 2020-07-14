@@ -70,11 +70,11 @@ class Details extends Component {
                                     {/* product text*/}
                                     <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                                         <h1>{title}</h1>
-                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                            made by : <span className="text-uppercase">
-                                            {info.company}
-                                        </span>
-                                        </h4>
+                                        {/*<h4 className="text-title text-uppercase text-muted mt-3 mb-2">*/}
+                                        {/*    made by : <span className="text-uppercase">*/}
+                                        {/*    {info.company}*/}
+                                        {/*</span>*/}
+                                        {/*</h4>*/}
 
                                         {/* Size */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
