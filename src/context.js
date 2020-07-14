@@ -17,6 +17,7 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
     state ={
+        colors: [],
         products: [],
         detailProduct: detailProduct,
         cart: [],
@@ -30,6 +31,30 @@ class ProductProvider extends Component {
     componentDidMount() {
         //localStorage.removeItem("cart")
         this.setProducts()
+        this.setColors()
+    }
+
+    setColors = ()=>{
+        const scanTable = async () => {
+            const params = {
+                TableName: "Colors",
+                ProjectionExpression: "color",
+            };
+
+            let scanResults = [];
+            let items;
+            do{
+                items =  await docClient.scan(params).promise();
+                items.Items.forEach((item) => scanResults.push(item));
+                params.ExclusiveStartKey  = items.LastEvaluatedKey;
+            }while(typeof items.LastEvaluatedKey != "undefined");
+
+            console.log("Scan Results:",scanResults)
+            this.setState(()=>{
+                return{colors:scanResults}
+            })
+        };
+        scanTable();
     }
 
     getCart = () =>{

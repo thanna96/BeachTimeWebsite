@@ -53,8 +53,8 @@ class Modal extends Component {
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Color:
                                             <select name="selCol" onChange={this.handleChange} >
-                                                {info.color.map(color => (
-                                                    <option key={color} >{color}</option>
+                                                {value.colors.map(color => (
+                                                    <option key={color.color} >{color.color}</option>
                                                 ))}
                                             </select>
                                         </h4>
