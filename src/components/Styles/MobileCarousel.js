@@ -3,12 +3,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import Mimg from "../../mBanner1.JPG"
 import Mimg2 from "../../mBanner2.JPG"
 import Mimg3 from "../../mBanner3.JPG"
+import Mimg4 from "../../mBanner4.JPG"
 import { Slide } from 'react-slideshow-image';
 
 const slideImages = [
     Mimg,
     Mimg2,
-    Mimg3
+    Mimg3,
+    Mimg4
 ];
 const properties = {
     duration: 5000,
@@ -37,6 +39,10 @@ class CarouselWrapper extends Component {
                         </div>
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
                             </div>
                         </div>
                     </Slide>

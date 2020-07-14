@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button'
 
 class Contact extends Component {
     render() {
@@ -7,24 +9,27 @@ class Contact extends Component {
                 <div className="row col-10 mx-auto col-md-6 ">
                     <h6 className="text-muted ">Home/</h6><h6>Contact</h6>
                 </div>
-            <form className="center col-10 mx-auto col-md-6 ">
-                <label>
-                    Name: <br/>
-                    <input type="text" name="name" />
-                </label>
                 <br/>
-                <label>
-                    Email: <br/>
-                    <input type="text" name="name" />
-                </label>
+            <Form className="center col-10 mx-auto col-md-6 ">
+                <Form.Label>
+                    Name:
+                </Form.Label>
+                <Form.Control name='name'/>
                 <br/>
-                <label>
-                    Message: <br/>
-                    <input type="text" name="name" />
-                </label>
+                <Form.Label>
+                    Email:
+                </Form.Label>
+                <Form.Control name='email'/>
                 <br/>
-                <input  type="submit" value="Submit" />
-            </form>
+                <Form.Label>
+                    Message:
+                </Form.Label>
+                <Form.Control name='message' type="text" as="textarea" rows="3"/>
+                <br/>
+                <Button variant="primary" type="submit" >
+                    Send
+                </Button>
+            </Form>
             </div>
         );
     }
