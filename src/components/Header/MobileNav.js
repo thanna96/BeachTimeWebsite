@@ -13,7 +13,7 @@ class MobileNav extends Component {
     render() {
         return (
 
-            <Navbar bg="white" border-dark expand="lg" style={{ width: "100%" }} sticky="top">
+            <Navbar bg="white" border-dark expand="lg" style={{ width: "100%" }} >
                 <Navbar.Brand href='/'>
                     <Link to='/'>
                         <Figure.Image src={logo2}  width={140}
@@ -61,7 +61,6 @@ class MobileNav extends Component {
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
-                <hr/>
 
             </Navbar>
         );
