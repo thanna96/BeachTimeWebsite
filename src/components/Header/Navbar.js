@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {ButtonContainer} from '../Styles/Button';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../croppedLogo.jpg";
 import logo2 from "../../croppedLogo2.jpg";
 import MobileNav from "./MobileNav";
 
@@ -201,30 +200,30 @@ class Navbar extends Component {
     }
 }
 
-const TitleWrapper = styled.nav`
-    background:var(--mainWhite);
-    .nav-link{
-        color:#808080!important;
-        font-size:1.6rem;
-        text-transform:capitalize !important;
-        display: block;
-    }
-    .nav-link-mobile{
-        color:#808080!important;
-        font-size:1.6rem;
-        text-transform:capitalize !important;
-        display: none;
-    }
-    
-    @media all and (max-width: 768px){
-        .nav-link { display: none; }
-        .nav-link-mobile {
-            ul { display: table; }
-            li { display: table-cell; }
-            display : inline-block;
-        }
-    }
-`;
+// const TitleWrapper = styled.nav`
+//     background:var(--mainWhite);
+//     .nav-link{
+//         color:#808080!important;
+//         font-size:1.6rem;
+//         text-transform:capitalize !important;
+//         display: block;
+//     }
+//     .nav-link-mobile{
+//         color:#808080!important;
+//         font-size:1.6rem;
+//         text-transform:capitalize !important;
+//         display: none;
+//     }
+//
+//     @media all and (max-width: 768px){
+//         .nav-link { display: none; }
+//         .nav-link-mobile {
+//             ul { display: table; }
+//             li { display: table-cell; }
+//             display : inline-block;
+//         }
+//     }
+//`;
 
 
 const NavWrapper = styled.nav`

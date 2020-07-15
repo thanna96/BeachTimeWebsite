@@ -7,7 +7,6 @@ import Mimg4 from "../../mBanner4.JPG"
 import { Slide } from 'react-slideshow-image';
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
-import Navbar from "react-bootstrap/Navbar";
 
 const slideImages = [
     Mimg,
