@@ -44,8 +44,10 @@ class Details extends Component {
                     return (
                         <div>
                             {/* title */}
-                            <div className="row col-10 mx-auto col-md-6 ">
-                                <h6 className="text-muted ">Home/Shop/</h6><h6>{title}</h6>
+                            <div className="d-none d-sm-block" >
+                                <div className="row col-10 mx-auto col-md-6  ">
+                                    <h6 className="text-muted ">Home/Shop/</h6><h6>{title}</h6>
+                                </div>
                             </div>
                             {/* end title */}
                         <div className="container ">
@@ -54,7 +56,7 @@ class Details extends Component {
                             {/* product info */}
                                 <div className="row">
                                     <div className="col-10 mx-auto col-md-6 my-3">
-                                        <Carousel>
+                                        <Carousel showThumbs={false}>
                                                 {info.img.map(image => (
                                                     <div key=''>
                                                     <img
@@ -69,17 +71,25 @@ class Details extends Component {
                                     </div>
                                     {/* product text*/}
                                     <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                                        <h1>{title}</h1>
-                                        {/*<h4 className="text-title text-uppercase text-muted mt-3 mb-2">*/}
-                                        {/*    made by : <span className="text-uppercase">*/}
-                                        {/*    {info.company}*/}
-                                        {/*</span>*/}
-                                        {/*</h4>*/}
+                                        <h1 className="text-center">{title}</h1>
+
+                                        <h4 className="text-center text-muted">
+                                            <strong>
+                                                <span>$</span>{info.price}
+                                            </strong>
+                                        </h4>
+
+                                        <p className="text-capitalize font-weight-bold mt-3 mb-0">
+                                            Product info:
+                                        </p>
+                                        <p className="text-muted lead">
+                                            {info.description}
+                                        </p>
 
                                         {/* Size */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                            Size:
-                                            <select name="selSiz" onChange={this.handleChange} >
+                                            Size:<br/>
+                                            <select name="selSiz"style={{width:"100%"}} onChange={this.handleChange} >
                                                 {info.sizes.map(size => (
                                                     <option value={size} key={size}>{size}</option>
                                                 ))}
@@ -88,14 +98,14 @@ class Details extends Component {
 
                                         {/* Color */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                            Color:
-                                            <select name="selCol"  onChange={this.handleChange}>
+                                            Color:<br/>
+                                            <select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>
                                                 {value.colors.map(color => (
                                                     <option value={color.color} key={color.color}>{color.color}</option>
                                                 ))}
                                             </select>
                                         </h4>
-
+                                        <br/>
                                         {/*/!* Quantity *!/*/}
                                         {/*<h4 className="text-title text-uppercase text-muted mt-3 mb-2">*/}
                                         {/*    <form>*/}
@@ -109,18 +119,7 @@ class Details extends Component {
                                         {/*    </form>*/}
                                         {/*</h4>*/}
 
-                                        <h4>
-                                            <strong>
-                                                price : <span>$</span>{info.price}
-                                            </strong>
-                                        </h4>
 
-                                        <p className="text-capitalize font-weight-bold mt-3 mb-0">
-                                            Product info:
-                                        </p>
-                                        <p className="text-muted lead">
-                                            {info.description}
-                                        </p>
                                         {/* buttons */}
                                         <div>
                                             <Link to="/ProductList">
