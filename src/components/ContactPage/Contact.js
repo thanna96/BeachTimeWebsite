@@ -10,7 +10,7 @@ class Contact extends Component {
                     <h6 className="text-muted ">Home/</h6><h6>Contact</h6>
                 </div>
                 <br/>
-            <Form className="center col-10 mx-auto col-md-6 ">
+            <Form className="col-10 mx-auto col-md-6 ">
                 <Form.Label>
                     Name:
                 </Form.Label>
