@@ -58,9 +58,15 @@ body{
 .navbar{
   /*font-family: 'Amatic SC', cursive;*/
 }
-
+.aboutTitle{
+  font-family: 'Nanum Myeongjo', serif;
+}
 .carousel-mobile{
     display: none;
+}
+.alignCard{
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (max-width: 600px) {
   .carousel-mobile {display: block;}

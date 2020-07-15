@@ -8,7 +8,9 @@ class StorePolicy extends Component {
                     <h6 className="text-muted ">Home/</h6><h6>Policy</h6>
                 </div>
                 <br/>
-                <p className="row col-10 mx-auto col-md-6 container-fluid">
+                <h3>Return Policy</h3>
+                <br/>
+                <p className="row col-10 mx-auto col-md-6 container-fluid text-center">
                 unfortunately, sew honey does not accept returns as we work
                 on a made to order service. Returns will only be accepted if
                 you have received a damaged item. However, all returns must be
