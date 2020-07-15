@@ -15,6 +15,7 @@ class CarouselWrapper extends Component {
 
     render() {
         return (
+            <div className='container-fluid'>
 <Carousel infiniteLoop autoPlay showThumbs={false} showStatus={false} useKeyboardArrows className="presentation-mode">
     <div key="content-3" className="each-slide">
         <img src={slideImages[0]} alt=""/>
@@ -26,6 +27,7 @@ class CarouselWrapper extends Component {
         <img src={slideImages[2]} alt=""/>
     </div>
 </Carousel>
+            </div>
 
         );
     }

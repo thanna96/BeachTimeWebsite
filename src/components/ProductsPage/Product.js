@@ -42,7 +42,7 @@ class Product extends Component {
                         }}>
                             {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>
                             ):(
-                                <div>Add to Cart <FontAwesomeIcon icon={ faShoppingCart }/></div>)}
+                                <div>Quick View</div>)}
                         </button>
                     </div>)}
                     </ProductConsumer>

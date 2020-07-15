@@ -3,7 +3,9 @@ import Product from './Product'
 //import Title from "../Header/Title";
 import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
-import img from "../../2020.JPG";
+import img from "../../2020Collection.jpg";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class ProductList extends Component {
     constructor(props) {
@@ -115,30 +117,37 @@ class ProductList extends Component {
                     </div>
                     <div className="container">
                         <img src={img} alt="store"
-                             className="img-fluid  d-none d-lg-block"
+                             className="img-fluid"
                              style={{"width":"100%"}}
                         />
                         {/*<Title name="summer 2020" title="collection"/>*/}
 
-                        <h5 className="text-title text-uppercase mt-3 mb-2 text-muted" >
-                            Sort:
-                        <select id="sortList" onChange={this.sortList}>
-                            <option value="new">Newest</option>
-                            <option value="priceLH">Price: (Low to High)</option>
-                            <option value="priceHL">Price: (High to Low)</option>
-                            <option value="AZ">Name: A-Z</option>
-                            <option value="ZA">Name: Z-A</option>
-                        </select>
-                        </h5>
-                        <h5  className="text-title text-uppercase mt-3 text-muted">
-                            Filter:
-                            <select id="mylist" onChange={this.filterHandler} >
-                                <option value="all">All</option>
-                                <option value="tops">Tops</option>
-                                <option value="bottoms">Bottoms</option>
-                                <option value="onePiece">One-Piece</option>
-                            </select>
-                        </h5>
+                        <Row>
+                            <Col>
+                                <h5 className="text-title text-uppercase mt-3 mb-2 text-muted text-left" >
+                                    Sort:
+                                    <select id="sortList" onChange={this.sortList}>
+                                        <option value="new">Newest</option>
+                                        <option value="priceLH">Price: (Low to High)</option>
+                                        <option value="priceHL">Price: (High to Low)</option>
+                                        <option value="AZ">Name: A-Z</option>
+                                        <option value="ZA">Name: Z-A</option>
+                                    </select>
+                                </h5>
+                            </Col>
+                            <Col>
+                                <h5  className="text-title text-uppercase mt-3 text-muted text-right" >
+                                    Filter:
+                                    <select id="mylist" onChange={this.filterHandler} >
+                                        <option value="all">All</option>
+                                        <option value="tops">Tops</option>
+                                        <option value="bottoms">Bottoms</option>
+                                        <option value="onePiece">One-Piece</option>
+                                    </select>
+                                </h5>
+
+                            </Col>
+                        </Row>
 
                         <div className="row">
                             <ProductConsumer>
