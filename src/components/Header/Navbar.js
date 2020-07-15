@@ -11,11 +11,11 @@ class Navbar extends Component {
 
     render() {
         return (
-            <div >
+            <div>
                 <div className="d-block d-sm-none">
                     <MobileNav/>
                 </div>
-                <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 ">
+                <NavWrapper className="nav-link navbar navbar-expand-sm navbar-dark px-sm-5 ">
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center mx-auto">
                         <li className="nav-item mr-auto ml-auto">

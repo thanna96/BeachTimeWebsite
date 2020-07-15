@@ -4,6 +4,7 @@ import Product from './Product'
 import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
 import img from "../../2020Collection.jpg";
+import img1 from "../../2020.jpg";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -111,22 +112,30 @@ class ProductList extends Component {
         return (
             <React.Fragment>
 
-                <div className="">
+                <div >
+                    <div className="d-none d-sm-block" >
                     <div className="row col-10 mx-auto col-md-6">
                         <h6 className="text-muted ">Home/</h6><h6>Shop</h6>
                     </div>
+                    </div>
+                    <div className="d-block d-sm-none" >
+                        <img src={img1} alt="store"
+                             className="img-fluid mb-2"
+                             style={{"width":"100%"}}
+                        />
+                    </div>
                     <div className="container">
                         <img src={img} alt="store"
-                             className="img-fluid"
+                             className="img-fluid d-none d-sm-block mb-2"
                              style={{"width":"100%"}}
                         />
                         {/*<Title name="summer 2020" title="collection"/>*/}
 
                         <Row>
                             <Col>
-                                <h5 className="text-title text-uppercase mt-3 mb-2 text-muted text-left" >
-                                    Sort:
-                                    <select id="sortList" onChange={this.sortList}>
+                                <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
+                                    <select id="sortList" onChange={this.sortList}  style={{"width":"100%"}}>
+                                        <option value="new" disabled selected>Sort</option>
                                         <option value="new">Newest</option>
                                         <option value="priceLH">Price: (Low to High)</option>
                                         <option value="priceHL">Price: (High to Low)</option>
@@ -136,16 +145,15 @@ class ProductList extends Component {
                                 </h5>
                             </Col>
                             <Col>
-                                <h5  className="text-title text-uppercase mt-3 text-muted text-right" >
-                                    Filter:
-                                    <select id="mylist" onChange={this.filterHandler} >
+                                <h5  className="text-title text-uppercase text-muted"  style={{"width":"100%"}}>
+                                    <select id="mylist" onChange={this.filterHandler}  style={{"width":"100%"}}>
+                                        <option value="all" disabled selected>Filter</option>
                                         <option value="all">All</option>
                                         <option value="tops">Tops</option>
                                         <option value="bottoms">Bottoms</option>
                                         <option value="onePiece">One-Piece</option>
                                     </select>
                                 </h5>
-
                             </Col>
                         </Row>
 

@@ -3,6 +3,7 @@ import CarouselWrapper from "../Styles/CarouselWrapper";
 import MobileCarousel from "../Styles/MobileCarousel";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import {Link} from "react-router-dom";
 
 class Home extends Component {
     render() {
@@ -18,7 +19,9 @@ class Home extends Component {
                             <Card.Text>
                                 Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection
                             </Card.Text>
+                            <Link to='/ProductList'>
                             <Button variant="outline-dark">Browse Collection</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                 </div>

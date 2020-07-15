@@ -12,11 +12,12 @@ import Figure from "react-bootstrap/Figure";
 class MobileNav extends Component {
     render() {
         return (
-            <Navbar bg="white" expand="lg" style={{ width: "100%" }} sticky="top">
+
+            <Navbar bg="white" border-dark expand="lg" style={{ width: "100%" }} sticky="top">
                 <Navbar.Brand href='/'>
                     <Link to='/'>
-                        <Figure.Image src={logo2}  width={150}
-                                      height={90}
+                        <Figure.Image src={logo2}  width={140}
+                                      height={80}
                                       alt="171x180"
                         />
                     </Link>
@@ -60,6 +61,8 @@ class MobileNav extends Component {
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
+                <hr/>
+
             </Navbar>
         );
     }
