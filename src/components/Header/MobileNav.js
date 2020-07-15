@@ -38,13 +38,13 @@ class MobileNav extends Component {
                         <Link to='/ProductList' className="nav-link">
                             Shop
                         </Link>
-                        <Link to='/SizingPage' className="nav-link">
-                            Sizing
+                        <Link to='/About' className="nav-link">
+                            About Us
                         </Link>
                         <NavDropdown title="More" id="basic-nav-dropdown">
                             <NavDropdown.Item>
-                                <Link to='/About' className="nav-link">
-                                    About Us
+                                <Link to='/SizingPage' className="nav-link">
+                                    Sizing
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item>
