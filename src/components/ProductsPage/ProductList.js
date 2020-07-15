@@ -4,7 +4,7 @@ import Product from './Product'
 import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
 import img from "../../2020Collection.jpg";
-import img1 from "../../2020.jpg";
+import img1 from "../../2020.JPG";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
