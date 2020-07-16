@@ -4,7 +4,7 @@ import Product from './Product'
 import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
 import img from "../../2020Collection.jpg";
-import img1 from "../../2020.JPG";
+import img1 from "../../2020.jpg";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -114,16 +114,24 @@ class ProductList extends Component {
 
                 <div >
                     <div className="d-none d-sm-block" >
-                    <div className="row col-10 mx-auto col-md-6">
-                        <h6 className="text-muted ">Home/</h6><h6>Shop</h6>
+                        <div className="row col-10 mx-auto col-md-6">
+                            <h6 className="text-muted ">Home/</h6><h6>Shop</h6>
+                        </div>
                     </div>
-                    </div>
-                    <div className="d-block d-sm-none" >
+
+                    <div className="d-block d-sm-none image" >
                         <img src={img1} alt="store"
-                             className="img-fluid mb-2"
+                             className="img-fluid mb-3"
                              style={{"width":"100%"}}
                         />
+                        <h2>
+                            <span className='spacer'>
+                            Summer 2020 Collection
+                            </span>
+                        </h2>
                     </div>
+
+
                     <div className="container">
                         <img src={img} alt="store"
                              className="img-fluid d-none d-sm-block mb-2"

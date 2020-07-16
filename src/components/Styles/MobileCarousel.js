@@ -63,6 +63,17 @@ class CarouselWrapper extends Component {
                              </span>
                             </div>
                         </div>
+                        <div className="each-slide">
+                            <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
+                                <span>
+                                  <Link to='/ProductList' className="nav-link">
+                                     <Button variant="outline-light" >
+                                        Shop Now
+                                    </Button>
+                                  </Link>
+                             </span>
+                            </div>
+                        </div>
                     </Slide>
                 </div>
             </div>
