@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import styled from 'styled-components';
-import {ButtonContainer} from '../Styles/Button';
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo2 from "../../croppedLogo2.jpg";
 import MobileNav from "./MobileNav";
+import Button from "react-bootstrap/Button";
 
 class Navbar extends Component {
 
@@ -18,13 +17,13 @@ class Navbar extends Component {
                 <NavWrapper className="nav-link navbar navbar-expand-sm navbar-dark px-sm-5 ">
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center mx-auto">
-                        <li className="nav-item mr-auto ml-auto">
-                            <Link to='/'>
-                                <img src={logo2} alt="store"
-                                     className="img-fluid nav-link"
-                                />
-                            </Link>
-                        </li>
+                        {/*<li className="nav-item mr-auto ml-auto">*/}
+                        {/*    <Link to='/'>*/}
+                        {/*        <img src={logo2} alt="store"*/}
+                        {/*             className="img-fluid nav-link"*/}
+                        {/*        />*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
                         <li className="nav-item mr-auto ml-auto">
                             <Link to='/' className="nav-link">
                                 Home
@@ -57,11 +56,11 @@ class Navbar extends Component {
                             </Link>
                         </li>
                         <Link to='/Cart' className="nav-link mr-auto ml-auto">
-                            <ButtonContainer>
+                            <Button variant="white">
                                 <span className="mr-2 text-muted">
                                     <FontAwesomeIcon icon={ faShoppingCart }/>
-                                </span> Cart
-                            </ButtonContainer>
+                                </span>
+                            </Button>
                         </Link>
                     </ul>
                 </NavWrapper>

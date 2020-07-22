@@ -4,9 +4,10 @@ import Product from './Product'
 import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
 import img from "../../2020Collection.jpg";
-import img1 from "../../2020.JPG";
-import Row from "react-bootstrap/Row";
+import img1 from "../../croppedLogo.jpg";
 import Col from "react-bootstrap/Col";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
 
 class ProductList extends Component {
     constructor(props) {
@@ -113,57 +114,90 @@ class ProductList extends Component {
             <React.Fragment>
 
                 <div >
-                    <div className="d-none d-sm-block" >
-                        <div className="row col-10 mx-auto col-md-6">
-                            <h6 className="text-muted ">Home/</h6><h6>Shop</h6>
-                        </div>
-                    </div>
 
-                    <div className="d-block d-sm-none image" >
+                    {/*<div className="d-none d-sm-block" >*/}
+                    {/*    <div className="row col-10 mx-auto col-md-6">*/}
+                    {/*        <h6 className="text-muted ">Home/</h6><h6>Shop</h6>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    {/*<div className="d-block d-sm-none image" >*/}
+                    {/*    <img src={img1} alt="store"*/}
+                    {/*         className="img-fluid mb-3"*/}
+                    {/*         style={{"width":"100%"}}*/}
+                    {/*    />*/}
+                    {/*    <h2>*/}
+                    {/*        <span className='spacer'>*/}
+                    {/*        Summer 2020 Collection*/}
+                    {/*        </span>*/}
+                    {/*    </h2>*/}
+                    {/*</div>*/}
+
+                    <div className="d-none d-sm-block image mx-auto" >
                         <img src={img1} alt="store"
-                             className="img-fluid mb-3"
-                             style={{"width":"100%"}}
+                             className="img-fluid mb-3 rounded center"
+                             style={{"width":"40%"}}
                         />
-                        <h2>
-                            <span className='spacer'>
-                            Summer 2020 Collection
-                            </span>
-                        </h2>
+                        {/*<h2>*/}
+                        {/*        <span className='spacer'>*/}
+                        {/*        Summer 2020 Collection*/}
+                        {/*        </span>*/}
+                        {/*</h2>*/}
                     </div>
-
 
                     <div className="container">
-                        <img src={img} alt="store"
-                             className="img-fluid d-none d-sm-block mb-2"
-                             style={{"width":"100%"}}
-                        />
+                        {/*<img src={img} alt="store"*/}
+                        {/*     className="img-fluid d-none d-sm-block mb-2"*/}
+                        {/*     style={{"width":"100%"}}*/}
+                        {/*/>*/}
                         {/*<Title name="summer 2020" title="collection"/>*/}
 
-                        <Row>
-                            <Col>
-                                <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
-                                    <select id="sortList" onChange={this.sortList}  style={{"width":"100%"}}>
-                                        <option value="new" disabled selected>Sort</option>
-                                        <option value="new">Newest</option>
-                                        <option value="priceLH">Price: (Low to High)</option>
-                                        <option value="priceHL">Price: (High to Low)</option>
-                                        <option value="AZ">Name: A-Z</option>
-                                        <option value="ZA">Name: Z-A</option>
-                                    </select>
-                                </h5>
-                            </Col>
-                            <Col>
-                                <h5  className="text-title text-uppercase text-muted"  style={{"width":"100%"}}>
-                                    <select id="mylist" onChange={this.filterHandler}  style={{"width":"100%"}}>
-                                        <option value="all" disabled selected>Filter</option>
-                                        <option value="all">All</option>
-                                        <option value="tops">Tops</option>
-                                        <option value="bottoms">Bottoms</option>
-                                        <option value="onePiece">One-Piece</option>
-                                    </select>
-                                </h5>
-                            </Col>
-                        </Row>
+                        {/*<div className="d-none d-sm-block image align-items-center justify-content-center" >*/}
+                        {/*    <img src={img1} alt="store"*/}
+                        {/*         className="img-fluid mb-3 rounded align-items-center justify-content-center"*/}
+                        {/*         style={{"width":"50%"}}*/}
+                        {/*    />*/}
+                        {/*    /!*<h2>*!/*/}
+                        {/*    /!*        <span className='spacer'>*!/*/}
+                        {/*    /!*        Summer 2020 Collection*!/*/}
+                        {/*    /!*        </span>*!/*/}
+                        {/*    /!*</h2>*!/*/}
+                        {/*</div>*/}
+
+                            <Accordion defaultActiveKey="0"  >
+                                <Card>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        Filters:
+                                    </Accordion.Toggle>
+                                    <Accordion.Collapse eventKey="0">
+                                        <Card.Body>
+                                            <Col>
+                                                <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
+                                                    <select id="sortList" onChange={this.sortList}  style={{"width":"100%"}}>
+                                                        <option value="new" disabled selected>Sort</option>
+                                                        <option value="new">Newest</option>
+                                                        <option value="priceLH">Price: (Low to High)</option>
+                                                        <option value="priceHL">Price: (High to Low)</option>
+                                                        <option value="AZ">Name: A-Z</option>
+                                                        <option value="ZA">Name: Z-A</option>
+                                                    </select>
+                                                </h5>
+                                            </Col>
+                                            <Col>
+                                                <h5  className="text-title text-uppercase text-muted"  style={{"width":"100%"}}>
+                                                    <select id="mylist" onChange={this.filterHandler}  style={{"width":"100%"}}>
+                                                        <option value="all" disabled selected>Style</option>
+                                                        <option value="all">All</option>
+                                                        <option value="tops">Tops</option>
+                                                        <option value="bottoms">Bottoms</option>
+                                                        <option value="onePiece">One-Piece</option>
+                                                    </select>
+                                                </h5>
+                                            </Col>
+                                        </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
 
                         <div className="row">
                             <ProductConsumer>
