@@ -13,8 +13,8 @@ class MobileNav extends Component {
     render() {
         return (
 
-            <Navbar bg="white" border-dark expand="lg" style={{ width: "100%" }} >
-                <Navbar.Brand href='/'>
+            <Navbar bg="white" expand="lg" style={{ width: "100%" }} >
+                <Navbar.Brand >
                     <Link to='/'>
                         <Figure.Image src={logo2}  width={140}
                                       height={80}

@@ -8,9 +8,9 @@ class About extends Component {
     render() {
         return (
             <div className="container">
-                <div className="row col-10 mx-auto col-md-6 ">
-                    <h6 className="text-muted ">Home/</h6><h6>About</h6>
-                </div>
+                {/*<div className="row col-10 mx-auto col-md-6 ">*/}
+                {/*    <h6 className="text-muted ">Home/</h6><h6>About</h6>*/}
+                {/*</div>*/}
                 <br/>
                 <h3 className="text-center text-title text-muted aboutTitle">MEET THE SISTERS BEHIND THE LABEL</h3>
                     <img className="rounded mx-auto d-block img-fluid" src={img} alt="aboutpic" />
