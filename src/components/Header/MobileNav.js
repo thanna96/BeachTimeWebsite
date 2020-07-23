@@ -46,7 +46,7 @@ class MobileNav extends Component {
                             </Link>
                         </Col>
                         <Col>
-                            <Link to='/ProductList' className="nav-link">
+                            <Link to='/Shop' className="nav-link">
                                 Shop
                             </Link>
                             <Link to='/StorePolicy' className="nav-link">

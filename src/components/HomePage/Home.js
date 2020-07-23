@@ -19,7 +19,7 @@ class Home extends Component {
                             <Card.Text>
                                 Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection
                             </Card.Text>
-                            <Link to='/ProductList'>
+                            <Link to='/Shop'>
                             <Button variant="outline-dark">Browse Collection</Button>
                             </Link>
                         </Card.Body>

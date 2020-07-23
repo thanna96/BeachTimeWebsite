@@ -17,7 +17,7 @@ import TopBar from "./components/Header/TopBar";
 import TestDb from "./DBTests/TestDB";
 import SizingPage from "./components/SizingPage/SizingPage";
 import AdminPage from "./components/AdminPage/AdminPage";
-
+import Shop from "./components/ProductsPage/Shop"
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
               <Route path="/ProductList" component={ProductList}/>
               <Route path="/About" component={About}/>
               {/*<Route path="/Details" component={Details}/>*/}
+              <Route path="/Shop" component={Shop}/>
               <Route path="/Cart" component={Cart}/>
               <Route path="/SizingPage" component={SizingPage}/>
               <Route path="/StorePolicy" component={StorePolicy}/>

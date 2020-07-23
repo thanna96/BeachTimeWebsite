@@ -30,7 +30,7 @@ class Navbar extends Component {
                             </Link>
                         </li>
                         <li className="nav-item mr-auto ml-auto">
-                            <Link to='/ProductList' className="nav-link">
+                            <Link to='/Shop' className="nav-link">
                                 Shop
                             </Link>
                         </li>

@@ -23,7 +23,7 @@ class CarouselWrapper extends Component {
                         <div className="button-container">
                             <img className="rounded mx-auto d-block img-fluid" src={Mimg2} alt="aboutpic2" />
                             <span>
-                            <Link to='/ProductList'>
+                            <Link to='/Shop'>
                                 <Button variant="outline-light" >
                                     Shop Now
                                 </Button>
@@ -39,7 +39,7 @@ class CarouselWrapper extends Component {
 
                                         <h4>Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection</h4>
 
-                                    <Link to='/ProductList'>
+                                    <Link to='/Shop'>
                                         <Button variant="outline-dark">Browse Collection</Button>
                                     </Link>
                                 </Card.Body>
@@ -47,7 +47,7 @@ class CarouselWrapper extends Component {
                             <div className="button-container">
                                 <img className="rounded mx-auto d-block img-fluid" src={Mimg4} alt="aboutpic2" />
                                 <span>
-                            <Link to='/ProductList'>
+                            <Link to='/Shop'>
                                 <Button variant="outline-light" >
                                     Shop Now
                                 </Button>
@@ -61,7 +61,7 @@ class CarouselWrapper extends Component {
                         <div className="button-container">
                             <img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2" />
                             <span>
-                            <Link to='/ProductList'>
+                            <Link to='/Shop'>
                                 <Button variant="outline-light" >
                                     Shop Now
                                 </Button>

@@ -29,7 +29,7 @@ class ProductProvider extends Component {
     }
 
     componentDidMount() {
-        //localStorage.removeItem("cart")
+        localStorage.removeItem("cart")
         this.setProducts()
         this.setColors()
     }
