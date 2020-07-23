@@ -62,7 +62,7 @@ class Modal extends Component {
                                         <ButtonContainer onClick={()=>closeModal()}>
                                             Close
                                         </ButtonContainer>
-                                        <Link to='/ProductList'>
+                                        <Link to={'/ProductList/'+info.gender}>
                                             <ButtonContainer onClick={()=>{
                                                 info.selSize = this.state.selSiz
                                                 info.selColor = this.state.selCol

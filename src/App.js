@@ -27,8 +27,8 @@ function App() {
           <Navbar/>
           <Switch>
               <Route exact path="/" component={Home}/>
-              <Route exact path="/ProductList/:id/:title" component={Details}/>
-              <Route path="/ProductList" component={ProductList}/>
+              <Route exact path="/ProductList/:gender/:id/:title" component={Details}/>
+              <Route exact path="/ProductList/:gender" component={ProductList}/>
               <Route path="/About" component={About}/>
               {/*<Route path="/Details" component={Details}/>*/}
               <Route path="/Shop" component={Shop}/>

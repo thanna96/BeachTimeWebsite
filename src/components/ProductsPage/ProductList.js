@@ -20,8 +20,13 @@ class ProductList extends Component {
         this.state = {
             products: storeProducts,
             filterChoice: 'all',
-            sortChoice: 'new'
+            sortChoice: 'new',
+            gender:'women'
         }
+    }
+
+    componentDidMount() {
+        this.setState({gender:this.props.match.params.gender})
     }
 
     sortList(Event){
@@ -96,6 +101,11 @@ class ProductList extends Component {
     }
 
     filterProducts = (data) =>{
+        if (this.state.gender === 'men'){
+            data = data.filter(product => product.info.gender === 'men')
+        }else {
+            data = data.filter(product => product.info.gender !== 'men')
+        }
         switch ( this.state.filterChoice ){
             default:
                 break;

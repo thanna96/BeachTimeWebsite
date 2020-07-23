@@ -17,7 +17,7 @@ class Shop extends Component {
                     <div className="button-container mx-auto">
                         <img className="rounded mx-auto d-block img-fluid" src={Mimg2} alt="aboutpic2"  />
                         <span>
-                            <Link to='/ProductList'>
+                            <Link to='/ProductList/women'>
                                 <Button variant="outline-light" >
                                     Shop Women
                                 </Button>
@@ -30,7 +30,7 @@ class Shop extends Component {
                     <div className="button-container mx-auto">
                         <img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2"  />
                         <span>
-                            <Link to='/ProductList'>
+                            <Link to='/ProductList/men'>
                                 <Button variant="outline-light" >
                                     Shop Men
                                 </Button>
@@ -45,7 +45,7 @@ class Shop extends Component {
                         <div className="button-container mx-auto">
                             <img className="rounded mx-auto d-block img-fluid" src={Mimg2} alt="aboutpic2"  />
                             <span>
-                            <Link to='/ProductList'>
+                            <Link to='/ProductList/women'>
                                 <Button variant="outline-light" >
                                     Shop Women
                                 </Button>
@@ -58,7 +58,7 @@ class Shop extends Component {
                         <div className="button-container mx-auto">
                             <img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2"  />
                             <span>
-                            <Link to='/ProductList'>
+                            <Link to='/ProductList/men'>
                                 <Button variant="outline-light" >
                                     Shop Men
                                 </Button>

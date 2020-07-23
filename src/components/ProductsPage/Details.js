@@ -44,11 +44,11 @@ class Details extends Component {
                     return (
                         <div>
                             {/* title */}
-                            <div className="d-none d-sm-block" >
-                                <div className="row col-10 mx-auto col-md-6  ">
-                                    <h6 className="text-muted ">Home/Shop/</h6><h6>{title}</h6>
-                                </div>
-                            </div>
+                            {/*<div className="d-none d-sm-block" >*/}
+                            {/*    <div className="row col-10 mx-auto col-md-6  ">*/}
+                            {/*        <h6 className="text-muted ">Home/Shop/</h6><h6>{title}</h6>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                             {/* end title */}
                         <div className="container ">
 
@@ -122,7 +122,7 @@ class Details extends Component {
 
                                         {/* buttons */}
                                         <div>
-                                            <Link to="/ProductList">
+                                            <Link to={"/ProductList/" + info.gender}>
                                                 <ButtonContainer>
                                                     back to products
                                                 </ButtonContainer>

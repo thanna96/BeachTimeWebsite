@@ -30,7 +30,7 @@ class Product extends Component {
                         {value=>(
                     <div className="img-container p-0"
                          onClick={()=>value.handleDetail(id,title)}>
-                        <Link to={"ProductList/"+id+'/'+title}>
+                        <Link to={info.gender+'/'+id+'/'+title}>
                             <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} id="imgTest" alt="product" className="card-img-top"/>
                         </Link>
 
