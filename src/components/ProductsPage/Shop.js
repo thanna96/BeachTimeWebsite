@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import img from "../../croppedLogo.jpg";
-import Mimg2 from "../../mBanner4.JPG";
+import Mimg2 from "../../mBanner1.JPG";
 import Mimg3 from "../../mens.jpg"
 import Col from "react-bootstrap/Col";
 
