@@ -67,7 +67,7 @@ class Modal extends Component {
                                                 info.selSize = this.state.selSiz
                                                 info.selColor = this.state.selCol
                                                 if (info.selSize === '') info.selSize = info.sizes[0];
-                                                if (info.selColor === '') info.selColor = info.color[0];
+                                                if (info.selColor === '') info.selColor = value.colors[0].color;
                                                 closeModal();
                                                 value.addToCart(id,title);
                                             }}>

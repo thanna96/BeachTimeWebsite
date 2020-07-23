@@ -49,7 +49,7 @@ class ProductProvider extends Component {
                 params.ExclusiveStartKey  = items.LastEvaluatedKey;
             }while(typeof items.LastEvaluatedKey != "undefined");
 
-            console.log("Scan Results:",scanResults)
+            //console.log("Scan Results:",scanResults)
             this.setState(()=>{
                 return{colors:scanResults}
             })
@@ -85,7 +85,7 @@ class ProductProvider extends Component {
                 params.ExclusiveStartKey  = items.LastEvaluatedKey;
             }while(typeof items.LastEvaluatedKey != "undefined");
 
-            console.log("Scan Results:",scanResults)
+           //console.log("Scan Results:",scanResults)
             this.setState(()=>{
                 return{products:scanResults.sort((a,b)=> a.id > b.id ? 1 : -1)}
             })

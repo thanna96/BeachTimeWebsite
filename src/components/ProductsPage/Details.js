@@ -17,7 +17,7 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        console.log("id",this.props.match.params.title,this.props.match.params.id)
+        //console.log("id",this.props.match.params.title,this.props.match.params.id)
         this.setState({productName:this.props.match.params.title})
         this.setState({id:parseInt(this.props.match.params.id)})
     }
@@ -133,7 +133,7 @@ class Details extends Component {
                                                     info.selSize = this.state.selSiz
                                                     info.selColor = this.state.selCol
                                                     if (info.selSize === '') info.selSize = info.sizes[0];
-                                                    if (info.selColor === '') info.selColor = info.color[0];
+                                                    if (info.selColor === '') info.selColor = value.colors[0].color;
                                                     value.addToCart(id,title);
                                                     }}>
                                                 {info.inCart?'inCart':'Add to Cart'}

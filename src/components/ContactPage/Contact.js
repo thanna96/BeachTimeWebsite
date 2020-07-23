@@ -26,7 +26,7 @@ class Contact extends Component {
 
     handleSubmit(Event) {
         Event.preventDefault()
-        console.log(this.state.message,this.state.name,this.state.email)
+        //console.log(this.state.message,this.state.name,this.state.email)
         const templateId = 'template_rzk8CvIY';
         this.sendFeedback(templateId, {
             message: this.state.message,

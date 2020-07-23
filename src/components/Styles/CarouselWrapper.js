@@ -36,9 +36,9 @@ class CarouselWrapper extends Component {
                             <img className="rounded mx-auto my-auto d-block img-fluid" src={img1} alt="aboutpic2" />
                             <Card className="text-center text-muted" border="white">
                                 <Card.Body>
-                                    <Card.Text>
+
                                         <h4>Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection</h4>
-                                    </Card.Text>
+
                                     <Link to='/ProductList'>
                                         <Button variant="outline-dark">Browse Collection</Button>
                                     </Link>

@@ -173,8 +173,8 @@ class ProductList extends Component {
                                         <Card.Body>
                                             <Col>
                                                 <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
-                                                    <select id="sortList" onChange={this.sortList}  style={{"width":"100%"}}>
-                                                        <option value="new" disabled selected>Sort</option>
+                                                    <select id="sortList" defaultValue="new" onChange={this.sortList}  style={{"width":"100%"}}>
+                                                        <option value="new" disabled>Sort</option>
                                                         <option value="new">Newest</option>
                                                         <option value="priceLH">Price: (Low to High)</option>
                                                         <option value="priceHL">Price: (High to Low)</option>
@@ -185,8 +185,8 @@ class ProductList extends Component {
                                             </Col>
                                             <Col>
                                                 <h5  className="text-title text-uppercase text-muted"  style={{"width":"100%"}}>
-                                                    <select id="mylist" onChange={this.filterHandler}  style={{"width":"100%"}}>
-                                                        <option value="all" disabled selected>Style</option>
+                                                    <select id="mylist" defaultValue="all" onChange={this.filterHandler}  style={{"width":"100%"}}>
+                                                        <option value="all" disabled>Style</option>
                                                         <option value="all">All</option>
                                                         <option value="tops">Tops</option>
                                                         <option value="bottoms">Bottoms</option>
