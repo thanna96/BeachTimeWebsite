@@ -21,12 +21,37 @@ class ProductList extends Component {
             products: storeProducts,
             filterChoice: 'all',
             sortChoice: 'new',
+            typeChoice:'all',
             gender:'women'
         }
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
         this.setState({gender:this.props.match.params.gender})
+    }
+
+    handleChange(Event){
+        let nam = Event.target.name;
+        let val = Event.target.value;
+        this.setState({
+            ...this.state,
+            [nam]: val
+        })
+    }
+
+    filterType = (data) =>{
+        switch ( this.state.typeChoice ){
+            default:
+                break;
+            case 'manufactured':
+                data = data.filter(product => product.info.type === 'manufactured')
+                break;
+            case 'handmade':
+                data = data.filter(product => product.info.type === 'handmade')
+                break;
+        }
+        return data;
     }
 
     sortList(Event){
@@ -203,7 +228,7 @@ class ProductList extends Component {
                                             <p className="text-muted">Product Type:</p>
                                             <Col>
                                                 <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
-                                                    <select id="sortList" defaultValue="all" className="text-muted" style={{"width":"100%"}}>
+                                                    <select id="sortList" name="typeChoice" defaultValue="all" onChange={this.handleChange} className="text-muted" style={{"width":"100%"}}>
                                                         {/*<option value="new" disabled>Sort</option>*/}
                                                         <option value="all">All</option>
                                                         <option value="handmade">Hand-Made</option>
@@ -236,6 +261,7 @@ class ProductList extends Component {
                                     this.sortProducts(value.products)
                                     let products = value.products;
                                     products = this.filterProducts(products)
+                                    products = this.filterType(products)
                                     return products.map( product =>{
                                         return <Product key={product.title} product={product}/>
                                     })
