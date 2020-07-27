@@ -13,7 +13,7 @@ class About extends Component {
                 {/*</div>*/}
                 <br/>
                 <h3 className="text-center text-title text-muted aboutTitle">MEET THE SISTERS BEHIND THE LABEL</h3>
-                    <img className="rounded mx-auto d-block img-fluid" src={img} alt="aboutpic" />
+                    <img className="rounded mx-auto d-block img-fluid w-75" src={img} alt="aboutpic" />
                 <br/>
 
                 <p className="col-10 mx-auto my-2 text-center text-muted">
@@ -21,21 +21,21 @@ class About extends Component {
                     Into a small business. We launched sew honey because we wanted to create swimwear that makes girls
                     Feel comfortable & confident!
                 </p>
-                <br/>
-                <Row>
-                    <Col>
-                        <img className="rounded mx-auto d-block img-fluid" src={img2} alt="aboutpic2" />
-                    </Col>
-                    <Col>
-                        <img className="rounded mx-auto d-block img-fluid" src={img3} alt="aboutpic2" />
-                    </Col>
-                </Row>
-
-                <br/>
                 <p className="col-10 mx-auto my-2 text-center text-muted">
                     Sew Honey is an online boutique that specializes in making handmade swimsuits.
                     We use high quality nylon lycra fabric.
                 </p>
+                <br/>
+                <Row>
+                    <Col>
+                        <img className="rounded mx-auto d-block img-fluid w-75" src={img2} alt="aboutpic2" />
+                    </Col>
+                    <Col>
+                        <img className="rounded mx-auto d-block img-fluid w-75" src={img3} alt="aboutpic2" />
+                    </Col>
+                </Row>
+
+                <br/>
 
             </div>
         );

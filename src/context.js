@@ -29,7 +29,7 @@ class ProductProvider extends Component {
     }
 
     componentDidMount() {
-        localStorage.removeItem("cart")
+        //localStorage.removeItem("cart")
         this.setProducts()
         this.setColors()
     }
@@ -110,14 +110,16 @@ class ProductProvider extends Component {
         const selectedProduct = tempCart.find(item => item.id === id && item.title === title);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
-        product.info.count = product.info.count + 1;
-        product.info.total = product.info.price * product.info.count;
+        if( product.info.count < 10) {
+            product.info.count = product.info.count + 1;
+            product.info.total = product.info.price * product.info.count;
 
-        this.setState( () => {
-            return {cart:[...tempCart]}
-        }, () => {
-            this.addTotals();
-        })
+            this.setState(() => {
+                return {cart: [...tempCart]}
+            }, () => {
+                this.addTotals();
+            })
+        }
     };
 
     decrement = (id,title) =>{

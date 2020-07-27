@@ -10,7 +10,7 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col-md-12 text-center ">
                             <div className="mb-3 ">
-                                <a href="https://www.facebook.com/gena.miele?__tn__=%2Cd*F*F-R&eid=ARAqBZJDAajsw3D9FrKgzblPIUFF24OSpRqlSa6d2tY2-RhQq0-JwVGQliNFu0PpMsm8CTubiR2P48XX&tn-str=*F" className="fb-ic">
+                                <a href="https://www.facebook.com/SewHoneySwim/?ref=nf&hc_ref=ARRAKOHS3x_-iRPO7-T_EwK5Ln04aL5J7gutQECf17b0uDp46kloMDbSlLUuTvfXlYk" className="fb-ic">
                                     <MDBIcon icon="facebook" size="2x" className="text-black-50 mr-md-5 mr-3" />
                                 </a>
                                 <a href="https://twitter.com/gena_miele" className="tw-ic">
