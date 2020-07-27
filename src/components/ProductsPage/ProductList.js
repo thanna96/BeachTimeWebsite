@@ -199,17 +199,18 @@ class ProductList extends Component {
                                                     </select>
                                                 </h5>
                                             </Col>
-                                            {/*<Col>*/}
-                                            {/*    <h5  className="text-title text-uppercase text-muted"  style={{"width":"100%"}}>*/}
-                                            {/*        <select id="mylist" defaultValue="all" className="text-muted"  onChange={this.filterHandler}  style={{"width":"100%"}}>*/}
-                                            {/*            <option value="all" disabled>Style</option>*/}
-                                            {/*            <option value="all">All</option>*/}
-                                            {/*            <option value="tops">Tops</option>*/}
-                                            {/*            <option value="bottoms">Bottoms</option>*/}
-                                            {/*            <option value="onePiece">One-Piece</option>*/}
-                                            {/*        </select>*/}
-                                            {/*    </h5>*/}
-                                            {/*</Col>*/}
+                                            <hr/>
+                                            <p className="text-muted">Product Type:</p>
+                                            <Col>
+                                                <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
+                                                    <select id="sortList" defaultValue="all" className="text-muted" style={{"width":"100%"}}>
+                                                        {/*<option value="new" disabled>Sort</option>*/}
+                                                        <option value="all">All</option>
+                                                        <option value="handmade">Hand-Made</option>
+                                                        <option value="manufactured">Manufactured</option>
+                                                    </select>
+                                                </h5>
+                                            </Col>
                                             <hr/>
                                             <p className="text-muted">Style:</p>
                                             <Row>
@@ -229,8 +230,8 @@ class ProductList extends Component {
                             </Accordion>
                         </Col>
                         <Col xs={12} md={8}>
-                        <div className="row border ">
-                            <ProductConsumer>
+                        <div className="row border">
+                            <ProductConsumer >
                                 {(value)=>{
                                     this.sortProducts(value.products)
                                     let products = value.products;

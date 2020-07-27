@@ -23,9 +23,8 @@ class Product extends Component {
     render() {
         const {id, title, info} = this.props.product;
         return (
-            <ProductWrapper className="col-6 mx-auto col-md-6 col-lg-3 my-3">
-                <div className="card">
-
+            <ProductWrapper className="col-6 col-md-3">
+                <div className="card mb-1">
                     <ProductConsumer>
                         {value=>(
                     <div className="img-container p-0"
@@ -46,16 +45,13 @@ class Product extends Component {
                     </ProductConsumer>
 
                     {/* Card Footer */}
-                    <div className="card-footer d-flex justify-content-center">
-                        <p className="align-self-center mb-0">
+                    <div className="card-footer d-flex justify-content-center" >
+                        <p className="mb-0 align-self-center" style={{"textAlign": "center"}}>
                             {title}
-                        </p>
-                    </div>
-                    <div className="card-footer d-flex justify-content-center">
-                        <h5 className="font-italic mb-0">
+                            <br/>
                             <span className="mr-1">$</span>
                             {info.price}
-                        </h5>
+                        </p>
                     </div>
 
                 </div>
@@ -88,6 +84,7 @@ const ProductWrapper = styled.div`
         border-top: transparent;
         font-family: 'Noto Sans JP', sans-serif;
         font-size: 1rem;
+        padding: 0 3;
     }
     &:hover{
         .card{
