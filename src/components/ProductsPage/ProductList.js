@@ -204,10 +204,12 @@ class ProductList extends Component {
 
                         <Row>
                         <Col xs={12} md={3} >
-                            <Accordion defaultActiveKey="0"  >
+                            <Accordion defaultActiveKey="0" >
                                 <Card>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                                        Filters:
+                                        <Button variant="outline-secondary" className="" block style={{textAlign: "left"}}>
+                                            Filters:
+                                        </Button>
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey="0">
                                         <Card.Body>
@@ -253,6 +255,7 @@ class ProductList extends Component {
                                     </Accordion.Collapse>
                                 </Card>
                             </Accordion>
+                            <br/>
                         </Col>
                         <Col xs={12} md={8}>
                         <div className="row border">
