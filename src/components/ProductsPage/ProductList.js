@@ -207,9 +207,7 @@ class ProductList extends Component {
                             <Accordion defaultActiveKey="0" >
                                 <Card>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
-                                        <Button variant="outline-secondary" className="" block style={{textAlign: "left"}}>
-                                            Filters:
-                                        </Button>
+                                        Filters:
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey="0">
                                         <Card.Body>

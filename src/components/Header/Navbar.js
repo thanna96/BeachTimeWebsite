@@ -11,7 +11,7 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <div className="d-block d-md-none">
+                <div className="d-block d-lg-none">
                     <MobileNav/>
                 </div>
                 <NavWrapper className="nav-link navbar navbar-expand-sm navbar-dark px-sm-5 ">
