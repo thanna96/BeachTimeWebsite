@@ -23,7 +23,7 @@ class Product extends Component {
     render() {
         const {id, title, info} = this.props.product;
         return (
-            <ProductWrapper className="col-6 col-lg-3 my-2">
+            <ProductWrapper className="col-12 col-lg-3 my-2">
                 <div className="card mb-1">
                     <ProductConsumer>
                         {value=>(
