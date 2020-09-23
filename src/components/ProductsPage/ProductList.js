@@ -108,7 +108,7 @@ class ProductList extends Component {
     sortProducts = (data) =>{
         switch ( this.state.sortChoice ){
             default:
-                data = data.sort((a,b)=> a.id > b.id ? 1 : -1);
+                data = data.sort((a,b)=> a.id < b.id ? 1 : -1);
                 break;
             case 'priceLH':
                 data = data.sort((a,b)=> a.info.price > b.info.price ? 1 : -1);
@@ -256,7 +256,7 @@ class ProductList extends Component {
                             <br/>
                         </Col>
                         <Col xs={12} md={8}>
-                        <div className="row border">
+                        <div className="row ">
                             <ProductConsumer >
                                 {(value)=>{
                                     this.sortProducts(value.products)
