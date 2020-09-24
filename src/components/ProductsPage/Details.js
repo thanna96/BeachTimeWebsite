@@ -56,13 +56,14 @@ class Details extends Component {
                             {/* product info */}
                                 <div className="row">
                                     <div className="col-10 mx-auto col-md-6 my-3">
-                                        <Carousel showThumbs={false}>
+                                        <Carousel showThumbs={true}>
                                                 {info.img.map(image => (
                                                     <div key=''>
                                                     <img
                                                         key={image}
-                                                        className="d-block "
+                                                        className="d-block image-container"
                                                         src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
+                                                        style={{maxHeight:"500px", width:"100%"}}
                                                         alt=""
                                                     />
                                                     </div>

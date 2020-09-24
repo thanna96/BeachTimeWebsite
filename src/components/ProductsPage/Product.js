@@ -23,24 +23,25 @@ class Product extends Component {
     render() {
         const {id, title, info} = this.props.product;
         return (
-            <ProductWrapper className="col-12 col-lg-3 my-2">
-                <div className="card mb-1">
+            <ProductWrapper className="col-6 col-md-4 col-lg-3 my-0 ">
+                <div className="card mb-1 ">
                     <ProductConsumer>
                         {value=>(
                     <div className=" p-0"
                          onClick={()=>value.handleDetail(id,title)}>
-                        <Link to={info.gender+'/'+id+'/'+title}>
-                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} id="imgTest" alt="product" className="card-img-top"/>
+                        <Link to={info.type+'/'+id+'/'+title}>
+                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]}
+                                 id="imgTest" alt="product" className="card-img-top " style={{height:"250px", width:"100%"}}/>
                         </Link>
 
-                        <button className="cart-btn" disabled={!!info.inCart}
-                                onClick={()=>{
-                                    value.openModal(id,title);
-                        }}>
-                            {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>
-                            ):(
-                                <div>Quick View</div>)}
-                        </button>
+                        {/*<button className="cart-btn" disabled={!!info.inCart}*/}
+                        {/*        onClick={()=>{*/}
+                        {/*            value.openModal(id,title);*/}
+                        {/*}}>*/}
+                        {/*    {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>*/}
+                        {/*    ):(*/}
+                        {/*        <div>Quick View</div>)}*/}
+                        {/*</button>*/}
                     </div>)}
                     </ProductConsumer>
 

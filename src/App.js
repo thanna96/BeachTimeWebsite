@@ -8,7 +8,7 @@ import Cart from './components/Cart'
 import Default from './components/DefaultPage/Default'
 import Home from './components/HomePage/Home'
 import About from './components/AboutPage/About'
-//import Login from './components/LoginPage/Login'
+import MensProductList from './components/ProductsPage/MensProductList'
 import StorePolicy from './components/PolicyPage/StorePolicy'
 import Contact from "./components/ContactPage/Contact";
 import Footer from "./components/Footer/Footer";
@@ -27,11 +27,12 @@ function App() {
           <Navbar/>
           <Switch>
               <Route exact path="/" component={Home}/>
-              <Route exact path="/ProductList/:gender/:id/:title" component={Details}/>
-              <Route exact path="/ProductList/:gender" component={ProductList}/>
+              <Route exact path="/ProductList/:style/:id/:title" component={Details}/>
+              <Route exact path="/MensProductList/:style/:id/:title" component={Details}/>
+              <Route exact path="/ProductList/:style" component={ProductList}/>
+              <Route exact path="/MensProductList/:style" component={MensProductList}/>
               <Route path="/About" component={About}/>
-              {/*<Route path="/Details" component={Details}/>*/}
-              <Route path="/Shop" component={Shop}/>
+              {/*<Route path="/Shop" component={Shop}/>*/}
               <Route path="/Cart" component={Cart}/>
               <Route path="/SizingPage" component={SizingPage}/>
               <Route path="/StorePolicy" component={StorePolicy}/>

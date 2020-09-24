@@ -4,7 +4,7 @@ import {MDBIcon} from "mdbreact";
 class TopBar extends Component {
     render() {
         return (
-                <div className=" d-none d-lg-block" style={{"background":"#eeeeee"}}>
+                <div className=" d-none d-md-block w-100 position-absolute" style={{background:"#eeeeee", zIndex:2, height:"25px"}}>
                     <ul className="" id="menu" style={{"textAlign": "left"}}>
                         <li className="text-muted">
                            Follow Us:

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import img from "../../banner.JPG"
-import Mimg4 from "../../mBanner2.JPG"
+import Mimg4 from "../../aboutPicture.JPG"
 import img1 from "../../croppedLogo.jpg";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -17,11 +17,11 @@ class CarouselWrapper extends Component {
     render() {
         return (
             <div className='container-fluid' >
-                <Row>
-                    <Col>
-                        <br/><br/>
+                <Row className="p-0 m-0">
+                    <Col className="p-0 m-0">
+                        <br/>
                         <div className="button-container">
-                            <img className="rounded mx-auto d-block img-fluid" src={Mimg2} alt="aboutpic2" />
+                            <img className="  d-block img-fluid p-0" src={Mimg2} alt="aboutpic2" style={{height:"450px", width:"100%"}}/>
                             <span>
                             <Link to='/Shop'>
                                 <Button variant="outline-light" >
@@ -31,21 +31,22 @@ class CarouselWrapper extends Component {
                             </span>
                         </div>
                     </Col>
-                    <Col>
-                        <Col>
-                            <img className="rounded mx-auto my-auto d-block img-fluid" src={img1} alt="aboutpic2" />
-                            <Card className="text-center text-muted" border="white">
-                                <Card.Body>
+                    <Col className="p-0 m-0">
+                        <br/>
 
-                                        <h4>Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection</h4>
+                            {/*<img className="rounded mx-auto my-auto d-block img-fluid" src={img1} alt="aboutpic2" />*/}
+                            {/*<Card className="text-center text-muted" border="white">*/}
+                            {/*    <Card.Body>*/}
 
-                                    <Link to='/Shop'>
-                                        <Button variant="outline-dark">Browse Collection</Button>
-                                    </Link>
-                                </Card.Body>
-                            </Card>
+                            {/*            <h4>Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection</h4>*/}
+
+                            {/*        <Link to='/Shop'>*/}
+                            {/*            <Button variant="outline-dark">Browse Collection</Button>*/}
+                            {/*        </Link>*/}
+                            {/*    </Card.Body>*/}
+                            {/*</Card>*/}
                             <div className="button-container">
-                                <img className="rounded mx-auto d-block img-fluid" src={Mimg4} alt="aboutpic2" />
+                                <img className="  d-block img-fluid" src={Mimg4} alt="aboutpic2" style={{height:"450px", width:"100%"}}/>
                                 <span>
                             <Link to='/Shop'>
                                 <Button variant="outline-light" >
@@ -54,12 +55,64 @@ class CarouselWrapper extends Component {
                             </Link>
                             </span>
                             </div>
-                        </Col>
+
                     </Col>
-                    <Col>
-                        <br/><br/>
+                    <Col className="p-0 m-0">
+                        <br/>
                         <div className="button-container">
-                            <img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2" />
+                            <img className="  d-block img-fluid" src={Mimg3} alt="aboutpic2" style={{height:"450px", width:"100%"}}/>
+                            <span>
+                            <Link to='/Shop'>
+                                <Button variant="outline-light" >
+                                    Shop Now
+                                </Button>
+                            </Link>
+                            </span>
+                        </div>
+                    </Col>
+                </Row>
+                <Row className="p-0 m-0">
+                    <Col className="p-0 m-0">
+                        <div className="button-container">
+                            <img className="  d-block img-fluid p-0" src={Mimg2} alt="aboutpic2" style={{height:"450px", width:"100%"}}/>
+                            <span>
+                            <Link to='/Shop'>
+                                <Button variant="outline-light" >
+                                    Shop Now
+                                </Button>
+                            </Link>
+                            </span>
+                        </div>
+                    </Col>
+                    <Col className="p-0 m-0">
+
+
+                        {/*<img className="rounded mx-auto my-auto d-block img-fluid" src={img1} alt="aboutpic2" />*/}
+                        {/*<Card className="text-center text-muted" border="white">*/}
+                        {/*    <Card.Body>*/}
+
+                        {/*            <h4>Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection</h4>*/}
+
+                        {/*        <Link to='/Shop'>*/}
+                        {/*            <Button variant="outline-dark">Browse Collection</Button>*/}
+                        {/*        </Link>*/}
+                        {/*    </Card.Body>*/}
+                        {/*</Card>*/}
+                        <div className="button-container">
+                            <img className="  d-block img-fluid" src={Mimg4} alt="aboutpic2" style={{height:"450px", width:"100%"}}/>
+                            <span>
+                            <Link to='/Shop'>
+                                <Button variant="outline-light" >
+                                    Shop Now
+                                </Button>
+                            </Link>
+                            </span>
+                        </div>
+
+                    </Col>
+                    <Col className="p-0 m-0">
+                        <div className="button-container">
+                            <img className="  d-block img-fluid" src={Mimg3} alt="aboutpic2" style={{height:"450px", width:"100%"}}/>
                             <span>
                             <Link to='/Shop'>
                                 <Button variant="outline-light" >
