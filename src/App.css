@@ -149,13 +149,13 @@ h3 {
 
 .button-container{
   display:flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: left;
 }
 
 .button-container span{
-  padding: 20px;
-  font-size: 20px;
+  padding: 3px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -4,9 +4,8 @@ import {MDBIcon} from "mdbreact";
 class Footer extends Component {
     render() {
         return (
-            <footer className="page-footer font-small cyan darken-3">
-                <hr style={{"background":"#e6be8a"}}/>
-                <div className="container">
+            <footer className="page-footer font-small cyan w-full darken-3 mt-3 pin-b border-t border-grey" >
+                <div className="container mt-3">
                     <div className="row">
                         <div className="col-md-12 text-center ">
                             <div className="mb-3 ">

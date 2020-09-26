@@ -55,16 +55,22 @@ class Details extends Component {
 
                             {/* product info */}
                                 <div className="row">
-                                    <div className="col-10 mx-auto col-md-6 my-3">
-                                        <Carousel showThumbs={true}>
+                                    <div className="col-10 mx-auto center col-md-6 my-3">
+                                        <Carousel showThumbs={false}>
                                                 {info.img.map(image => (
                                                     <div key=''>
                                                     <img
-                                                        key={image}
-                                                        className="d-block image-container"
+                                                        key={image+9}
+                                                        className="d-none d-md-block center img-fluid"
                                                         src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
-                                                        style={{maxHeight:"500px", width:"100%"}}
+                                                        style={{height:"550px", width:"auto"}}
                                                         alt=""
+                                                    />
+                                                    <img
+                                                            key={image}
+                                                            className="d-block d-md-none center"
+                                                            src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
+                                                            alt=""
                                                     />
                                                     </div>
                                                 ))}
@@ -90,7 +96,7 @@ class Details extends Component {
                                         {/* Size */}
                                         <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                             Size:<br/>
-                                            <select name="selSiz"style={{width:"100%"}} onChange={this.handleChange} >
+                                            <select name="selSiz" style={{width:"100%"}} onChange={this.handleChange} >
                                                 {info.sizes.map(size => (
                                                     <option value={size} key={size}>{size}</option>
                                                 ))}
@@ -129,15 +135,19 @@ class Details extends Component {
                                                 </ButtonContainer>
                                             </Link>
                                             <ButtonContainer
-                                                disabled={info.inCart}
+                                                // disabled={info.inCart}
                                                 onClick={()=>{
+                                                    if(info.inCart) {
+                                                        window.location.href = "/cart";
+                                                        return
+                                                    }
                                                     info.selSize = this.state.selSiz
                                                     info.selColor = this.state.selCol
                                                     if (info.selSize === '') info.selSize = info.sizes[0];
                                                     if (info.selColor === '') info.selColor = value.colors[0].color;
                                                     value.addToCart(id,title);
                                                     }}>
-                                                {info.inCart?'inCart':'Add to Cart'}
+                                                {info.inCart?'View Cart':'Add to Cart'}
                                             </ButtonContainer>
                                         </div>
                                     </div>

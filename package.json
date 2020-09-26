@@ -32,6 +32,9 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
+    "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
+    "prestart": "npm run build:tailwind",
+    "prebuild": "npm run build:tailwind",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -53,11 +56,14 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.0.0",
     "aws-amplify": "^3.0.18",
     "aws-sdk": "^2.702.0",
     "cors": "^2.8.5",
     "img": "^3.0.3",
     "nodemailer": "^6.4.10",
-    "prop-types": "^15.7.2"
+    "postcss-cli": "^8.0.0",
+    "prop-types": "^15.7.2",
+    "tailwindcss": "^1.8.10"
   }
 }

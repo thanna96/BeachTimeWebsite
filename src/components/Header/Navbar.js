@@ -41,10 +41,10 @@ class Navbar extends Component {
                                     <Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Women</p></Dropdown.Header>
 
                                     <Dropdown.Item href="/ProductList/handmade" style={{color: "#808080"}}>
-                                        Handmade Swimwear
+                                        Hand-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/ProductList/swimwear" style={{color: "#808080"}}>
-                                        Swimwear
+                                    <Dropdown.Item href="/ProductList/ready-made" style={{color: "#808080"}}>
+                                        Ready-Made Swimwear
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/ProductList/apparel" style={{color: "#808080"}}>
                                         Apparel

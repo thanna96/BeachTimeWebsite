@@ -9,6 +9,7 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Title from "../Header/Title";
 
 class MensProductList extends Component {
     constructor(props) {
@@ -155,7 +156,7 @@ class MensProductList extends Component {
 
                         <Row>
                             <Col xs={12} md={3}  >
-                                <div className=" border d-none d-md-block mt-2 p-2 " style={{background:"#f8f8f8",  top:"130px", position:"sticky"}}>
+                                <div className=" border d-none d-md-block mt-5 p-2 " style={{background:"#f8f8f8",  top:"130px", position:"sticky"}}>
                                     <p className="text-muted">Sort:</p>
                                     <Col>
                                         <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
@@ -169,18 +170,18 @@ class MensProductList extends Component {
                                             </select>
                                         </h5>
                                     </Col>
-                                    <hr/>
-                                    <p className="text-muted">Style:</p>
-                                    <Row className="w-100 mx-auto">
-                                        <ButtonGroup  className="mx-auto w-100" >
-                                            <Button onClick={this.filterHandler} value="all" className=" w-50" variant="outline-secondary">All</Button>
-                                            <Button onClick={this.filterHandler} value="shirt" className=" w-50" variant="outline-secondary">Shirts</Button>
-                                        </ButtonGroup>
-                                        <ButtonGroup className="mx-auto w-100" >
-                                            <Button onClick={this.filterHandler} value="sweatshirt" className=" w-50" variant="outline-secondary">Sweatshirts</Button>
-                                            <Button onClick={this.filterHandler} value="swimwear" className=" w-50" variant="outline-secondary">Swimwear</Button>
-                                        </ButtonGroup>
-                                    </Row>
+                                    {/*<hr/>*/}
+                                    {/*<p className="text-muted">Style:</p>*/}
+                                    {/*<Col>*/}
+                                    {/*    <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>*/}
+                                    {/*        <select id="sortList" name="typeChoice" defaultValue="all" onChange={this.handleChange} className="text-muted" style={{"width":"100%"}}>*/}
+                                    {/*            /!*<option value="new" disabled>Sort</option>*!/*/}
+                                    {/*            <option value="all">All</option>*/}
+                                    {/*            <option value="handmade">Top</option>*/}
+                                    {/*            <option value="manufactured">Bottom</option>*/}
+                                    {/*        </select>*/}
+                                    {/*    </h5>*/}
+                                    {/*</Col>*/}
                                 </div>
                                 <Navbar expand="lg" className="d-block d-md-none border" style={{ width: "100%" }} >
 
@@ -231,6 +232,13 @@ class MensProductList extends Component {
                                 <br/>
                             </Col>
                             <Col xs={12} md={9}>
+                                <div className="col-10 mx-auto mb-0 text-center text-title mt-0">
+                                    <h1 className="text-capitalize text-muted font-semibold text-4xl subpixel-antialiased">
+                                        Mens {this.state.typeChoice}
+                                    </h1>
+                                </div>
+
+
                                 <div className="row mx-auto w-100">
                                     <ProductConsumer >
                                         {(value)=>{
