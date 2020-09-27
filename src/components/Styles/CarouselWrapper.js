@@ -16,7 +16,8 @@ import Mimg3 from "../../IMG_5131.jpg"
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import Title from '../Header/Title'
+import Title from '../Header/Title';
+import logo from "../../sewhoneylogo.png";
 
 class CarouselWrapper extends Component {
 
@@ -26,27 +27,33 @@ class CarouselWrapper extends Component {
             animate: true
         }
     }
+
     componentDidMount() {
-        if(window.sessionStorage.getItem("firstLoadDone") === null){
-            this.setState({
-                animate: true
-            })
-            window.sessionStorage.setItem("firstLoadDone", 1)
-        } else {
+
+        if(window.sessionStorage.getItem("firstLoadDone") === '1'){
             this.setState({
                 animate: false
             })
+
+        } else {
+            this.setState({
+                animate: true
+            })
+            window.sessionStorage.setItem("firstLoadDone", '1')
         }
+        this.setState({
+            animate:false
+        })
     }
 
 
     render() {
         return (
-            <div className='container-fluid' >
+            <div className='mx-auto '>
 
-                <ProductWrapper>
+                <ProductWrapper >
                 <div className={this.state.animate ? "titleStart" : "titleEnd"}>
-                <div className="col-10 mx-auto mb-0 text-center text-title mt-0">
+                <div className="col-10 mx-auto mb-0 text-center text-title mt-5">
                     <h1 className="text-capitalize text-muted font-semibold text-4xl subpixel-antialiased">
                         Shop Now
                     </h1>
@@ -56,13 +63,13 @@ class CarouselWrapper extends Component {
 
                 <br/>
                 <Row className="p-0 m-0 mx-auto">
-                    <Row className="p-0 m-0 mx-auto " >
-                        <br/>
-                        <ProductWrapper className="p-0 m-0 mx-auto ">
+                    <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 p-0 m-0 mx-auto " >
+
+                        <ProductWrapper className="p-0 m-0  ">
                             <div className="container m-0 p-0">
                                 <Link to='/Shop' >
                                     <button className="bg-black overflow-hidden">
-                                    <img className={this.state.animate ? "image-fade" : "image"} src={Mimg2} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>
+                                    <img className={this.state.animate ? "image-fade" : "image"} src={Mimg2} alt="aboutpic2" style={{height:"450px", width:"297px"}}/>
                                         <div className="middle">
                                             <div className="text">Women's Swim</div>
                                         </div>
@@ -70,12 +77,12 @@ class CarouselWrapper extends Component {
                                 </Link>
                             </div>
                         </ProductWrapper>
-                        <Col className="p-0 mb-2">
-                        <ProductWrapper className="p-0 m-0">
+                        <div className=" p-0 mb-2" style={{height:"450px", width:"297px"}}>
+                        <ProductWrapper className="p-0 m-0" style={{height:"225px", width:"297px"}}>
                             <div className="container m-0 p-0">
                                 <Link to='/Shop' className="m-0 p-0">
                                     <button className="bg-black m-0 p-0 overflow-hidden">
-                                        <img className={this.state.animate ? "image-fade" : "image"} src={image2} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>
+                                        <img className={this.state.animate ? "image-fade" : "image"} src={image2} alt="aboutpic2" style={{height:"225px", width:"297px"}}/>
                                         <div className="middle  p-0 ">
                                             <div className="text m-0 p-0">Women's Apparel</div>
                                         </div>
@@ -83,11 +90,11 @@ class CarouselWrapper extends Component {
                                 </Link>
                             </div>
                         </ProductWrapper>
-                        <ProductWrapper className="p-0 -mt-2">
+                        <ProductWrapper className="p-0 " style={{height:"225px", width:"297px"}}>
                             <div className="container m-0 p-0">
                                 <Link to='/Shop' className="m-0 p-0">
                                     <button className="bg-black m-0 p-0 overflow-hidden">
-                                        <img className={this.state.animate ? "image-fade" : "image"} src={imagee} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>
+                                        <img className={this.state.animate ? "image-fade" : "image"} src={imagee} alt="aboutpic2" style={{height:"225px", width:"297px"}}/>
                                         <div className="middle m-0 p-0">
                                             <div className="text m-0 p-0">Women's Apparel</div>
                                         </div>
@@ -95,12 +102,39 @@ class CarouselWrapper extends Component {
                                 </Link>
                             </div>
                         </ProductWrapper>
-                        </Col>
+                        </div>
+
+                        <div className="p-0 m-0 " style={{height:"450px", width:"297px"}}>
+                                        <ProductWrapper className="p-0 " style={{height:"225px", width:"297px"}}>
+                                            <div className="container m-0 p-0">
+                                                <Link to='/Shop' className="m-0 p-0">
+                                                    <button className="bg-black m-0 p-0 overflow-hidden">
+                                                        <img className={this.state.animate ? "image-fade" : "image"} src={img11} alt="aboutpic2" style={{height:"225px", width:"297px"}}/>
+                                                        <div className="middle  p-0 ">
+                                                            <div className="text m-0 p-0">Women's Apparel</div>
+                                                        </div>
+                                                    </button>
+                                                </Link>
+                                            </div>
+                                        </ProductWrapper>
+                                        <ProductWrapper className="p-0 " style={{height:"225px", width:"297px"}}>
+                                            <div className="container m-0 p-0">
+                                                <Link to='/Shop' className="m-0 p-0">
+                                                    <button className="bg-black m-0 p-0 overflow-hidden">
+                                                        <img className={this.state.animate ? "image-fade" : "image"} src={img1} alt="aboutpic2" style={{height:"225px", width:"297px"}}/>
+                                                        <div className="middle m-0 p-0">
+                                                            <div className="text m-0 p-0">Women's Apparel</div>
+                                                        </div>
+                                                    </button>
+                                                </Link>
+                                            </div>
+                                        </ProductWrapper>
+                                    </div>
                         <ProductWrapper>
                             <div className="container p-0">
                                 <Link to='/Shop' >
                                     <button className="bg-black overflow-hidden">
-                                        <img className={this.state.animate ? "image-fade" : "image"} src={Mimg3} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>
+                                        <img className={this.state.animate ? "image-fade" : "image"} src={Mimg3} alt="aboutpic2" style={{height:"450px", width:"297px"}}/>
                                         <div className="middle">
                                             <div className="text">Women's Swim</div>
                                         </div>
@@ -108,101 +142,90 @@ class CarouselWrapper extends Component {
                                 </Link>
                             </div>
                         </ProductWrapper>
-                        <ProductWrapper className="p-0 m-0 mx-auto ">
-                        <div className="container m-0 p-0">
-                            <Link to='/Shop' >
-                                <button className="bg-black overflow-hidden">
-                                    <img className={this.state.animate ? "image-fade" : "image"} src={immmm} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>
-                                    <div className="middle">
-                                        <div className="text">Women's Swim</div>
-                                    </div>
-                                </button>
-                            </Link>
                         </div>
-                    </ProductWrapper>
-                        </Row>
-                </Row>
-                <Row className="p-0 m-0 mx-auto">
-                    <Row className="p-0 m-0 mx-auto " >
 
-                        <Col className="p-0 m-0 my-auto">
-                        <ProductWrapper className="p-0 -mt-4">
-                            <div className="container m-0 p-0">
-                                <Link to='/Shop' className="m-0 p-0">
-                                    <button className="bg-black m-0 p-0 overflow-hidden">
-                                        <img className={this.state.animate ? "image-fade" : "image"} src={img1} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>
-                                        <div className="middle  p-0 ">
-                                            <div className="text m-0 p-0">Women's Apparel</div>
-                                        </div>
-                                    </button>
-                                </Link>
-                            </div>
-                        </ProductWrapper>
-                            <ProductWrapper className="p-0 -mt-2">
-                                <div className="container m-0 p-0">
-                                    <Link to='/Shop' className="m-0 p-0">
-                                        <button className="bg-black m-0 p-0 overflow-hidden">
-                                            <img className={this.state.animate ? "image-fade" : "image"} src={img11} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>
-                                            <div className="middle m-0 p-0">
-                                                <div className="text m-0 p-0">Women's Apparel</div>
-                                            </div>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </ProductWrapper>
-                        </Col>
-                            <ProductWrapper className="p-0 -mt-4">
-                                <div className="container p-0">
-                                    <Link to='/Shop' >
-                                        <button className="bg-black overflow-hidden">
-                                            <img className={this.state.animate ? "image-fade" : "image"} src={Mimg4} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>
-                                            <div className="middle">
-                                                <div className="text">Women's Swim</div>
-                                            </div>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </ProductWrapper>
-                        <Col className="p-0 m-0 my-auto">
-                            <ProductWrapper className="p-0 -mt-4">
-                                <div className="container m-0 p-0">
-                                    <Link to='/Shop' className="m-0 p-0">
-                                        <button className="bg-black m-0 p-0 overflow-hidden">
-                                            <img className={this.state.animate ? "image-fade" : "image"} src={imagee} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>
-                                            <div className="middle  p-0 ">
-                                                <div className="text m-0 p-0">Women's Apparel</div>
-                                            </div>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </ProductWrapper>
-                            <ProductWrapper className="p-0 -mt-2">
-                                <div className="container m-0 p-0">
-                                    <Link to='/Shop' className="m-0 p-0">
-                                        <button className="bg-black m-0 p-0 overflow-hidden">
-                                            <img className={this.state.animate ? "image-fade" : "image"} src={image2} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>
-                                            <div className="middle m-0 p-0">
-                                                <div className="text m-0 p-0">Women's Apparel</div>
-                                            </div>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </ProductWrapper>
-                        </Col>
-                        <ProductWrapper className="p-0 -mt-4">
-                            <div className="container p-0">
-                                <Link to='/Shop' >
-                                    <button className="bg-black overflow-hidden">
-                                        <img className={this.state.animate ? "image-fade" : "image"} src={ima3} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>
-                                        <div className="middle">
-                                            <div className="text">Women's Swim</div>
-                                        </div>
-                                    </button>
-                                </Link>
-                            </div>
-                        </ProductWrapper>
-                    </Row>
                 </Row>
+                {/*<Row className="p-0 m-0 mx-auto">*/}
+                {/*    <Row className="p-0 m-0 mx-auto " >*/}
+
+                {/*        <Col className="p-0 m-0 my-auto">*/}
+                {/*        <ProductWrapper className="p-0 -mt-4">*/}
+                {/*            <div className="container m-0 p-0">*/}
+                {/*                <Link to='/Shop' className="m-0 p-0">*/}
+                {/*                    <button className="bg-black m-0 p-0 overflow-hidden">*/}
+                {/*                        <img className={this.state.animate ? "image-fade" : "image"} src={img1} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>*/}
+                {/*                        <div className="middle  p-0 ">*/}
+                {/*                            <div className="text m-0 p-0">Women's Apparel</div>*/}
+                {/*                        </div>*/}
+                {/*                    </button>*/}
+                {/*                </Link>*/}
+                {/*            </div>*/}
+                {/*        </ProductWrapper>*/}
+                {/*            <ProductWrapper className="p-0 -mt-2">*/}
+                {/*                <div className="container m-0 p-0">*/}
+                {/*                    <Link to='/Shop' className="m-0 p-0">*/}
+                {/*                        <button className="bg-black m-0 p-0 overflow-hidden">*/}
+                {/*                            <img className={this.state.animate ? "image-fade" : "image"} src={img11} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>*/}
+                {/*                            <div className="middle m-0 p-0">*/}
+                {/*                                <div className="text m-0 p-0">Women's Apparel</div>*/}
+                {/*                            </div>*/}
+                {/*                        </button>*/}
+                {/*                    </Link>*/}
+                {/*                </div>*/}
+                {/*            </ProductWrapper>*/}
+                {/*        </Col>*/}
+                {/*            <ProductWrapper className="p-0 -mt-4">*/}
+                {/*                <div className="container p-0">*/}
+                {/*                    <Link to='/Shop' >*/}
+                {/*                        <button className="bg-black overflow-hidden">*/}
+                {/*                            <img className={this.state.animate ? "image-fade" : "image"} src={Mimg4} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>*/}
+                {/*                            <div className="middle">*/}
+                {/*                                <div className="text">Women's Swim</div>*/}
+                {/*                            </div>*/}
+                {/*                        </button>*/}
+                {/*                    </Link>*/}
+                {/*                </div>*/}
+                {/*            </ProductWrapper>*/}
+                {/*        <div className="p-0 m-0 my-auto">*/}
+                {/*            <ProductWrapper className="p-0 -mt-4">*/}
+                {/*                <div className="container m-0 p-0">*/}
+                {/*                    <Link to='/Shop' className="m-0 p-0">*/}
+                {/*                        <button className="bg-black m-0 p-0 overflow-hidden">*/}
+                {/*                            <img className={this.state.animate ? "image-fade" : "image"} src={imagee} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>*/}
+                {/*                            <div className="middle  p-0 ">*/}
+                {/*                                <div className="text m-0 p-0">Women's Apparel</div>*/}
+                {/*                            </div>*/}
+                {/*                        </button>*/}
+                {/*                    </Link>*/}
+                {/*                </div>*/}
+                {/*            </ProductWrapper>*/}
+                {/*            <ProductWrapper className="p-0 -mt-2">*/}
+                {/*                <div className="container m-0 p-0">*/}
+                {/*                    <Link to='/Shop' className="m-0 p-0">*/}
+                {/*                        <button className="bg-black m-0 p-0 overflow-hidden">*/}
+                {/*                            <img className={this.state.animate ? "image-fade" : "image"} src={image2} alt="aboutpic2" style={{height:"200px", width:"267px"}}/>*/}
+                {/*                            <div className="middle m-0 p-0">*/}
+                {/*                                <div className="text m-0 p-0">Women's Apparel</div>*/}
+                {/*                            </div>*/}
+                {/*                        </button>*/}
+                {/*                    </Link>*/}
+                {/*                </div>*/}
+                {/*            </ProductWrapper>*/}
+                {/*        </div>*/}
+                {/*        <ProductWrapper className="p-0 -mt-4">*/}
+                {/*            <div className="container p-0">*/}
+                {/*                <Link to='/Shop' >*/}
+                {/*                    <button className="bg-black overflow-hidden">*/}
+                {/*                        <img className={this.state.animate ? "image-fade" : "image"} src={ima3} alt="aboutpic2" style={{height:"400px", width:"267px"}}/>*/}
+                {/*                        <div className="middle">*/}
+                {/*                            <div className="text">Women's Swim</div>*/}
+                {/*                        </div>*/}
+                {/*                    </button>*/}
+                {/*                </Link>*/}
+                {/*            </div>*/}
+                {/*        </ProductWrapper>*/}
+                {/*    </Row>*/}
+                {/*</Row>*/}
 
 {/*<Carousel infiniteLoop autoPlay showThumbs={false} showStatus={false} useKeyboardArrows className="presentation-mode">*/}
 {/*    <div key="content-3" className="each-slide">*/}

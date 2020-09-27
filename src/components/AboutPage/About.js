@@ -12,7 +12,7 @@ class About extends Component {
                 {/*    <h6 className="text-muted ">Home/</h6><h6>About</h6>*/}
                 {/*</div>*/}
                 <br/>
-                <h3 className="text-center text-title text-muted aboutTitle">MEET THE SISTERS BEHIND THE LABEL</h3>
+                <h3 className="text-center text-title text-muted aboutTitle text-3xl">MEET THE SISTERS BEHIND THE LABEL</h3>
                     <img className="rounded mx-auto d-block img-fluid w-75" src={img} alt="aboutpic" />
                 <br/>
 

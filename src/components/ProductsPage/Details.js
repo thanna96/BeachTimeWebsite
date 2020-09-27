@@ -78,7 +78,7 @@ class Details extends Component {
                                     </div>
                                     {/* product text*/}
                                     <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                                        <h1 className="text-center">{title}</h1>
+                                        <h1 className="text-center text-3xl">{title}</h1>
 
                                         <h4 className="text-center text-muted">
                                             <strong>
@@ -93,8 +93,9 @@ class Details extends Component {
                                             {info.description}
                                         </p>
 
+                                        <div className="row">
                                         {/* Size */}
-                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             Size:<br/>
                                             <select name="selSiz" style={{width:"100%"}} onChange={this.handleChange} >
                                                 {info.sizes.map(size => (
@@ -104,7 +105,7 @@ class Details extends Component {
                                         </h4>
 
                                         {/* Color */}
-                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             Color:<br/>
                                             <select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>
                                                 {value.colors.map(color => (
@@ -112,6 +113,7 @@ class Details extends Component {
                                                 ))}
                                             </select>
                                         </h4>
+                                        </div>
                                         <br/>
                                         {/*/!* Quantity *!/*/}
                                         {/*<h4 className="text-title text-uppercase text-muted mt-3 mb-2">*/}

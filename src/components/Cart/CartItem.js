@@ -9,7 +9,7 @@ export default function CartItem({item,value}) {
     return (
         <div className="row my-2 text-capitalize text-center">
             <div className="col-10 mx-auto col-lg-2">
-                <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} style={{width:'5rem',height:'6rem'}} className="img-fluid" alt="product"/>
+                <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} style={{width:'5rem',height:'6rem'}} className="img-fluid img-thumbnail mx-auto" alt="product"/>
             </div>
 
             <div className="col-10 mx-auto col-lg-2">

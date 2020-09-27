@@ -224,8 +224,9 @@ class ProductList extends Component {
                                                 <select id="sortList" name="typeChoice" defaultValue="all" onChange={this.handleChange} className="text-muted" style={{"width":"100%"}}>
                                                     {/*<option value="new" disabled>Sort</option>*/}
                                                     <option value="all">All</option>
-                                                    <option value="handmade">Top</option>
-                                                    <option value="manufactured">Bottom</option>
+                                                    <option value="one-piece">One Piece</option>
+                                                    <option value="top">Top</option>
+                                                    <option value="bottom">Bottom</option>
                                                 </select>
                                             </h5>
                                         </Col>
@@ -357,10 +358,9 @@ class ProductList extends Component {
                                     let products = value.products;
                                     products = this.filterProducts(products)
                                     products = this.filterType(products)
-                                    return products.map( product =>{
-                                        return <Product key={product.title} product={product}/>
-                                    })
-                                }}
+                                    return (products.map( product =>{
+                                            return <Product key={product.title} product={product}/>
+                                                }))}}
                             </ProductConsumer>
                         </div>
                         </Col>
