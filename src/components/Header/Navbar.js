@@ -6,24 +6,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MobileNav from "./MobileNav";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
-import logo2 from '../../croppedLogo.jpg'
+import logo2 from '../../sewhoneylogo.png'
 class Navbar extends Component {
 
     render() {
         return (
             <div >
-                <div className="d-none d-md-block" style={{height:"125px"}}/>
-                <div className="d-block d-md-none">
+                <div className="d-none d-md-block" style={{height:"150px"}}/>
+                <div className="d-block d-md-none" style={{height:"150px"}}>
                     <MobileNav/>
                 </div>
-                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 " style={{zIndex:1}}>
+                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{background:"#fffaf0", zIndex:1}}>
 
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center mx-auto">
 
                                 <img src={logo2} alt="store"
                                      className=" img-fluid pr-0 pt-3"
-                                     style={{maxWidth:"15%", Height:"auto"}}
+                                     style={{maxWidth:"10%", Height:"auto"}}
                                 />
 
 

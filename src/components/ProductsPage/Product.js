@@ -25,7 +25,7 @@ class Product extends Component {
         return (
             <ProductWrapper className="col-6 col-md-4 col-lg-3 my-0 ">
 
-                <div className="card mb-1 ">
+                <div className="card mb-1 shadow-sm ">
                     <ProductConsumer>
                         {value=>(
                     <div className=" p-0"

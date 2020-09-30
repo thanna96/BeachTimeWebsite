@@ -55,7 +55,7 @@ class CarouselWrapper extends Component {
 
                 <ProductWrapper >
                 <div className={this.state.animate ? "titleStart" : "titleEnd"}>
-                <div className="col-10 mx-auto mb-0 text-center text-title mt-5">
+                <div className="col-10 mx-auto mb-0 text-center text-title mt-2">
                     <h1 className="text-capitalize text-muted font-semibold text-5xl subpixel-antialiased">
                         Shop Now
                     </h1>
@@ -69,7 +69,7 @@ class CarouselWrapper extends Component {
                     <Card className="p-0 m-0">
                         <ProductWrapper className="p-0 m-0  ">
                             <div className="container ">
-                                <Link to='/Shop' >
+                                <Link to='/ProductList/handmade' >
                                     <button className="bg-black overflow-hidden ">
                                         <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg2} />
                                         <div className="middle">
@@ -83,7 +83,7 @@ class CarouselWrapper extends Component {
                     <Card className="p-0 m-0">
                         <ProductWrapper className="p-0 m-0  ">
                             <div className="container ">
-                                <Link to='/Shop' >
+                                <Link to='/ProductList/handmade' >
                                     <button className="bg-black overflow-hidden ">
                                         <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={image2} />
                                         <div className="middle">
@@ -97,7 +97,7 @@ class CarouselWrapper extends Component {
                     <Card className="p-0 m-0">
                         <ProductWrapper className="p-0 m-0  ">
                             <div className="container ">
-                                <Link to='/Shop' >
+                                <Link to='/ProductList/handmade' >
                                     <button className="bg-black overflow-hidden ">
                                         <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={imagee} />
                                         <div className="middle">
@@ -111,7 +111,7 @@ class CarouselWrapper extends Component {
                     <Card className="p-0 m-0">
                         <ProductWrapper className="p-0 m-0  ">
                             <div className="container ">
-                                <Link to='/Shop' >
+                                <Link to='/ProductList/handmade' >
                                     <button className="bg-black overflow-hidden ">
                                         <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
                                         <div className="middle">
@@ -125,7 +125,7 @@ class CarouselWrapper extends Component {
                     <Card className="p-0 m-0">
                         <ProductWrapper className="p-0 m-0  ">
                             <div className="container ">
-                                <Link to='/Shop' >
+                                <Link to='/ProductList/handmade' >
                                     <button className="bg-black overflow-hidden ">
                                         <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={img} />
                                         <div className="middle">
@@ -139,9 +139,37 @@ class CarouselWrapper extends Component {
                     <Card className="p-0 m-0">
                         <ProductWrapper className="p-0 m-0  ">
                             <div className="container ">
-                                <Link to='/Shop' >
+                                <Link to='/ProductList/handmade' >
                                     <button className="bg-black overflow-hidden ">
                                         <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg3} />
+                                        <div className="middle">
+                                            <div className="text">Women's Swim</div>
+                                        </div>
+                                    </button>
+                                </Link>
+                            </div>
+                        </ProductWrapper>
+                    </Card>
+                    <Card className="p-0 m-0">
+                        <ProductWrapper className="p-0 m-0  ">
+                            <div className="container ">
+                                <Link to='/ProductList/handmade' >
+                                    <button className="bg-black overflow-hidden ">
+                                        <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={ima3} />
+                                        <div className="middle">
+                                            <div className="text">Women's Swim</div>
+                                        </div>
+                                    </button>
+                                </Link>
+                            </div>
+                        </ProductWrapper>
+                    </Card>
+                    <Card className="p-0 m-0">
+                        <ProductWrapper className="p-0 m-0  ">
+                            <div className="container ">
+                                <Link to='/ProductList/handmade' >
+                                    <button className="bg-black overflow-hidden ">
+                                        <Card.Img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
                                         <div className="middle">
                                             <div className="text">Women's Swim</div>
                                         </div>

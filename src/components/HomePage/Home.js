@@ -12,18 +12,14 @@ class Home extends Component {
                 <div className="carousel-desktop w-75 mx-auto">
                     <CarouselWrapper/>
                 </div>
-                <div className="carousel-mobile">
+                <div className="carousel-mobile my-auto">
+                    <div className="col-10 mx-auto  text-center text-title m-3">
+                        <h1 className="text-capitalize text-muted font-semibold text-3xl subpixel-antialiased">
+                            Shop Now
+                        </h1>
+                    </div>
                     <MobileCarousel/>
-                    <Card className="text-center text-muted" border="white">
-                        <Card.Body>
-                            <Card.Text>
-                                Check out the newest hand made swimsuits from our Sew Honey Summer 2020 Collection
-                            </Card.Text>
-                            <Link to='/Shop'>
-                            <Button variant="outline-dark">Browse Collection</Button>
-                            </Link>
-                        </Card.Body>
-                    </Card>
+
                 </div>
 
             </div>

@@ -203,7 +203,7 @@ class ProductList extends Component {
                             {/*        Filters:*/}
                             {/*    </Card.Header>*/}
                             {/*        <Card.Body>*/}
-                            <div className=" border d-none d-md-block  p-2 " style={{background:"#f8f8f8", marginTop:"60px",  top:"130px", position:"sticky"}}>
+                            <div className=" border d-none d-md-block  p-2 shadow-md" style={{background:"#f8f8f8", marginTop:"100px",  top:"130px", position:"sticky"}}>
                                         <p className="text-muted">Sort:</p>
                                         <Col>
                                             <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
@@ -247,7 +247,7 @@ class ProductList extends Component {
                             {/*</Card>*/}
                             <Navbar expand="lg" className="d-block d-md-none border" style={{ width: "100%" }} >
 
-                                <Navbar.Toggle aria-controls="basic-navbar-nav"  > Filters</Navbar.Toggle>
+                                <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-auto w-full" > Filters</Navbar.Toggle>
 
 
                                 <Navbar.Collapse id="basic-navbar-nav">
@@ -272,23 +272,25 @@ class ProductList extends Component {
                                                             <select id="sortList" name="typeChoice" defaultValue="all" onChange={this.handleChange} className="text-muted" style={{"width":"100%"}}>
                                                                 {/*<option value="new" disabled>Sort</option>*/}
                                                                 <option value="all">All</option>
-                                                                <option value="handmade">Hand-Made</option>
-                                                                <option value="manufactured">Manufactured</option>
+                                                                <option value="tops">Tops</option>
+                                                                <option value="bottoms">Bottoms</option>
+                                                                <option value="onePiece">One-Piece</option>
+
                                                             </select>
                                                         </h5>
                                                     </Col>
-                                                    <hr/>
-                                                    <p className="text-muted">Style:</p>
-                                                    <Row>
-                                                        <ButtonGroup  className="mx-auto w-100" >
-                                                            <Button onClick={this.filterHandler} value="all" className=" w-50" variant="outline-secondary">All</Button>
-                                                            <Button onClick={this.filterHandler} value="tops" className=" w-50" variant="outline-secondary">Top</Button>
-                                                        </ButtonGroup>
-                                                        <ButtonGroup className="mx-auto w-100" >
-                                                            <Button onClick={this.filterHandler} value="bottoms" className=" w-50" variant="outline-secondary">Bottom</Button>
-                                                            <Button onClick={this.filterHandler} value="onePiece" className=" w-50" variant="outline-secondary">One-Piece</Button>
-                                                        </ButtonGroup>
-                                                    </Row>
+                                                    {/*<hr/>*/}
+                                                    {/*<p className="text-muted">Style:</p>*/}
+                                                    {/*<Row>*/}
+                                                    {/*    <ButtonGroup  className="mx-auto w-100" >*/}
+                                                    {/*        <Button onClick={this.filterHandler} value="all" className=" w-50" variant="outline-secondary">All</Button>*/}
+                                                    {/*        <Button onClick={this.filterHandler} value="tops" className=" w-50" variant="outline-secondary">Top</Button>*/}
+                                                    {/*    </ButtonGroup>*/}
+                                                    {/*    <ButtonGroup className="mx-auto w-100" >*/}
+                                                    {/*        <Button onClick={this.filterHandler} value="bottoms" className=" w-50" variant="outline-secondary">Bottom</Button>*/}
+                                                    {/*        <Button onClick={this.filterHandler} value="onePiece" className=" w-50" variant="outline-secondary">One-Piece</Button>*/}
+                                                    {/*    </ButtonGroup>*/}
+                                                    {/*</Row>*/}
                                     </Nav>
                                 </Navbar.Collapse>
                             </Navbar>
@@ -344,8 +346,8 @@ class ProductList extends Component {
                             <br/>
                         </Col>
                         <Col xs={12} md={9}>
-                            <div className="col-10 mx-auto mb-0 text-center text-title mt-0">
-                                <h1 className="text-capitalize text-muted font-semibold text-4xl subpixel-antialiased">
+                            <div className="col-10 mx-auto mb-0 text-center text-title mt-3">
+                                <h1 className="text-capitalize  aboutTitle text-muted font-semibold text-4xl subpixel-antialiased">
                                     Womens {this.state.typeChoice}
                                 </h1>
                             </div>
