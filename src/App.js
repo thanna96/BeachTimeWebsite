@@ -18,12 +18,12 @@ import TestDb from "./DBTests/TestDB";
 import SizingPage from "./components/SizingPage/SizingPage";
 import AdminPage from "./components/AdminPage/AdminPage";
 import Shop from "./components/ProductsPage/Shop"
-
+import CustomerCare from "./components/PolicyPage/CustomerCare";
 function App() {
   return (
       <React.Fragment>
           <TestDb/>
-          <TopBar/>
+          {/*<TopBar/>*/}
           <Navbar/>
           <Switch>
               <Route exact path="/" component={Home}/>
@@ -32,6 +32,7 @@ function App() {
               <Route exact path="/ProductList/:style" component={ProductList}/>
               <Route exact path="/MensProductList/:style" component={MensProductList}/>
               <Route path="/About" component={About}/>
+              <Route path="/customer-care" component={CustomerCare}/>
               {/*<Route path="/Shop" component={Shop}/>*/}
               <Route path="/Cart" component={Cart}/>
               <Route path="/SizingPage" component={SizingPage}/>

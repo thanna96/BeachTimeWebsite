@@ -5,20 +5,23 @@ import image2 from '../../IMG_4588.JPG';
 class SizingPage extends Component {
     render() {
         return (
-            <div className="">
-                <div className="row col-10 mx-auto col-md-6">
-                    <h6 className="text-muted ">Home/</h6><h6>Sizing Charts</h6>
+            <div className="w-75 mx-auto">
+                <div className="col-12 mx-auto m-5 text-center text-title mt-3">
+                    <p className="mx-auto   font-bold" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'40px'}}>
+                        Sizing
+                    </p>
                 </div>
-                <div className="container">
-
-                <img src={image1} alt="store"
-                     className="img-fluid "
-                     style={{"width":"100%"}}
-                />
-                <img src={image2} alt="store"
-                     className="img-fluid"
-                     style={{"width":"100%"}}
-                />
+                <div className="row">
+                    <div className="col-12 col-md-6">
+                        <img src={image1} alt="store"
+                             className="img-fluid mx-auto "
+                        />
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <img src={image2} alt="store"
+                             className="img-fluid mx-auto"
+                        />
+                    </div>
                 </div>
             </div>
         );

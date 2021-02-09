@@ -7,41 +7,43 @@ export default function CartTotals({value,history}) {
 
     return (
         <React.Fragment>
-            <div className="container">
+            {/*<div className="container">*/}
                 <div className="row">
-                    <div className="col-10 mt-2 ml-sm-5 ml-m-auto col-sm-8 text-capitalize text-right">
-                        <Link to="/Shop">
-                            <button className="btn btn-outline-danger text-uppercase mb-3 px-5" type="button"
+                    <div className="col-lg-11 mt-2 ml-sm-5 ml-m-auto col-sm-8   text-right">
+
+                            <button className=" text-uppercase mb-3 py-2 px-5"
+                                    style={{ fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'16px',backgroundColor:'red'}}
+                                    type="button"
                             onClick={()=>clearCart()}>
                                 clear cart
                             </button>
-                        </Link>
+
                         <h5>
-                            <span className="text-title">
+                            <span   style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'20px'  }}>
                                 subtotal :
                             </span>
-                            <strong>$ {cartSubTotal}</strong>
+                            <strong> $ {cartSubTotal}</strong>
                         </h5>
                         <h5>
-                            <span className="text-title">
+                            <span style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'20px'  }}>
                                 tax :
                             </span>
-                            <strong>$ {cartTax}</strong>
+                            <strong> $ {cartTax}</strong>
                         </h5>
-                        <h5>
-                            <span className="text-title">
+                        <h5 className="mb-2">
+                            <span style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'20px' }}>
                                 total :
                             </span>
-                            <strong>$ {cartTotal}</strong>
+                            <strong> $ {cartTotal}</strong>
                         </h5>
-                        <PayPalButton
+                        <PayPalButton className="m-2"
                             total={cartTotal}
                             clearCart={clearCart}
                             history={history}
                         />
                     </div>
                 </div>
-            </div>
+            {/*</div>*/}
         </React.Fragment>
     );
 }

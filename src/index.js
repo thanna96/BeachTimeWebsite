@@ -9,6 +9,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {ProductProvider} from "./context";
 import ScrollToTop from "./components/ScrollToTop";
 import './tailwind.output.css'
+
 require('dotenv').config();
 
 ReactDOM.render(

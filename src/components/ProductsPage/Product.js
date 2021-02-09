@@ -16,44 +16,40 @@ class Product extends Component {
     constructor(props){
         super(props);
         this.state = {
-            image: ''
+            image: '',
         }
     }
 
     render() {
         const {id, title, info} = this.props.product;
         return (
-            <ProductWrapper className="col-6 col-md-4 col-lg-3 my-0 ">
+            <ProductWrapper className="col-6 col-md-4 col-lg-3 my-0 " >
 
-                <div className="card mb-1 shadow-sm ">
+                <div className="my-6" style={{ }}>
                     <ProductConsumer>
                         {value=>(
-                    <div className=" p-0"
-                         onClick={()=>value.handleDetail(id,title)}>
-                        <Link to={info.type+'/'+id+'/'+title}>
-                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]}
-                                 id="imgTest" alt="product" className="card-img-top " style={{height:"250px", width:"100%"}}/>
+                    <div onClick={()=>value.handleDetail(id,title)} >
+                        <Link to={info.type+'/'+id+'/'+title} >
+                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} className="hover-image"
+                                 onMouseEnter={e => {if (info.img[1]) e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/" + info.img[1]}}
+                                 onMouseLeave={e => (e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0])}
+                                 id="imgTest" alt="product" style={{height:"300px", width:"270px"}}/>
                         </Link>
-
-                        {/*<button className="cart-btn" disabled={!!info.inCart}*/}
-                        {/*        onClick={()=>{*/}
-                        {/*            value.openModal(id,title);*/}
-                        {/*}}>*/}
-                        {/*    {info.inCart?(<p className="text-capitalize mb-0" disabled>{" "}in cart</p>*/}
-                        {/*    ):(*/}
-                        {/*        <div>Quick View</div>)}*/}
-                        {/*</button>*/}
                     </div>)}
                     </ProductConsumer>
 
                     {/* Card Footer */}
-                    <div className="card-footer d-flex justify-content-center" >
-                        <p className="mb-0 align-self-center" style={{"textAlign": "center"}}>
+                    <div className=" justify-content-center" >
+                        <Link to={info.type+'/'+id+'/'+title} className="footer-link">
+                        <p className="mb-0 align-self-center font-bold" style={{"textAlign": "center",letterSpacing:'1px',
+                            fontFamily:'"Montserrat", sans-serif' , fontSize:'16px',opacity:'60%' }} >
                             {title}
-                            <br/>
-                            <span className="mr-1">$</span>
-                            {info.price}
                         </p>
+                        </Link>
+                        <p className="align-self-center " style={{"textAlign": "center",opacity:'60%'}}>
+                        <span>${info.price}</span>
+                        </p>
+
                     </div>
 
                 </div>
@@ -84,7 +80,7 @@ const ProductWrapper = styled.div`
     .card-footer{
         background: transparent;
         border-top: transparent;
-        font-family: 'Noto Sans JP', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         padding: 0 3;
     }

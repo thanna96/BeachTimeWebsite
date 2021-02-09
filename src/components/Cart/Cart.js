@@ -16,10 +16,20 @@ class Cart extends Component {
                         if(cart.length > 0){
                             return(
                                 <React.Fragment>
-                                    <Title name="Your" title="cart"/>
-                                    <CartColumns/>
-                                    <CartList value={value}/>
-                                    <CartTotals value={value} history={this.props.history}/>
+                                    <div className="col-10 mx-auto m-4 text-center text-title mt-3">
+                                        <p className="mx-auto  font-bold" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'40px'}}>
+                                           Cart
+                                        </p>
+                                    </div>
+                                    <div className="w-75 mx-auto border border-black p-2">
+                                        <CartColumns/>
+                                        <hr className="my-4"/>
+
+                                        <CartList value={value}/>
+                                        <hr className="my-4"/>
+                                        <CartTotals value={value} history={this.props.history}/>
+                                    </div>
+
                                 </React.Fragment>
                             )
                         }else{

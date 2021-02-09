@@ -145,100 +145,38 @@ class MensProductList extends Component {
             <React.Fragment>
 
                 <div >
-                    {/*<img src={img} alt="store"*/}
-                    {/*     className="img-fluid d-none d-sm-block mb-2"*/}
-                    {/*     style={{"width":"100%"}}*/}
-                    {/*/>*/}
-
-                    <div className="container h-100" >
-
-
-
+                    <div className="container h-100 w-75" >
                         <Row>
-                            <Col xs={12} md={3}  >
-                                <div className=" border d-none d-md-block mt-5 p-2 " style={{background:"#f8f8f8",  top:"130px", position:"sticky"}}>
-                                    <p className="text-muted">Sort:</p>
-                                    <Col>
-                                        <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
-                                            <select id="sortList" defaultValue="new" className="text-muted" onChange={this.sortList}  style={{"width":"100%"}}>
-                                                {/*<option value="new" disabled>Sort</option>*/}
-                                                <option value="new">Newest</option>
-                                                <option value="priceLH">Price: (Low to High)</option>
-                                                <option value="priceHL">Price: (High to Low)</option>
-                                                <option value="AZ">Name: A-Z</option>
-                                                <option value="ZA">Name: Z-A</option>
-                                            </select>
-                                        </h5>
-                                    </Col>
-                                    {/*<hr/>*/}
-                                    {/*<p className="text-muted">Style:</p>*/}
-                                    {/*<Col>*/}
-                                    {/*    <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>*/}
-                                    {/*        <select id="sortList" name="typeChoice" defaultValue="all" onChange={this.handleChange} className="text-muted" style={{"width":"100%"}}>*/}
-                                    {/*            /!*<option value="new" disabled>Sort</option>*!/*/}
-                                    {/*            <option value="all">All</option>*/}
-                                    {/*            <option value="handmade">Top</option>*/}
-                                    {/*            <option value="manufactured">Bottom</option>*/}
-                                    {/*        </select>*/}
-                                    {/*    </h5>*/}
-                                    {/*</Col>*/}
+
+                            <Col xs={12} >
+                                <div className="col-10 mx-auto m-4 text-center text-title mt-3">
+                                    <p className="mx-auto w-50 font-bold" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'40px'}}>
+                                        Shop
+                                    </p>
                                 </div>
-                                <Navbar expand="lg" className="d-block d-md-none border" style={{ width: "100%" }} >
 
-                                    <Navbar.Toggle aria-controls="basic-navbar-nav"  > Filters</Navbar.Toggle>
-
-
-                                    <Navbar.Collapse id="basic-navbar-nav">
-                                        <Nav className="mr-auto text-center">
-                                            <p className="text-muted">Sort:</p>
-                                            <Col>
-                                                <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
-                                                    <select id="sortList" defaultValue="new" className="text-muted" onChange={this.sortList}  style={{"width":"100%"}}>
-                                                        <option value="new">Newest</option>
-                                                        <option value="priceLH">Price: (Low to High)</option>
-                                                        <option value="priceHL">Price: (High to Low)</option>
-                                                        <option value="AZ">Name: A-Z</option>
-                                                        <option value="ZA">Name: Z-A</option>
-                                                    </select>
-                                                </h5>
-                                            </Col>
-                                            <hr/>
-                                            <p className="text-muted">Product Type:</p>
-                                            <Col>
-                                                <h5 className="text-title text-uppercase  mb-2 text-muted"  style={{"width":"100%"}}>
-                                                    <select id="sortList" name="typeChoice" defaultValue="all" onChange={this.handleChange} className="text-muted" style={{"width":"100%"}}>
-                                                        {/*<option value="new" disabled>Sort</option>*/}
-                                                        <option value="all">All</option>
-                                                        <option value="handmade">Hand-Made</option>
-                                                        <option value="manufactured">Manufactured</option>
-                                                    </select>
-                                                </h5>
-                                            </Col>
-                                            <hr/>
-                                            <p className="text-muted">Style:</p>
-                                            <Row>
-                                                <ButtonGroup  className="mx-auto w-100" >
-                                                    <Button onClick={this.filterHandler} value="all" className=" w-50" variant="outline-secondary">All</Button>
-                                                    <Button onClick={this.filterHandler} value="Shirts" className=" w-50" variant="outline-secondary">Shirts</Button>
-                                                </ButtonGroup>
-                                                <ButtonGroup className="mx-auto w-100" >
-                                                    <Button onClick={this.filterHandler} value="Hoodies" className=" w-50" variant="outline-secondary">Hoodies</Button>
-                                                    <Button onClick={this.filterHandler} value="Swimwear" className=" w-50" variant="outline-secondary">Swimwear</Button>
-                                                </ButtonGroup>
-                                            </Row>
-                                        </Nav>
-                                    </Navbar.Collapse>
-                                </Navbar>
-                                <br/>
-                            </Col>
-                            <Col xs={12} md={9}>
-                                <div className="col-10 mx-auto mb-0 text-center text-title mt-0">
-                                    <h1 className="text-capitalize text-muted font-semibold text-4xl subpixel-antialiased">
+                                <Col xs={12} md={3} className="mb-4 p-2" style={{float: 'left' }} >
+                                    <p  style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
                                         Mens {this.state.typeChoice}
-                                    </h1>
-                                </div>
+                                    </p>
+                                </Col>
 
-
+                                <Col xs={12} md={3} className="mb-4" style={{float: 'right'}} >
+                                    <div className=" border d-none d-md-block  p-2 shadow-md" style={{background:"#f8f8f8" }}>
+                                        <Col>
+                                            <h5 className="text-uppercase text-muted"  style={{"width":"100%",fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f'}}>
+                                                <select id="sortList" defaultValue="new" className="text-muted" onChange={this.sortList}  style={{"width":"100%"}}>
+                                                    <option value="new" disabled>Sort</option>
+                                                    <option value="new">Newest</option>
+                                                    <option value="priceLH">Price: (Low to High)</option>
+                                                    <option value="priceHL">Price: (High to Low)</option>
+                                                    <option value="AZ">Name: A-Z</option>
+                                                    <option value="ZA">Name: Z-A</option>
+                                                </select>
+                                            </h5>
+                                        </Col>
+                                    </div>
+                                </Col>
                                 <div className="row mx-auto w-100">
                                     <ProductConsumer >
                                         {(value)=>{
@@ -252,10 +190,14 @@ class MensProductList extends Component {
                                         }}
                                     </ProductConsumer>
                                 </div>
+
                             </Col>
+
                         </Row>
                     </div>
                 </div>
+
+
             </React.Fragment>
         );
     }

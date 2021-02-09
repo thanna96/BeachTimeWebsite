@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="carousel-desktop w-75 mx-auto">
+                <div className="carousel-desktop w-100 mx-auto">
                     <CarouselWrapper/>
                 </div>
                 <div className="carousel-mobile my-auto">

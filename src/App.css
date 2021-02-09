@@ -1,7 +1,7 @@
 :root {
   --mainBlue:#2a2a72;
   --lightBlue:#009ffd;
-  --mainWhite: #fffafa;
+  --mainWhite: white;
   --mainDark:#232528;
   --mainYellow:#ffa400;
   --mainBlack: #000000;
@@ -14,6 +14,34 @@ body{
   color:var(--mainDark) !important;
 }
 
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.center-text-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.nav-btn {
+  font-family: 'Montserrat', sans-serif;
+  size: 12px 20px;
+  color: #1a1b1f;
+  opacity: 60%;
+}
 .title h1{
   font-size: calc(55px + 2vmin);
   text-align: center;
@@ -23,6 +51,7 @@ body{
   /*font-family: 'Amatic SC', cursive;*/
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
 }
 .card-img-top {
   width: 100%;
@@ -51,6 +80,19 @@ body{
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+}
+.footer-link:hover{
+  color: var(--mainYellow);
+  text-decoration: none;
+  transition: all .3s linear;
+}
+.hover-image:hover{
+  opacity:0.80;
+  background-color: Black;
+}
+.clicked{
+  opacity:0.5;
+  background-color: Black;
 }
 .sewtitle{
   /*font-family: 'Amatic SC', cursive;*/

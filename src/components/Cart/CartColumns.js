@@ -3,12 +3,12 @@ import React from 'react';
 export default function CartColumns(){
     return (
         <div className="container-fluid text-center d-none d-lg-block">
-            <div className="row">
+            <div className="row font-bold">
                 <div className="mx-auto col-10 col-lg-2">
-                    <p className="text-uppercase">Products</p>
+                    <p className="text-uppercase"> </p>
                 </div>
                 <div className="mx-auto col-10 col-lg-2">
-                    <p className="text-uppercase">Item Name</p>
+                    <p className="text-uppercase">Product Info</p>
                 </div>
                 <div className="mx-auto col-10 col-lg-2">
                     <p className="text-uppercase">Price</p>

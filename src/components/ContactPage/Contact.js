@@ -49,31 +49,32 @@ class Contact extends Component {
 
     render() {
         return (
-            <div>
-                <div className="row col-10 mx-auto col-md-6 ">
-                    <h6 className="text-muted ">Home/</h6><h6>Contact</h6>
-                </div>
-                <br/>
-            <Form className="col-10 mx-auto col-md-6 " onSubmit={this.handleSubmit}>
-                <Form.Label>
+            <div className="pb-5">
+                {/*<div className="row col-10 mx-auto col-md-6 ">*/}
+                {/*    <h6 className="text-muted ">Home/</h6><h6>Contact</h6>*/}
+                {/*</div>*/}
+                {/*<br/>*/}
+            <Form className="w-75    " onSubmit={this.handleSubmit}>
+                <Form.Label className=" " style={{spacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'12px'}}>
                     Name:
                 </Form.Label>
                 <Form.Control name='name' onChange={this.handleChange}/>
                 <br/>
-                <Form.Label>
+                <Form.Label className=" "  style={{spacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'12px'}}>
                     Email:
                 </Form.Label>
                 <Form.Control name='email' onChange={this.handleChange}/>
                 <br/>
-                <Form.Label>
+                <Form.Label className=" "  style={{spacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'12px'}}>
                     Message:
                 </Form.Label>
                 <Form.Control name='message' type="text" as="textarea" rows="3" onChange={this.handleChange}/>
                 <br/>
-                <Button variant="primary" type="submit" >
+                <button type="submit" className="py-2 px-3" style={{ fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'12px',backgroundColor:'black'}}>
                     Send
-                </Button>
+                </button>
             </Form>
+
             </div>
         );
     }

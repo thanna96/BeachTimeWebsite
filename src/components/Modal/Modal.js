@@ -34,46 +34,24 @@ class Modal extends Component {
                         return null;
                     }else {
                        return (<ModalContainer>
-                            <div className="container">
+                            <div className="m-auto" style={{
+                                position:"fixed",
+                                top:'50%',
+                                left:'50%',
+                                transform: 'translate(-50%, -50%)'
+                            }} >
                                 <div className="row">
-                                    <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5">
-                                        <h5>{title}</h5>
-                                        <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} className="img-fluid" alt="product"/>
-                                        {/* Size */}
-                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                            Size:
-                                            <select name="selSize" onChange={this.handleChange} >
-                                                {info.sizes.map(size => (
-                                                    <option key={size} >{size}</option>
-                                                ))}
-                                            </select>
-                                        </h4>
+                                    <div id="modal" className="col-8 mx-auto col-md-6 col-lg-6 text-center text-capitalize">
+                                        <h5 className="p-3">{title} Has Been Added To Your Cart!</h5>
 
-                                        {/* Color */}
-                                        <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                            Color:
-                                            <select name="selCol" onChange={this.handleChange} >
-                                                {value.colors.map(color => (
-                                                    <option key={color.color} >{color.color}</option>
-                                                ))}
-                                            </select>
-                                        </h4>
-                                        <h5 className="text-muted">price : ${info.price}</h5>
-                                        <ButtonContainer onClick={()=>closeModal()}>
-                                            Close
-                                        </ButtonContainer>
-                                        <Link to={'/ProductList/'+info.gender}>
-                                            <ButtonContainer onClick={()=>{
-                                                info.selSize = this.state.selSiz
-                                                info.selColor = this.state.selCol
-                                                if (info.selSize === '') info.selSize = info.sizes[0];
-                                                if (info.selColor === '') info.selColor = value.colors[0].color;
-                                                closeModal();
-                                                value.addToCart(id,title);
-                                            }}>
-                                                Add to Cart
+                                        <Link to={"/cart"}>
+                                            <ButtonContainer onClick={()=>closeModal()}>
+                                                View Cart
                                             </ButtonContainer>
                                         </Link>
+                                        <ButtonContainer className="mt-2" onClick={()=>closeModal()}>
+                                            Close
+                                        </ButtonContainer>
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +74,8 @@ const ModalContainer = styled.div`
     align-items: center;
     justify-content: center;
     #modal{
-        background:rgba(255, 255, 255, 0.9);
+        background:rgba(255, 255, 255,1);
+      padding: 20px;
     }
 `;
 
