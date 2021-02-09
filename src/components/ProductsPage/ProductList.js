@@ -1,23 +1,23 @@
 import React, {Component} from 'react';
 import Product from './Product'
-import Title from "../Header/Title";
+// import Title from "../Header/Title";
 import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
-import img from "../../2020Collection.jpg";
-import img1 from "../../croppedLogo.jpg";
+// import img from "../../2020Collection.jpg";
+// import img1 from "../../croppedLogo.jpg";
 import Col from "react-bootstrap/Col";
-import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
+// import Accordion from "react-bootstrap/Accordion";
+// import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import {Link} from "react-router-dom";
-import Figure from "react-bootstrap/Figure";
-import logo2 from "../../croppedLogo2.jpg";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+// import Button from "react-bootstrap/Button";
+// import ButtonGroup from "react-bootstrap/ButtonGroup";
+// import Navbar from "react-bootstrap/Navbar";
+// import Nav from "react-bootstrap/Nav";
+// import {Link} from "react-router-dom";
+// import Figure from "react-bootstrap/Figure";
+// import logo2 from "../../croppedLogo2.jpg";
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+// import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 class ProductList extends Component {
     constructor(props) {

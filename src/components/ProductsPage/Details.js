@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {ProductConsumer} from "../../context";
 import {Link} from "react-router-dom";
 import {ButtonContainer} from "../Styles/Button";
-import { Carousel } from 'react-responsive-carousel';
+// import { Carousel } from 'react-responsive-carousel';
 import Mimg2 from "../../mBanner1.JPG";
 import img from "../../banner.JPG";
  import {OverlayTrigger} from "react-bootstrap";
@@ -132,7 +132,7 @@ class Details extends Component {
                                             {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
                                                 {value.colors.map(color => (
                                                     // <option value={color.color} key={color.color}>{color.color}</option>
-                                                    <OverlayTrigger  className="inline-flex " overlay={<Tooltip className="p-0">{color.color}</Tooltip>}>
+                                                    <OverlayTrigger key={color.color} className="inline-flex " overlay={<Tooltip className="p-0">{color.color}</Tooltip>}>
                                                     <input type="image" key={color.color} name="selCol" value={color.color}
                                                            className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
                                                             onClick={this.handleChange} style={{ background: 'transparent' }} height="30px" width="30px"
@@ -170,7 +170,7 @@ class Details extends Component {
                                                         info.selColor = this.state.selCol
                                                         if (info.selSize === '') info.selSize = info.sizes[0];
                                                         if (info.selColor === '') info.selColor = value.colors[0].color;
-                                                        value.addToCart(id,title);
+                                                        value.addToCart(value.detailProduct);
                                                         value.openModal(id,title)
                                                     }}>
                                                    Add to Cart

@@ -61,11 +61,13 @@ class ProductProvider extends Component {
         let localCart = localStorage.getItem("cart");
         localCart = JSON.parse(localCart)
         if (localCart) {
+            console.log(localCart)
+
             localCart.forEach(product => {
-                this.getItem(product.id,product.title).info.count = product.info.count
-                this.getItem(product.id,product.title).info.selColor = product.info.selColor
-                this.getItem(product.id,product.title).info.selSize = product.info.selSize
-                this.addToCart(product.id,product.title)
+                //this.getItem(product.id,product.title).info.count = product.info.count
+                //this.getItem(product.id,product.title).info.selColor = product.info.selColor
+                //this.getItem(product.id,product.title).info.selSize = product.info.selSize
+                this.addToCart(product)
             })
         }
     }
@@ -105,10 +107,10 @@ class ProductProvider extends Component {
         });
     }
 
-    increment = (id,title)=>{
+    increment = (item)=>{
         let tempCart = [...this.state.cart];
-        const selectedProduct = tempCart.find(item => item.id === id && item.title === title);
-        const index = tempCart.indexOf(selectedProduct);
+        //const selectedProduct = tempCart.find(item => item.id === id && item.title === title && item.info.selColor === color && item.info.selSize === size );
+        const index = tempCart.indexOf(item);
         const product = tempCart[index];
         if( product.info.count < 10) {
             product.info.count = product.info.count + 1;
@@ -122,15 +124,15 @@ class ProductProvider extends Component {
         }
     };
 
-    decrement = (id,title) =>{
+    decrement = (id,title,color,size) =>{
         let tempCart = [...this.state.cart];
-        const selectedProduct = tempCart.find(item => item.id === id && item.title === title);
+        const selectedProduct = tempCart.find(item => item.id === id && item.title === title && item.info.selColor === color && item.info.selSize === size );
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
         product.info.count = product.info.count - 1;
 
         if(product.info.count === 0){
-            this.removeItem(id,title);
+            this.removeItem(id,title,color,size);
         }
         else {
             product.info.total = product.info.price * product.info.count;
@@ -143,11 +145,11 @@ class ProductProvider extends Component {
         }
     };
 
-    removeItem = (id,title) =>{
+    removeItem = (id,title,color,size) =>{
         let tempProducts = [...this.state.products];
         let tempCart = [...this.state.cart];
 
-        tempCart = tempCart.filter(item => item.id !== id && item.title !== title);
+        tempCart = tempCart.find(item => item.id === id && item.title === title && item.info.selColor === color && item.info.selSize === size );
 
         const index = tempProducts.indexOf(this.getItem(id,title));
         let removedProduct = tempProducts[index];
@@ -176,6 +178,7 @@ class ProductProvider extends Component {
     };
 
     addTotals = () =>{
+       console.log(this.state.cart)
         let subTotal = 0;
         this.state.cart.map(item => (subTotal += item.info.total));
         const tempTax = subTotal * 0.06625;
@@ -193,15 +196,16 @@ class ProductProvider extends Component {
         localStorage.setItem("cart", stringCart);
     }
 
-    addToCart = (id,title) =>{
-        let tempProducts = [...this.state.products];
-        const index = tempProducts.indexOf(this.getItem(id,title));
-        const product = tempProducts[index];
+    addToCart = (prod) =>{
+        var product = JSON.parse(JSON.stringify(prod))
+        //let tempProducts = [...this.state.products];
+        //const index = tempProducts.indexOf(this.getItem(id,title));
+        //const product = this.getItem(id,title);// tempProducts[index];
         product.info.inCart = true;
         if (product.info.count === 0) product.info.count = 1;
         product.info.total = product.info.price * product.info.count;
         this.setState( () =>{
-            return { products: tempProducts,cart:[...this.state.cart,product]};
+            return {  cart:[...this.state.cart,product]};
         },()=>this.addTotals());
     };
 

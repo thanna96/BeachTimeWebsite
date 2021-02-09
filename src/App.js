@@ -13,11 +13,11 @@ import StorePolicy from './components/PolicyPage/StorePolicy'
 import Contact from "./components/ContactPage/Contact";
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
-import TopBar from "./components/Header/TopBar";
+//import TopBar from "./components/Header/TopBar";
 import TestDb from "./DBTests/TestDB";
 import SizingPage from "./components/SizingPage/SizingPage";
 import AdminPage from "./components/AdminPage/AdminPage";
-import Shop from "./components/ProductsPage/Shop"
+//import Shop from "./components/ProductsPage/Shop"
 import CustomerCare from "./components/PolicyPage/CustomerCare";
 function App() {
   return (

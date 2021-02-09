@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import {faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MobileNav from "./MobileNav";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import logo2 from '../../sewhoneylogo.png'
-import TopBar from "./TopBar";
+// import TopBar from "./TopBar";
 
 class Navbar extends Component {
 

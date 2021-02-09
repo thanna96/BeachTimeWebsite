@@ -27,16 +27,16 @@ export default function CartItem({item,value}) {
             <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
                 <div className="d-flex justify-content-center">
                     <div>
-                        <span className="btn mx-0" onClick={()=>decrement(id,title)}>-</span>
+                        <span className="btn mx-0" onClick={()=>decrement(id,title,info.selColor,info.selSize)}>-</span>
                         <span className="btn btn-black mx-0">{info.count}</span>
-                        <span className="btn mx-0" onClick={()=>increment(id,title)}>+</span>
+                        <span className="btn mx-0" onClick={()=>increment(item)}>+</span>
                     </div>
                 </div>
             </div>
             {/*  */}
 
             <div className="col-10 mx-auto col-lg-2">
-                <div className="cart-icon" onClick={()=>removeItem(id,title)}>
+                <div className="cart-icon" onClick={()=>removeItem(id,title,info.selColor,info.selSize)}>
                     <FontAwesomeIcon icon={ faTrash }/>
                 </div>
             </div>

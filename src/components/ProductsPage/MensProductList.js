@@ -5,11 +5,11 @@ import {ProductConsumer} from "../../context";
 // import img from "../../2020Collection.jpg";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Title from "../Header/Title";
+// import Button from "react-bootstrap/Button";
+// import ButtonGroup from "react-bootstrap/ButtonGroup";
+// import Navbar from "react-bootstrap/Navbar";
+// import Nav from "react-bootstrap/Nav";
+// import Title from "../Header/Title";
 
 class MensProductList extends Component {
     constructor(props) {

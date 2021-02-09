@@ -1,34 +1,34 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import CardGroup from "react-bootstrap/CardGroup";
+// import CardGroup from "react-bootstrap/CardGroup";
 import img2 from "../../aboutPicture2.JPG"
 import img from "../../banner.JPG"
 import immmm from "../../mBanner3.JPG"
 import Mimg4 from "../../mBanner4.JPG"
 import styled from "styled-components";
-import ima3 from "../../mBanner2.JPG"
-import image2 from '../../BD17565E-.jpg'
-import img11 from "../../IMG_5075.jpg";
+// import ima3 from "../../mBanner2.JPG"
+// import image2 from '../../BD17565E-.jpg'
+// import img11 from "../../IMG_5075.jpg";
 import img1 from "../../34D5341D-.jpg";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import imagee from "../../DB9BDE83-.jpg"
+// import imagee from "../../DB9BDE83-.jpg"
 import Mimg2 from "../../mBanner1.JPG"
-import Mimg3 from "../../IMG_5131.jpg"
-import Button from "react-bootstrap/Button";
+// import Mimg3 from "../../IMG_5131.jpg"
+// import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
-import Card from "react-bootstrap/Card";
-import Title from '../Header/Title';
-import logo from "../../sewhoneylogo.png";
-import CardColumns from "react-bootstrap/CardColumns";
-import logo2 from "../../sewhoneylogo.png";
+// import Card from "react-bootstrap/Card";
+// import Title from '../Header/Title';
+// import logo from "../../sewhoneylogo.png";
+// import CardColumns from "react-bootstrap/CardColumns";
+// import logo2 from "../../sewhoneylogo.png";
 import About from "../AboutPage/About";
 import Contact from "../ContactPage/Contact";
 import {MDBIcon} from "mdbreact";
 
-let images = [
-    ima3,image2,img11,img1,imagee,Mimg3,immmm,Mimg4
-]
+// let images = [
+//     ima3,image2,img11,img1,imagee,Mimg3,immmm,Mimg4
+// ]
 class CarouselWrapper extends Component {
 
     constructor(props) {
@@ -66,7 +66,7 @@ class CarouselWrapper extends Component {
 
 
                     <div className="img-container p-1 mb-20 mt-2" style={{height: '500px'}}>
-                        <img className='w-4/5 mx-auto' src={img1} style={{height: '500px'}} />
+                        <img alt='' className='w-4/5 mx-auto' src={img1} style={{height: '500px'}} />
                         <div  className="center-text-image">
                             <p className="my-6" style={{fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'64px'}}>Sew Honey Swim</p>
                             <p className="mb-10" style={{fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'20px',opacity: "60%"}}>Hand sewn swimwear and apparel.</p>
@@ -127,7 +127,7 @@ class CarouselWrapper extends Component {
                             <div className="container ">
                                 <Link to='/ProductList/handmade' >
                                     <button className="bg-white overflow-hidden ">
-                                        <img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
+                                        <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
                                         <div className="middle">
                                             <div className="text">BYOB</div>
                                         </div>
@@ -141,7 +141,7 @@ class CarouselWrapper extends Component {
                                 <div className="container ">
                                     <Link to='/ProductList/handmade' >
                                         <button className="bg-white overflow-hidden ">
-                                            <img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg2} />
+                                            <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg2} />
                                             <div className="middle">
                                                 <div className="text">Women's Swim</div>
                                             </div>
@@ -155,7 +155,7 @@ class CarouselWrapper extends Component {
                     <div className="container ">
                         <Link to='/ProductList/handmade' >
                             <button className="bg-white overflow-hidden ">
-                                <img className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
+                                <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
                                 <div className="middle">
                                     <div className="text">Men's Swim</div>
                                 </div>
@@ -196,41 +196,41 @@ class CarouselWrapper extends Component {
         );
     }
 }
-
-const Collage = styled.div`
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 0;
-  }
-
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 0;
-  }
-
-  .column img {
-    margin-top: 0;
-    vertical-align: middle;
-    width: 100%;
-  }
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
-`;
+//
+// const Collage = styled.div`
+//   .row {
+//     display: flex;
+//     flex-wrap: wrap;
+//     padding: 0 0;
+//   }
+//
+//   /* Create four equal columns that sits next to each other */
+//   .column {
+//     flex: 25%;
+//     max-width: 25%;
+//     padding: 0 0;
+//   }
+//
+//   .column img {
+//     margin-top: 0;
+//     vertical-align: middle;
+//     width: 100%;
+//   }
+//   @media screen and (max-width: 800px) {
+//     .column {
+//       flex: 50%;
+//       max-width: 50%;
+//     }
+//   }
+//
+//   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+//   @media screen and (max-width: 600px) {
+//     .column {
+//       flex: 100%;
+//       max-width: 100%;
+//     }
+//   }
+// `;
 
 
 const ProductWrapper = styled.div`

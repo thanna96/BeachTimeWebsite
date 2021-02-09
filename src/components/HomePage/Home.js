@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import CarouselWrapper from "../Styles/CarouselWrapper";
 import MobileCarousel from "../Styles/MobileCarousel";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import {Link} from "react-router-dom";
+// import Card from "react-bootstrap/Card";
+// import Button from "react-bootstrap/Button";
+// import {Link} from "react-router-dom";
 
 class Home extends Component {
     render() {

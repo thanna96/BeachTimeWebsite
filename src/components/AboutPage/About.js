@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import Button from 'react-bootstrap/Button'
-import img from "../../banner.JPG"
-import Mimg2 from "../../mBanner1.JPG"
-
-import img2 from "../../aboutPicture2.JPG"
-import img3 from "../../aboutPicture.JPG"
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col"
-import {MDBIcon} from "mdbreact";
+// import Button from 'react-bootstrap/Button'
+// import img from "../../banner.JPG"
+// import Mimg2 from "../../mBanner1.JPG"
+//
+// import img2 from "../../aboutPicture2.JPG"
+// import img3 from "../../aboutPicture.JPG"
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col"
+// import {MDBIcon} from "mdbreact";
 import {ButtonContainer} from "../Styles/Button";
-import logo2 from "../../sewhoneylogo.png";
+// import logo2 from "../../sewhoneylogo.png";
 class About extends Component {
     render() {
         return (
