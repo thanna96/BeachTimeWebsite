@@ -15,7 +15,7 @@ class MobileNav extends Component {
     render() {
         return (
 
-            <Navbar className="shadow-md mb-2 fixed-top" expand="lg" style={{ width: "100%", background:"#fffaf0" }}  >
+            <Navbar className="shadow-md mb-2 fixed-top" expand="lg" style={{ width: "100%", background:"white" }}  >
                 <Navbar.Brand >
                     <Link to='/'>
                         <Figure.Image src={logo2}  width={140}
@@ -42,25 +42,20 @@ class MobileNav extends Component {
                         <Row>
                         <Col>
 
+                            <Link to='/' className="nav-link">
+                                BYOB
+                            </Link>
+                            <Link to='/customer-care' className="nav-link">
+                                Customer Care
+                            </Link>
                             <Link to='/SizingPage' className="nav-link">
                                 Sizing
-                            </Link>
-                            <Link to='/About' className="nav-link">
-                                About Us
-                            </Link>
-                        </Col>
-                        <Col>
-                            <Link to='/StorePolicy' className="nav-link">
-                                Policy
-                            </Link>
-                            <Link to='/Contact' className="nav-link">
-                                Contact
                             </Link>
                         </Col>
 
                         </Row>
                         <Row>
-                            <Dropdown className="mx-auto">
+                            <Dropdown className="mx-auto" >
                                 <Dropdown.Toggle  className="nav-link w-100" style={{ background: 'transparent', border: "none", boxShadow: "none"}}>
                                     Shop
                                 </Dropdown.Toggle>

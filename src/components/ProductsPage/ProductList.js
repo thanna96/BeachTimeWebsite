@@ -158,7 +158,7 @@ class ProductList extends Component {
             <React.Fragment>
 
                 <div >
-                    <div className="container h-100 w-75" >
+                    <div className="container h-100 w-100" >
                         <Row>
 
                         <Col xs={12} >

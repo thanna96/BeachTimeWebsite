@@ -145,18 +145,23 @@ class MensProductList extends Component {
             <React.Fragment>
 
                 <div >
-                    <div className="container h-100 w-75" >
+                    <div className="container h-100 w-100" >
                         <Row>
 
                             <Col xs={12} >
                                 <div className="col-10 mx-auto m-4 text-center text-title mt-3">
-                                    <p className="mx-auto w-50 font-bold" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'40px'}}>
+                                    <p className="mx-auto font-bold" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'40px'}}>
                                         Shop
                                     </p>
                                 </div>
 
-                                <Col xs={12} md={3} className="mb-4 p-2" style={{float: 'left' }} >
-                                    <p  style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
+                                <Col xs={12} md={6} className="mb-4 p-2" style={{float: 'left' }} >
+                                    <p className="d-none d-md-block"
+                                       style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
+                                        Mens {this.state.typeChoice}
+                                    </p>
+                                    <p className="text-center d-block d-md-none"
+                                       style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
                                         Mens {this.state.typeChoice}
                                     </p>
                                 </Col>

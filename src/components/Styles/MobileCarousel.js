@@ -19,8 +19,9 @@ const properties = {
     transitionDuration: 500,
     infinite: true,
     arrows: true,
-    pauseOnHover: true
-
+    pauseOnHover: true,
+    indicators: true,
+    canSwipe: true
 }
 
 class CarouselWrapper extends Component {

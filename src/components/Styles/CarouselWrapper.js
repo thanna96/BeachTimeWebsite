@@ -25,6 +25,7 @@ import {Link} from "react-router-dom";
 import About from "../AboutPage/About";
 import Contact from "../ContactPage/Contact";
 import {MDBIcon} from "mdbreact";
+import MobileCarousel from "../Styles/MobileCarousel";
 
 // let images = [
 //     ima3,image2,img11,img1,imagee,Mimg3,immmm,Mimg4
@@ -81,7 +82,7 @@ class CarouselWrapper extends Component {
 
                     <div className="pb-3 pt-1 text-title text-center mx-auto">
                         <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>WHAT WE BELIEVE IN</p>
-                        <p className="mx-auto w-50" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear should be nice for all shapes and sizes</p>
+                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear should be nice for all shapes and sizes</p>
                     </div>
                     <hr className="w-75 mx-auto my-20" />
 
@@ -120,7 +121,12 @@ class CarouselWrapper extends Component {
                         <p className="mx-auto  " style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear That Works For You.</p>
                     </div>
 
-                <Row className="w-4/5 mx-auto ">
+                <div className="d-block d-md-none my-auto">
+                    <MobileCarousel/>
+                </div>
+
+                <div className=" d-none d-md-block">
+                <Row className="w-4/5 mx-auto">
 
                     <Col sm={12} md={4} >
                         <ProductWrapper className="p-1 m-0 mx- ">
@@ -165,7 +171,7 @@ class CarouselWrapper extends Component {
                 </ProductWrapper>
                     </Col>
                 </Row>
-
+                </div>
 
                 <hr className="w-75 mx-auto my-20" />
 
