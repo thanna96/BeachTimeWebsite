@@ -54,8 +54,8 @@ class Details extends Component {
 
                         <div className="mx-auto w-75">
                             {/* product info */}
-                            <div className="m-1  underline" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px' }}>
-                                <Link  to={"/ProductList/" + info.gender} >
+                            <div className="m-3  underline" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px' }}>
+                                <Link  to={info.gender === 'men' ? "/MensProductList/" + info.gender : "/ProductList/" + info.gender } >
                                     &laquo; Back to Products
                                 </Link>
                             </div>
@@ -85,7 +85,7 @@ class Details extends Component {
                                             key={((this.state.image === '') ? info.img[0] : this.state.image)}
                                             className="center img-fluid "
                                             src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+((this.state.image === '') ? info.img[0] : this.state.image)}
-                                            style={{height:"450px", width:"300px"}}
+                                            style={{height:"450px", width:"350px"}}
                                             alt=""
                                         />
                                         <div className="mx-auto text-center">
