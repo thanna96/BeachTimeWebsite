@@ -20,8 +20,7 @@ class MobileNav extends Component {
                     <Link to='/'>
                         <Figure.Image src={logo2}  width={140}
                                       height={80}
-                                      alt="171x180"
-                        />
+                                      alt="171x180"/>
                     </Link>
                 </Navbar.Brand>
                 <Link to='/Cart' className="nav-link">
@@ -39,46 +38,45 @@ class MobileNav extends Component {
                                 Home
                             </Link>
                         </Row>
-                        <Row>
                         <Col>
-
                             <Link to='/' className="nav-link">
                                 BYOB
                             </Link>
                             <Link to='/customer-care' className="nav-link">
                                 Customer Care
                             </Link>
-                            <Link to='/SizingPage' className="nav-link">
+                            <Link to='/sizing-page' className="nav-link">
                                 Sizing
                             </Link>
                         </Col>
-
-                        </Row>
                         <Row>
                             <Dropdown className="mx-auto" >
                                 <Dropdown.Toggle  className="nav-link w-100" style={{ background: 'transparent', border: "none", boxShadow: "none"}}>
                                     Shop
                                 </Dropdown.Toggle>
-                                <Dropdown.Menu className="" >
+                                <Dropdown.Menu>
                                     <Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Women</p></Dropdown.Header>
 
-                                    <Dropdown.Item href="/ProductList/handmade" style={{color: "#808080"}}>
+                                    <Dropdown.Item href="/product-list/handmade" style={{color: "#808080"}}>
                                         Hand-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/ProductList/ready-made" style={{color: "#808080"}}>
+                                    <Dropdown.Item href="/product-list/ready-made" style={{color: "#808080"}}>
                                         Ready-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/ProductList/apparel" style={{color: "#808080"}}>
+                                    <Dropdown.Item href="/" style={{color: "#808080"}}>
+                                        BYOB
+                                    </Dropdown.Item>
+                                    <Dropdown.Item href="/product-list/apparel" style={{color: "#808080"}}>
                                         Apparel
                                     </Dropdown.Item>
 
                                     <Dropdown.Divider />
 
                                     <Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Men</p></Dropdown.Header>
-                                    <Dropdown.Item href="/MensProductList/swimwear" style={{color: "#808080"}}>
+                                    <Dropdown.Item href="/mens-product-list/swimwear" style={{color: "#808080"}}>
                                         Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/MensProductList/apparel" style={{color: "#808080"}}>
+                                    <Dropdown.Item href="/mens-product-list/apparel" style={{color: "#808080"}}>
                                         Apparel
                                     </Dropdown.Item>
                                 </Dropdown.Menu>

@@ -4,10 +4,8 @@ import styled from 'styled-components';
 import {faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MobileNav from "./MobileNav";
-// import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import logo2 from '../../sewhoneylogo.png'
-// import TopBar from "./TopBar";
 
 class Navbar extends Component {
 
@@ -21,12 +19,9 @@ class Navbar extends Component {
                 <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{  zIndex:1}}>
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center ml-auto">
-
                                 <img src={logo2} alt="store"
                                      className="nav-item img-fluid pr-0 "
-                                     style={{maxWidth:"8%", Height:"auto"}}
-                                />
-
+                                     style={{maxWidth:"8%", Height:"auto"}}/>
 
                         <li className="nav-item nav-btn ml-auto mr-2">
                             <Link to='/' className="nav-link">
@@ -41,23 +36,23 @@ class Navbar extends Component {
                                 <Dropdown.Menu style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px' }} >
                                     <Dropdown.Header ><p className="font-weight-bold mb-0 p-0" >Women</p></Dropdown.Header>
 
-                                    <Dropdown.Item href="/ProductList/handmade"   >
+                                    <Dropdown.Item href="/product-list/handmade"   >
                                         Hand-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/ProductList/ready-made" >
+                                    <Dropdown.Item href="/product-list/ready-made" >
                                         Ready-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/ProductList/apparel"  >
+                                    <Dropdown.Item href="/product-list/apparel"  >
                                         Apparel
                                     </Dropdown.Item>
 
                                     <Dropdown.Divider />
 
                                     <Dropdown.Header ><p className="font-weight-bold mb-0 p-0">Men</p></Dropdown.Header>
-                                    <Dropdown.Item href="/MensProductList/swimwear" >
+                                    <Dropdown.Item href="/mens-product-list/swimwear" >
                                         Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/MensProductList/apparel" >
+                                    <Dropdown.Item href="/mens-product-list/apparel" >
                                         Apparel
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -73,28 +68,12 @@ class Navbar extends Component {
                                 Customer Care
                             </Link>
                         </li>
-                        {/*<li className="nav-item mx-2" >*/}
-                        {/*    <Link to='/About' className="nav-link">*/}
-                        {/*        About Us*/}
-                        {/*    </Link>*/}
-                        {/*</li>*/}
-                        {/*<li className="nav-item mx-2" >*/}
-                        {/*    <Link to='/Contact' className="nav-link">*/}
-                        {/*        Contact*/}
-                        {/*    </Link>*/}
-                        {/*</li>*/}
-
-                            {/*<li className="nav-item mx-2">*/}
-                            {/*    <Link to='/StorePolicy' className="nav-link">*/}
-                            {/*        Policy*/}
-                            {/*    </Link>*/}
-                            {/*</li>*/}
                         <li className="nav-item nav-btn ml-2 mr-auto" >
-                            <Link to='/SizingPage' className="nav-link">
+                            <Link to='/sizing-page' className="nav-link">
                                 Sizing
                             </Link>
                         </li>
-                        <Link to='/Cart' className=" nav-btn ">
+                        <Link to='/cart' className=" nav-btn ">
                             <button variant="white">
                                 <span className="mr-2 " style={{color:'black'}}>
                                     <FontAwesomeIcon icon={ faShoppingBag }/>

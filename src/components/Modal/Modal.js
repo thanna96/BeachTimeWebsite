@@ -43,7 +43,6 @@ class Modal extends Component {
                                 <div className="row">
                                     <div id="modal" className="col-8 mx-auto col-md-6 col-lg-6 text-center text-capitalize">
                                         <h5 className="p-3">{title} Has Been Added To Your Cart!</h5>
-
                                         <Link to={"/cart"}>
                                             <ButtonContainer onClick={()=>closeModal()}>
                                                 View Cart

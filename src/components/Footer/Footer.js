@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import {MDBIcon} from "mdbreact";
-// import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 class Footer extends Component {
     render() {
         return (
-
             <footer className="page-footer font-small cyan w-full darken-3 pt-3 pin-b   border-grey"  >
                 <div className="container mt-3">
                     <div className="row">

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Form from 'react-bootstrap/Form';
-// import Button from 'react-bootstrap/Button'
 import emailjs from 'emailjs-com';
 
 class Contact extends Component {
@@ -50,10 +49,6 @@ class Contact extends Component {
     render() {
         return (
             <div className="pb-5">
-                {/*<div className="row col-10 mx-auto col-md-6 ">*/}
-                {/*    <h6 className="text-muted ">Home/</h6><h6>Contact</h6>*/}
-                {/*</div>*/}
-                {/*<br/>*/}
             <Form className="w-75    " onSubmit={this.handleSubmit}>
                 <Form.Label className=" " style={{spacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'12px'}}>
                     Name:

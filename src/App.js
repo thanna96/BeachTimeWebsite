@@ -27,19 +27,19 @@ function App() {
           <Navbar/>
           <Switch>
               <Route exact path="/" component={Home}/>
-              <Route exact path="/ProductList/:style/:id/:title" component={Details}/>
-              <Route exact path="/MensProductList/:style/:id/:title" component={Details}/>
-              <Route exact path="/ProductList/:style" component={ProductList}/>
-              <Route exact path="/MensProductList/:style" component={MensProductList}/>
-              <Route path="/About" component={About}/>
+              <Route exact path="/product-list/:style/:id/:title" component={Details}/>
+              <Route exact path="/mens-product-list/:style/:id/:title" component={Details}/>
+              <Route exact path="/product-list/:style" component={ProductList}/>
+              <Route exact path="/mens-product-list/:style" component={MensProductList}/>
+              <Route path="/about" component={About}/>
               <Route path="/customer-care" component={CustomerCare}/>
               {/*<Route path="/Shop" component={Shop}/>*/}
-              <Route path="/Cart" component={Cart}/>
-              <Route path="/SizingPage" component={SizingPage}/>
-              <Route path="/StorePolicy" component={StorePolicy}/>
+              <Route path="/cart" component={Cart}/>
+              <Route path="/sizing-page" component={SizingPage}/>
+              <Route path="/store-policy" component={StorePolicy}/>
               {/*<Route path="/Login" component={Login}/>*/}
-              <Route path="/Contact" component={Contact}/>
-              <Route path="/AdminPage" component={AdminPage}/>
+              <Route path="/contact" component={Contact}/>
+              <Route path="/admin-page" component={AdminPage}/>
               <Route component={Default}/>
           </Switch>
           <Modal/>

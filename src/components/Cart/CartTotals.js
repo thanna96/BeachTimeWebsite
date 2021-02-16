@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router-dom'
 import PayPalButton from "./PayPalButton";
 
 export default function CartTotals({value,history}) {
@@ -7,7 +6,6 @@ export default function CartTotals({value,history}) {
 
     return (
         <React.Fragment>
-            {/*<div className="container">*/}
                 <div className="row">
                     <div className="col-lg-11 mt-2 ml-sm-5 ml-m-auto col-sm-8   text-right">
 
@@ -43,7 +41,6 @@ export default function CartTotals({value,history}) {
                         />
                     </div>
                 </div>
-            {/*</div>*/}
         </React.Fragment>
     );
 }

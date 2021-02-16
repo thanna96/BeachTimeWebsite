@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {ProductConsumer} from "../../context";
 import {Link} from "react-router-dom";
 import {ButtonContainer} from "../Styles/Button";
-// import { Carousel } from 'react-responsive-carousel';
 import Mimg2 from "../../mBanner1.JPG";
 import img from "../../banner.JPG";
  import {OverlayTrigger} from "react-bootstrap";
@@ -47,47 +46,24 @@ class Details extends Component {
                     if(value.getItem(this.state.id,this.state.productName && this.state.image === '')){
                         this.setState({image:info.img[0]})
                     }
-                    //console.log("value",value.getItem(this.state.id,this.state.productName))
-
                     return (
                         <div>
 
                         <div className="mx-auto w-75">
                             {/* product info */}
                             <div className="m-3  underline" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px' }}>
-                                <Link  to={info.gender === 'men' ? "/MensProductList/" + info.gender : "/ProductList/" + info.gender } >
+                                <Link  to={info.gender === 'men' ? "/mens-product-list/" + info.gender : "/product-list/" + info.gender } >
                                     &laquo; Back to Products
                                 </Link>
                             </div>
                             <div className="flex row">
-
                                     <div className="col-10 mx-auto   col-md-6 col-lg-4 my-3   p-3 ">
-                                        {/*<Carousel showThumbs={false}>*/}
-                                        {/*        {info.img.map(image => (*/}
-                                        {/*            <div key=''>*/}
-                                        {/*            <img*/}
-                                        {/*                key={image+9}*/}
-                                        {/*                className="d-none d-md-block center img-fluid"*/}
-                                        {/*                src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}*/}
-                                        {/*                style={{height:"550px", width:"auto"}}*/}
-                                        {/*                alt=""*/}
-                                        {/*            />*/}
-                                        {/*            <img*/}
-                                        {/*                    key={image}*/}
-                                        {/*                    className="d-block d-md-none center"*/}
-                                        {/*                    src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}*/}
-                                        {/*                    alt=""*/}
-                                        {/*            />*/}
-                                        {/*            </div>*/}
-                                        {/*        ))}*/}
-                                        {/*</Carousel>*/}
                                         <img
                                             key={((this.state.image === '') ? info.img[0] : this.state.image)}
                                             className="center img-fluid "
                                             src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+((this.state.image === '') ? info.img[0] : this.state.image)}
                                             style={{height:"450px", width:"350px"}}
-                                            alt=""
-                                        />
+                                            alt=""/>
                                         <div className="mx-auto text-center">
                                             <div style={{display:'inline-block' }}>
                                             {info.img.map(image => (
@@ -96,8 +72,7 @@ class Details extends Component {
                                                     className={(image === this.state.image) ? "m-1 clicked" : "m-1 "}
                                                     src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
                                                     style={{width:'5rem',height:'6rem',display:'inline-block',cursor:'pointer'}}
-                                                    alt=""
-                                                />
+                                                    alt=""/>
                                         ))}
                                             </div>
                                         </div>
@@ -145,7 +120,6 @@ class Details extends Component {
                                             {/*</select>*/}
                                         </h4>
 
-
                                         {/*/!* Quantity *!/*/}
                                         <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             Quantity:
@@ -159,7 +133,6 @@ class Details extends Component {
                                         </h4>
 
                                         <hr className="my-3"/>
-
 
                                         {/* buttons */}
                                         <div>
@@ -177,7 +150,7 @@ class Details extends Component {
                                                 </ButtonContainer>
                                             </div>
                                             <div className="m-1 text-center underline">
-                                                <Link  to={"/SizingPage"}>
+                                                <Link  to={"/sizing-page"}>
                                                     Size Guide
                                                 </Link>
                                             </div>
