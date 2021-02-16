@@ -157,7 +157,7 @@ class ProductList extends Component {
         return (
             <React.Fragment>
 
-                <div >
+
                     <div className="container h-100 w-100" >
                         <Row>
 
@@ -213,7 +213,7 @@ class ProductList extends Component {
 
                         </Row>
                     </div>
-                </div>
+
             </React.Fragment>
         );
     }

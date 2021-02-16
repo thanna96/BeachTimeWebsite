@@ -19,6 +19,8 @@ import SizingPage from "./components/SizingPage/SizingPage";
 import AdminPage from "./components/AdminPage/AdminPage";
 //import Shop from "./components/ProductsPage/Shop"
 import CustomerCare from "./components/PolicyPage/CustomerCare";
+import BYOB from "./components/BYOBPage/BYOB";
+
 function App() {
   return (
       <React.Fragment>
@@ -27,6 +29,7 @@ function App() {
           <Navbar/>
           <Switch>
               <Route exact path="/" component={Home}/>
+              <Route exact path="/byob" component={BYOB}/>
               <Route exact path="/product-list/:style/:id/:title" component={Details}/>
               <Route exact path="/mens-product-list/:style/:id/:title" component={Details}/>
               <Route exact path="/product-list/:style" component={ProductList}/>

@@ -39,7 +39,7 @@ class MobileNav extends Component {
                             </Link>
                         </Row>
                         <Col>
-                            <Link to='/' className="nav-link">
+                            <Link to='/byob' className="nav-link">
                                 BYOB
                             </Link>
                             <Link to='/customer-care' className="nav-link">
@@ -62,9 +62,6 @@ class MobileNav extends Component {
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/product-list/ready-made" style={{color: "#808080"}}>
                                         Ready-Made Swimwear
-                                    </Dropdown.Item>
-                                    <Dropdown.Item href="/" style={{color: "#808080"}}>
-                                        BYOB
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/product-list/apparel" style={{color: "#808080"}}>
                                         Apparel

@@ -59,7 +59,7 @@ class Navbar extends Component {
                             </Dropdown>
                         </li>
                         <li className="nav-item mx-2 nav-btn">
-                            <Link to='/' className="nav-link">
+                            <Link to='/byob' className="nav-link">
                                 BYOB
                             </Link>
                         </li>
