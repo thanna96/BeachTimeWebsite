@@ -72,7 +72,7 @@ class CarouselWrapper extends Component {
                             <p className="my-6" style={{fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'64px'}}>Sew Honey Swim</p>
                             <p className="mb-10" style={{fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'20px',opacity: "60%"}}>Hand sewn swimwear and apparel.</p>
 
-                            <Link to='/ProductList/handmade'  style={{height: '500px'}}>
+                            <Link to='/product-list/handmade'  style={{height: '500px'}}>
                                 <button className="py-4 px-5" style={{letterSpacing:'2px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'14px',backgroundColor:'#f4f4f4'}}>SHOP NOW</button>
                             </Link>
                         </div>

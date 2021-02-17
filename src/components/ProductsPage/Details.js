@@ -52,12 +52,12 @@ class Details extends Component {
                         <div className="mx-auto w-75">
                             {/* product info */}
                             <div className="m-3  underline" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px' }}>
-                                <Link  to={info.gender === 'men' ? "/mens-product-list/" + info.gender : "/product-list/" + info.gender } >
+                                <Link  to={info.gender === 'men' ? "/mens-product-list/" + info.gender : "/product-list/" + info.type } >
                                     &laquo; Back to Products
                                 </Link>
                             </div>
                             <div className="flex row">
-                                    <div className="col-10 mx-auto   col-md-6 col-lg-4 my-3   p-3 ">
+                                    <div className="col-10 mx-auto   col-md-6 col-lg-6 col-xl-4 my-3   p-3 ">
                                         <img
                                             key={((this.state.image === '') ? info.img[0] : this.state.image)}
                                             className="center img-fluid "
@@ -160,7 +160,21 @@ class Details extends Component {
                                         </p>
                                         <p className="text-muted lead" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px' }}>
                                             {info.description}
-                                            Our new favourite style in our latest print!! Pastel floral.This print is seriously stunninggg and another Vincija Swim original!  The perfect top for larger busts as it will give you that extra support with the wider straps! Minimal coverage perfect for tanning. Perfectly paired with our classic matching string tie bottoms made to complete the cutest set imaginable!! Turn up the heat this summer in this new MUST HAVE kini!!
+                                            <br/>
+                                            {(info.style === 'Top') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
+                                                'Handmade by Sew Honey.\n' +
+                                                'Pair this top with your favorite bottom.\n' +
+                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : '' }
+                                            {(info.style === 'bottom') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
+                                                'Handmade by Sew Honey.\n' +
+                                                'Pair this bottom with your favorite top.\n' +
+                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : '' }
+                                            {(info.style === 'One-Piece') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
+                                                'Handmade by Sew Honey.\n' +
+                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : '' }
                                         </p>
                                     </div>
                                 </div>

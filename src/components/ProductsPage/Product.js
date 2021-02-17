@@ -33,7 +33,7 @@ class Product extends Component {
                             <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} className="hover-image"
                                  onMouseEnter={e => {if (info.img[1]) e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/" + info.img[1]}}
                                  onMouseLeave={e => (e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0])}
-                                 id="imgTest" alt="product" style={{height:"300px", width:"270px"}}/>
+                                 id="imgTest" alt="product" style={{height:"300px", width:"300px"}}/>
                         </Link>
                     </div>)}
                     </ProductConsumer>
