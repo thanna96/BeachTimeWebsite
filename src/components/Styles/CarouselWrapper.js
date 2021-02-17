@@ -107,8 +107,8 @@ class CarouselWrapper extends Component {
                         </Col>
                         <Col sm={12} md={12} lg={6}>
                             <img src={img2} alt="store"
-                                 className="  mx-auto"
-                                 style={{ Width:"563px", Height:"auto"}}
+                                 className="mx-auto"
+                                 style={{ width:"563px", height:"auto"}}
                             />
                         </Col>
                     </Row>
