@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 // import Product from './Product'
-import {storeProducts} from '../../data';
+// import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+// import Row from "react-bootstrap/Row";
 import Product from "../ProductsPage/Product";
 
 class BYOB extends Component {
