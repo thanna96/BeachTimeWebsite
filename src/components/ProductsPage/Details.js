@@ -15,15 +15,27 @@ class Details extends Component {
             selCol: '',
             productName: '',
             id: 0,
-            image: ''
+            image: '',
+            width: 0,
+            height: 0
         }
         this.handleChange = this.handleChange.bind(this);
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
     componentDidMount() {
         //console.log("id",this.props.match.params.title,this.props.match.params.id)
         this.setState({productName:this.props.match.params.title})
         this.setState({id:parseInt(this.props.match.params.id)})
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     handleChange(Event){
@@ -49,7 +61,7 @@ class Details extends Component {
                     return (
                         <div>
 
-                        <div className="mx-auto w-75">
+                        <div className={ this.state.width >= 768 ? "mx-auto w-75":"mx-auto w-100"} >
                             {/* product info */}
                             <div className="m-3  underline" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px' }}>
                                 <Link  to={info.gender === 'men' ? "/mens-product-list/" + info.gender : "/product-list/" + info.type } >
@@ -57,12 +69,12 @@ class Details extends Component {
                                 </Link>
                             </div>
                             <div className="flex row">
-                                    <div className="col-10 mx-auto   col-md-6 col-lg-6 col-xl-4 my-3   p-3 ">
+                                    <div className="col-12 mx-auto   col-md-6 col-lg-6 col-xl-4 my-3   p-3 ">
                                         <img
                                             key={((this.state.image === '') ? info.img[0] : this.state.image)}
                                             className="center img-fluid "
                                             src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+((this.state.image === '') ? info.img[0] : this.state.image)}
-                                            style={{height:"450px", width:"350px"}}
+                                            style={{height:"350px", minWidth:"350px"}}
                                             alt=""/>
                                         <div className="mx-auto text-center">
                                             <div style={{display:'inline-block' }}>
@@ -71,7 +83,7 @@ class Details extends Component {
                                                     key={image}
                                                     className={(image === this.state.image) ? "m-1 clicked" : "m-1 "}
                                                     src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+image}
-                                                    style={{width:'5rem',height:'6rem',display:'inline-block',cursor:'pointer'}}
+                                                    style={{width:'6rem',height:'6rem',display:'inline-block',cursor:'pointer'}}
                                                     alt=""/>
                                         ))}
                                             </div>

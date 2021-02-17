@@ -39,8 +39,8 @@ class Navbar extends Component {
                                     <Dropdown.Item href="/product-list/handmade"   >
                                         Hand-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/product-list/ready-made" >
-                                        Ready-Made Swimwear
+                                    <Dropdown.Item href="/byob" >
+                                        BYOB(Build Your Own Bathing Suit)
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/product-list/apparel"  >
                                         Apparel
@@ -49,19 +49,14 @@ class Navbar extends Component {
                                     <Dropdown.Divider />
 
                                     <Dropdown.Header ><p className="font-weight-bold mb-0 p-0">Men</p></Dropdown.Header>
-                                    <Dropdown.Item href="/mens-product-list/swimwear" >
-                                        Swimwear
-                                    </Dropdown.Item>
+                                    {/*<Dropdown.Item href="/mens-product-list/swimwear" >*/}
+                                    {/*    Swimwear*/}
+                                    {/*</Dropdown.Item>*/}
                                     <Dropdown.Item href="/mens-product-list/apparel" >
                                         Apparel
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                        </li>
-                        <li className="nav-item mx-2 nav-btn">
-                            <Link to='/byob' className="nav-link">
-                                BYOB
-                            </Link>
                         </li>
                         <li className="nav-item mx-2 nav-btn">
                             <Link to='/customer-care' className="nav-link">

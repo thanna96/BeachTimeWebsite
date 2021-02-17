@@ -39,9 +39,6 @@ class MobileNav extends Component {
                             </Link>
                         </Row>
                         <Col>
-                            <Link to='/byob' className="nav-link">
-                                BYOB
-                            </Link>
                             <Link to='/customer-care' className="nav-link">
                                 Customer Care
                             </Link>
@@ -60,8 +57,8 @@ class MobileNav extends Component {
                                     <Dropdown.Item href="/product-list/handmade" style={{color: "#808080"}}>
                                         Hand-Made Swimwear
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/product-list/ready-made" style={{color: "#808080"}}>
-                                        Ready-Made Swimwear
+                                    <Dropdown.Item href="/byob" style={{color: "#808080"}}>
+                                        BYOB(Build Your Own Bathing Suit)
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/product-list/apparel" style={{color: "#808080"}}>
                                         Apparel
@@ -70,9 +67,9 @@ class MobileNav extends Component {
                                     <Dropdown.Divider />
 
                                     <Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Men</p></Dropdown.Header>
-                                    <Dropdown.Item href="/mens-product-list/swimwear" style={{color: "#808080"}}>
-                                        Swimwear
-                                    </Dropdown.Item>
+                                    {/*<Dropdown.Item href="/mens-product-list/swimwear" style={{color: "#808080"}}>*/}
+                                    {/*    Swimwear*/}
+                                    {/*</Dropdown.Item>*/}
                                     <Dropdown.Item href="/mens-product-list/apparel" style={{color: "#808080"}}>
                                         Apparel
                                     </Dropdown.Item>

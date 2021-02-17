@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Tab from "react-bootstrap/cjs/Tab";
 import {Row, Col, Accordion, Card} from "react-bootstrap"
 import ListGroup from "react-bootstrap/cjs/ListGroup";
+import img from "../../banner.JPG";
+import img1 from "../../bumblebee-icon-20.jpg";
 
 const style = {
     color: '#000000',
@@ -100,7 +102,8 @@ class CustomerCare extends Component {
                                     <Accordion defaultActiveKey="0">
                                         <div className="w-100">
                                             <Accordion.Toggle eventKey="0" style={headerStyle}>
-                                                &#9706; What fabric are your swimsuits made from?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                What fabric are your swimsuits made from?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
                                                 <Card.Body>All womens swimwear is made from a beautiful nylon lycra fabric.
@@ -109,7 +112,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle eventKey="1" style={headerStyle}>
-                                                &#9706; How long do orders typically take to fulfill?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                How long do orders typically take to fulfill?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="1">
                                                 <Card.Body>Once your order is placed we begin the cutting process of the
@@ -120,7 +124,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle  eventKey="2" style={headerStyle}>
-                                                &#9706; After I’ve placed my order, can I cancel or change it?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                After I’ve placed my order, can I cancel or change it?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="2">
                                                 <Card.Body>After you’ve placed your order we typically start the cutting
@@ -129,7 +134,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle  eventKey="3" style={headerStyle}>
-                                                &#9706; How does sizing work?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                How does sizing work?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="3">
                                                 <Card.Body>The women's size chart we provide is based off of your bra and jean size.
@@ -138,7 +144,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle  eventKey="4" style={headerStyle}>
-                                                &#9706; Can I return or exchange my order?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                Can I return or exchange my order?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="4">
                                                 <Card.Body> All of our swimwear is produced  on a made-to-order service.
@@ -151,7 +158,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle eventKey="5" style={headerStyle}>
-                                                &#9706; What are the customer service hours?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                What are the customer service hours?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="5">
                                                 <Card.Body> Our customer service hours are Monday-Friday 24/7.
@@ -160,7 +168,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle  eventKey="6" style={headerStyle}>
-                                                &#9706;  How do I take care of my swimwear?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                How do I take care of my swimwear?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="6">
                                                 <Card.Body>For best results we recommend hand washing and line-drying your
@@ -169,7 +178,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle  eventKey="7" style={headerStyle}>
-                                                &#9706; How do I know when my order will arrive?/Can I track my order?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                How do I know when my order will arrive?/Can I track my order?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="7">
                                                 <Card.Body> Once your order has been shipped out we will email you with
@@ -179,7 +189,8 @@ class CustomerCare extends Component {
                                         </div>
                                         <div className="w-100">
                                             <Accordion.Toggle  eventKey="8" style={headerStyle}>
-                                                &#9706; Who can I ask any questions I may have to?
+                                                <img alt='' src={img1} height='18px' width="18px" style={{display: 'inline-block',marginRight:'5px'}}/>
+                                                Who can I ask any questions I may have to?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="8">
                                                 <Card.Body>We are more than happy to answer any questions you may have! You can

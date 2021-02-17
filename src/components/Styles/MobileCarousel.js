@@ -34,7 +34,7 @@ class CarouselWrapper extends Component {
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
                                 <span>
-                                  <Link to='/productlist/handmade' className="nav-link">
+                                  <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-dark" >
                                         Shop Now
                                     </Button>
@@ -45,7 +45,7 @@ class CarouselWrapper extends Component {
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
                              <span>
-                                  <Link to='/productlist/handmade' className="nav-link">
+                                  <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-light" >
                                         Shop Now
                                     </Button>
@@ -56,7 +56,7 @@ class CarouselWrapper extends Component {
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
                             <span>
-                                  <Link to='/productlist/handmade' className="nav-link">
+                                  <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-light" >
                                         Shop Now
                                     </Button>
@@ -67,7 +67,7 @@ class CarouselWrapper extends Component {
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
                                 <span>
-                                  <Link to='/productlist/handmade' className="nav-link">
+                                  <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-light" >
                                         Shop Now
                                     </Button>
