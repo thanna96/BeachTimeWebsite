@@ -155,7 +155,7 @@ class ProductList extends Component {
                             </div>
 
                             <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left' }} >
-                                <p className="d-none d-md-block"
+                                <p className=" "
                                    style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
                                     Tops
                                 </p>
@@ -200,7 +200,7 @@ class ProductList extends Component {
                             <hr className="w-75 mx-auto my-10" />
 
                             <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left' }} >
-                                <p className="d-none d-md-block"
+                                <p
                                    style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
                                     Bottoms
                                 </p>
@@ -241,7 +241,7 @@ class ProductList extends Component {
                             <hr className="w-75 mx-auto my-20" />
 
                             <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left' }} >
-                                <p className="d-none d-md-block"
+                                <p
                                    style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
                                     One-Piece
                                 </p>
