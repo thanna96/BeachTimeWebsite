@@ -23,7 +23,7 @@ class Product extends Component {
     render() {
         const {id, title, info} = this.props.product;
         return (
-            <ProductWrapper className="col-12 col-md-6 col-lg-4 col-xl-3 my-0 " >
+            <ProductWrapper className="item" >
 
                 <div className="my-6" style={{ }}>
                     <ProductConsumer>
@@ -33,11 +33,10 @@ class Product extends Component {
                             <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} className="hover-image"
                                  onMouseEnter={e => {if (info.img[1]) e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/" + info.img[1]}}
                                  onMouseLeave={e => (e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0])}
-                                 id="imgTest" alt="product" style={{height:"340px", minWidth:"340px", top: 0,
+                                 id="imgTest" alt="product" style={{height:"340px", minWidth:"340px", top: 0,width:"340px",
                                 bottom: 0,
                                 left: 0,
-                                right: 0,
-                                margin: 'auto'}}/>
+                                right: 0, margin :0}}/>
                         </Link>
                     </div>)}
                     </ProductConsumer>

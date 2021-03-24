@@ -32,6 +32,33 @@ body{
   text-align: center;
   color: white;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+.item:hover {
+  transform: scale(1.1) !important;
+}
+.product-container{
+  display:flex;
+  padding:0 ;
+}
+.item {
+  flex: 0 0 19.7%;
+  text-align: center;
+  margin: 0 2px;
+  transition: transform 300ms ease 100ms;
+}
+.product-container:hover .item {
+  transform: translateX(-10%);
+}
+.item:hover ~ .item {
+  transform: translateX(10%);
+}
 .center-text-image {
   position: absolute;
   top: 50%;
