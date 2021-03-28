@@ -30,7 +30,7 @@ class Product extends Component {
                         {value=>(
                     <div onClick={()=>value.handleDetail(id,title)} >
                         <Link to={info.type+'/'+id+'/'+title} >
-                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} className="hover-image"
+                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]}
                                  onMouseEnter={e => {if (info.img[1]) e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/" + info.img[1]}}
                                  onMouseLeave={e => (e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0])}
                                  id="imgTest" alt="product" style={{height:"340px", minWidth:"340px", top: 0,maxWidth:"340px",
