@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import CardGroup from "react-bootstrap/CardGroup";
-import img2 from "../../aboutPicture2.JPG"
+// import img2 from "../../aboutPicture2.JPG"
 import img from "../../banner.JPG"
 import immmm from "../../mBanner3.JPG"
 import Mimg4 from "../../mBanner4.JPG"
@@ -9,7 +9,7 @@ import styled from "styled-components";
 // import ima3 from "../../mBanner2.JPG"
 // import image2 from '../../BD17565E-.jpg'
 // import img11 from "../../IMG_5075.jpg";
-import img1 from "../../34D5341D-.jpg";
+// import img1 from "../../34D5341D-.jpg";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 // import imagee from "../../DB9BDE83-.jpg"
@@ -22,7 +22,7 @@ import {Link} from "react-router-dom";
 // import logo from "../../sewhoneylogo.png";
 // import CardColumns from "react-bootstrap/CardColumns";
 // import logo2 from "../../sewhoneylogo.png";
-import About from "../AboutPage/About";
+// import About from "../AboutPage/About";
 import Contact from "../ContactPage/Contact";
 import {MDBIcon} from "mdbreact";
 import MobileCarousel from "../Styles/MobileCarousel";
@@ -66,86 +66,40 @@ class CarouselWrapper extends Component {
                 <div className="pb-5 pt-0 col-12"  >
 
 
-                    <div className="img-container p-1 mb-20 mt-2" style={{height: '500px'}}>
-                        <img alt='' className='w-4/5 mx-auto' src={img1} style={{height: '500px'}} />
-                        <div  className="center-text-image">
-                            <p className="my-6" style={{fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'64px'}}>Sew Honey Swim</p>
-                            <p className="mb-10" style={{fontFamily:'"Montserrat", sans-serif', color:'white', fontSize:'20px',opacity: "60%"}}>Hand sewn swimwear and apparel.</p>
-
-                            <Link to='/product-list/handmade'  style={{height: '500px'}}>
-                                <button className="py-4 px-5" style={{letterSpacing:'2px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'14px',backgroundColor:'#f4f4f4'}}>SHOP NOW</button>
+                    <div className="img-container p-1 mt-3 mx-auto" style={{ width:'75%'}}>
+                        {/*<img alt='' className='w-4/5 mx-auto' src={img1} style={{height: '500px'}} />*/}
+                            <p className="mx-auto w-100 d-none d-md-block" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'64px' }}>Sew Honey Swim</p>
+                        <p className="mx-auto w-100 d-block d-md-none" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'45px',whiteSpace:'nowrap' }}>Sew Honey<br/> Swim</p>
+                            <p className="mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'20px',opacity: "60%"}}>Made to order swimwear.</p>
+                            <Link to='/product-list/handmade' className="mx-auto">
+                                <button className="py-4 px-5 mb-2" style={{letterSpacing:'2px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'14px',backgroundColor:'#f4f4f4'}}>SHOP NOW</button>
                             </Link>
-                        </div>
+
                     </div>
                 </div>
                 </Row>
 
-                    <div className="pb-3 pt-1 text-title text-center mx-auto">
-                        <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>WHAT WE BELIEVE IN</p>
-                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear should be nice for all shapes and sizes</p>
-                    </div>
-                    <hr className="w-75 mx-auto my-20" />
+                <div className="mb-5 d-none d-md-block">
+                    <Row className="w-4/5 mx-auto">
 
-                    <Row className="mx-auto w-75 mb-10">
-                        <Col   className=" d-lg-none " sm={12} md={12} lg={6}>
-                            <div className="p-3   "  >
-                                <div className=" p-3  text-title   mx-auto">
-                                    <p className=" " style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>About</p>
-                                    <p className=" mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Who we are</p>
-                                </div>
-                                <About/>
-                            </div>
-                        </Col>
-                        <Col  className="p-3  d-none d-lg-block "  >
-                            <div className="p-3  vertical-center "  >
-                                <div className=" p-3  text-title   mx-auto">
-                                    <p className=" " style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>About</p>
-                                    <p className=" mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Who we are</p>
-                                </div>
-                                <About/>
-                            </div>
-                        </Col>
-                        <Col sm={12} md={12} lg={6}>
-                            <img src={img2} alt="store"
-                                 className="mx-auto"
-                                 style={{ width:"563px", height:"auto"}}
-                            />
-                        </Col>
-                    </Row>
-
-
-                    <hr className="w-75 mx-auto my-20" />
-
-                    <div className="pb-3 pt-1 text-title text-center mx-auto">
-                        <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>Shop</p>
-                        <p className="mx-auto  " style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear That Works For You.</p>
-                    </div>
-
-                <div className="d-block d-md-none my-auto">
-                    <MobileCarousel/>
-                </div>
-
-                <div className=" d-none d-md-block">
-                <Row className="w-4/5 mx-auto">
-
-                    <Col sm={12} md={4} >
-                        <ProductWrapper className="p-1 m-0 mx- ">
-                            <div className="container ">
-                                <Link to='/ProductList/handmade' >
-                                    <button className="bg-white overflow-hidden ">
-                                        <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
-                                        <div className="middle">
-                                            <div className="text">BYOB</div>
-                                        </div>
-                                    </button>
-                                </Link>
-                            </div>
-                        </ProductWrapper>
-                    </Col>
-                <Col sm={12} md={4} >
-                <ProductWrapper className="p-1 m-0  ">
+                        <Col sm={12} md={4} >
+                            <ProductWrapper className="p-1 m-0 mx- ">
                                 <div className="container ">
-                                    <Link to='/ProductList/handmade' >
+                                    <Link to='/product-list/handmade' >
+                                        <button className="bg-white overflow-hidden ">
+                                            <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
+                                            <div className="middle">
+                                                <div className="text">BYOB</div>
+                                            </div>
+                                        </button>
+                                    </Link>
+                                </div>
+                            </ProductWrapper>
+                        </Col>
+                        <Col sm={12} md={4} >
+                            <ProductWrapper className="p-1 m-0  ">
+                                <div className="container ">
+                                    <Link to='/product-list/handmade' >
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg2} />
                                             <div className="middle">
@@ -154,26 +108,75 @@ class CarouselWrapper extends Component {
                                         </button>
                                     </Link>
                                 </div>
-                </ProductWrapper>
-                </Col>
-                    <Col sm={12} md={4} >
-                <ProductWrapper className="p-1 m-0  ">
-                    <div className="container ">
-                        <Link to='/ProductList/handmade' >
-                            <button className="bg-white overflow-hidden ">
-                                <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
-                                <div className="middle">
-                                    <div className="text">Men's Swim</div>
+                            </ProductWrapper>
+                        </Col>
+                        <Col sm={12} md={4} >
+                            <ProductWrapper className="p-1 m-0  ">
+                                <div className="container ">
+                                    <Link to='/product-list/handmade' >
+                                        <button className="bg-white overflow-hidden ">
+                                            <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
+                                            <div className="middle">
+                                                <div className="text">Men's Swim</div>
+                                            </div>
+                                        </button>
+                                    </Link>
                                 </div>
-                            </button>
-                        </Link>
-                    </div>
-                </ProductWrapper>
-                    </Col>
-                </Row>
+                            </ProductWrapper>
+                        </Col>
+                    </Row>
                 </div>
 
-                <hr className="w-75 mx-auto my-20" />
+                <div className="d-block d-md-none mb-5">
+                    <MobileCarousel/>
+                </div>
+
+                    <div className="pb-3 pt-1 text-title text-center mx-auto">
+                        <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>WHAT WE BELIEVE IN</p>
+                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear should be nice for all shapes and sizes</p>
+                    </div>
+                    <hr className="w-75 mx-auto my-20" />
+
+                    {/*<Row className="mx-auto w-75 mb-10">*/}
+                    {/*    <Col   className=" d-lg-none " sm={12} md={12} lg={6}>*/}
+                    {/*        <div className="p-3   "  >*/}
+                    {/*            <div className=" p-3  text-title   mx-auto">*/}
+                    {/*                <p className=" " style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>About</p>*/}
+                    {/*                <p className=" mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Who we are</p>*/}
+                    {/*            </div>*/}
+                    {/*            <About/>*/}
+                    {/*        </div>*/}
+                    {/*    </Col>*/}
+                    {/*    <Col  className="p-3  d-none d-lg-block "  >*/}
+                    {/*        <div className="p-3  vertical-center "  >*/}
+                    {/*            <div className=" p-3  text-title   mx-auto">*/}
+                    {/*                <p className=" " style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>About</p>*/}
+                    {/*                <p className=" mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Who we are</p>*/}
+                    {/*            </div>*/}
+                    {/*            <About/>*/}
+                    {/*        </div>*/}
+                    {/*    </Col>*/}
+                    {/*    <Col sm={12} md={12} lg={6}>*/}
+                    {/*        <img src={img2} alt="store"*/}
+                    {/*             className="mx-auto"*/}
+                    {/*             style={{ width:"563px", height:"auto"}}*/}
+                    {/*        />*/}
+                    {/*    </Col>*/}
+                    {/*</Row>*/}
+
+
+                    {/*<hr className="w-75 mx-auto my-20" />*/}
+
+                    {/*<div className="pb-3 pt-1 text-title text-center mx-auto">*/}
+                    {/*    <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>Shop</p>*/}
+                    {/*    <p className="mx-auto  " style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear That Works For You.</p>*/}
+                    {/*</div>*/}
+
+
+
+
+
+                {/*<hr className="w-75 mx-auto my-20" />*/}
 
 
                 <div className="  mx-auto w-75" >

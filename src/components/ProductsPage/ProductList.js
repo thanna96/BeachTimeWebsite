@@ -120,10 +120,10 @@ class ProductList extends Component {
         }
     }
 
-    filterProducts = (data) =>{
+    filterProducts = (data,filterChoice) =>{
 
         data = data.filter(product => product.info.gender !== 'men')
-        switch ( this.state.filterChoice ){
+        switch ( filterChoice ){
             default:
                 break;
             case 'Top':
@@ -155,13 +155,54 @@ class ProductList extends Component {
                             </div>
 
                             <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left' }} >
-                                <p className="d-none d-md-block"
+                                <p className=" "
                                    style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
-                                    Womens {this.state.typeChoice}
+                                    Tops
                                 </p>
-                                <p className="text-center d-block d-md-none"
+                                {/*<p className="text-center d-block d-md-none"*/}
+                                {/*   style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>*/}
+                                {/*    Womens {this.state.typeChoice}*/}
+                                {/*</p>*/}
+                            </Col>
+
+                            <Col xs={12} md={3} className="mb-4" style={{float: 'right'}} >
+                                <div className=" border   p-2 shadow-md" style={{background:"#f8f8f8" }}>
+                                    <Col>
+                                        <h5 className="text-uppercase text-muted"  style={{"width":"100%",fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f'}}>
+                                            <select id="sortList" defaultValue="new" className="text-muted" onChange={this.sortList}  style={{"width":"100%"}}>
+                                                <option value="new" disabled>Sort</option>
+                                                <option value="new">Newest</option>
+                                                <option value="priceLH">Price: (Low to High)</option>
+                                                <option value="priceHL">Price: (High to Low)</option>
+                                                <option value="AZ">Name: A-Z</option>
+                                                <option value="ZA">Name: Z-A</option>
+                                            </select>
+                                        </h5>
+                                    </Col>
+                                </div>
+                            </Col>
+
+                        <div className="row mx-auto w-100 scrollbar-hide" style={{overflowX:"auto",overflowY:"hidden"}}>
+                            <div className="product-container">
+                                <ProductConsumer >
+                                    {(value)=>{
+                                        this.sortProducts(value.products)
+                                        let products = value.products;
+                                        products = this.filterProducts(products,'Top')
+                                        products = this.filterType(products)
+                                        return (products.map( product =>{
+                                            return <Product key={product.title} product={product}/>
+                                        }))}}
+                                </ProductConsumer>
+                            </div>
+                        </div>
+
+                            <hr className="w-75 mx-auto my-10" />
+
+                            <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left' }} >
+                                <p
                                    style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
-                                    Womens {this.state.typeChoice}
+                                    Bottoms
                                 </p>
                             </Col>
 
@@ -182,18 +223,61 @@ class ProductList extends Component {
                                 </div>
                             </Col>
 
-                        <div className="row mx-auto w-100">
-                            <ProductConsumer >
-                                {(value)=>{
-                                    this.sortProducts(value.products)
-                                    let products = value.products;
-                                    products = this.filterProducts(products)
-                                    products = this.filterType(products)
-                                    return (products.map( product =>{
+                            <div className="row mx-auto w-100 scrollbar-hide" style={{overflowX:"auto",overflowY:"hidden"}}>
+                                <div className="product-container">
+                                    <ProductConsumer >
+                                        {(value)=>{
+                                            this.sortProducts(value.products)
+                                            let products = value.products;
+                                            products = this.filterProducts(products,'bottom')
+                                            products = this.filterType(products)
+                                            return (products.map( product =>{
+                                                return <Product key={product.title} product={product}/>
+                                            }))}}
+                                    </ProductConsumer>
+                                </div>
+                            </div>
+
+                            <hr className="w-75 mx-auto my-20" />
+
+                            <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left' }} >
+                                <p
+                                   style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'15px',opacity: "60%"}}>
+                                    One-Piece
+                                </p>
+                            </Col>
+
+                            <Col xs={12} md={3} className="mb-4" style={{float: 'right'}} >
+                                <div className=" border   p-2 shadow-md" style={{background:"#f8f8f8" }}>
+                                    <Col>
+                                        <h5 className="text-uppercase text-muted"  style={{"width":"100%",fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f'}}>
+                                            <select id="sortList" defaultValue="new" className="text-muted" onChange={this.sortList}  style={{"width":"100%"}}>
+                                                <option value="new" disabled>Sort</option>
+                                                <option value="new">Newest</option>
+                                                <option value="priceLH">Price: (Low to High)</option>
+                                                <option value="priceHL">Price: (High to Low)</option>
+                                                <option value="AZ">Name: A-Z</option>
+                                                <option value="ZA">Name: Z-A</option>
+                                            </select>
+                                        </h5>
+                                    </Col>
+                                </div>
+                            </Col>
+
+                            <div className="row mx-auto w-100 scrollbar-hide" style={{overflowX:"auto",overflowY:"hidden"}}>
+                                <div className="product-container">
+                                <ProductConsumer >
+                                    {(value)=>{
+                                        this.sortProducts(value.products)
+                                        let products = value.products;
+                                        products = this.filterProducts(products,'One-Piece')
+                                        products = this.filterType(products)
+                                        return (products.map( product =>{
                                             return <Product key={product.title} product={product}/>
-                                                }))}}
-                            </ProductConsumer>
-                        </div>
+                                        }))}}
+                                </ProductConsumer>
+                                    </div>
+                                </div>
 
                         </Col>
 
