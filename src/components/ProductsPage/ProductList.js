@@ -4,7 +4,6 @@ import {storeProducts} from '../../data';
 import {ProductConsumer} from "../../context";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import rightArrow from "../../right-arrow.png";
 
 class ProductList extends Component {
     constructor(props) {
@@ -22,7 +21,13 @@ class ProductList extends Component {
             gender: 'women',
         }
         this.handleChange = this.handleChange.bind(this);
-        this.scroll = this.scroll.bind(this);
+        this.scrollLeft = this.scrollLeft.bind(this);
+        this.scrollRight = this.scrollRight.bind(this);
+        this.topsRef = React.createRef();
+        this.bottomsRef = React.createRef();
+        this.onePRef = React.createRef();
+        this.othesrRef = React.createRef();
+
     }
 
     componentDidMount() {
@@ -125,9 +130,27 @@ class ProductList extends Component {
         }
     }
 
-    scroll = (Event) => {
-        console.log(Event)
-        // Event.target.scrollLeft += scrollOffset;
+    scrollLeft = (scrollContainer) => {
+        if(scrollContainer === 'topsRef'){
+            this.topsRef.current.scrollLeft -= 350
+        } else if (scrollContainer === 'bottomsRef'){
+            this.bottomsRef.current.scrollLeft -= 350
+        } else if (scrollContainer === 'onePRef'){
+            this.onePRef.current.scrollLeft -= 350
+        } else if (scrollContainer === 'othersRef'){
+            this.othersRef.current.scrollLeft -= 350
+        }
+    }
+    scrollRight = (scrollContainer) => {
+        if(scrollContainer === 'topsRef'){
+            this.topsRef.current.scrollLeft += 350
+        } else if (scrollContainer === 'bottomsRef'){
+            this.bottomsRef.current.scrollLeft += 350
+        } else if (scrollContainer === 'onePRef'){
+            this.onePRef.current.scrollLeft += 350
+        } else if (scrollContainer === 'othersRef'){
+            this.othersRef.current.scrollLeft += 350
+        }
     }
 
     filterProducts = (data, filterChoice) => {
@@ -202,7 +225,7 @@ class ProductList extends Component {
                                 </div>
                             </Col>
                             <div id="menu">
-                                <div className="row mx-auto scrollbar-hide shadow-scroll container tops-container"
+                                <div className="row mx-auto scrollbar-hide shadow-scroll container" ref={this.topsRef}
                                      style={{overflowX: "auto", overflowY: "hidden"}}>
                                     <div className="product-container " >
                                         <ProductConsumer>
@@ -218,10 +241,10 @@ class ProductList extends Component {
                                         </ProductConsumer>
                                     </div>
                                     <div id="nav">
-                                        <div id="prev" onClick={()=> this.scroll}>
+                                        <div id="prev" onClick={()=>this.scrollLeft('topsRef')}>
                                             <i className="fa fa-angle-left fa-5x color-filter"/>
                                         </div>
-                                        <div id="next" onClick={()=> this.scroll}>
+                                        <div id="next" onClick={()=>this.scrollRight('topsRef')}>
                                             <i className="fa fa-angle-right fa-5x color-filter"/>
                                         </div>
                                     </div>
@@ -266,7 +289,7 @@ class ProductList extends Component {
                             </Col>
 
                             <div id="menu">
-                                <div className="row mx-auto scrollbar-hide container"
+                                <div className="row mx-auto scrollbar-hide container shadow-scroll" ref={this.bottomsRef}
                                      style={{overflowX: "auto", overflowY: "hidden"}}>
                                     <div className="product-container">
                                         <ProductConsumer>
@@ -282,8 +305,12 @@ class ProductList extends Component {
                                         </ProductConsumer>
                                     </div>
                                     <div id="nav">
-                                        <div id="prev">Prev</div>
-                                        <div id="next">Next</div>
+                                        <div id="prev" onClick={()=>this.scrollLeft('bottomsRef')}>
+                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                        </div>
+                                        <div id="next" onClick={()=>this.scrollRight('bottomsRef')}>
+                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +353,7 @@ class ProductList extends Component {
                             </Col>
 
                             <div id="menu">
-                                <div className="row mx-auto scrollbar-hide container"
+                                <div className="row mx-auto scrollbar-hide container shadow-scroll" ref={this.onePRef}
                                      style={{overflowX: "auto", overflowY: "hidden"}}>
                                     <div className="product-container">
                                         <ProductConsumer>
@@ -342,8 +369,12 @@ class ProductList extends Component {
                                         </ProductConsumer>
                                     </div>
                                     <div id="nav">
-                                        <div id="prev">Prev</div>
-                                        <div id="next">Next</div>
+                                        <div id="prev" onClick={()=>this.scrollLeft('onePRef')}>
+                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                        </div>
+                                        <div id="next" onClick={()=>this.scrollRight('onePRef')}>
+                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
