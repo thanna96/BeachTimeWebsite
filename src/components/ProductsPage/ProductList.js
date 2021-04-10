@@ -240,7 +240,7 @@ class ProductList extends Component {
                                             }}
                                         </ProductConsumer>
                                     </div>
-                                    <div id="nav">
+                                    <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('topsRef')}>
                                             <i className="fa fa-angle-left fa-5x color-filter"/>
                                         </div>
@@ -304,7 +304,7 @@ class ProductList extends Component {
                                             }}
                                         </ProductConsumer>
                                     </div>
-                                    <div id="nav">
+                                    <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('bottomsRef')}>
                                             <i className="fa fa-angle-left fa-5x color-filter"/>
                                         </div>
@@ -368,7 +368,7 @@ class ProductList extends Component {
                                             }}
                                         </ProductConsumer>
                                     </div>
-                                    <div id="nav">
+                                    <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('onePRef')}>
                                             <i className="fa fa-angle-left fa-5x color-filter"/>
                                         </div>

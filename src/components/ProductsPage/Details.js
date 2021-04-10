@@ -17,7 +17,9 @@ class Details extends Component {
             id: 0,
             image: '',
             width: 0,
-            height: 0
+            height: 0,
+            reversible: false,
+            customString: false
         }
         this.handleChange = this.handleChange.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -140,9 +142,8 @@ class Details extends Component {
                                             {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
                                             {value.colors.map(color => (
                                                 // <option value={color.color} key={color.color}>{color.color}</option>
-                                                <OverlayTrigger key={color.color} className="inline-flex "
-                                                                overlay={<Tooltip
-                                                                    className="p-0">{color.color}</Tooltip>}>
+                                                <OverlayTrigger key={color.color}
+                                                                overlay={<Tooltip>{color.color}</Tooltip>}>
                                                     <input type="image" key={color.color} name="selCol"
                                                            value={color.color}
                                                            className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
@@ -157,6 +158,76 @@ class Details extends Component {
 
                                             {/*</select>*/}
                                         </h4>
+
+                                        {/* Reverse Option */}
+                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                            reversible:<br/>
+                                            <select name="reversible" className="mt-2" style={{width: "100%"}}
+                                                    onChange={this.handleChange}>
+                                                <option value='false' key="no">No</option>
+                                                <option value='true' key="yes">Yes (+$10)</option>
+                                            </select>
+                                        </h4>
+
+                                        {this.state.reversible === 'true' ?
+                                            <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                            Second Color: <br/>
+                                            <div className="mb-2"/>
+                                            {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
+                                            {value.colors.map(color => (
+                                                // <option value={color.color} key={color.color}>{color.color}</option>
+                                                <OverlayTrigger key={color.color}
+                                                                overlay={<Tooltip>{color.color}</Tooltip>}>
+                                                    <input type="image" key={color.color} name="selCol"
+                                                           value={color.color}
+                                                           className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                           onClick={this.handleChange}
+                                                           style={{background: 'transparent'}} height="30px"
+                                                           width="30px"
+                                                           src={Mimg2}
+                                                           alt="">
+                                                    </input>
+                                                </OverlayTrigger>
+                                            ))}
+
+                                            {/*</select>*/}
+                                        </h4> : ''}
+
+                                        {/* string color Option */}
+                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                            Custom String Color:<br/>
+                                            <select name="customString" className="mt-2" style={{width: "100%"}}
+                                                    onChange={this.handleChange}>
+                                                <option value='false' key="no">No</option>
+                                                <option value='true' key="yes">Yes</option>
+                                            </select>
+                                        </h4>
+
+                                        {this.state.customString === 'true' ?
+                                            <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                                String Color: <br/>
+                                                <div className="mb-2"/>
+                                                {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
+                                                {value.colors.map(color => (
+                                                    // <option value={color.color} key={color.color}>{color.color}</option>
+                                                    <OverlayTrigger key={color.color}
+                                                                    overlay={<Tooltip>{color.color}</Tooltip>}>
+                                                        <input type="image" key={color.color} name="selCol"
+                                                               value={color.color}
+                                                               className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                               onClick={this.handleChange}
+                                                               style={{background: 'transparent'}} height="30px"
+                                                               width="30px"
+                                                               src={Mimg2}
+                                                               alt="">
+                                                        </input>
+                                                    </OverlayTrigger>
+                                                ))}
+
+                                                {/*</select>*/}
+                                            </h4> : ''}
+
+
 
                                         {/*/!* Quantity *!/*/}
                                         <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
