@@ -16,7 +16,7 @@ class Navbar extends Component {
                 <div className="d-block d-md-none" style={{height:"150px"}}>
                     <MobileNav/>
                 </div>
-                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
+                <div className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1,fontSize:'1.2rem'}}>
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center ml-auto">
                                 <img src={logo2} alt="store"
@@ -24,13 +24,13 @@ class Navbar extends Component {
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
                         <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
-                            <Link to='/' className="nav-link">
+                            <Link to='/' className="nav-link" style={{color:'black'}}>
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item  mx-2" >
                             <Dropdown >
-                                <Toggle className="nav-link nav-btn" style={{color:'black', background: 'transparent', border: "none", boxShadow: "none"}}>
+                                <Toggle className="nav-link nav-btn" style={{color:'black', background: 'transparent', border: "none", boxShadow: "none",fontSize:'1.2rem'}}>
                                     Shop
                                 </Toggle>
                                 <Dropdown.Menu style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'12px' }} >
@@ -89,7 +89,7 @@ class Navbar extends Component {
                             </button>
                         </Link>
                     </ul>
-                </NavWrapper>
+                </div>
             </div>
         );
     }
