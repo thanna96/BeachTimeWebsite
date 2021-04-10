@@ -23,17 +23,17 @@ class Navbar extends Component {
                                      className="nav-item img-fluid pr-0 "
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
-                        <li className="nav-item nav-btn ml-auto mr-2">
+                        <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
                             <Link to='/' className="nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item  mx-2" >
                             <Dropdown >
-                                <Toggle className="nav-link nav-btn" style={{ background: 'transparent', border: "none", boxShadow: "none"}}>
+                                <Toggle className="nav-link nav-btn" style={{color:'black', background: 'transparent', border: "none", boxShadow: "none"}}>
                                     Shop
                                 </Toggle>
-                                <Dropdown.Menu style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px' }} >
+                                <Dropdown.Menu style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'12px' }} >
                                     {/*<Dropdown.Header ><p className="font-weight-bold mb-0 p-0" >Women</p></Dropdown.Header>*/}
 
                                     <Dropdown.Item href="/product-list/handmade"   >
@@ -66,23 +66,23 @@ class Navbar extends Component {
                         {/*        Shop Instagram*/}
                         {/*    </Link>*/}
                         {/*</li>*/}
-                        <li className="nav-item mx-2 nav-btn">
-                            <Link to='/customer-care' className="nav-link">
+                        <li className="nav-item mx-2 nav-btn" style={{color:'black'}}>
+                            <Link to='/customer-care' className="nav-link" style={{color:'black'}}>
                                 Customer Care
                             </Link>
                         </li>
                         <li className="nav-item mx-2 nav-btn">
-                            <Link to='/about' className="nav-link">
+                            <Link to='/about' className="nav-link" style={{color:'black'}}>
                                 About
                             </Link>
                         </li>
-                        <li className="nav-item nav-btn ml-2 mr-auto" >
-                            <Link to='/sizing-page' className="nav-link">
+                        <li className="nav-item nav-btn ml-2 mr-auto" style={{color:'black'}}>
+                            <Link to='/sizing-page' className="nav-link" style={{color:'black'}}>
                                 Sizing
                             </Link>
                         </li>
-                        <Link to='/cart' className=" nav-btn ">
-                            <button variant="white">
+                        <Link to='/cart' className=" nav-btn " style={{color:'black'}}>
+                            <button style={{color:'black'}}>
                                 <span className="mr-2 " style={{color:'black'}}>
                                     <FontAwesomeIcon icon={ faShoppingBag }/>
                                 </span>
