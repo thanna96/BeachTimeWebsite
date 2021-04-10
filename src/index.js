@@ -7,7 +7,7 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router} from "react-router-dom";
 import {ProductProvider} from "./context";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 import './tailwind.output.css'
 
 require('dotenv').config();
@@ -16,9 +16,7 @@ ReactDOM.render(
   <React.StrictMode>
       <ProductProvider>
           <Router>
-              <ScrollToTop>
               <App />
-              </ScrollToTop>
           </Router>
       </ProductProvider>
   </React.StrictMode>,

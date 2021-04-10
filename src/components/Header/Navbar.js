@@ -16,7 +16,7 @@ class Navbar extends Component {
                 <div className="d-block d-md-none" style={{height:"150px"}}>
                     <MobileNav/>
                 </div>
-                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{  zIndex:1}}>
+                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center ml-auto">
                                 <img src={logo2} alt="store"
@@ -34,30 +34,38 @@ class Navbar extends Component {
                                     Shop
                                 </Toggle>
                                 <Dropdown.Menu style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px' }} >
-                                    <Dropdown.Header ><p className="font-weight-bold mb-0 p-0" >Women</p></Dropdown.Header>
+                                    {/*<Dropdown.Header ><p className="font-weight-bold mb-0 p-0" >Women</p></Dropdown.Header>*/}
 
                                     <Dropdown.Item href="/product-list/handmade"   >
-                                        Hand-Made Swimwear
+                                        Women
+                                    </Dropdown.Item>
+                                    <Dropdown.Item href="/mens-product-list/apparel" >
+                                        Men
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/byob" >
-                                        BYOB(Build Your Own Bathing Suit)
+                                        Instagram Styles
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/product-list/apparel"  >
-                                        Apparel
-                                    </Dropdown.Item>
-
-                                    <Dropdown.Divider />
-
-                                    <Dropdown.Header ><p className="font-weight-bold mb-0 p-0">Men</p></Dropdown.Header>
-                                    {/*<Dropdown.Item href="/mens-product-list/swimwear" >*/}
-                                    {/*    Swimwear*/}
+                                    {/*<Dropdown.Item href="/product-list/apparel"  >*/}
+                                    {/*    Apparel*/}
                                     {/*</Dropdown.Item>*/}
-                                    <Dropdown.Item href="/mens-product-list/apparel" >
-                                        Apparel
-                                    </Dropdown.Item>
+
+                                    {/*<Dropdown.Divider />*/}
+
+                                    {/*<Dropdown.Header ><p className="font-weight-bold mb-0 p-0">Men</p></Dropdown.Header>*/}
+                                    {/*/!*<Dropdown.Item href="/mens-product-list/swimwear" >*!/*/}
+                                    {/*/!*    Swimwear*!/*/}
+                                    {/*/!*</Dropdown.Item>*!/*/}
+                                    {/*<Dropdown.Item href="/mens-product-list/apparel" >*/}
+                                    {/*    Apparel*/}
+                                    {/*</Dropdown.Item>*/}
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>
+                        {/*<li className="nav-item nav-btn mx-2 ">*/}
+                        {/*    <Link to='/byob' className="nav-link">*/}
+                        {/*        Shop Instagram*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
                         <li className="nav-item mx-2 nav-btn">
                             <Link to='/customer-care' className="nav-link">
                                 Customer Care

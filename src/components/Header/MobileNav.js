@@ -52,27 +52,27 @@ class MobileNav extends Component {
                                     Shop
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
-                                    <Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Women</p></Dropdown.Header>
+                                    {/*<Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Women</p></Dropdown.Header>*/}
 
                                     <Dropdown.Item href="/product-list/handmade" style={{color: "#808080"}}>
-                                        Hand-Made Swimwear
+                                        Women
+                                    </Dropdown.Item>
+                                    <Dropdown.Item href="/mens-product-list/apparel" style={{color: "#808080"}}>
+                                        Men
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/byob" style={{color: "#808080"}}>
-                                        BYOB(Build Your Own Bathing Suit)
-                                    </Dropdown.Item>
-                                    <Dropdown.Item href="/product-list/apparel" style={{color: "#808080"}}>
-                                        Apparel
+                                        Instagram Styles
                                     </Dropdown.Item>
 
-                                    <Dropdown.Divider />
+                                    {/*<Dropdown.Divider />*/}
 
-                                    <Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Men</p></Dropdown.Header>
-                                    {/*<Dropdown.Item href="/mens-product-list/swimwear" style={{color: "#808080"}}>*/}
-                                    {/*    Swimwear*/}
+                                    {/*<Dropdown.Header ><p className="font-weight-bold text-center mb-0 p-0">Men</p></Dropdown.Header>*/}
+                                    {/*/!*<Dropdown.Item href="/mens-product-list/swimwear" style={{color: "#808080"}}>*!/*/}
+                                    {/*/!*    Swimwear*!/*/}
+                                    {/*/!*</Dropdown.Item>*!/*/}
+                                    {/*<Dropdown.Item href="/mens-product-list/apparel" style={{color: "#808080"}}>*/}
+                                    {/*    Apparel*/}
                                     {/*</Dropdown.Item>*/}
-                                    <Dropdown.Item href="/mens-product-list/apparel" style={{color: "#808080"}}>
-                                        Apparel
-                                    </Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Row>
