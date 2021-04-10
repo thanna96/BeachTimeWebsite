@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from "react-router-dom";
+import {Redirect,Switch, Route} from "react-router-dom";
 import './App.css';
 import Navbar from './components/Header/Navbar'
 import ProductList from './components/ProductsPage/ProductList'
@@ -20,21 +20,21 @@ import SizingPage from "./components/SizingPage/SizingPage";
 //import Shop from "./components/ProductsPage/Shop"
 import CustomerCare from "./components/PolicyPage/CustomerCare";
 import BYOB from "./components/BYOBPage/BYOB";
-// import LoginPage from "./components/AdminPage/LoginPage";
+import LoginPage from "./components/AdminPage/LoginPage";
 
-// const check  = () =>{
-//     return localStorage.getItem('login');
-// }
-//
-// const  Route = ({ component: Component, ...rest }) => (
-//     <Route {...rest} render={props => (
-//         check () ? (
-//             <Component {...props} />
-//         ) : (
-//             <Redirect to='/Login' />
-//         )
-//     )} />
-// )
+const check  = () =>{
+    return localStorage.getItem('login');
+}
+
+const AuthRoute = ({ component: Component, ...rest }) => (
+    <Route {...rest} render={props => (
+        check () ? (
+            <Component {...props} />
+        ) : (
+            <Redirect to='/Login' />
+        )
+    )} />
+)
 
 function App() {
   return (
@@ -43,26 +43,26 @@ function App() {
           {/*<TopBar/>*/}
           <Navbar/>
           <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/byob" component={BYOB}/>
-              <Route exact path="/product-list/:style/:id/:title" component={Details}/>
-              <Route exact path="/mens-product-list/:style/:id/:title" component={Details}/>
-              <Route exact path="/product-list/:style" component={ProductList}/>
-              <Route exact path="/mens-product-list/:style" component={MensProductList}/>
-              <Route path="/about" component={About}/>
-              <Route path="/customer-care" component={CustomerCare}/>
+              <AuthRoute exact path="/" component={Home}/>
+              <AuthRoute exact path="/byob" component={BYOB}/>
+              <AuthRoute exact path="/product-list/:style/:id/:title" component={Details}/>
+              <AuthRoute exact path="/mens-product-list/:style/:id/:title" component={Details}/>
+              <AuthRoute exact path="/product-list/:style" component={ProductList}/>
+              <AuthRoute exact path="/mens-product-list/:style" component={MensProductList}/>
+              <AuthRoute path="/about" component={About}/>
+              <AuthRoute path="/customer-care" component={CustomerCare}/>
               {/*<Route path="/Shop" component={Shop}/>*/}
-              <Route path="/cart" component={Cart}/>
-              <Route path="/sizing-page" component={SizingPage}/>
-              <Route path="/store-policy" component={StorePolicy}/>
+              <AuthRoute path="/cart" component={Cart}/>
+              <AuthRoute path="/sizing-page" component={SizingPage}/>
+              <AuthRoute path="/store-policy" component={StorePolicy}/>
               {/*<Route path="/Login" component={Login}/>*/}
-              <Route path="/contact" component={Contact}/>
+              <AuthRoute path="/contact" component={Contact}/>
               {/*< Route path="/admin-page" component={AdminPage}/>*/}
-              <Route component={Default}/>
+              <AuthRoute component={Default}/>
               {/*<Route path="/Login" component={LoginPage} />*/}
           </Switch>
-          {/*<Route path="/Login" component={LoginPage} />*/}
-          <Modal/>
+          <Route path="/Login" component={LoginPage} />
+          {/*<Modal/>*/}
           <Footer/>
       </React.Fragment>
   );
