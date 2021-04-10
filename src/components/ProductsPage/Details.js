@@ -171,27 +171,27 @@ class Details extends Component {
 
                                         {this.state.reversible === 'true' ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                            Second Color: <br/>
-                                            <div className="mb-2"/>
-                                            {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
-                                            {value.colors.map(color => (
-                                                // <option value={color.color} key={color.color}>{color.color}</option>
-                                                <OverlayTrigger key={color.color}
-                                                                overlay={<Tooltip>{color.color}</Tooltip>}>
-                                                    <input type="image" key={color.color} name="selCol"
-                                                           value={color.color}
-                                                           className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
-                                                           onClick={this.handleChange}
-                                                           style={{background: 'transparent'}} height="30px"
-                                                           width="30px"
-                                                           src={Mimg2}
-                                                           alt="">
-                                                    </input>
-                                                </OverlayTrigger>
-                                            ))}
+                                                Second Color: <br/>
+                                                <div className="mb-2"/>
+                                                {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
+                                                {value.colors.map(color => (
+                                                    // <option value={color.color} key={color.color}>{color.color}</option>
+                                                    <OverlayTrigger key={color.color}
+                                                                    overlay={<Tooltip>{color.color}</Tooltip>}>
+                                                        <input type="image" key={color.color} name="selCol"
+                                                               value={color.color}
+                                                               className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                               onClick={this.handleChange}
+                                                               style={{background: 'transparent'}} height="30px"
+                                                               width="30px"
+                                                               src={Mimg2}
+                                                               alt="">
+                                                        </input>
+                                                    </OverlayTrigger>
+                                                ))}
 
-                                            {/*</select>*/}
-                                        </h4> : ''}
+                                                {/*</select>*/}
+                                            </h4> : ''}
 
                                         {/* string color Option */}
                                         <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
@@ -226,7 +226,6 @@ class Details extends Component {
 
                                                 {/*</select>*/}
                                             </h4> : ''}
-
 
 
                                         {/*/!* Quantity *!/*/}

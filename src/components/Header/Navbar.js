@@ -71,6 +71,11 @@ class Navbar extends Component {
                                 Customer Care
                             </Link>
                         </li>
+                        <li className="nav-item mx-2 nav-btn">
+                            <Link to='/about' className="nav-link">
+                                About
+                            </Link>
+                        </li>
                         <li className="nav-item nav-btn ml-2 mr-auto" >
                             <Link to='/sizing-page' className="nav-link">
                                 Sizing

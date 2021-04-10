@@ -39,6 +39,9 @@ class MobileNav extends Component {
                             </Link>
                         </Row>
                         <Col>
+                            <Link to='/about' className="nav-link">
+                                About
+                            </Link>
                             <Link to='/customer-care' className="nav-link">
                                 Customer Care
                             </Link>
