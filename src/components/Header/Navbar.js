@@ -16,7 +16,7 @@ class Navbar extends Component {
                 <div className="d-block d-md-none" style={{height:"150px"}}>
                     <MobileNav/>
                 </div>
-                <div className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1,fontSize:'1.2rem'}}>
+                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center ml-auto">
                                 <img src={logo2} alt="store"
@@ -24,13 +24,13 @@ class Navbar extends Component {
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
                         <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
-                            <Link to='/' className="nav-link" style={{color:'black'}}>
+                            <Link to='/' className="nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item  mx-2" >
                             <Dropdown >
-                                <Toggle className="nav-link nav-btn" style={{color:'black', background: 'transparent', border: "none", boxShadow: "none",fontSize:'1.2rem'}}>
+                                <Toggle className="nav-link nav-btn" style={{color:'black', background: 'transparent', border: "none", boxShadow: "none"}}>
                                     Shop
                                 </Toggle>
                                 <Dropdown.Menu style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'12px' }} >
@@ -89,7 +89,7 @@ class Navbar extends Component {
                             </button>
                         </Link>
                     </ul>
-                </div>
+                </NavWrapper>
             </div>
         );
     }
@@ -100,30 +100,30 @@ const Toggle = styled(Dropdown.Toggle)`
     }
 `;
 
-//
-// const NavWrapper = styled.nav`
-//     background:var(--mainWhite);
-//     .nav-link{
-//         color:black!important;
-//         font-size:1.2rem;
-//         text-transform:capitalize !important;
-//     }
-//     .nav-link-mobile{
-//         color:#808080!important;
-//         font-size:1.6rem;
-//         text-transform:capitalize !important;
-//         display: none;
-//     }
-//
-//     @media all and (max-width: 768px){
-//         .nav-link { display: none; }
-//         .nav-link-mobile {
-//             ul { display: table; }
-//             li { display: table-cell; }
-//             display : inline-block;
-//         }
-//     }
-//
-// `;
+
+const NavWrapper = styled.nav`
+    background:var(--mainWhite);
+    .nav-link{
+        color:black!important;
+        font-size:1.2rem;
+        text-transform:capitalize !important;
+    }
+    .nav-link-mobile{
+        color:#808080!important;
+        font-size:1.6rem;
+        text-transform:capitalize !important;
+        display: none;
+    }
+    
+    @media all and (max-width: 768px){
+        .nav-link { display: none; }
+        .nav-link-mobile {
+            ul { display: table; }
+            li { display: table-cell; }
+            display : inline-block;
+        }
+    }
+    
+`;
 
 export default Navbar;
