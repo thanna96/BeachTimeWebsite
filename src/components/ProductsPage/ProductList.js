@@ -326,7 +326,7 @@ class ProductList extends Component {
                                         fontSize: '15px',
                                         opacity: "60%"
                                     }}>
-                                    One-Piece
+                                    One-Pieces
                                 </p>
                             </Col>
 

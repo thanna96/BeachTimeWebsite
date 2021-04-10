@@ -15,13 +15,13 @@ const style = {
 };
 
 const headerStyle = {
-    'font-weight': 'bold',
+    fontWeight: 'bold',
     fontSize: '17px',
     outline: 0,
     border: 'none',
     background: '#ffffff',
     cursor: 'pointer',
-    'text-align': 'center'
+    textAlign: 'center'
 };
 
 class CustomerCare extends Component {
