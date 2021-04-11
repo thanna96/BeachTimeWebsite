@@ -103,26 +103,26 @@ const Toggle = styled(Dropdown.Toggle)`
 
 const NavWrapper = styled.nav`
     background:var(--mainWhite);
-    .nav-link{
-        color:black!important;
-        font-size:1.2rem;
-        text-transform:capitalize !important;
-    }
-    .nav-link-mobile{
-        color:#808080!important;
-        font-size:1.6rem;
-        text-transform:capitalize !important;
-        display: none;
-    }
-    
-    @media all and (max-width: 768px){
-        .nav-link { display: none; }
-        .nav-link-mobile {
-            ul { display: table; }
-            li { display: table-cell; }
-            display : inline-block;
-        }
-    }
+    //.nav-link{
+    //    color:black!important;
+    //    font-size:1.2rem;
+    //    text-transform:capitalize !important;
+    //}
+    //.nav-link-mobile{
+    //    color:#808080!important;
+    //    font-size:1.6rem;
+    //    text-transform:capitalize !important;
+    //    display: none;
+    //}
+    //
+    //@media all and (max-width: 768px){
+    //    .nav-link { display: none; }
+    //    .nav-link-mobile {
+    //        ul { display: table; }
+    //        li { display: table-cell; }
+    //        display : inline-block;
+    //    }
+    //}
     
 `;
 
