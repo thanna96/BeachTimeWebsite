@@ -62,7 +62,7 @@ span.arrow-right{
   padding:0 ;
 }
 #nav {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   top: 0;
   width: 100%;
