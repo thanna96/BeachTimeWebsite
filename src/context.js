@@ -205,7 +205,9 @@ class ProductProvider extends Component {
 
             return;
         }
-
+        if ( product.info.secColor !== ''){
+            product.info.price = this.getItem(product.id,product.title).info.price + 10
+        }
         //let tempProducts = [...this.state.products];
         //const index = tempProducts.indexOf(this.getItem(id,title));
         //const product = this.getItem(id,title);// tempProducts[index];
