@@ -24,7 +24,7 @@ class Navbar extends Component {
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
                         <li className=" ml-auto mr-2" style={{color:'black'}}>
-                            <Link to='/' className="nav-link">
+                            <Link to='/' className="nav-link nav-item nav-btn">
                                 Home
                             </Link>
                         </li>
