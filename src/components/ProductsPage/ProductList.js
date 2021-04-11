@@ -227,7 +227,7 @@ class ProductList extends Component {
                             <div id="menu">
                                 <div className="row mx-auto scrollbar-hide shadow-scroll container" ref={this.topsRef}
                                      style={{overflowX: "auto", overflowY: "hidden"}}>
-                                    <div className="product-container " >
+                                    <div className="product-container" >
                                         <ProductConsumer>
                                             {(value) => {
                                                 this.sortProducts(value.products)
@@ -247,6 +247,15 @@ class ProductList extends Component {
                                         <div id="next" onClick={()=>this.scrollRight('topsRef')}>
                                             <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                         </div>
+                                    </div>
+
+                                </div>
+                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
+                                    </div>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                     </div>
                                 </div>
                             </div>
@@ -313,6 +322,14 @@ class ProductList extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
+                                    </div>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
+                                    </div>
+                                </div>
                             </div>
 
                             <hr className="w-75 mx-auto my-10"/>
@@ -377,6 +394,14 @@ class ProductList extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
+                                    </div>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
+                                    </div>
+                                </div>
                             </div>
                             <hr className="w-75 mx-auto my-10"/>
 
@@ -438,6 +463,14 @@ class ProductList extends Component {
                                         <div id="next" onClick={()=>this.scrollRight('othersRef')}>
                                             <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                         </div>
+                                    </div>
+                                </div>
+                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
+                                    </div>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                        <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                     </div>
                                 </div>
                             </div>
