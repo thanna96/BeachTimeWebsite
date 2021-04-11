@@ -13,6 +13,8 @@ class Details extends Component {
         this.state = {
             selSiz: '',
             selCol: '',
+            secColor: '',
+            stringColor: '',
             productName: '',
             id: 0,
             image: '',
@@ -160,14 +162,14 @@ class Details extends Component {
                                         </h4>
 
                                         {/* Reverse Option */}
-                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                        {info.reverible === true ? <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             reversible:<br/>
                                             <select name="reversible" className="mt-2" style={{width: "100%"}}
                                                     onChange={this.handleChange}>
                                                 <option value='false' key="no">No</option>
                                                 <option value='true' key="yes">Yes (+$10)</option>
                                             </select>
-                                        </h4>
+                                        </h4> : ''}
 
                                         {this.state.reversible === 'true' ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
@@ -178,9 +180,9 @@ class Details extends Component {
                                                     // <option value={color.color} key={color.color}>{color.color}</option>
                                                     <OverlayTrigger key={color.color}
                                                                     overlay={<Tooltip>{color.color}</Tooltip>}>
-                                                        <input type="image" key={color.color} name="selCol"
+                                                        <input type="image" key={color.color} name="secColor"
                                                                value={color.color}
-                                                               className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                               className={(color.color === this.state.secColor) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
                                                                onClick={this.handleChange}
                                                                style={{background: 'transparent'}} height="30px"
                                                                width="30px"
@@ -194,14 +196,14 @@ class Details extends Component {
                                             </h4> : ''}
 
                                         {/* string color Option */}
-                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                        {info.customString === true ? <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             Custom String Color:<br/>
                                             <select name="customString" className="mt-2" style={{width: "100%"}}
                                                     onChange={this.handleChange}>
                                                 <option value='false' key="no">No</option>
                                                 <option value='true' key="yes">Yes</option>
                                             </select>
-                                        </h4>
+                                        </h4> : ''}
 
                                         {this.state.customString === 'true' ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
@@ -212,9 +214,9 @@ class Details extends Component {
                                                     // <option value={color.color} key={color.color}>{color.color}</option>
                                                     <OverlayTrigger key={color.color}
                                                                     overlay={<Tooltip>{color.color}</Tooltip>}>
-                                                        <input type="image" key={color.color} name="selCol"
+                                                        <input type="image" key={color.color} name="stringColor"
                                                                value={color.color}
-                                                               className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                               className={(color.color === this.state.stringColor) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
                                                                onClick={this.handleChange}
                                                                style={{background: 'transparent'}} height="30px"
                                                                width="30px"
@@ -249,6 +251,8 @@ class Details extends Component {
                                                     onClick={() => {
                                                         info.selSize = this.state.selSiz
                                                         info.selColor = this.state.selCol
+                                                        info.secColor = this.state.secColor
+                                                        info.stringColor = this.state.stringColor
                                                         if (info.selSize === '') info.selSize = info.sizes[0];
                                                         if (info.selColor === '') info.selColor = value.colors[0].color;
                                                         value.addToCart(value.detailProduct);
