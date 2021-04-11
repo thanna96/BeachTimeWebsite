@@ -23,12 +23,11 @@ class Navbar extends Component {
                                      className="nav-item img-fluid pr-0 "
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
-                        {/*<li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>*/}
-                            {/*<Link to='/' className="nav-link">*/}
-                            {/*    Home*/}
-                            {/*</Link>*/}
-                            Home
-                        {/*</li>*/}
+                        <li className=" ml-auto mr-2" style={{color:'black'}}>
+                            <Link to='/' className="nav-link">
+                                Home
+                            </Link>
+                        </li>
                         <li className="nav-item  mx-2" >
                             <Dropdown >
                                 <Toggle className="nav-link nav-btn" style={{color:'black', background: 'transparent', border: "none", boxShadow: "none"}}>
