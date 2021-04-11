@@ -26,7 +26,7 @@ class ProductList extends Component {
         this.topsRef = React.createRef();
         this.bottomsRef = React.createRef();
         this.onePRef = React.createRef();
-        this.othesrRef = React.createRef();
+        this.othersRef = React.createRef();
 
     }
 
@@ -132,24 +132,24 @@ class ProductList extends Component {
 
     scrollLeft = (scrollContainer) => {
         if(scrollContainer === 'topsRef'){
-            this.topsRef.current.scrollLeft -= 350
+            this.topsRef.current.scrollLeft -= 340
         } else if (scrollContainer === 'bottomsRef'){
-            this.bottomsRef.current.scrollLeft -= 350
+            this.bottomsRef.current.scrollLeft -= 340
         } else if (scrollContainer === 'onePRef'){
-            this.onePRef.current.scrollLeft -= 350
+            this.onePRef.current.scrollLeft -= 340
         } else if (scrollContainer === 'othersRef'){
-            this.othersRef.current.scrollLeft -= 350
+            this.othersRef.current.scrollLeft -= 340
         }
     }
     scrollRight = (scrollContainer) => {
         if(scrollContainer === 'topsRef'){
-            this.topsRef.current.scrollLeft += 350
+            this.topsRef.current.scrollLeft += 340
         } else if (scrollContainer === 'bottomsRef'){
-            this.bottomsRef.current.scrollLeft += 350
+            this.bottomsRef.current.scrollLeft += 340
         } else if (scrollContainer === 'onePRef'){
-            this.onePRef.current.scrollLeft += 350
+            this.onePRef.current.scrollLeft += 340
         } else if (scrollContainer === 'othersRef'){
-            this.othersRef.current.scrollLeft += 350
+            this.othersRef.current.scrollLeft += 340
         }
     }
 
@@ -378,6 +378,70 @@ class ProductList extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <hr className="w-75 mx-auto my-10"/>
+
+                            <Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left'}}>
+                                <p
+                                    style={{
+                                        letterSpacing: '1px',
+                                        fontFamily: '"Montserrat", sans-serif',
+                                        color: 'BLACK',
+                                        fontSize: '15px',
+                                        opacity: "60%"
+                                    }}>
+                                    Misc.
+                                </p>
+                            </Col>
+
+                            <Col xs={12} md={3} className="mb-4" style={{float: 'right', zIndex: 10}}>
+                                <div className=" border   p-2 shadow-md" style={{background: "#f8f8f8"}}>
+                                    <Col>
+                                        <h5 className="text-uppercase text-muted" style={{
+                                            "width": "100%",
+                                            fontFamily: '"Montserrat", sans-serif',
+                                            color: '#1a1b1f'
+                                        }}>
+                                            <select id="sortList" defaultValue="new" className="text-muted"
+                                                    onChange={this.sortList} style={{"width": "100%"}}>
+                                                <option value="new" disabled>Sort</option>
+                                                <option value="new">Newest</option>
+                                                <option value="priceLH">Price: (Low to High)</option>
+                                                <option value="priceHL">Price: (High to Low)</option>
+                                                <option value="AZ">Name: A-Z</option>
+                                                <option value="ZA">Name: Z-A</option>
+                                            </select>
+                                        </h5>
+                                    </Col>
+                                </div>
+                            </Col>
+
+                            <div id="menu">
+                                <div className="row mx-auto scrollbar-hide container shadow-scroll" ref={this.othersRef}
+                                     style={{overflowX: "auto", overflowY: "hidden"}}>
+                                    <div className="product-container">
+                                        <ProductConsumer>
+                                            {(value) => {
+                                                this.sortProducts(value.products)
+                                                let products = value.products;
+                                                products = this.filterProducts(products, 'Other')
+                                                products = this.filterType(products)
+                                                return (products.map(product => {
+                                                    return <Product key={product.title} product={product}/>
+                                                }))
+                                            }}
+                                        </ProductConsumer>
+                                    </div>
+                                    <div id="nav" className="d-none d-md-block">
+                                        <div id="prev" onClick={()=>this.scrollLeft('othersRef')}>
+                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                        </div>
+                                        <div id="next" onClick={()=>this.scrollRight('othersRef')}>
+                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </Col>
 

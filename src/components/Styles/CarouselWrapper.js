@@ -89,7 +89,7 @@ class CarouselWrapper extends Component {
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
                                             <div className="middle">
-                                                <div className="text">BYOB</div>
+                                                <div className="text">Instagram Styles</div>
                                             </div>
                                         </button>
                                     </Link>
@@ -103,7 +103,7 @@ class CarouselWrapper extends Component {
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg2} />
                                             <div className="middle">
-                                                <div className="text">Women's Swim</div>
+                                                <div className="text">Women's</div>
                                             </div>
                                         </button>
                                     </Link>
@@ -117,7 +117,7 @@ class CarouselWrapper extends Component {
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
                                             <div className="middle">
-                                                <div className="text">Men's Swim</div>
+                                                <div className="text">Men's</div>
                                             </div>
                                         </button>
                                     </Link>
