@@ -23,8 +23,8 @@ class Navbar extends Component {
                                      className="nav-item img-fluid pr-0 "
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
-                        <li className=" ml-auto mr-2" style={{color:'black'}}>
-                            <Link to='/' className="nav-link nav-item nav-btn">
+                        <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
+                            <Link to='/' className="nav-link">
                                 Home
                             </Link>
                         </li>
@@ -66,17 +66,17 @@ class Navbar extends Component {
                         {/*        Shop Instagram*/}
                         {/*    </Link>*/}
                         {/*</li>*/}
-                        <li className="nav-item mx-2 nav-btn" style={{color:'black'}}>
+                        <li className="nav-item mx-2  " style={{color:'black'}}>
                             <Link to='/customer-care' className="nav-link" style={{color:'black'}}>
                                 Customer Care
                             </Link>
                         </li>
-                        <li className="nav-item mx-2 nav-btn">
+                        <li className="  mx-2 nav-btn">
                             <Link to='/about' className="nav-link" style={{color:'black'}}>
                                 About
                             </Link>
                         </li>
-                        <li className="nav-item nav-btn ml-2 mr-auto" style={{color:'black'}}>
+                        <li className="  ml-2 mr-auto" style={{color:'black'}}>
                             <Link to='/sizing-page' className="nav-link" style={{color:'black'}}>
                                 Sizing
                             </Link>
@@ -103,26 +103,26 @@ const Toggle = styled(Dropdown.Toggle)`
 
 const NavWrapper = styled.nav`
     background:var(--mainWhite);
-    //.nav-link{
-    //    color:black!important;
-    //    font-size:1.2rem;
-    //    text-transform:capitalize !important;
-    //}
-    //.nav-link-mobile{
-    //    color:#808080!important;
-    //    font-size:1.6rem;
-    //    text-transform:capitalize !important;
-    //    display: none;
-    //}
-    //
-    //@media all and (max-width: 768px){
-    //    .nav-link { display: none; }
-    //    .nav-link-mobile {
-    //        ul { display: table; }
-    //        li { display: table-cell; }
-    //        display : inline-block;
-    //    }
-    //}
+    .nav-link{
+        color:black!important;
+        font-size:1.2rem;
+        text-transform:capitalize !important;
+    }
+    .nav-link-mobile{
+        color:#808080!important;
+        font-size:1.6rem;
+        text-transform:capitalize !important;
+        display: none;
+    }
+    
+    @media all and (max-width: 768px){
+        .nav-link { display: none; }
+        .nav-link-mobile {
+            ul { display: table; }
+            li { display: table-cell; }
+            display : inline-block;
+        }
+    }
     
 `;
 
