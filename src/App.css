@@ -62,6 +62,7 @@ span.arrow-right{
   padding:0 ;
 }
 #nav {
+  visibility: hidden;
   position: absolute;
   top: 0;
   width: 100%;
@@ -73,31 +74,53 @@ span.arrow-right{
   position: relative;
 
 }
+#menu:hover #nav{
+  visibility: visible;
+}
+
 #prev {
-  height: 100px;
-  display: inline-block;
+  height: 340px;
+  background: rgba(0, 0, 0, 0.35);
+  display: table;
   position: absolute;
   left: -22px;
-  color: grey;
+  color: white;
   padding: 5px;
   cursor: pointer;
-  top: 200px;
+  top: 87px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
+
+  width: 60px;
 }
-.color-filter{
+#prev:hover {
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  transition-duration: .5s;
 }
 #next {
-  height: 100px;
+  display: table;
+  height: 340px;
+  background: rgba(0, 0, 0, 0.35);
   position: absolute;
   right: 5px;
-  display: inline-block;
-  color: grey;
+   color: white;
   padding: 5px;
   cursor: pointer;
-  top: 200px;
+  top: 87px;
   font-weight: bold;
+  font-size: 20px;
+  width: 60px;
+}
+.list-arrow {
+  display: table-cell!important;
+  vertical-align: middle;
+  text-align: center;
+}
+#next:hover {
   font-size: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  transition-duration: .5s;
 }
 .item {
   text-align: center;
