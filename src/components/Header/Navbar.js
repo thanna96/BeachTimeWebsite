@@ -66,17 +66,17 @@ class Navbar extends Component {
                         {/*        Shop Instagram*/}
                         {/*    </Link>*/}
                         {/*</li>*/}
-                        <li className="nav-item mx-2  " style={{color:'black'}}>
+                        <li className="nav-item mx-2 nav-btn" style={{color:'black'}}>
                             <Link to='/customer-care' className="nav-link" style={{color:'black'}}>
                                 Customer Care
                             </Link>
                         </li>
-                        <li className="  mx-2 nav-btn">
+                        <li className="nav-item mx-2 nav-btn">
                             <Link to='/about' className="nav-link" style={{color:'black'}}>
                                 About
                             </Link>
                         </li>
-                        <li className="  ml-2 mr-auto" style={{color:'black'}}>
+                        <li className="nav-item nav-btn ml-2 mr-auto" style={{color:'black'}}>
                             <Link to='/sizing-page' className="nav-link" style={{color:'black'}}>
                                 Sizing
                             </Link>

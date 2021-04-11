@@ -127,7 +127,7 @@ span.arrow-right{
   font-family: 'Montserrat', sans-serif;
   size: 12px 20px;
   color: #1a1b1f;
-  opacity: 60%;
+  opacity: 60%!important;
 }
 .title h1{
   font-size: calc(55px + 2vmin);
