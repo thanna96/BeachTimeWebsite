@@ -242,10 +242,10 @@ class ProductList extends Component {
                                     </div>
                                     <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('topsRef')}>
-                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                         </div>
                                         <div id="next" onClick={()=>this.scrollRight('topsRef')}>
-                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                         </div>
                                     </div>
                                 </div>
@@ -306,10 +306,10 @@ class ProductList extends Component {
                                     </div>
                                     <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('bottomsRef')}>
-                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                         </div>
                                         <div id="next" onClick={()=>this.scrollRight('bottomsRef')}>
-                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                         </div>
                                     </div>
                                 </div>
@@ -370,10 +370,10 @@ class ProductList extends Component {
                                     </div>
                                     <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('onePRef')}>
-                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                         </div>
                                         <div id="next" onClick={()=>this.scrollRight('onePRef')}>
-                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                         </div>
                                     </div>
                                 </div>
@@ -433,10 +433,10 @@ class ProductList extends Component {
                                     </div>
                                     <div id="nav" className="d-none d-md-block">
                                         <div id="prev" onClick={()=>this.scrollLeft('othersRef')}>
-                                            <i className="fa fa-angle-left fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                         </div>
                                         <div id="next" onClick={()=>this.scrollRight('othersRef')}>
-                                            <i className="fa fa-angle-right fa-5x color-filter"/>
+                                            <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                         </div>
                                     </div>
                                 </div>
