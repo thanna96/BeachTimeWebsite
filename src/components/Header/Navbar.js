@@ -16,17 +16,18 @@ class Navbar extends Component {
                 <div className="d-block d-md-none" style={{height:"150px"}}>
                     <MobileNav/>
                 </div>
-                <NavWrapper className="  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
+                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center ml-auto">
                                 <img src={logo2} alt="store"
                                      className="nav-item img-fluid pr-0 "
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
-                        <li className="  nav-btn ml-auto mr-2" style={{color:'black'}}>
-                            <Link to='/' className=" ">
-                                Home
-                            </Link>
+                        <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
+                            {/*<Link to='/' className="nav-link">*/}
+                            {/*    Home*/}
+                            {/*</Link>*/}
+                            Home
                         </li>
                         <li className="nav-item  mx-2" >
                             <Dropdown >
