@@ -9,7 +9,8 @@ export default function CartItem({item,value}) {
     return (
         <div className="row my-2 text-capitalize text-center">
             <div className="col-6 mx-auto col-lg-2">
-                <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} style={{width:'5rem',height:'6rem'}} className="img-fluid img-thumbnail mx-auto" alt="product"/>
+                <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} style={{width:'5rem',height:'6rem'}}
+                     className="img-fluid img-thumbnail mx-auto" alt="product"/>
             </div>
 
             <div className="col-6 mx-auto col-lg-2">
@@ -30,7 +31,7 @@ export default function CartItem({item,value}) {
             <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
                 <div className="d-flex justify-content-center">
                     <div>
-                        <span className="btn mx-0" onClick={()=>decrement(id,title,info.selColor,info.selSize)}>-</span>
+                        <span className="btn mx-0" onClick={()=>decrement(item)}>-</span>
                         <span className="btn btn-black mx-0">{info.count}</span>
                         <span className="btn mx-0" onClick={()=>increment(item)}>+</span>
                     </div>
