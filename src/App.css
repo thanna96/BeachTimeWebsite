@@ -201,11 +201,19 @@ span.arrow-right{
   background-color: Black;
 }
 .clicked{
-  opacity:0.5;
+  opacity:0.2;
   background-color: Black;
 }
 .sewtitle{
   /*font-family: 'Amatic SC', cursive;*/
+}
+.disabled-button{
+  opacity:0.2!important;
+  cursor: not-allowed!important;
+}
+.disabled-button:hover{
+  opacity:0.2!important;
+  background-color: black!important;
 }
 .navbar{
   /*font-family: 'Amatic SC', cursive;*/

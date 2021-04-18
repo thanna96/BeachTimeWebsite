@@ -250,7 +250,7 @@ class ProductList extends Component {
                                     </div>
 
                                 </div>
-                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
+                                <div className="d-block d-md-none -my-10" style={{textAlign:'center'}}>
                                     <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
                                         <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                     </div>
@@ -322,11 +322,11 @@ class ProductList extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
-                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                <div className="d-block d-md-none -my-10" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('bottomsRef')}>
                                         <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                     </div>
-                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('bottomsRef')}>
                                         <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                     </div>
                                 </div>
@@ -394,11 +394,11 @@ class ProductList extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
-                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                <div className="d-block d-md-none -my-10" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('onePRef')}>
                                         <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                     </div>
-                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('onePRef')}>
                                         <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                     </div>
                                 </div>
@@ -465,11 +465,11 @@ class ProductList extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-block d-md-none" style={{textAlign:'center'}}>
-                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('topsRef')}>
+                                <div className="d-block d-md-none -my-10" style={{textAlign:'center'}}>
+                                    <div className="mr-5" style={{display:'inline-block'}} onClick={()=>this.scrollLeft('othersRef')}>
                                         <i className="list-arrow fa fa-angle-left fa-5x color-filter"/>
                                     </div>
-                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('topsRef')}>
+                                    <div className="ml-5" style={{display:'inline-block'}} onClick={()=>this.scrollRight('othersRef')}>
                                         <i className="list-arrow fa fa-angle-right fa-5x color-filter"/>
                                     </div>
                                 </div>
