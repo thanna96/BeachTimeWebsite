@@ -5,16 +5,17 @@ import {ButtonContainer} from "../Styles/Button";
 import Mimg2 from "../../mBanner1.JPG";
 import img from "../../banner.JPG";
 import {OverlayTrigger} from "react-bootstrap";
-import Tooltip  from "react-bootstrap/cjs/Tooltip";
+import Tooltip from "react-bootstrap/cjs/Tooltip";
 import colorsData from "../../colorsData";
 
 class Details extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            selSiz: '',
+            selSiz: 'XS',
             selCol: '',
             secColor: '',
+            count: 1,
             stringColor: '',
             productName: '',
             id: 0,
@@ -30,20 +31,21 @@ class Details extends Component {
 
     componentDidMount() {
         //console.log("id",this.props.match.params.title,this.props.match.params.id)
-        this.setState({productName:this.props.match.params.title})
-        this.setState({id:parseInt(this.props.match.params.id)})
+        this.setState({productName: this.props.match.params.title})
+        this.setState({id: parseInt(this.props.match.params.id)})
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
+
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimensions);
     }
 
     updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
+        this.setState({width: window.innerWidth, height: window.innerHeight});
     }
 
-    handleChange(Event){
+    handleChange(Event) {
         let nam = Event.target.name;
         let val = Event.target.value;
         this.setState({
@@ -163,14 +165,15 @@ class Details extends Component {
                                         </h4>
 
                                         {/* Reverse Option */}
-                                        {info.reversible === true ? <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                            reversible:<br/>
-                                            <select name="reversible" className="mt-2" style={{width: "100%"}}
-                                                    onChange={this.handleChange}>
-                                                <option value='false' key="no">No</option>
-                                                <option value='true' key="yes">Yes (+$10)</option>
-                                            </select>
-                                        </h4> : ''}
+                                        {info.reversible === true ?
+                                            <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                                reversible:<br/>
+                                                <select name="reversible" className="mt-2" style={{width: "100%"}}
+                                                        onChange={this.handleChange}>
+                                                    <option value='false' key="no">No</option>
+                                                    <option value='true' key="yes">Yes (+$10)</option>
+                                                </select>
+                                            </h4> : ''}
 
                                         {this.state.reversible === 'true' ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
@@ -197,14 +200,15 @@ class Details extends Component {
                                             </h4> : ''}
 
                                         {/* string color Option */}
-                                        {info.customString === true ? <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                            Custom String Color:<br/>
-                                            <select name="customString" className="mt-2" style={{width: "100%"}}
-                                                    onChange={this.handleChange}>
-                                                <option value='false' key="no">No</option>
-                                                <option value='true' key="yes">Yes</option>
-                                            </select>
-                                        </h4> : ''}
+                                        {info.customString === true ?
+                                            <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                                Custom String Color:<br/>
+                                                <select name="customString" className="mt-2" style={{width: "100%"}}
+                                                        onChange={this.handleChange}>
+                                                    <option value='false' key="no">No</option>
+                                                    <option value='true' key="yes">Yes</option>
+                                                </select>
+                                            </h4> : ''}
 
                                         {this.state.customString === 'true' ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
@@ -237,20 +241,14 @@ class Details extends Component {
                                             <div className="mt-2">
                                                 <input type="number" className="form-control"
                                                        style={{width: "20%"}}
-                                                       id="quantity"
-                                                       placeholder="1"/>
+                                                       name="count" min="1" max="10"
+                                                       placeholder="1"
+                                                       onChange={this.handleChange}/>
                                             </div>
                                         </h4>
 
                                         <hr className="my-3"/>
 
-                                        <p className="mt-3 mb-0 font-weight-bold" style={{
-                                            fontFamily: '"Montserrat", sans-serif',
-                                            color: '#1a1b1f',
-                                            fontSize: '16px'
-                                        }}>
-                                            Total:
-                                        </p>
                                         <div className="text-muted lead" style={{
                                             fontFamily: '"Montserrat", sans-serif',
                                             color: '#1a1b1f',
@@ -258,14 +256,49 @@ class Details extends Component {
                                         }}>
                                             <div className="row">
                                                 <div className="col col-6 text-left">
-                                                    {title}
+                                                    {this.state.count}x {title} - {this.state.selCol}
                                                 </div>
                                                 <div className="col col-6 text-right">
-                                                    USD ${info.price}.00
+                                                    {'USD $' + parseInt(info.price) * this.state.count + '.00'}
                                                 </div>
                                             </div>
+                                            {this.state.selSiz ? <div className="row">
+                                                <div className="col col-6 text-left">
+                                                    Size - {this.state.selSiz}
+                                                </div>
+                                                <div className="col col-6 text-right">
+                                                    -
+                                                </div>
+                                            </div>: ''}
+                                            {this.state.reversible === 'true' ? <div className="row">
+                                                <div className="col col-6 text-left">
+                                                    Reversible - {this.state.secColor}
+                                                </div>
+                                                <div className="col col-6 text-right">
+                                                    USD $10.00
+                                                </div>
+                                            </div> : ''}
+                                            {this.state.customString === 'true' ? <div className="row">
+                                                <div className="col col-6 text-left">
+                                                    Custom String Color - {this.state.stringColor}
+                                                </div>
+                                                <div className="col col-6 text-right">
+                                                    -
+                                                </div>
+                                            </div> : ''}
                                         </div>
 
+                                        <hr className="my-3"/>
+                                        <p className="mt-3 mb-0 font-weight-bold" style={{
+                                            fontFamily: '"Montserrat", sans-serif',
+                                            color: '#1a1b1f',
+                                            fontSize: '16px',
+                                            textAlign: 'right'
+                                        }}>
+                                            Subtotal: {this.state.reversible === 'true' ?
+                                            ('$' + (parseInt(info.price) + 10) * this.state.count + '.00') :
+                                            ('$' + parseInt(info.price) * this.state.count + '.00')}
+                                        </p>
                                         <hr className="my-3"/>
 
                                         {/* buttons */}
@@ -277,6 +310,7 @@ class Details extends Component {
                                                         info.selColor = this.state.selCol
                                                         info.secColor = this.state.secColor
                                                         info.stringColor = this.state.stringColor
+                                                        info.count = this.state.count
                                                         if (info.selSize === '') info.selSize = info.sizes[0];
                                                         if (info.selColor === '') info.selColor = value.colors[0].color;
                                                         value.addToCart(value.detailProduct);
