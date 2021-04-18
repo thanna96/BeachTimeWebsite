@@ -262,14 +262,14 @@ class Details extends Component {
                                                     {'USD $' + parseInt(info.price) * this.state.count + '.00'}
                                                 </div>
                                             </div>
-                                            {this.state.selSiz ? <div className="row">
+                                            <div className="row">
                                                 <div className="col col-6 text-left">
                                                     Size - {this.state.selSiz}
                                                 </div>
                                                 <div className="col col-6 text-right">
                                                     -
                                                 </div>
-                                            </div>: ''}
+                                            </div>
                                             {this.state.reversible === 'true' ? <div className="row">
                                                 <div className="col col-6 text-left">
                                                     Reversible - {this.state.secColor}
