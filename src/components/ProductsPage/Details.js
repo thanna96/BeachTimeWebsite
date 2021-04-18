@@ -7,6 +7,7 @@ import img from "../../banner.JPG";
 import {OverlayTrigger} from "react-bootstrap";
 import Tooltip from "react-bootstrap/cjs/Tooltip";
 import colorsData from "../../colorsData";
+import img1 from "../../bumblebee-icon-20.jpg";
 
 class Details extends Component {
     constructor(props) {
@@ -22,11 +23,13 @@ class Details extends Component {
             image: '',
             width: 0,
             height: 0,
-            reversible: false,
-            customString: false
+            reversible: 'false',
+            customString: 'false',
+            validOptions: false
         }
         this.handleChange = this.handleChange.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+        this.updateValid = this.updateValid.bind(this);
     }
 
     componentDidMount() {
@@ -51,7 +54,24 @@ class Details extends Component {
         this.setState({
             ...this.state,
             [nam]: val
-        })
+        });
+    }
+
+    updateValid() {
+        if (this.state.selSiz !== '' && this.state.selCol !== '' && this.state.count !== 0) {
+            if (this.state.reversible === 'true' && this.state.customString === 'true'
+            && (this.state.secColor === '' || this.state.stringColor === '')) {
+                return false;
+            } else if (this.state.reversible === 'true' && this.state.secColor !== '') {
+                return true;
+            } else if (this.state.customString === 'true' && this.state.stringColor !== '') {
+                return true;
+            } else if (this.state.customString === 'false' && this.state.reversible === 'false') {
+                return true;
+            }
+        } else {
+           return false;
+        }
     }
 
     render() {
@@ -256,6 +276,8 @@ class Details extends Component {
                                         }}>
                                             <div className="row">
                                                 <div className="col col-6 text-left">
+                                                    <img alt='' src={img1} height='18px' width="18px"
+                                                         style={{display: 'inline-block', marginRight: '5px'}}/>
                                                     {this.state.count}x {title} - {this.state.selCol}
                                                 </div>
                                                 <div className="col col-6 text-right">
@@ -264,6 +286,8 @@ class Details extends Component {
                                             </div>
                                             <div className="row">
                                                 <div className="col col-6 text-left">
+                                                    <img alt='' src={img1} height='18px' width="18px"
+                                                         style={{display: 'inline-block', marginRight: '5px'}}/>
                                                     Size - {this.state.selSiz}
                                                 </div>
                                                 <div className="col col-6 text-right">
@@ -272,6 +296,8 @@ class Details extends Component {
                                             </div>
                                             {this.state.reversible === 'true' ? <div className="row">
                                                 <div className="col col-6 text-left">
+                                                    <img alt='' src={img1} height='18px' width="18px"
+                                                         style={{display: 'inline-block', marginRight: '5px'}}/>
                                                     Reversible - {this.state.secColor}
                                                 </div>
                                                 <div className="col col-6 text-right">
@@ -280,6 +306,8 @@ class Details extends Component {
                                             </div> : ''}
                                             {this.state.customString === 'true' ? <div className="row">
                                                 <div className="col col-6 text-left">
+                                                    <img alt='' src={img1} height='18px' width="18px"
+                                                         style={{display: 'inline-block', marginRight: '5px'}}/>
                                                     Custom String Color - {this.state.stringColor}
                                                 </div>
                                                 <div className="col col-6 text-right">
@@ -304,20 +332,23 @@ class Details extends Component {
                                         {/* buttons */}
                                         <div>
                                             <div className="m-1 text-center">
-                                                <ButtonContainer
-                                                    onClick={() => {
-                                                        info.selSize = this.state.selSiz
-                                                        info.selColor = this.state.selCol
-                                                        info.secColor = this.state.secColor
-                                                        info.stringColor = this.state.stringColor
-                                                        info.count = this.state.count
-                                                        if (info.selSize === '') info.selSize = info.sizes[0];
-                                                        if (info.selColor === '') info.selColor = value.colors[0].color;
-                                                        value.addToCart(value.detailProduct);
-                                                        value.openModal(id, title)
-                                                    }}>
-                                                    Add to Cart
-                                                </ButtonContainer>
+                                                {this.updateValid() === true ? <ButtonContainer
+                                                        onClick={() => {
+                                                            info.selSize = this.state.selSiz
+                                                            info.selColor = this.state.selCol
+                                                            info.secColor = this.state.secColor
+                                                            info.stringColor = this.state.stringColor
+                                                            info.count = this.state.count
+                                                            if (info.selSize === '') info.selSize = info.sizes[0];
+                                                            if (info.selColor === '') info.selColor = value.colors[0].color;
+                                                            value.addToCart(value.detailProduct);
+                                                            value.openModal(id, title)
+                                                        }}>
+                                                        Add to Cart
+                                                    </ButtonContainer> :
+                                                    <ButtonContainer className="disabled-button">
+                                                        Add to Cart
+                                                    </ButtonContainer>}
                                             </div>
                                             <div className="m-1 text-center underline">
                                                 <Link to={"/sizing-page"}>
