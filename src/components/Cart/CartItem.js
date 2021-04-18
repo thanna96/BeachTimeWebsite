@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
 export default function CartItem({item,value}) {
+    // eslint-disable-next-line no-unused-vars
     const{id,title,info} = item;
     const {increment,decrement,removeItem} = value;
     return (
