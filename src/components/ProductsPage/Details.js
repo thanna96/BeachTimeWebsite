@@ -243,6 +243,7 @@ class Details extends Component {
                                         </h4>
 
                                         <hr className="my-3"/>
+
                                         <p className="mt-3 mb-0 font-weight-bold" style={{
                                             fontFamily: '"Montserrat", sans-serif',
                                             color: '#1a1b1f',
@@ -250,17 +251,23 @@ class Details extends Component {
                                         }}>
                                             Total:
                                         </p>
-                                        <p className="text-muted lead" style={{
+                                        <div className="text-muted lead" style={{
                                             fontFamily: '"Montserrat", sans-serif',
                                             color: '#1a1b1f',
                                             fontSize: '16px',
                                         }}>
                                             <div className="row">
-                                                <div className="col col-6 text-left">44</div>
-                                                <div className="col col-6 text-right">44</div>
+                                                <div className="col col-6 text-left">
+                                                    {title}
+                                                </div>
+                                                <div className="col col-6 text-right">
+                                                    USD ${info.price}.00
+                                                </div>
                                             </div>
-                                        </p>
+                                        </div>
+
                                         <hr className="my-3"/>
+
                                         {/* buttons */}
                                         <div>
                                             <div className="m-1 text-center">
