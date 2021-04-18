@@ -275,7 +275,7 @@ class Details extends Component {
                                                     Reversible - {this.state.secColor}
                                                 </div>
                                                 <div className="col col-6 text-right">
-                                                    USD $10.00
+                                                    USD {10 * this.state.count + '.00'}
                                                 </div>
                                             </div> : ''}
                                             {this.state.customString === 'true' ? <div className="row">
