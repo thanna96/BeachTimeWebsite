@@ -204,15 +204,16 @@ class ProductProvider extends Component {
     addToCart = (prod) => {
         let product = JSON.parse(JSON.stringify(prod))
         let tempCart = [...this.state.cart];
-        if (tempCart.find(item => item.id === prod.id
+        let itemInCart = tempCart.find(item => item.id === prod.id
             && item.title === prod.title
             && item.info.selColor === prod.info.selColor
             && item.info.selSize === prod.info.selSize
             && item.info.secColor === prod.info.secColor
-            && item.info.stringColor === prod.info.stringColor)) {
-            // console.log(prod)
-            this.increment(product)
-
+            && item.info.stringColor === prod.info.stringColor);
+        if (itemInCart) {
+            for ( var i = 0; i < parseInt(product.info.count); i++) {
+                this.increment(product);
+            }
             return;
         }
         if (product.info.secColor !== '') {
