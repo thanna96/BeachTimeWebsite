@@ -4,8 +4,9 @@ import {Link} from "react-router-dom";
 import {ButtonContainer} from "../Styles/Button";
 import Mimg2 from "../../mBanner1.JPG";
 import img from "../../banner.JPG";
- import {OverlayTrigger} from "react-bootstrap";
-import  Tooltip  from "react-bootstrap/cjs/Tooltip";
+import {OverlayTrigger} from "react-bootstrap";
+import Tooltip  from "react-bootstrap/cjs/Tooltip";
+import colorsData from "../../colorsData";
 
 class Details extends Component {
     constructor(props){
@@ -142,17 +143,17 @@ class Details extends Component {
                                             Color: <br/>
                                             <div className="mb-2"/>
                                             {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
-                                            {value.colors.map(color => (
+                                            {colorsData.map(color => (
                                                 // <option value={color.color} key={color.color}>{color.color}</option>
-                                                <OverlayTrigger key={color.color}
-                                                                overlay={<Tooltip>{color.color}</Tooltip>}>
-                                                    <input type="image" key={color.color} name="selCol"
-                                                           value={color.color}
-                                                           className={(color.color === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                <OverlayTrigger key={color.id}
+                                                                overlay={<Tooltip>{color.title}</Tooltip>}>
+                                                    <input type="image" key={color.id} name="selCol"
+                                                           value={color.title}
+                                                           className={(color.title === this.state.selCol) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
                                                            onClick={this.handleChange}
                                                            style={{background: 'transparent'}} height="30px"
                                                            width="30px"
-                                                           src={Mimg2}
+                                                           src={color.img}
                                                            alt="">
                                                     </input>
                                                 </OverlayTrigger>
@@ -162,7 +163,7 @@ class Details extends Component {
                                         </h4>
 
                                         {/* Reverse Option */}
-                                        {info.reverible === true ? <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                        {info.reversible === true ? <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             reversible:<br/>
                                             <select name="reversible" className="mt-2" style={{width: "100%"}}
                                                     onChange={this.handleChange}>
@@ -176,17 +177,17 @@ class Details extends Component {
                                                 Second Color: <br/>
                                                 <div className="mb-2"/>
                                                 {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
-                                                {value.colors.map(color => (
+                                                {colorsData.map(color => (
                                                     // <option value={color.color} key={color.color}>{color.color}</option>
-                                                    <OverlayTrigger key={color.color}
-                                                                    overlay={<Tooltip>{color.color}</Tooltip>}>
-                                                        <input type="image" key={color.color} name="secColor"
-                                                               value={color.color}
-                                                               className={(color.color === this.state.secColor) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                    <OverlayTrigger key={color.id}
+                                                                    overlay={<Tooltip>{color.title}</Tooltip>}>
+                                                        <input type="image" key={color.id} name="secColor"
+                                                               value={color.title}
+                                                               className={(color.title === this.state.secColor) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
                                                                onClick={this.handleChange}
                                                                style={{background: 'transparent'}} height="30px"
                                                                width="30px"
-                                                               src={Mimg2}
+                                                               src={color.img}
                                                                alt="">
                                                         </input>
                                                     </OverlayTrigger>
@@ -210,17 +211,17 @@ class Details extends Component {
                                                 String Color: <br/>
                                                 <div className="mb-2"/>
                                                 {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
-                                                {value.colors.map(color => (
+                                                {colorsData.map(color => (
                                                     // <option value={color.color} key={color.color}>{color.color}</option>
-                                                    <OverlayTrigger key={color.color}
-                                                                    overlay={<Tooltip>{color.color}</Tooltip>}>
-                                                        <input type="image" key={color.color} name="stringColor"
-                                                               value={color.color}
-                                                               className={(color.color === this.state.stringColor) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
+                                                    <OverlayTrigger key={color.id}
+                                                                    overlay={<Tooltip>{color.title}</Tooltip>}>
+                                                        <input type="image" key={color.id} name="stringColor"
+                                                               value={color.title}
+                                                               className={(color.title === this.state.stringColor) ? "clicked m-1 inline-flex" : "m-1 inline-flex"}
                                                                onClick={this.handleChange}
                                                                style={{background: 'transparent'}} height="30px"
                                                                width="30px"
-                                                               src={Mimg2}
+                                                               src={color.img}
                                                                alt="">
                                                         </input>
                                                     </OverlayTrigger>
@@ -239,11 +240,27 @@ class Details extends Component {
                                                        id="quantity"
                                                        placeholder="1"/>
                                             </div>
-
                                         </h4>
 
                                         <hr className="my-3"/>
-
+                                        <p className="mt-3 mb-0 font-weight-bold" style={{
+                                            fontFamily: '"Montserrat", sans-serif',
+                                            color: '#1a1b1f',
+                                            fontSize: '16px'
+                                        }}>
+                                            Total:
+                                        </p>
+                                        <p className="text-muted lead" style={{
+                                            fontFamily: '"Montserrat", sans-serif',
+                                            color: '#1a1b1f',
+                                            fontSize: '16px',
+                                        }}>
+                                            <div className="row">
+                                                <div className="col col-6 text-left">44</div>
+                                                <div className="col col-6 text-right">44</div>
+                                            </div>
+                                        </p>
+                                        <hr className="my-3"/>
                                         {/* buttons */}
                                         <div>
                                             <div className="m-1 text-center">
