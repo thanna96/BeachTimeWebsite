@@ -63,14 +63,14 @@ class CarouselWrapper extends Component {
             <div>
 
                 <Row>
-                <div className="pb-5 pt-0 col-12"  >
+                <div className="pb-3 pt-0 col-12"  >
 
 
                     <div className="img-container p-1 mt-3 mx-auto" style={{ width:'75%'}}>
                         {/*<img alt='' className='w-4/5 mx-auto' src={img1} style={{height: '500px'}} />*/}
                             <p className="mx-auto w-100 d-none d-md-block" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'64px' }}>Sew Honey Swim</p>
                         <p className="mx-auto w-100 d-block d-md-none" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'45px',whiteSpace:'nowrap' }}>Sew Honey<br/> Swim</p>
-                            <p className="mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'20px',opacity: "60%"}}>Made to order swimwear.</p>
+                            <p className="mb-3" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'20px',opacity: "60%"}}>Made to order swimwear.</p>
                             {/*<Link to='/product-list/handmade' className="mx-auto">*/}
                             {/*    <button className="py-4 px-5 mb-2" style={{letterSpacing:'2px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'14px',backgroundColor:'#f4f4f4'}}>SHOP NOW</button>*/}
                             {/*</Link>*/}
@@ -182,12 +182,12 @@ class CarouselWrapper extends Component {
                 <div className="  mx-auto w-75" >
 
                     <div className="row">
-                        <div className="  col-md-9  mx-auto ">
+                        <div className="col-md-9  mx-auto">
                             <p className="font-bold mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Contact Us.</p>
                         </div>
 
-                        <div className="col-md-3  ">
-                            <div className="mb-3 ">
+                        <div className="col-md-3">
+                            <div className="mb-3">
                                 <a href="https://www.facebook.com/SewHoneySwim/?ref=nf&hc_ref=ARRAKOHS3x_-iRPO7-T_EwK5Ln04aL5J7gutQECf17b0uDp46kloMDbSlLUuTvfXlYk" className="fb-ic">
                                     <MDBIcon icon="facebook" size="3x" className="   mr-md-5 mr-3" />
                                 </a>
