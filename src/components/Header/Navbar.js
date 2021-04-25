@@ -37,10 +37,10 @@ class Navbar extends Component {
                                     {/*<Dropdown.Header ><p className="font-weight-bold mb-0 p-0" >Women</p></Dropdown.Header>*/}
 
                                     <Dropdown.Item href="/product-list/handmade"   >
-                                        Women
+                                        Swim
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/mens-product-list/apparel" >
-                                        Men
+                                    <Dropdown.Item href="/product-list/apparel" >
+                                        Apparel
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/byob" >
                                         Instagram Styles

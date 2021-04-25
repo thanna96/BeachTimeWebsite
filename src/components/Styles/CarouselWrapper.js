@@ -71,9 +71,9 @@ class CarouselWrapper extends Component {
                             <p className="mx-auto w-100 d-none d-md-block" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'64px' }}>Sew Honey Swim</p>
                         <p className="mx-auto w-100 d-block d-md-none" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'45px',whiteSpace:'nowrap' }}>Sew Honey<br/> Swim</p>
                             <p className="mb-6" style={{fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'20px',opacity: "60%"}}>Made to order swimwear.</p>
-                            <Link to='/product-list/handmade' className="mx-auto">
-                                <button className="py-4 px-5 mb-2" style={{letterSpacing:'2px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'14px',backgroundColor:'#f4f4f4'}}>SHOP NOW</button>
-                            </Link>
+                            {/*<Link to='/product-list/handmade' className="mx-auto">*/}
+                            {/*    <button className="py-4 px-5 mb-2" style={{letterSpacing:'2px',fontFamily:'"Montserrat", sans-serif', color:'black', fontSize:'14px',backgroundColor:'#f4f4f4'}}>SHOP NOW</button>*/}
+                            {/*</Link>*/}
 
                     </div>
                 </div>
@@ -85,11 +85,11 @@ class CarouselWrapper extends Component {
                         <Col sm={12} md={4} >
                             <ProductWrapper className="p-1 m-0 mx- ">
                                 <div className="container ">
-                                    <Link to='/product-list/handmade' >
+                                    <Link to='/shop-instagram' >
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={immmm} />
                                             <div className="middle">
-                                                <div className="text">Instagram Styles</div>
+                                                <div className="text">Shop</div>
                                             </div>
                                         </button>
                                     </Link>
@@ -103,7 +103,7 @@ class CarouselWrapper extends Component {
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg2} />
                                             <div className="middle">
-                                                <div className="text">Women's</div>
+                                                <div className="text">Shop From Instagram</div>
                                             </div>
                                         </button>
                                     </Link>
@@ -117,7 +117,7 @@ class CarouselWrapper extends Component {
                                         <button className="bg-white overflow-hidden ">
                                             <img alt='' className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"} src={Mimg4} />
                                             <div className="middle">
-                                                <div className="text">Men's</div>
+                                                <div className="text">Apparel</div>
                                             </div>
                                         </button>
                                     </Link>
@@ -132,8 +132,8 @@ class CarouselWrapper extends Component {
                 </div>
 
                     <div className="pb-3 pt-1 text-title text-center mx-auto">
-                        <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>WHAT WE BELIEVE IN</p>
-                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Swimwear should be nice for all shapes and sizes</p>
+                        <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>SPREAD YOUR HONEY</p>
+                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Share your adventures with #SewHoneySwim</p>
                     </div>
                     <hr className="w-75 mx-auto my-20" />
 

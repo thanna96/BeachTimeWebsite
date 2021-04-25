@@ -224,6 +224,19 @@ class ProductList extends Component {
                                     </Col>
                                 </div>
                             </Col>
+                            <div className="row w-100">
+                                <ProductConsumer>
+                                    {(value) => {
+                                        this.sortProducts(value.products)
+                                        let products = value.products;
+                                        products = this.filterProducts(products, 'Top')
+                                        products = this.filterType(products)
+                                        return (products.map(product => {
+                                            return <Product key={product.title} product={product}/>
+                                        }))
+                                    }}
+                                </ProductConsumer>
+                            </div>
                             <div id="menu">
                                 <div className="row mx-auto scrollbar-hide shadow-scroll container" ref={this.topsRef}
                                      style={{overflowX: "auto", overflowY: "hidden"}}>
