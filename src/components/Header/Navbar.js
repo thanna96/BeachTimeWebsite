@@ -18,12 +18,12 @@ class Navbar extends Component {
                 </div>
                 <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
                     {/* Navbar for Desktop */}
-                    <ul className="navbar-nav align-items-center ml-auto">
+                    <ul className="navbar-nav align-items-center ml-auto ">
                                 <img src={logo2} alt="store"
-                                     className="nav-item img-fluid pr-0 "
+                                     className="nav-item img-fluid pr-0 mr-2"
                                      style={{maxWidth:"8%", Height:"auto"}}/>
 
-                        <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
+                        <li className="nav-item nav-btn mx-2" style={{color:'black'}}>
                             <Link to='/' className="nav-link">
                                 Home
                             </Link>

@@ -23,9 +23,9 @@ class Product extends Component {
     render() {
         const {id, title, info} = this.props.product;
         return (
-            <ProductWrapper className="item" >
+            <ProductWrapper className="col col-6 col-md-3 p-0" style={{height:"auto",objectFit:'cover',maxWidth:"340px",}}>
 
-                <div className="my-6" style={{ }}>
+                <div className="my-6" style={{maxHeight:'100%'}}>
                     <ProductConsumer>
                         {value=>(
                     <div onClick={()=>value.handleDetail(id,title)} >
@@ -33,10 +33,7 @@ class Product extends Component {
                             <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]}
                                  onMouseEnter={e => {if (info.img[1]) e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/" + info.img[1]}}
                                  onMouseLeave={e => (e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0])}
-                                 id="imgTest" alt="product" style={{height:"340px", minWidth:"340px", top: 0,maxWidth:"340px",
-                                bottom: 0,
-                                left: 0,
-                                right: 0, margin:0}}/>
+                                 id="imgTest" alt="product" style={{display:'block',  margin:0}}/>
                         </Link>
                     </div>)}
                     </ProductConsumer>
@@ -44,12 +41,12 @@ class Product extends Component {
                     {/* Card Footer */}
                     <div className=" justify-content-center" >
                         <Link to={info.type+'/'+id+'/'+title} className="footer-link">
-                        <p className="mb-0 align-self-center font-bold" style={{"textAlign": "center",letterSpacing:'1px',
-                            fontFamily:'"Montserrat", sans-serif' , fontSize:'16px',opacity:'60%' }} >
+                        <p className="mb-0 align-self-center font-bold responsive-font" style={{"textAlign": "center",letterSpacing:'1px',
+                            fontFamily:'"Montserrat", sans-serif' , opacity:'60%' }} >
                             {title}
                         </p>
                         </Link>
-                        <p className="align-self-center " style={{"textAlign": "center",opacity:'60%'}}>
+                        <p className="align-self-center responsive-font" style={{"textAlign": "center",opacity:'60%'}}>
                         <span>${info.price}</span>
                         </p>
 
