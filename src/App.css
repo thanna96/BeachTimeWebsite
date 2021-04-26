@@ -150,6 +150,10 @@ span.arrow-right{
   font-size: 15px;
   opacity: 60%;
 }
+.mobile-nav{
+  position: fixed;
+  z-index: 11;
+ }
 .size-button:hover{
    cursor: pointer;
   text-decoration: underline;

@@ -35,11 +35,11 @@ class CustomerCare extends Component {
                     </p>
                 </div>
 
-                <Tab.Container defaultActiveKey="#Policies" >
+                <Tab.Container defaultActiveKey="#FAQ" >
                     <div className="d-block d-md-none mb-5 mx-auto text-center">
                         <ListGroup className="font-bold">
-                            <ListGroup.Item href="#Policies" style={style}>
-                                Policies
+                            <ListGroup.Item href="#FAQ" style={style}>
+                                FAQ
                             </ListGroup.Item>
                             <ListGroup.Item href="#Shipping" style={style}>
                                 Shipping
@@ -47,18 +47,17 @@ class CustomerCare extends Component {
                             <ListGroup.Item href="#Returns" style={style}>
                                 Returns
                             </ListGroup.Item>
-                            <ListGroup.Item href="#FAQ" style={style}>
-                                FAQ
+                            <ListGroup.Item href="#Policies" style={style}>
+                                Policies
                             </ListGroup.Item>
-
                         </ListGroup>
                         <hr/>
                     </div>
                     <Row>
                         <Col sm={3} className="d-none d-md-block">
                             <ListGroup className="font-bold">
-                                <ListGroup.Item href="#Policies" style={style}>
-                                    Policies
+                                <ListGroup.Item href="#FAQ" style={style}>
+                                    FAQ
                                 </ListGroup.Item>
                                 <ListGroup.Item href="#Shipping" style={style}>
                                     Shipping
@@ -66,8 +65,8 @@ class CustomerCare extends Component {
                                 <ListGroup.Item href="#Returns" style={style}>
                                     Returns
                                 </ListGroup.Item>
-                                <ListGroup.Item href="#FAQ" style={style}>
-                                    FAQ
+                                <ListGroup.Item href="#Policies" style={style}>
+                                    Policies
                                 </ListGroup.Item>
 
                             </ListGroup>

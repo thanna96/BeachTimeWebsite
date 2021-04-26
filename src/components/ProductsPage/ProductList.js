@@ -80,6 +80,10 @@ class ProductList extends Component {
                 break;
             case 'apparel':
                 data = data.filter(product => product.info.type === 'apparel')
+                break;
+            case 'instagram-styles':
+                data = data.filter(product => product.info.type === 'instagram')
+                break;
         }
         return data;
     }

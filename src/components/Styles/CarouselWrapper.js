@@ -133,7 +133,7 @@ class CarouselWrapper extends Component {
 
                     <div className="pb-3 pt-1 text-title text-center mx-auto">
                         <p className="mb-2" style={{letterSpacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'BLACK', fontSize:'12px',opacity: "60%"}}>SPREAD YOUR HONEY</p>
-                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'36px'}}>Share your adventures with #SewHoneySwim</p>
+                        <p className="mx-auto w-75" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f' }}>Share your adventures with #SewHoneySwim</p>
                     </div>
                     <hr className="w-75 mx-auto my-20" />
 

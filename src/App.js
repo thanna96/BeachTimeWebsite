@@ -48,6 +48,9 @@ function App() {
               <Route exact path="/product-list/:style/:id/:title" component={Details}/>
               <Route exact path="/mens-product-list/:style/:id/:title" component={Details}/>
               <Route exact path="/product-list/:style" component={ProductList}/>
+              <Route exact path="/product-list/:style/tops" component={ProductList}/>
+              <Route exact path="/product-list/:style/bottoms" component={ProductList}/>
+              <Route exact path="/product-list/:style/one-pieces" component={ProductList}/>
               <Route exact path="/mens-product-list/:style" component={MensProductList}/>
               <Route path="/about" component={About}/>
               <Route path="/customer-care" component={CustomerCare}/>
