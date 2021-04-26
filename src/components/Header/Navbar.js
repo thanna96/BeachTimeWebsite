@@ -13,19 +13,25 @@ class Navbar extends Component {
         return (
             <div >
                 <div className="d-none d-md-block" style={{height:"100px"}}/>
-                <div className="d-block d-md-none" style={{height:"150px"}}>
+                <div className="d-block d-md-none" style={{height:"130px"}}>
                     <MobileNav/>
                 </div>
                 <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm  px-sm-5 shadow-md" style={{zIndex:1}}>
                     {/* Navbar for Desktop */}
-                    <ul className="navbar-nav align-items-center ml-auto">
+                    <ul className="navbar-nav align-items-center ml-auto ">
+                        <li className=" " style={{color:'black',maxWidth:"10%", Height:"auto"}} >
+                            <Link to='/' className="nav-link" >
                                 <img src={logo2} alt="store"
-                                     className="nav-item img-fluid pr-0 "
-                                     style={{maxWidth:"8%", Height:"auto"}}/>
+                                     className="nav-item img-fluid pr-0 mr-2"
+                                     />
+                            </Link>
+                        </li>
 
-                        <li className="nav-item nav-btn ml-auto mr-2" style={{color:'black'}}>
-                            <Link to='/' className="nav-link" style={{color:'black'}}>
-                                Home
+
+
+                        <li className="nav-item nav-btn mx-2" style={{color:'black'}}>
+                            <Link to='/' className="nav-link">
+                                 Home
                             </Link>
                         </li>
                         <li className="nav-item  mx-2" >
@@ -37,12 +43,12 @@ class Navbar extends Component {
                                     {/*<Dropdown.Header ><p className="font-weight-bold mb-0 p-0" >Women</p></Dropdown.Header>*/}
 
                                     <Dropdown.Item href="/product-list/handmade"   >
-                                        Women
+                                        Swim
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/mens-product-list/apparel" >
-                                        Men
+                                    <Dropdown.Item href="/product-list/apparel" >
+                                        Apparel
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/byob" >
+                                    <Dropdown.Item href="/product-list/instagram-styles" >
                                         Instagram Styles
                                     </Dropdown.Item>
                                     {/*<Dropdown.Item href="/product-list/apparel"  >*/}

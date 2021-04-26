@@ -122,6 +122,42 @@ span.arrow-right{
   background: rgba(0, 0, 0, 0.5);
   transition-duration: .5s;
 }
+@media screen and (min-width: 768px) {
+  .responsive-font {
+    font-size: 16px;
+  }
+  .style-buttons{
+    float: left;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 767px) {
+  .responsive-font {
+    font-size: 3vw;
+  }
+  .center-small{
+    text-align: center;
+  }
+  .style-buttons{
+    text-align: center;
+  }
+}
+.size-button{
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  color: BLACK;
+  font-size: 15px;
+  opacity: 60%;
+}
+.mobile-nav{
+  position: fixed;
+  z-index: 11;
+ }
+.size-button:hover{
+   cursor: pointer;
+  text-decoration: underline;
+ }
 .item {
   text-align: center;
   margin: 0 2px;

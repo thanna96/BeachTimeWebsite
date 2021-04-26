@@ -49,7 +49,7 @@ class Contact extends Component {
     render() {
         return (
             <div className="pb-5">
-            <Form className="w-4/5 d-none d-lg-block" onSubmit={this.handleSubmit}>
+            <Form className="w-3/5 d-none mx-auto d-lg-block" onSubmit={this.handleSubmit}>
                 <Form.Label className=" " style={{spacing:'1px',fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'12px'}}>
                     Name:
                 </Form.Label>

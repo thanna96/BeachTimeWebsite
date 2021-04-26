@@ -372,7 +372,7 @@ class Details extends Component {
                                             {(info.style === 'Top') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
                                                 'Handmade by Sew Honey.\n' +
                                                 'Pair this top with your favorite bottom.\n' +
-                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 20 days for your order to be cut and sewn. Thank-you!\n' +
                                                 'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
                                             {(info.style === 'bottom') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
                                                 'Handmade by Sew Honey.\n' +
