@@ -148,7 +148,7 @@ span.arrow-right{
   font-family: "Montserrat", sans-serif;
   color: BLACK;
   font-size: 15px;
-  opacity: 60%;
+  opacity: 0.6;
 }
 .mobile-nav{
   position: fixed;
