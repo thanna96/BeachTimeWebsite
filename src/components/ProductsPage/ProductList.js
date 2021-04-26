@@ -208,7 +208,7 @@ class ProductList extends Component {
                     <Row>
 
                         <Col xs={12}>
-                            <div className="col-12 mx-auto text-title center-small">
+                            <div className="col-12 mx-auto text-title center-small mt-5">
                                 <img alt='' src={img1} height="40px" width="40px" style={{display: 'inline-block',marginRight:'5px',verticalAlign:'text-bottom'}}/>
                                 <p className="mx-auto inline-block font-bold"
                                    style={{fontFamily: '"Montserrat", sans-serif', color: '#1a1b1f', fontSize: '40px'}}>
