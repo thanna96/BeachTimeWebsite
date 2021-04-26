@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import Navbar from "react-bootstrap/Navbar";
-import Nav from 'react-bootstrap/Nav'
+// import Nav from 'react-bootstrap/Nav'
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import {faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import logo2 from "../../sewhoneylogo.png";
 import Figure from "react-bootstrap/Figure";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Dropdown from "react-bootstrap/Dropdown";
+// import Col from "react-bootstrap/Col";
+// import Row from "react-bootstrap/Row";
+// import Dropdown from "react-bootstrap/Dropdown";
 import {Navigation} from 'react-minimal-side-navigation';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import img1 from "../../bumblebee-icon-20.jpg";
