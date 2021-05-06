@@ -38,18 +38,24 @@ class CustomerCare extends Component {
                 <Tab.Container defaultActiveKey="#FAQ" >
                     <div className="d-block d-md-none mb-5 mx-auto text-center">
                         <ListGroup className="font-bold">
-                            <ListGroup.Item href="#FAQ" style={style}>
-                                FAQ
-                            </ListGroup.Item>
-                            <ListGroup.Item href="#Shipping" style={style}>
-                                Shipping
-                            </ListGroup.Item>
-                            <ListGroup.Item href="#Returns" style={style}>
-                                Returns
-                            </ListGroup.Item>
-                            <ListGroup.Item href="#Policies" style={style}>
-                                Policies
-                            </ListGroup.Item>
+                            <Row>
+                                <Col>
+                                    <ListGroup.Item href="#FAQ" style={style}>
+                                        FAQ
+                                    </ListGroup.Item>
+                                    <ListGroup.Item href="#Shipping" style={style}>
+                                        Shipping
+                                    </ListGroup.Item>
+                                </Col>
+                                <Col>
+                                    <ListGroup.Item href="#Returns" style={style}>
+                                        Returns
+                                    </ListGroup.Item>
+                                    <ListGroup.Item href="#Policies" style={style}>
+                                        Policies
+                                    </ListGroup.Item>
+                                </Col>
+                            </Row>
                         </ListGroup>
                         <hr/>
                     </div>
