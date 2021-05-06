@@ -35,6 +35,7 @@ export default function CartTotals({value,history}) {
                             <strong> $ {cartTotal}</strong>
                         </h5>
                         <PayPalButton className="m-2"
+                                      value={value}
                             total={cartTotal}
                             clearCart={clearCart}
                             history={history}
