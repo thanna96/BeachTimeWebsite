@@ -216,7 +216,7 @@ class ProductList extends Component {
                                 </p>
                             </div>
 
-                            <Col xs={12} md={6} className="mb-4 p-2 style-buttons responsive-font">
+                            {this.state.typeChoice === 'apparel' ? '' :<Col xs={12} md={6} className="mb-4 p-2 style-buttons responsive-font">
                                 <p className=" inline-block mr-2 p-1 size-button responsive-font"
                                    style={this.state.filterChoice === 'all' ? {fontWeight:'bold', textDecoration:'underline'} : {}}
                                    onClick={()=>{this.filterHandler('all')}}>
@@ -237,7 +237,7 @@ class ProductList extends Component {
                                    onClick={()=>{this.filterHandler('onePiece')}}>
                                     One-Pieces
                                 </p>
-                            </Col>
+                            </Col>}
 
                             <Col xs={12} md={3} className="mb-4" style={{float: 'right' }}>
                                 <div className=" border  p-0  shadow-md" style={{background: "#f8f8f8"}}>
