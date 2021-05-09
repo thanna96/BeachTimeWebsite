@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {ButtonContainer} from "../Styles/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import img from "../../banner.JPG"
+// import img from "../../banner.JPG"
 class About extends Component {
     render() {
         return (
@@ -17,7 +17,8 @@ class About extends Component {
                             </p>
                         </div>
                     <div className="mx-auto">
-                        <img alt=''  src={img} />
+                        {/*<img alt=''  src={img} />*/}
+                        <p style={{width: '100%', height:'250px', background:'lightpink'}}>&nbsp;</p>
 
                         <br/>
                         <p className="my-2" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px',opacity:'60%'}} >
@@ -55,8 +56,8 @@ class About extends Component {
                             </p>
                         </div>
                         <div className="mx-auto">
-                            <img alt=''  src={img} />
-
+                            {/*<img alt=''  src={img} />*/}
+                            <p style={{width: '100%', height:'165px', background:'lightpink'}}>&nbsp;</p>
                             <br/>
                             <p className="my-2" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px',opacity:'60%'}} >
                                 Hi there! We are Gena Miele & Gabbi Miele- and we are Sew Honey!
