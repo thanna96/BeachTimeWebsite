@@ -6,25 +6,27 @@ export default class MyApp extends React.Component {
     render() {
         const onSuccess = (payment) => {
             // Congratulation, it came here means everything's fine!
-            console.log("The payment was succeeded!", payment,this.props.value.cart);
-            const products = this.props.value.cart.map((item)=>{
+            console.log("The payment was succeeded!", payment, this.props.value.cart);
+            const products = this.props.value.cart.map((item) => {
                 return {
                     itemName: item.title,
                     count: item.info.count,
                     size: item.info.selSize,
                     color: item.info.selColor,
                     secondaryColor: item.info.secColor,
-                    stringColor: item.info.stringColor
+                    stringColor: item.info.stringColor,
+                    price: item.info.total
                 }
             });
-            const htmlItems = '<div>'+
-                products.map((item)=>{
-                    return ('<div style="border: 1px solid black"><p>item:'+item.itemName+'</p><p>count:'+item.count+
-                        '</p><p>size:'+item.size+'</p><p>color:'+item.color+'</p><p>second color:'
-                        +item.secondaryColor+'</p> <p>string color:'+item.stringColor+'</p> </div>')
+            let htmlItems = '<div>' +
+                products.map((item) => {
+                    return ('<div style="border: 1px solid black;padding-left:5px"><p>item:' + item.itemName + '</p><p>count:' + item.count +
+                        '</p><p>size:' + item.size + '</p><p>color:' + item.color + '</p><p>second color:'
+                        + item.secondaryColor + '</p> <p>string color:' + item.stringColor + '</p><p>items price:' + item.price + '</p> </div>')
                 })
-                +'</div>'
-            const variables = {
+                + '</div>';
+
+            let variables = {
                 city: payment.address.city,
                 country_code: payment.address.country_code,
                 line1: payment.address.line1,
@@ -45,8 +47,42 @@ export default class MyApp extends React.Component {
                 console.log('Email successfully sent!')
             })
                 .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err));
-            this.props.clearCart();
-            this.props.history.push('/');
+
+            htmlItems = '<div>' +
+                products.map((item) => {
+                    return (
+                        '<table style="border: 1px dotted black;padding:5px">' +
+                        '<tr><td style="width: 401px;" width="80%">Item: ' + item.count + 'x ' + item.itemName + '</td>' +
+                        '<td style="width: 97px;" width="20%">Size: ' + item.size + '</td></tr>' +
+                        '<tr><td style="width: 401px;" width="80%">Color: ' + item.color + '</td>' +
+                        '<td style="width: 97px;" width="20%">Price: ' + item.price + '</td> </tr>' +
+                        '</table>')
+                })
+                + '</div>';
+
+            variables = {
+                city: payment.address.city,
+                country_code: payment.address.country_code,
+                line1: payment.address.line1,
+                postal_code: payment.address.postal_code,
+                recipient_name: payment.address.recipient_name,
+                state: payment.address.state,
+                email: payment.email,
+                items: htmlItems,
+                total: this.props.total
+            }
+
+            emailjs.send(
+                'gmail',
+                'template_2uee09q',
+                variables,
+                process.env.REACT_APP_EMAILJS_KEY
+            ).then(res => {
+                console.log('Email successfully sent!')
+            })
+                .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err));
+            // this.props.clearCart();
+            // this.props.history.push('/');
             // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
         }
 
@@ -87,7 +123,7 @@ export default class MyApp extends React.Component {
                 total={this.props.total}
                 onError={onError}
                 onSuccess={onSuccess}
-                onCancel={onCancel} />
+                onCancel={onCancel}/>
         );
     }
 }

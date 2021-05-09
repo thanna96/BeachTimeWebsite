@@ -137,6 +137,12 @@ class CarouselWrapper extends Component {
                     </div>
                     <hr className="w-75 mx-auto my-20" />
 
+
+
+
+
+
+
                     {/*<Row className="mx-auto w-75 mb-10">*/}
                     {/*    <Col   className=" d-lg-none " sm={12} md={12} lg={6}>*/}
                     {/*        <div className="p-3   "  >*/}

@@ -24,6 +24,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-horizontal-scrolling-menu": "^0.7.10",
+    "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed#v2.0.0",
     "react-minimal-side-navigation": "^1.8.0",
     "react-paypal-express-checkout": "^1.0.5",
     "react-responsive-carousel": "^3.2.7",
