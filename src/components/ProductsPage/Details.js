@@ -151,7 +151,7 @@ class Details extends Component {
                                         {/* Size */}
                                         <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                             Size:<br/>
-                                            <select name="selSiz" className="mt-2" style={{width: "100%"}}
+                                            <select name="selSiz" className="mt-2  remove-ios-dropdown" style={{width: "100%"}}
                                                     onChange={this.handleChange}>
                                                 {info.sizes.map(size => (
                                                     <option value={size} key={size}>{size}</option>
@@ -187,7 +187,7 @@ class Details extends Component {
                                         {info.reversible === true ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                                 reversible:<br/>
-                                                <select name="reversible" className="mt-2" style={{width: "100%"}}
+                                                <select name="reversible" className="mt-2 remove-ios-dropdown" style={{width: "100%"}}
                                                         onChange={this.handleChange}>
                                                     <option value='false' key="no">No</option>
                                                     <option value='true' key="yes">Yes (+$10)</option>
@@ -222,7 +222,7 @@ class Details extends Component {
                                         {info.customString === true ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
                                                 Custom String Color:<br/>
-                                                <select name="customString" className="mt-2" style={{width: "100%"}}
+                                                <select name="customString" className="mt-2 remove-ios-dropdown" style={{width: "100%"}}
                                                         onChange={this.handleChange}>
                                                     <option value='false' key="no">No</option>
                                                     <option value='true' key="yes">Yes</option>
