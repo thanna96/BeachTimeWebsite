@@ -28,12 +28,12 @@ class CarouselWrapper extends Component {
 
     render() {
         return (
-            <div className="container-fluid ">
+            <div className="container-fluid">
                 <div className="slide-container">
                     <Slide {...properties}>
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-                                <p style={{width: '300px', height:'500px', background:'lightsteelblue'}}>&nbsp;</p>
+                                {/*<p style={{width: '300px', height:'500px', background:'lightsteelblue'}}>&nbsp;</p>*/}
                                 <span>
                                   <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-dark" >
@@ -45,7 +45,7 @@ class CarouselWrapper extends Component {
                         </div>
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-                                <p style={{width: '300px', height:'500px', background:'lightseagreen'}}>&nbsp;</p>
+                                {/*<p style={{width: '300px', height:'500px', background:'lightseagreen'}}>&nbsp;</p>*/}
                              <span>
                                   <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-light" >
@@ -57,7 +57,7 @@ class CarouselWrapper extends Component {
                         </div>
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-                                <p style={{width: '300px', height:'500px', background:'brown'}}>&nbsp;</p>
+                                {/*<p style={{width: '300px', height:'500px', background:'brown'}}>&nbsp;</p>*/}
                             <span>
                                   <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-light" >
@@ -69,7 +69,7 @@ class CarouselWrapper extends Component {
                         </div>
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
-                                <p style={{width: '300px', height:'500px', background:'cyan'}}>&nbsp;</p>
+                                {/*<p style={{width: '300px', height:'500px', background:'cyan'}}>&nbsp;</p>*/}
                                 <span>
                                   <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-light" >
