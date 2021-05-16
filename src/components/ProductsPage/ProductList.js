@@ -320,7 +320,7 @@ class ProductList extends Component {
                             {/*    </div>*/}
                             {/*</div>*/}
 
-                            <hr className="w-75 mx-auto my-10"/>
+                            <hr className="w-75 mx-auto my-10 d-none d-md-block"/>
 
                             {/*<Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left'}}>*/}
                             {/*    <p*/}
