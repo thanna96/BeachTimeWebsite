@@ -247,7 +247,7 @@ class ProductList extends Component {
                                             fontFamily: '"Montserrat", sans-serif',
                                             color: '#1a1b1f'
                                         }}>
-                                            <select id="sortList" defaultValue="new" className="text-muted p-2"
+                                            <select id="sortList" defaultValue="new" className="text-muted p-2 remove-ios-dropdown"
                                                     onChange={this.sortList} style={{"width": "100%"}}>
                                                 <option value="new" disabled>Sort</option>
                                                 <option value="new">Newest</option>
@@ -320,7 +320,7 @@ class ProductList extends Component {
                             {/*    </div>*/}
                             {/*</div>*/}
 
-                            <hr className="w-75 mx-auto my-10"/>
+                            <hr className="w-75 mx-auto my-10 d-none d-md-block"/>
 
                             {/*<Col xs={12} md={6} className="mb-4 p-2 " style={{float: 'left'}}>*/}
                             {/*    <p*/}

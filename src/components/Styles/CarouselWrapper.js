@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 // import CardGroup from "react-bootstrap/CardGroup";
 // import img2 from "../../aboutPicture2.JPG"
 // import img from "../../banner.JPG"
-// import immmm from "../../mBanner3.JPG"
+import immmm from "../../mBanner3.JPG"
 // import Mimg4 from "../../mBanner4.JPG"
 import styled from "styled-components";
 // import ima3 from "../../mBanner2.JPG"
@@ -13,7 +13,7 @@ import styled from "styled-components";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 // import imagee from "../../DB9BDE83-.jpg"
-// import Mimg2 from "../../mBanner1.JPG"
+import Mimg2 from "../../mBanner1.JPG"
 // import Mimg3 from "../../IMG_5131.jpg"
 // import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
@@ -27,6 +27,7 @@ import Contact from "../ContactPage/Contact";
 import {MDBIcon} from "mdbreact";
 import MobileCarousel from "../Styles/MobileCarousel";
 import Carousel from 'react-bootstrap/Carousel'
+import Button from "react-bootstrap/Button";
 
 // let images = [
 //     ima3,image2,img11,img1,imagee,Mimg3,immmm,Mimg4
@@ -63,8 +64,8 @@ class CarouselWrapper extends Component {
         return (
             <div>
 
-                <Row>
-                    <div className="pb-3 pt-0 col-12">
+                <Row className="w-full mx-auto">
+                    <div className="pb-3 px-0 w-full pt-0 col-12">
 
 
                         <div className="img-container p-1 mt-3 mx-auto" style={{width: '75%'}}>
@@ -159,6 +160,33 @@ class CarouselWrapper extends Component {
 
                 <hr className="w-75 mx-auto my-10"/>
 
+                <div className="pb-1 d-block d-md-none flex px-8">
+                    <div className="each-slide">
+                        <div style={{'backgroundImage': `url(${immmm})`}}>
+                            <span>
+                                  <Link to='/product-list/handmade' className="nav-link">
+                                     <Button variant="outline-dark" >
+                                        Shop Now
+                                    </Button>
+                                  </Link>
+                             </span>
+                        </div>
+                    </div>
+                </div>
+                <div className="pb-10 d-block d-md-none flex px-8">
+                    <div className="each-slide">
+                        <div style={{'backgroundImage': `url(${Mimg2})`}}>
+                            <span>
+                                  <Link to='/product-list/handmade' className="nav-link">
+                                     <Button variant="outline-dark" >
+                                        Shop Now
+                                    </Button>
+                                  </Link>
+                             </span>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="mb-5 d-none d-md-block">
                     <Row className="w-4/5 mx-auto">
 
@@ -214,9 +242,8 @@ class CarouselWrapper extends Component {
                             </ProductWrapper>
                         </Col>
                     </Row>
-
-                    <hr className="w-75 mx-auto my-10"/>
                 </div>
+                <hr className="w-75 mx-auto my-10"/>
                 {/*<Row className="mx-auto w-75 mb-10">*/}
                 {/*    <Col   className=" d-lg-none " sm={12} md={12} lg={6}>*/}
                 {/*        <div className="p-3   "  >*/}

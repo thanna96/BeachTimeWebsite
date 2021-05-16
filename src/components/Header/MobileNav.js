@@ -34,7 +34,7 @@ class MobileNav extends Component {
     render() {
         return (
 
-            <Navbar className="shadow-md mb-2 fixed-top" expand="lg" style={{width: "100%", background: "white"}}>
+            <Navbar className="shadow-md mb-2 fixed-top mx-auto" expand="lg" style={{width: "100%", background: "white"}}>
                 <div onClick={() => {
                     this.openSidebar()
                 }}
@@ -124,7 +124,7 @@ class MobileNav extends Component {
                                       alt="171x180"/>
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {
+                <Navbar.Toggle onClick={() => {
                     this.openSidebar()
                 }}/>
                 {/*<Link to='/Cart' className="nav-link">*/}
