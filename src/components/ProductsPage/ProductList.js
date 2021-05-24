@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import img1 from "../../bumblebee-icon-20.jpg";
 import img from "../../banner.JPG";
+import {MDBIcon} from "mdbreact";
 
 class ProductList extends Component {
     constructor(props) {
@@ -247,6 +248,7 @@ class ProductList extends Component {
                                             fontFamily: '"Montserrat", sans-serif',
                                             color: '#1a1b1f'
                                         }}>
+                                            <MDBIcon icon="angle-down" size="sm" className="text-black-50 absolute" style={{top:'10px', right: '10px'}}/>
                                             <select id="sortList" defaultValue="new" className="text-muted p-2 remove-ios-dropdown"
                                                     onChange={this.sortList} style={{"width": "100%"}}>
                                                 <option value="new" disabled>Sort</option>

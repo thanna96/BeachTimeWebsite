@@ -19,7 +19,7 @@ export default function CartItem({item,value}) {
                 <p className="text-left">Name: {title}</p>
                 <p className="text-left">Color: {info.selColor}</p>
                 {info.secColor !== '' ? <p className="text-left">Color 2: {info.secColor}</p> : ''}
-                {info.stringColor !== '' ? <p className="text-left">String Color: {info.stringColor}</p> : ''}
+                {info.stringColor !== '' ? <p className="text-left">Strap Color: {info.stringColor}</p> : ''}
                 <p className="text-left">Size: {info.selSize}</p>
 
             {/*    If the size and color are undefined go with array index 0    */}
