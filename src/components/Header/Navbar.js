@@ -12,11 +12,11 @@ class Navbar extends Component {
     render() {
         return (
             <div >
-                <div className="d-none d-md-block" style={{height:"100px"}}/>
+                <div className="d-none d-md-block" style={{height:"120px"}}/>
                 <div className="d-block d-md-none" style={{height:"130px"}}>
                     <MobileNav/>
                 </div>
-                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1}}>
+                <NavWrapper className="nav-link  d-none d-md-block fixed-top navbar navbar-expand-sm navbar-dark px-sm-5 shadow-md" style={{zIndex:1, maxHeight: '120px'}}>
                     {/* Navbar for Desktop */}
                     <ul className="navbar-nav align-items-center ml-auto ">
                         <li className=" " style={{color:'black',maxWidth:"10%", Height:"auto"}} >
