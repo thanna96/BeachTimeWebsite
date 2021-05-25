@@ -7,7 +7,6 @@ import {OverlayTrigger} from "react-bootstrap";
 import Tooltip from "react-bootstrap/cjs/Tooltip";
 import colorsData from "../../colorsData";
 import img1 from "../../bumblebee-icon-20.jpg";
-import {MDBIcon} from "mdbreact";
 
 class Details extends Component {
     constructor(props) {
