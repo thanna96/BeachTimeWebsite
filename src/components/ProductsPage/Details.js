@@ -149,15 +149,20 @@ class Details extends Component {
                                         <hr className="my-3"/>
 
                                         {/* Size */}
-                                        <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                            Size:<br/>
-                                            <select name="selSiz" className="mt-2  remove-ios-dropdown" style={{width: "100%"}}
-                                                    onChange={this.handleChange}>
-                                                {info.sizes.map(size => (
-                                                    <option value={size} key={size}>{size}</option>
-                                                ))}
-                                            </select>
-                                        </h4>
+                                        <div className="container p-0">
+                                            <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
+                                                Size:<br/>
+                                                <i className="fa fa-angle-down absolute" style={{marginLeft: '30px', marginTop: ' 10px'}}/>
+                                                <select name="selSiz" className="mt-2  remove-ios-dropdown" style={{width: "100%"}}
+                                                        onChange={this.handleChange}>
+                                                    {info.sizes.map(size => (
+                                                        <option value={size} key={size}>{size}</option>
+                                                    ))}
+
+                                                </select>
+                                            </h4>
+                                        </div>
+
 
                                         {/* Color */}
                                         <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
@@ -186,7 +191,7 @@ class Details extends Component {
                                         {/* Reverse Option */}
                                         {info.reversible === true ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                                reversible:<br/>
+                                                reversible:<br/><i className="fa fa-angle-down absolute" style={{marginLeft: '80px', marginTop: ' 10px'}}/>
                                                 <select name="reversible" className="mt-2 remove-ios-dropdown" style={{width: "100%"}}
                                                         onChange={this.handleChange}>
                                                     <option value='false' key="no">No</option>
@@ -221,7 +226,7 @@ class Details extends Component {
                                         {/* string color Option */}
                                         {info.customString === true ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                                Custom String Color:<br/>
+                                                Custom String Color:<br/> <i className="fa fa-angle-down absolute" style={{marginLeft: '30px', marginTop: ' 10px'}}/>
                                                 <select name="customString" className="mt-2 remove-ios-dropdown" style={{width: "100%"}}
                                                         onChange={this.handleChange}>
                                                     <option value='false' key="no">No</option>
@@ -231,7 +236,7 @@ class Details extends Component {
 
                                         {this.state.customString === 'true' ?
                                             <h4 className="text-title mx-auto text-uppercase text-muted mt-3 mb-2">
-                                                String Color: <br/>
+                                                Strap Color: <br/>
                                                 <div className="mb-2"/>
                                                 {/*<select name="selCol" style={{width:"100%"}} onChange={this.handleChange}>*/}
                                                 {colorsData.map(color => (
@@ -307,7 +312,7 @@ class Details extends Component {
                                                 <div className="col col-6 text-left">
                                                     <img alt='' src={img1} height='18px' width="18px"
                                                          style={{display: 'inline-block', marginRight: '5px'}}/>
-                                                    Custom String Color - {this.state.stringColor}
+                                                    Custom Strap Color - {this.state.stringColor}
                                                 </div>
                                                 <div className="col col-6 text-right">
                                                     -
