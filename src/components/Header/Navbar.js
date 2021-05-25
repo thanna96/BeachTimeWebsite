@@ -12,7 +12,7 @@ class Navbar extends Component {
     render() {
         return (
             <div >
-                <div className="d-none d-md-block" style={{height:"120px"}}/>
+                <div className="d-none d-md-block" style={{height:"110px"}}/>
                 <div className="d-block d-md-none" style={{height:"130px"}}>
                     <MobileNav/>
                 </div>
