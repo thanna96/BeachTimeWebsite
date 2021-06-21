@@ -60,20 +60,19 @@ class About extends Component {
                             <p style={{width: '100%', height:'165px', background:'lightpink'}}>&nbsp;</p>
                             <br/>
                             <p className="my-2" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px',opacity:'60%'}} >
-                                Hi there! We are Gena Miele & Gabbi Miele- and we are Sew Honey!
-                                This is a place where bathing suit dreams come to life!
-                                Sew Honey is an online boutique that specializes in making handmade swimsuits. We use high quality nylon lycra fabric.
-
+                                Hi there! We are Gena & Gabbi Miele and we are the owners of Sew Honey!
+                                Here at Sew Honey, we produce sustainable handmade swimwear right in our NJ office!
+                                To minimize waste, all of our bathing suits are cut and sewn to order!
                             </p>
                             <p className=" my-2 mb-20" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px',opacity:'60%'}} >
-                                Sew Honey was founded in 2018. What started off as a creative outlet turned into a small business. We launched Sew Honey because we have a passion for swimwear. Who doesn’t love a cute, comfortable bathing suit- not to mention made specifically for your body type! Our goal is to make you feel comfortable, confident and sexy in your own skin!
-                                At Sew Honey every swimsuit is designed and handmade with love! Nothing makes us happier than seeing all of you wearing our creations!
-
+                                At Sew Honey we are committed to making you feel confident and comfortable in your swimwear!
+                                That's why we created our B.Y.O.B  (build your own bathing suit) page! This gives our customers the ability
+                                to custom design their new favorite bathing suit, down to every detail!
+                                We absolutely love our products and nothing makes us happier than seeing our customers love them too!
                             </p>
                             <p className=" my-2 mb-20" style={{fontFamily:'"Montserrat", sans-serif', color:'#1a1b1f', fontSize:'16px',opacity:'60%'}} >
-                                - Sew Honey Crew
+                                - Gena & Gabbi Miele
                             </p>
-
 
                             <ButtonContainer
                                 className="mx-auto text-wrap my-3"

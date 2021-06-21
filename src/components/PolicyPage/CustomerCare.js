@@ -82,6 +82,7 @@ class CustomerCare extends Component {
                             <Tab.Content>
                                 <Tab.Pane eventKey="#Shipping">
                                     <h1><b>SHIPPING</b></h1>
+                                    <p className="py-2">
                                     All domestic parcels are sent via
                                     the Australia Post Express post service
                                     as it ensures guaranteed next business
@@ -92,16 +93,31 @@ class CustomerCare extends Component {
                                     This method of shipping also provides free full tracking on all parcels upon request.
                                     $11 FLATRATE AUSTRALIA WIDE
                                     *Orders are processed, sewn and shipped within 7 business days of payment (weekends and public holidays excluded).
+                                    </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="#Returns">
                                     <h1><b>RETURNS</b></h1>
-                                    Unfortunately, Sew Honey does not accept returns as we work on a made to order service.
-                                    Returns will only be accepted if you have received a damaged item. However, all returns
-                                    must be made within a 10 day period of receiving the product. Sew Honey will not accept
-                                    returns for any other reason. Reasons including “it doesn’t fit.” You are responsible for
-                                    providing us with the correct size based on our size chart. Any questions regarding sizing or
-                                    any other matter can be sent to sewhoney3@gmail.com. Thank-you & we appreciate your business!
-
+                                    <p className="py-2">
+                                        Please understand that Sew Honey does not accept returns as all items are produced on
+                                        a made-to-order service. Returns for an even exchange will only be accepted if the item
+                                        is deemed faulty and must be returned within 14 days. Sew Honey reserves the right to deny
+                                        returns for reasons such as ‘change of mind’ or ‘wrong fit’ as it is your sole responsibility
+                                        to check our description, sizing charts and email us with accurate measurements so we
+                                        can assist with sizing prior to checkout.
+                                    </p>
+                                    <p className="pb-2">
+                                        Colors/lighting may show differently on each computer or mobile, therefore there may be
+                                        slight variations in color. Please email
+                                        <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a>
+                                         or visit our Instagram <a className="text-blue-400 underline" href="https://www.instagram.com/sewhoney/?hl=en">@SewHoney</a>
+                                        if you are unsure about the color  you are purchasing and would like to see more photos.
+                                    </p>
+                                    <p>
+                                        Please also note that although all of our swimwear is double layered, some lighter
+                                        colors  may still go slightly  see through when wet. If you are concerned about this please
+                                        select a darker color or email <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a> for color recommendations, sizing, fit or
+                                        any other questions you may have.
+                                    </p>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="#FAQ">
                                     <Accordion defaultActiveKey="0">
@@ -111,8 +127,17 @@ class CustomerCare extends Component {
                                                 What fabric are your swimsuits made from?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="0">
-                                                <Card.Body>All womens swimwear is made from a beautiful nylon lycra fabric.
-                                                    All mens swimwear is made from soft polyester.</Card.Body>
+                                                <Card.Body>
+                                                    <p className="pb-2">
+                                                        Most of our women's swimwear is made from high quality 4-way
+                                                    stretch nylon or polyester spandex blends. Any questions about a specific
+                                                    fabric can be sent to <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a>.
+                                                    </p>
+                                                    <p>
+                                                    All of our fabrics have a buttery soft feel and plenty of stretch, designed
+                                                    to fit snug to the body and accentuate all curves without digging in!
+                                                    </p>
+                                                </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -121,9 +146,8 @@ class CustomerCare extends Component {
                                                 How long do orders typically take to fulfill?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="1">
-                                                <Card.Body>Once your order is placed we begin the cutting process of the
-                                                    fabric right away. However, given the volume of suits we have to sew,
-                                                    suits can take up to two weeks to complete.
+                                                <Card.Body> Once your order is placed we begin the production process!
+                                                    Processing time can take up to 3 weeks as all of our products are made to order.
                                                 </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
@@ -133,8 +157,10 @@ class CustomerCare extends Component {
                                                 After I’ve placed my order, can I cancel or change it?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="2">
-                                                <Card.Body>After you’ve placed your order we typically start the cutting
-                                                    process ASAP. You have about an hour to contact us to change or cancel an order.</Card.Body>
+                                                <Card.Body>All orders are final. Once your order is placed, we can not accept any changes as
+                                                    it goes into production immediately. Please choose carefully or email us with any questions
+                                                    prior to making your selections.
+                                                </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -143,8 +169,10 @@ class CustomerCare extends Component {
                                                 How does sizing work?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="3">
-                                                <Card.Body>The women's size chart we provide is based off of your bra and jean size.
-                                                    The mens size chart is based on your waist size.</Card.Body>
+                                                <Card.Body>The women's size chart we provide is based on standard US sizing. As every order is handmade
+                                                    from scratch it is important that you check our size guide before placing your order and double checking
+                                                    you are ordering the correct size before checkout. Any questions about sizing can be sent to
+                                                     <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a>. </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -153,12 +181,12 @@ class CustomerCare extends Component {
                                                 Can I return or exchange my order?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="4">
-                                                <Card.Body> All of our swimwear is produced  on a made-to-order service.
-                                                    We do not accept returns or exchanges. We will only make an exception
-                                                    on one condition, if an item is delivered to you and is damaged you have
-                                                    10 business days to contact Sew Honey.  You must provide a detailed description
-                                                    of what is wrong with your item and/or pictures. On this condition we will provide
-                                                    you with a new item. Your happiness is important to us!</Card.Body>
+                                                <Card.Body> Please understand that Sew Honey does not accept returns as all items are produced
+                                                    on a made-to-order service. Returns for an even exchange will only be accepted if the item
+                                                    is deemed faulty and must be returned within 14 days. Sew Honey reserves the right to deny
+                                                    returns for reasons such as ‘change of mind’ or ‘wrong fit’ as it is your sole responsibility
+                                                    to check our description, sizing charts and email us with accurate measurements so we can
+                                                    assist with sizing prior to checkout.</Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -177,8 +205,38 @@ class CustomerCare extends Component {
                                                 How do I take care of my swimwear?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="6">
-                                                <Card.Body>For best results we recommend hand washing and line-drying your
-                                                    swimsuit. If you choose to machine wash your suit be sure to wash it on delicate!</Card.Body>
+                                                <Card.Body>
+
+                                                    To ensure the longevity of your swimwear, follow these steps:
+                                                    <p className="pt-2">
+                                                        -Hand wash separately in cold soapy water after contact with chlorine and salt water.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Lay flat out to dry (do not leave in direct sunlight.)
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Avoid prolonged contact with sunscreens,  oils & chlorine- overexposure without washing properly after wearing can cause damage to your swimwear.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Avoid contact with rough surfaces.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Not reccomended machine wash or tumble dry.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Do not wring, soak or bleach.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Do not iron or dry clean.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -Do not wash with other clothing. Brighter and darker colors may bleed and may transfer when wet.
+                                                    </p>
+                                                    <p className="pt-2">
+                                                        -High amounts of chlorine and salt water may damage your swimwear if not rinsed out thoroughly.
+                                                    </p>
+
+                                                </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -187,9 +245,10 @@ class CustomerCare extends Component {
                                                 How do I know when my order will arrive?/Can I track my order?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="7">
-                                                <Card.Body> Once your order has been shipped out we will email you with
-                                                    a tracking number. If you have any issues finding your order feel
-                                                    free to send us an email and we will assist you!</Card.Body>
+                                                <Card.Body>  Once your order has been shipped you will receive an email including your tracking number.
+                                                    If you have any issues finding your order feel free to
+                                                    email <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a> and
+                                                    we will assist you!</Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -198,8 +257,11 @@ class CustomerCare extends Component {
                                                 Who can I ask any questions I may have to?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="8">
-                                                <Card.Body>We are more than happy to answer any questions you may have! You can
-                                                    email us at sewhoney3@gmail.com. You may also direct message @genamiele on instagram for any help as well!
+                                                <Card.Body>We are more than happy to answer any questions you may have!
+                                                    You can email us at <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com </a>
+                                                     or direct message <a className="text-blue-400 underline" href="https://www.instagram.com/sewhoney/?hl=en">@SewHoney </a>
+                                                    on Instagram for any help! Please allow up to 48 hours response time.
+
                                                 </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
@@ -209,41 +271,52 @@ class CustomerCare extends Component {
                                     <b>DISCLAIMER:</b> It is agreed by the user that by using this online boutique, they agree to the below policies.
                                     <br/><br/>
                                     <h1><b>PRIVACY</b></h1>
-                                    Sew Honey  is committed to providing a safe and secure online boutique and shopping
-                                    environment. All essential precautions are taken to ensure your personal privacy.
-                                    Any personal information gathered by Sew Honey  will be used to process your order,
-                                    to contact you regarding transactions and if you approve, to contact you with regards
-                                    to product updates.  Sew Honey  guarantees that all information collected through
-                                    www.sewhoney.com will be handled with the strictest confidence, stored securely and
-                                    will not be distributed or sold to any third party.  Your details will be kept on a
-                                    private database for use by the Sew Honey house only.
+                                    <p className="pt-3">
+                                        Sew Honey  is committed to providing a safe and secure online boutique and shopping
+                                        environment. All essential precautions are taken to ensure your personal privacy.
+                                        Any personal information gathered by Sew Honey  will be used to process your order,
+                                        to contact you regarding transactions and if you approve, to contact you with regards
+                                        to product updates.  Sew Honey  guarantees that all information collected through
+                                        www.sewhoney.com will be handled with the strictest confidence, stored securely and
+                                        will not be distributed or sold to any third party.  Your details will be kept on a
+                                        private database for use by the Sew Honey house only.
+                                    </p>
                                     <br/><br/>
                                     <h1><b>Security</b></h1>
-                                    Sew Honey takes every  precaution necessary to ensure our online boutique is as secure
-                                    as possible. To ensure the highest level of security when making purchases, all Sew Honey
-                                    orders are processed using the safest payment method available, PayPal.  You will need to
-                                    set up a PayPal account to purchase items from the Sew Honey  Online Boutique or you may
-                                    checkout as a guest on PayPal.
+                                    <p className="pt-3">
+                                        Sew Honey takes every  precaution necessary to ensure our online boutique is as secure
+                                        as possible. To ensure the highest level of security when making purchases, all Sew Honey
+                                        orders are processed using the safest payment method available, PayPal.  You will need to
+                                        set up a PayPal account to purchase items from the Sew Honey  Online Boutique or you may
+                                        checkout as a guest on PayPal.
+                                    </p>
                                     <br/><br/>
                                     <h1><b>E-NEWSLETTER</b></h1>
-                                    If you sign up for the newsletter, Sew Honey  may contact you via email with our
-                                    frequent e-mailed newsletter. The newsletters will feature information about new
-                                    products, features or special promotions. If you do not wish to receive this kind
-                                    of e-mail, please follow the opt-out prompts at the footer of the e-mail.
-                                    you do not wish to receive this kind of e-mail, please follow the opt-out prompts at the footer of the e-mail.
+                                    <p className="pt-3">
+                                        If you sign up for the newsletter, Sew Honey  may contact you via email with our
+                                        frequent e-mailed newsletter. The newsletters will feature information about new
+                                        products, features or special promotions. If you do not wish to receive this kind
+                                        of e-mail, please follow the opt-out prompts at the footer of the e-mail.
+                                        you do not wish to receive this kind of e-mail, please follow the opt-out prompts at the footer of the e-mail.
+                                    </p>
                                     <br/><br/>
                                     <h1><b>COPYRIGHT</b></h1>
-                                    All content contained on this website including-but not limited to, images, information
-                                    and text, and product designs are copyrighted material of Sew Honey.  These materials
-                                    may not be used without prior approval through the form of legal written consent of Sew Honey.
+                                    <p className="pt-3">
+                                        All content contained on this website including-but not limited to, images, information
+                                        and text, and product designs are copyrighted material of Sew Honey.  These materials
+                                        may not be used without prior approval through the form of legal written consent of Sew Honey.
+                                    </p>
+
                                     <br/><br/>
                                     <h1><b>PRODUCT AND SERVICES</b></h1>
-                                    We have made every effort to display as accurately as possible the colors and images
-                                    of our products that appear at the store. We can not guarantee that your computer monitor's
-                                    display of any color will be accurate. We reserve the right to limit the quantities of
-                                    any products or services that we offer. All descriptions of products or product pricing
-                                    are subject to change at any time without notice, at the sole discretion of us. We reserve
-                                    the right to discontinue any product at any time.
+                                    <p className="pt-3">
+                                        We have made every effort to display as accurately as possible the colors and images
+                                        of our products that appear at the store. We can not guarantee that your computer monitor's
+                                        display of any color will be accurate. We reserve the right to limit the quantities of
+                                        any products or services that we offer. All descriptions of products or product pricing
+                                        are subject to change at any time without notice, at the sole discretion of us. We reserve
+                                        the right to discontinue any product at any time.
+                                    </p>
 
                                 </Tab.Pane>
                             </Tab.Content>

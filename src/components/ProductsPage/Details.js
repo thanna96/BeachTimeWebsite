@@ -354,11 +354,25 @@ class Details extends Component {
                                                         Add to Cart
                                                     </ButtonContainer>}
                                             </div>
-                                            <div className="m-1 text-center underline">
-                                                <Link to={"/sizing-page"}>
-                                                    Size Guide
-                                                </Link>
+                                            <div className="m-3 text-center">
+                                                <p className="text-muted lead" style={{
+                                                    fontFamily: '"Montserrat", sans-serif',
+                                                    color: '#1a1b1f',
+                                                    fontSize: '16px'
+                                                }}>Model is 5’4 and wearing a size small.
+                                                    <span className="text-center underline text-black">
+                                                        <Link to={"/sizing-page"}>
+                                                            Size Guide
+                                                        </Link>
+                                                    </span>
+                                                </p>
                                             </div>
+
+                                            {/*<div className="m-1 text-center underline">*/}
+                                            {/*    <Link to={"/sizing-page"}>*/}
+                                            {/*        Size Guide*/}
+                                            {/*    </Link>*/}
+                                            {/*</div>*/}
                                         </div>
                                         <p className="mt-3 mb-0 font-weight-bold" style={{
                                             fontFamily: '"Montserrat", sans-serif',
@@ -374,17 +388,17 @@ class Details extends Component {
                                         }}>
                                             {info.description}
                                             <br/>
-                                            {(info.style === 'Top') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
+                                            {(info.style && info.style.toUpperCase() === 'TOP') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
                                                 'Handmade by Sew Honey.\n' +
                                                 'Pair this top with your favorite bottom.\n' +
                                                 'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 20 days for your order to be cut and sewn. Thank-you!\n' +
                                                 'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
-                                            {(info.style === 'bottom') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
+                                            {(info.style && info.style.toUpperCase() === 'BOTTOM') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
                                                 'Handmade by Sew Honey.\n' +
                                                 'Pair this bottom with your favorite top.\n' +
                                                 'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
                                                 'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
-                                            {(info.style === 'One-Piece') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
+                                            {(info.style && info.style.toUpperCase() === 'ONE-PIECE') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
                                                 'Handmade by Sew Honey.\n' +
                                                 'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
                                                 'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
