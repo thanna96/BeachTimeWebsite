@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Tab from "react-bootstrap/cjs/Tab";
 import {Row, Col, Accordion, Card} from "react-bootstrap"
 import ListGroup from "react-bootstrap/cjs/ListGroup";
-import img from "../../banner.JPG";
 import img1 from "../../bumblebee-icon-20.jpg";
 
 const style = {
@@ -98,9 +97,9 @@ class CustomerCare extends Component {
                                 <Tab.Pane eventKey="#Returns">
                                     <h1><b>RETURNS</b></h1>
                                     <p className="py-2">
-                                        Please understand that Sew Honey does not accept returns as all items are produced on
+                                        Please understand that Beach Time does not accept returns as all items are produced on
                                         a made-to-order service. Returns for an even exchange will only be accepted if the item
-                                        is deemed faulty and must be returned within 14 days. Sew Honey reserves the right to deny
+                                        is deemed faulty and must be returned within 14 days. Beach Time reserves the right to deny
                                         returns for reasons such as ‘change of mind’ or ‘wrong fit’ as it is your sole responsibility
                                         to check our description, sizing charts and email us with accurate measurements so we
                                         can assist with sizing prior to checkout.
@@ -108,14 +107,14 @@ class CustomerCare extends Component {
                                     <p className="pb-2">
                                         Colors/lighting may show differently on each computer or mobile, therefore there may be
                                         slight variations in color. Please email
-                                        <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a>
-                                         or visit our Instagram <a className="text-blue-400 underline" href="https://www.instagram.com/sewhoney/?hl=en">@SewHoney</a>
+                                        <a className="text-blue-400 underline" href="mailto: "> beachtime@gmail.com</a>
+                                         or visit our Instagram <a className="text-blue-400 underline" href="https://www.instagram.com">@BeachTime</a>
                                         if you are unsure about the color  you are purchasing and would like to see more photos.
                                     </p>
                                     <p>
                                         Please also note that although all of our swimwear is double layered, some lighter
                                         colors  may still go slightly  see through when wet. If you are concerned about this please
-                                        select a darker color or email <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a> for color recommendations, sizing, fit or
+                                        select a darker color or email <a className="text-blue-400 underline" href="mailto:"> beachtime@gmail.com</a> for color recommendations, sizing, fit or
                                         any other questions you may have.
                                     </p>
                                 </Tab.Pane>
@@ -131,7 +130,7 @@ class CustomerCare extends Component {
                                                     <p className="pb-2">
                                                         Most of our women's swimwear is made from high quality 4-way
                                                     stretch nylon or polyester spandex blends. Any questions about a specific
-                                                    fabric can be sent to <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a>.
+                                                    fabric can be sent to <a className="text-blue-400 underline" href="mailto:"> beachtime@gmail.com</a>.
                                                     </p>
                                                     <p>
                                                     All of our fabrics have a buttery soft feel and plenty of stretch, designed
@@ -172,7 +171,7 @@ class CustomerCare extends Component {
                                                 <Card.Body>The women's size chart we provide is based on standard US sizing. As every order is handmade
                                                     from scratch it is important that you check our size guide before placing your order and double checking
                                                     you are ordering the correct size before checkout. Any questions about sizing can be sent to
-                                                     <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a>. </Card.Body>
+                                                     <a className="text-blue-400 underline" href="mailto: "> beachtime@gmail.com</a>. </Card.Body>
                                             </Accordion.Collapse>
                                         </div>
                                         <div className="w-100">
@@ -181,9 +180,9 @@ class CustomerCare extends Component {
                                                 Can I return or exchange my order?
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="4">
-                                                <Card.Body> Please understand that Sew Honey does not accept returns as all items are produced
+                                                <Card.Body> Please understand that Beach Time does not accept returns as all items are produced
                                                     on a made-to-order service. Returns for an even exchange will only be accepted if the item
-                                                    is deemed faulty and must be returned within 14 days. Sew Honey reserves the right to deny
+                                                    is deemed faulty and must be returned within 14 days. Beach Time reserves the right to deny
                                                     returns for reasons such as ‘change of mind’ or ‘wrong fit’ as it is your sole responsibility
                                                     to check our description, sizing charts and email us with accurate measurements so we can
                                                     assist with sizing prior to checkout.</Card.Body>
@@ -247,7 +246,7 @@ class CustomerCare extends Component {
                                             <Accordion.Collapse eventKey="7">
                                                 <Card.Body>  Once your order has been shipped you will receive an email including your tracking number.
                                                     If you have any issues finding your order feel free to
-                                                    email <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com</a> and
+                                                    email <a className="text-blue-400 underline" href="mailto:"> beachtime@gmail.com</a> and
                                                     we will assist you!</Card.Body>
                                             </Accordion.Collapse>
                                         </div>
@@ -258,8 +257,8 @@ class CustomerCare extends Component {
                                             </Accordion.Toggle>
                                             <Accordion.Collapse eventKey="8">
                                                 <Card.Body>We are more than happy to answer any questions you may have!
-                                                    You can email us at <a className="text-blue-400 underline" href="mailto: sewhoney3@gmail.com"> sewhoney3@gmail.com </a>
-                                                     or direct message <a className="text-blue-400 underline" href="https://www.instagram.com/sewhoney/?hl=en">@SewHoney </a>
+                                                    You can email us at <a className="text-blue-400 underline" href="mailto: "> beachtime@gmail.com </a>
+                                                     or direct message <a className="text-blue-400 underline" href="https://www.instagram.com/">@BeachTime </a>
                                                     on Instagram for any help! Please allow up to 48 hours response time.
 
                                                 </Card.Body>
@@ -272,28 +271,28 @@ class CustomerCare extends Component {
                                     <br/><br/>
                                     <h1><b>PRIVACY</b></h1>
                                     <p className="pt-3">
-                                        Sew Honey  is committed to providing a safe and secure online boutique and shopping
+                                        Beach Time  is committed to providing a safe and secure online boutique and shopping
                                         environment. All essential precautions are taken to ensure your personal privacy.
-                                        Any personal information gathered by Sew Honey  will be used to process your order,
+                                        Any personal information gathered by Beach Time  will be used to process your order,
                                         to contact you regarding transactions and if you approve, to contact you with regards
-                                        to product updates.  Sew Honey  guarantees that all information collected through
-                                        www.sewhoney.com will be handled with the strictest confidence, stored securely and
+                                        to product updates.  Beach Time  guarantees that all information collected through
+                                        www.beachtime.com will be handled with the strictest confidence, stored securely and
                                         will not be distributed or sold to any third party.  Your details will be kept on a
-                                        private database for use by the Sew Honey house only.
+                                        private database for use by the Beach Time house only.
                                     </p>
                                     <br/><br/>
                                     <h1><b>Security</b></h1>
                                     <p className="pt-3">
-                                        Sew Honey takes every  precaution necessary to ensure our online boutique is as secure
-                                        as possible. To ensure the highest level of security when making purchases, all Sew Honey
+                                        Beach Time takes every  precaution necessary to ensure our online boutique is as secure
+                                        as possible. To ensure the highest level of security when making purchases, all Beach Time
                                         orders are processed using the safest payment method available, PayPal.  You will need to
-                                        set up a PayPal account to purchase items from the Sew Honey  Online Boutique or you may
+                                        set up a PayPal account to purchase items from the Beach Time  Online Boutique or you may
                                         checkout as a guest on PayPal.
                                     </p>
                                     <br/><br/>
                                     <h1><b>E-NEWSLETTER</b></h1>
                                     <p className="pt-3">
-                                        If you sign up for the newsletter, Sew Honey  may contact you via email with our
+                                        If you sign up for the newsletter, Beach Time  may contact you via email with our
                                         frequent e-mailed newsletter. The newsletters will feature information about new
                                         products, features or special promotions. If you do not wish to receive this kind
                                         of e-mail, please follow the opt-out prompts at the footer of the e-mail.
@@ -303,8 +302,8 @@ class CustomerCare extends Component {
                                     <h1><b>COPYRIGHT</b></h1>
                                     <p className="pt-3">
                                         All content contained on this website including-but not limited to, images, information
-                                        and text, and product designs are copyrighted material of Sew Honey.  These materials
-                                        may not be used without prior approval through the form of legal written consent of Sew Honey.
+                                        and text, and product designs are copyrighted material of Beach Time.  These materials
+                                        may not be used without prior approval through the form of legal written consent of Beach Time.
                                     </p>
 
                                     <br/><br/>

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {ProductConsumer} from "../../context";
 import PropTypes from 'prop-types';
+import default1 from "../../default.JPG"
+import default2 from "../../default2.JPG"
 
 const AWS = require("aws-sdk");
 
@@ -30,10 +32,10 @@ class Product extends Component {
                         {value=>(
                     <div onClick={()=>value.handleDetail(id,title)} >
                         <Link to={info.type+'/'+id+'/'+title} >
-                            <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]}
-                                 onMouseEnter={e => {if (info.img[1]) e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/" + info.img[1]}}
-                                 onMouseLeave={e => (e.currentTarget.src = "https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0])}
-                                 id="imgTest" alt="product" style={{display:'block',  margin:0}}/>
+                            <img src={default1}
+                                 onMouseEnter={e => {if (default2) e.currentTarget.src = default2}}
+                                 onMouseLeave={e => (e.currentTarget.src = default1)}
+                                 id={title} alt="product" style={{display:'block',  margin:0}}/>
                         </Link>
                     </div>)}
                     </ProductConsumer>

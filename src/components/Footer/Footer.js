@@ -31,17 +31,17 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col-md-12 text-center ">
                             <div className="mb-3 ">
-                                <a href="https://www.facebook.com/SewHoneySwim/?ref=nf&hc_ref=ARRAKOHS3x_-iRPO7-T_EwK5Ln04aL5J7gutQECf17b0uDp46kloMDbSlLUuTvfXlYk"
+                                <a href="https://www.facebook.com/"
                                    className="fb-ic">
                                     <MDBIcon icon="facebook" size="lg" className="text-black-50 mr-md-5 mr-3"/>
                                 </a>
-                                <a href="https://www.instagram.com/sewhoneyswim/?hl=en" className="ins-ic">
+                                <a href="https://www.instagram.com/" className="ins-ic">
                                     <MDBIcon icon="instagram" size="lg" className="text-black-50 mr-md-0 mr-3"/>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className="text-center ">© 2020 Sew Honey Swim
+                    <div className="text-center ">© 2020 Beach Time Swim
                     </div>
                 </div>
 

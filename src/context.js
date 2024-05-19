@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import {detailProduct} from './data';
+import {detailProduct, storeProducts} from './data';
 
-const AWS = require("aws-sdk");
-AWS.config.update({
-    region: "us-east-1",
-    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
-});
-const docClient = new AWS.DynamoDB.DocumentClient();
+// const AWS = require("aws-sdk");
+// AWS.config.update({
+//     region: "us-east-1",
+//     accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+//     secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+// });
+// const docClient = new AWS.DynamoDB.DocumentClient();
 
 const ProductContext = React.createContext();
 // Provider
@@ -36,18 +36,18 @@ class ProductProvider extends Component {
 
     setColors = () => {
         const scanTable = async () => {
-            const params = {
-                TableName: "Colors",
-                ProjectionExpression: "color",
-            };
+            // const params = {
+            //     TableName: "Colors",
+            //     ProjectionExpression: "color",
+            // };
 
             let scanResults = [];
-            let items;
-            do {
-                items = await docClient.scan(params).promise();
-                items.Items.forEach((item) => scanResults.push(item));
-                params.ExclusiveStartKey = items.LastEvaluatedKey;
-            } while (typeof items.LastEvaluatedKey != "undefined");
+            // let items;
+            // do {
+            //     items = []; // await docClient.scan(params).promise();
+            //     items.Items.forEach((item) => scanResults.push(item));
+            //     params.ExclusiveStartKey = items.LastEvaluatedKey;
+            // } while (typeof items.LastEvaluatedKey != "undefined");
 
             //console.log("Scan Results:",scanResults)
             this.setState(() => {
@@ -72,22 +72,22 @@ class ProductProvider extends Component {
 
     setProducts = () => {
         const scanTable = async () => {
-            const params = {
-                TableName: "Products",
-                ProjectionExpression: "id, title, info",
-            };
-
-            let scanResults = [];
-            let items;
-            do {
-                items = await docClient.scan(params).promise();
-                items.Items.forEach((item) => scanResults.push(item));
-                params.ExclusiveStartKey = items.LastEvaluatedKey;
-            } while (typeof items.LastEvaluatedKey != "undefined");
+            // const params = {
+            //     TableName: "Products",
+            //     ProjectionExpression: "id, title, info",
+            // };
+            //
+            // let scanResults = [];
+            // let items;
+            // do {
+            //     items = [] // await docClient.scan(params).promise();
+            //     items.Items.forEach((item) => scanResults.push(item));
+            //     params.ExclusiveStartKey = items.LastEvaluatedKey;
+            // } while (typeof items.LastEvaluatedKey != "undefined");
 
             //console.log("Scan Results:",scanResults)
             this.setState(() => {
-                return {products: scanResults.sort((a, b) => a.id > b.id ? 1 : -1)}
+                return {products: storeProducts.sort((a, b) => a.id > b.id ? 1 : -1)}
             })
             this.getCart()
         };

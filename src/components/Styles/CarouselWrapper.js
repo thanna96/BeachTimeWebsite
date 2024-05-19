@@ -1,37 +1,15 @@
 import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import CardGroup from "react-bootstrap/CardGroup";
-// import img2 from "../../aboutPicture2.JPG"
-// import img from "../../banner.JPG"
-import immmm from "../../mBanner3.JPG"
-// import Mimg4 from "../../mBanner4.JPG"
 import styled from "styled-components";
-// import ima3 from "../../mBanner2.JPG"
-// import image2 from '../../BD17565E-.jpg'
-// import img11 from "../../IMG_5075.jpg";
-// import img1 from "../../34D5341D-.jpg";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-// import imagee from "../../DB9BDE83-.jpg"
-import Mimg2 from "../../mBanner1.JPG"
-// import Mimg3 from "../../IMG_5131.jpg"
-// import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
-// import Card from "react-bootstrap/Card";
-// import Title from '../Header/Title';
-// import logo from "../../sewhoneylogo.png";
-// import CardColumns from "react-bootstrap/CardColumns";
-// import logo2 from "../../sewhoneylogo.png";
-// import About from "../AboutPage/About";
 import Contact from "../ContactPage/Contact";
 import {MDBIcon} from "mdbreact";
 import MobileCarousel from "../Styles/MobileCarousel";
 import Carousel from 'react-bootstrap/Carousel'
 import Button from "react-bootstrap/Button";
 
-// let images = [
-//     ima3,image2,img11,img1,imagee,Mimg3,immmm,Mimg4
-// ]
 class CarouselWrapper extends Component {
 
     constructor(props) {
@@ -71,14 +49,14 @@ class CarouselWrapper extends Component {
                         <div className="img-container p-1 mt-3 mx-auto" style={{width: '75%'}}>
                             {/*<img alt='' className='w-4/5 mx-auto' src={img1} style={{height: '500px'}} />*/}
                             <p className="mx-auto w-100 d-none d-md-block"
-                               style={{fontFamily: '"Montserrat", sans-serif', color: 'black', fontSize: '64px'}}>Sew
-                                Honey Swim</p>
+                               style={{fontFamily: '"Montserrat", sans-serif', color: 'black', fontSize: '64px'}}>Beach
+                                Time Swim</p>
                             <p className="mx-auto w-100 d-block d-md-none" style={{
                                 fontFamily: '"Montserrat", sans-serif',
                                 color: 'black',
                                 fontSize: '45px',
                                 whiteSpace: 'nowrap'
-                            }}>Sew Honey<br/> Swim</p>
+                            }}>Beach Time<br/> Swim</p>
                             <p className="mb-3" style={{
                                 fontFamily: '"Montserrat", sans-serif',
                                 color: 'black',
@@ -93,6 +71,7 @@ class CarouselWrapper extends Component {
                     </div>
                 </Row>
 
+                {/* Desktop Carousel */}
                 <div className="mx-auto w-5/6 mb-5 d-none d-md-block">
                     <Carousel className="mx-auto">
                         <Carousel.Item interval={100}>
@@ -101,7 +80,7 @@ class CarouselWrapper extends Component {
                                     {/*<img alt=''*/}
                                     {/*     className={this.state.animate ? "image-fade image-responsive" : "image image-responsive"}*/}
                                     {/*     src={immmm}/>*/}
-                                    <p style={{width: '100%', height:'380px', background:'lightsalmon'}}>&nbsp;</p>
+                                    <p  style={{width: '100%', height:'380px', background:'lightsalmon'}}>&nbsp;</p>
                                 </Col>
                                 <Col sm={12} md={4} className="px-0">
                                     {/*<img alt=''*/}
@@ -142,6 +121,7 @@ class CarouselWrapper extends Component {
                     </Carousel>
                 </div>
 
+                {/* Mobile Carousel */}
                 <div className="d-block d-md-none mb-5">
                     <MobileCarousel/>
                 </div>
@@ -155,14 +135,14 @@ class CarouselWrapper extends Component {
                         opacity: "60%"
                     }}>SPREAD YOUR HONEY</p>
                     <p className="mx-auto w-75" style={{fontFamily: '"Montserrat", sans-serif', color: '#1a1b1f'}}>Share
-                        your adventures with #SewHoneySwim</p>
+                        your adventures with #BeachTimeSwim</p>
                 </div>
 
                 <hr className="w-75 mx-auto my-10"/>
 
                 <div className="pb-1 d-block d-md-none flex px-8">
                     <div className="each-slide">
-                        <div style={{'backgroundImage': `url(${immmm})`}}>
+                        <div style={{ background:'brown'}}>
                             <span>
                                   <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-dark" >
@@ -175,7 +155,7 @@ class CarouselWrapper extends Component {
                 </div>
                 <div className="pb-10 d-block d-md-none flex px-8">
                     <div className="each-slide">
-                        <div style={{'backgroundImage': `url(${Mimg2})`}}>
+                        <div style={{background:'lightcoral'}}>
                             <span>
                                   <Link to='/product-list/handmade' className="nav-link">
                                      <Button variant="outline-dark" >
@@ -296,11 +276,11 @@ class CarouselWrapper extends Component {
 
                         <div className="col-md-3">
                             <div className="mb-3">
-                                <a href="https://www.facebook.com/SewHoneySwim/?ref=nf&hc_ref=ARRAKOHS3x_-iRPO7-T_EwK5Ln04aL5J7gutQECf17b0uDp46kloMDbSlLUuTvfXlYk"
+                                <a href="https://www.facebook.com/"
                                    className="fb-ic">
                                     <MDBIcon icon="facebook" size="3x" className="   mr-md-5 mr-3"/>
                                 </a>
-                                <a href="https://www.instagram.com/sewhoneyswim/?hl=en" className="ins-ic">
+                                <a href="https://www.instagram.com/" className="ins-ic">
                                     <MDBIcon icon="instagram" size="3x" className="  mr-md-0 "/>
                                 </a>
                             </div>

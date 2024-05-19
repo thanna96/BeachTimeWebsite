@@ -6,10 +6,26 @@ https://www.iconfinder.com/Makoto_msk */
 export const storeProducts = [
   {
     id: 1,
-    title: "Carter One-Piece",
+    title: "Carters One-Piece",
+    price: 25.00,
+    desc:"-",
+    colors: [
+      "Black",
+      "White",
+      "Yellow"
+    ],
+    sizes: {
+      "X-Small": 1,
+      "Small": 1,
+      "Medium": 1,
+      "Large": 1,
+      "X-Large": 1
+    },
     info : {
-      img: "img/default.jpg",
-      price: 70.00,
+      img: ["default.JPG"],
+      style: "One-Piece",
+      type: "handmade",
+      price: 10.00,
       sizes: {
         "X-Small": 1,
         "Small": 1,
@@ -31,17 +47,19 @@ export const storeProducts = [
   },
   {
     id: 2,
-    title: "Stella One-Piece",
+    title: "Stellas One-Piece",
     info : {
-      img: "img/default2.jpg",
-      price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      img: ["img/default2.jpg"],
+      style: "One-Piece",
+      type: "handmade",
+      price: 45.00,
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -56,17 +74,19 @@ export const storeProducts = [
   },
   {
     id: 3,
-    title: "Bradley Bottom",
+    title: "Bradleys Bottom",
     info : {
-      img: "img/default3.jpg",
-      price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      img:[ "img/default3.jpg"],
+      style: "bottom",
+      type: "handmade",
+      price: 40.00,
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -81,17 +101,19 @@ export const storeProducts = [
   },
   {
     id: 4,
-    title: "Brandi Bottom",
+    title: "Brandis Bottom",
     info : {
-      img: "img/default4.jpg",
+      img: ["default.JPG"],
+      style: "bottom",
+      type: "handmade",
       price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -108,15 +130,17 @@ export const storeProducts = [
     id: 5,
     title: "Bradley Bottom",
     info : {
-      img: "img/default3.jpg",
-      price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      img: ["default.JPG"],
+      style: "bottom",
+      type: "handmade",
+      price: 30.00,
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -133,15 +157,17 @@ export const storeProducts = [
     id: 6,
     title: "Brandi Bottom",
     info : {
-      img: "img/default4.jpg",
-      price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      img: ["default.JPG"],
+      style: "bottom",
+      type: "handmade",
+      price: 60.00,
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -158,15 +184,17 @@ export const storeProducts = [
     id: 7,
     title: "Stella One-Piece",
     info : {
-      img: "img/default2.jpg",
-      price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      img: ["default.JPG"],
+      style: "One-Piece",
+      type: "handmade",
+      price: 50.00,
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -183,15 +211,17 @@ export const storeProducts = [
     id: 8,
     title: "Carter One-Piece",
     info : {
-      img: "img/default.jpg",
+      img: ["default.JPG"],
+      style: "One-Piece",
+      type: "handmade",
       price: 70.00,
-      sizes: {
-        "X-Small": 1,
-        "Small": 1,
-        "Medium": 1,
-        "Large": 1,
-        "X-Large": 1
-      },
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       color: [
         "Black",
         "White",
@@ -199,6 +229,33 @@ export const storeProducts = [
       ],
       company: "SHS",
       description: "One-Piece",
+      inCart: false,
+      count: 0,
+      total: 0
+    }
+  },
+  {
+    id: 10,
+    title: "Carters Top",
+    info: {
+      img: ["default.JPG"],
+      style: "Top",
+      type: "handmade",
+      price: 80.00,
+      sizes: [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      color: [
+        "Black",
+        "White",
+        "Yellow"
+      ],
+      company: "SHS",
+      description: "Top",
       inCart: false,
       count: 0,
       total: 0

@@ -13,7 +13,6 @@ import Figure from "react-bootstrap/Figure";
 import {Navigation} from 'react-minimal-side-navigation';
 import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 import img1 from "../../bumblebee-icon-20.jpg";
-import img from "../../banner.JPG";
 
 class MobileNav extends Component {
     constructor(props) {

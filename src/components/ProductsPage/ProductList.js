@@ -5,7 +5,6 @@ import {ProductConsumer} from "../../context";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import img1 from "../../bumblebee-icon-20.jpg";
-import img from "../../banner.JPG";
 import {MDBIcon} from "mdbreact";
 
 class ProductList extends Component {

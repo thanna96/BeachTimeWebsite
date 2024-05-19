@@ -3,8 +3,6 @@ import Row from "react-bootstrap/Row";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import img from "../../croppedLogo.jpg";
-import Mimg2 from "../../mBanner1.JPG";
-import Mimg3 from "../../mens.jpg"
 import Col from "react-bootstrap/Col";
 
 class Shop extends Component {
@@ -15,7 +13,7 @@ class Shop extends Component {
                 <Row>
                 <Col>
                     <div className="button-container mx-auto">
-                        <img className="rounded mx-auto d-block img-fluid" src={Mimg2} alt="aboutpic2"  />
+                        {/*<img className="rounded mx-auto d-block img-fluid" src={Mimg2} alt="aboutpic2"  />*/}
                         <span>
                             <Link to='/ProductList/women'>
                                 <Button variant="outline-light" >
@@ -28,7 +26,7 @@ class Shop extends Component {
                 <br/>
                 <Col>
                     <div className="button-container mx-auto">
-                        <img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2"  />
+                        {/*<img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2"  />*/}
                         <span>
                             <Link to='/ProductList/men'>
                                 <Button variant="outline-light" >
@@ -56,7 +54,7 @@ class Shop extends Component {
                     <br/>
                     <Row>
                         <div className="button-container mx-auto">
-                            <img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2"  />
+                            {/*<img className="rounded mx-auto d-block img-fluid" src={Mimg3} alt="aboutpic2"  />*/}
                             <span>
                             <Link to='/ProductList/men'>
                                 <Button variant="outline-light" >

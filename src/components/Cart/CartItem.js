@@ -1,7 +1,7 @@
 import React from 'react';
 import {faTrash} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
+import default1 from "../../default.JPG"
 
 export default function CartItem({item,value}) {
     // eslint-disable-next-line no-unused-vars
@@ -10,7 +10,9 @@ export default function CartItem({item,value}) {
     return (
         <div className="row my-2 text-capitalize text-center">
             <div className="col-6 mx-auto col-lg-2">
-                <img src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]} style={{width:'5rem',height:'6rem'}}
+                <img src={default1}
+                    // src={"https://s3.amazonaws.com/sew-honey-bucket/img/"+info.img[0]}
+                     style={{width:'5rem',height:'6rem'}}
                      className="img-fluid img-thumbnail mx-auto" alt="product"/>
             </div>
 

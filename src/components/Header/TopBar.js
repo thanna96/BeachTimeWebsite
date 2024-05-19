@@ -10,12 +10,12 @@ class TopBar extends Component {
                            Follow Us:
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/SewHoneySwim/?ref=nf&hc_ref=ARRAKOHS3x_-iRPO7-T_EwK5Ln04aL5J7gutQECf17b0uDp46kloMDbSlLUuTvfXlYk" className="fb-ic">
+                            <a href="https://www.facebook.com/" className="fb-ic">
                                 <MDBIcon icon="facebook" size="1x" className="text-black-50 ml-3 mr-3 " />
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/sewhoneyswim/?hl=en" className="ins-ic">
+                            <a href="https://www.instagram.com/" className="ins-ic">
                                 <MDBIcon icon="instagram" size="1x" className="text-black-50 " />
                             </a>
                         </li>

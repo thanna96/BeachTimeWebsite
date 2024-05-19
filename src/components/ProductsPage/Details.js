@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {ProductConsumer} from "../../context";
 import {Link} from "react-router-dom";
 import {ButtonContainer} from "../Styles/Button";
-import img from "../../banner.JPG";
 import {OverlayTrigger} from "react-bootstrap";
 import Tooltip from "react-bootstrap/cjs/Tooltip";
 import colorsData from "../../colorsData";
 import img1 from "../../bumblebee-icon-20.jpg";
+import default1 from "../../default.JPG"
 
 class Details extends Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class Details extends Component {
             stringColor: '',
             productName: '',
             id: 0,
-            image: '',
+            image: default1,
             width: 0,
             height: 0,
             reversible: 'false',
@@ -104,7 +104,8 @@ class Details extends Component {
                                         <img
                                             key={((this.state.image === '') ? info.img[0] : this.state.image)}
                                             className="center img-fluid "
-                                            src={"https://s3.amazonaws.com/sew-honey-bucket/img/" + ((this.state.image === '') ? info.img[0] : this.state.image)}
+                                            // src={"https://s3.amazonaws.com/sew-honey-bucket/img/" + ((this.state.image === '') ? info.img[0] : this.state.image)}
+                                            src={this.state.image}
                                             style={{height: "350px", minWidth: "350px"}}
                                             alt=""/>
                                         <div className="mx-auto text-center">
@@ -113,7 +114,8 @@ class Details extends Component {
                                                     <img onClick={() => (this.setState({image: image}))}
                                                          key={image}
                                                          className={(image === this.state.image) ? "m-1 clicked" : "m-1 "}
-                                                         src={"https://s3.amazonaws.com/sew-honey-bucket/img/" + image}
+                                                         // src={"https://s3.amazonaws.com/sew-honey-bucket/img/" + image}
+                                                        src={default1}
                                                          style={{
                                                              width: '6rem',
                                                              height: '6rem',
@@ -389,19 +391,19 @@ class Details extends Component {
                                             {info.description}
                                             <br/>
                                             {(info.style && info.style.toUpperCase() === 'TOP') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
-                                                'Handmade by Sew Honey.\n' +
+                                                'Handmade by Beach Time.\n' +
                                                 'Pair this top with your favorite bottom.\n' +
-                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 20 days for your order to be cut and sewn. Thank-you!\n' +
-                                                'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
+                                                'Keep in mind that all Swimwear is hand sewn by Beach Time. Please allow up to 20 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'We are happy to answer any questions you may have, we can be reached at beachtime@gmail.com.' : ''}
                                             {(info.style && info.style.toUpperCase() === 'BOTTOM') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
-                                                'Handmade by Sew Honey.\n' +
+                                                'Handmade by Beach Time.\n' +
                                                 'Pair this bottom with your favorite top.\n' +
-                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
-                                                'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
+                                                'Keep in mind that all Swimwear is hand sewn by Beach Time. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'We are happy to answer any questions you may have, we can be reached at beachtime@gmail.com.' : ''}
                                             {(info.style && info.style.toUpperCase() === 'ONE-PIECE') ? 'A beautiful & soft Nylon Spandex Swimsuit fabric, with a 4-way stretch, & a matte finish.\n' +
-                                                'Handmade by Sew Honey.\n' +
-                                                'Keep in mind that all Swimwear is hand sewn by Sew Honey. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
-                                                'We are happy to answer any questions you may have, we can be reached at sewhoney3@gmail.com.' : ''}
+                                                'Handmade by Beach Time.\n' +
+                                                'Keep in mind that all Swimwear is hand sewn by Beach Time. Please allow up to 14 days for your order to be cut and sewn. Thank-you!\n' +
+                                                'We are happy to answer any questions you may have, we can be reached at beachtime@gmail.com.' : ''}
                                         </p>
                                     </div>
                                 </div>
